@@ -1,0 +1,149 @@
+[
+  {"id": "ex_co_fire_plastics", "kind": "company",
+   "article": "A fire broke out overnight at Ostrel Plastics 870's resin plant, halting polyethylene output. The plastics maker expects to restart in six weeks and has told its customers in Poland and Denmark to expect delays.",
+   "answer": {"reasoning": "One named company had a fire. 'Plastics' is its own sector, not a sector-wide event. Poland and Denmark are only where customers are.", "is_disruption": true, "disruption_type": "industrial_accident", "summary": "Fire halts output at Ostrel Plastics 870.", "countries": [], "industries": [], "companies": ["Ostrel Plastics 870"]}},
+
+  {"id": "ex_co_dairy_described", "kind": "company",
+   "article": "Talvo Holdings 902, a dairy cooperative, has stopped collecting milk after a contamination scare at its main site. The dairy group said laboratory tests will take ten days.",
+   "answer": {"reasoning": "One named company is affected. Calling it a dairy group describes the firm; the Dairy sector as a whole is not disrupted.", "is_disruption": true, "disruption_type": "industrial_accident", "summary": "Contamination scare stops milk collection at Talvo Holdings 902.", "countries": [], "industries": [], "companies": ["Talvo Holdings 902"]}},
+
+  {"id": "ex_co_cyber_logistics", "kind": "company",
+   "article": "Ransomware has knocked out booking systems at freight firm Belmar Logistics 915, leaving trucks idle at its depots. The logistics company says it is restoring systems from backups.",
+   "answer": {"reasoning": "A cyberattack on one named logistics firm. Only that company is hit, so the Logistics industry is not listed.", "is_disruption": true, "disruption_type": "cybersecurity", "summary": "Ransomware stops operations at Belmar Logistics 915.", "countries": [], "industries": [], "companies": ["Belmar Logistics 915"]}},
+
+  {"id": "ex_co_site_in_country", "kind": "company",
+   "article": "An explosion at the Rivka Chemicals 934 site in the Netherlands has shut its caustic soda unit. Regional authorities say the rest of the industrial park is operating normally.",
+   "answer": {"reasoning": "One plant of one company is shut. It is located in the Netherlands, but the country as a whole is not disrupted, so no country is listed.", "is_disruption": true, "disruption_type": "industrial_accident", "summary": "Explosion shuts the caustic soda unit at Rivka Chemicals 934.", "countries": [], "industries": [], "companies": ["Rivka Chemicals 934"]}},
+
+  {"id": "ex_co_insolvency", "kind": "company",
+   "article": "Sugar refiner Monzar Trading 948 filed for insolvency on Friday and halted deliveries of refined sugar while administrators review its contracts.",
+   "answer": {"reasoning": "One named company has stopped deliveries after insolvency. The sugar sector is not hit as a whole.", "is_disruption": true, "disruption_type": "economic_crisis", "summary": "Insolvency halts deliveries from Monzar Trading 948.", "countries": [], "industries": [], "companies": ["Monzar Trading 948"]}},
+
+  {"id": "ex_co_recall", "kind": "company",
+   "article": "Food regulators ordered Grenfold Foods 961 to recall all its ready meals and stop production after listeria was found at its kitchen.",
+   "answer": {"reasoning": "A regulator stopped production at one named company. Only that company is affected.", "is_disruption": true, "disruption_type": "regulatory", "summary": "Recall stops production at Grenfold Foods 961.", "countries": [], "industries": [], "companies": ["Grenfold Foods 961"]}},
+
+  {"id": "ex_co_two_companies", "kind": "company",
+   "article": "A strike at Palvo Mining 977 and a separate breakdown at Corvan Metals 983's smelter have cut aluminium supplies. Both companies say output will stay down for at least a month.",
+   "answer": {"reasoning": "Two named companies are affected by separate events. Two firms are not a whole sector, so Mining and Metals are not listed.", "is_disruption": true, "disruption_type": "labour_action", "summary": "Strike at Palvo Mining 977 and breakdown at Corvan Metals 983 cut aluminium supply.", "countries": [], "industries": [], "companies": ["Palvo Mining 977", "Corvan Metals 983"]}},
+
+  {"id": "ex_co_mining_company_word", "kind": "company",
+   "article": "Underground flooding has stopped work at Sorvik Group 989. The mining firm, which produces phosphate rock, says pumps will take three weeks to clear the shafts.",
+   "answer": {"reasoning": "One named company is flooded. 'The mining firm' only describes it; the Mining industry as a whole is not disrupted.", "is_disruption": true, "disruption_type": "industrial_accident", "summary": "Flooding stops work at Sorvik Group 989.", "countries": [], "industries": [], "companies": ["Sorvik Group 989"]}},
+
+  {"id": "ex_ctry_japan_quake", "kind": "country",
+   "article": "A powerful earthquake struck northern Japan, damaging factories, rail lines and ports. The government has halted production across the region while inspections take place.",
+   "answer": {"reasoning": "The event is in Japan and stops production broadly. Factories, rail and ports describe the damage; no single sector is named as hit, so industries stay empty.", "is_disruption": true, "disruption_type": "natural_disaster", "summary": "Earthquake halts production across northern Japan.", "countries": ["Japan"], "industries": [], "companies": []}},
+
+  {"id": "ex_ctry_bangladesh_buyers", "kind": "country",
+   "article": "Monsoon floods in Bangladesh have closed garment and food factories and cut roads to Chittagong port. Retailers in Germany and the United Kingdom are warning of late deliveries.",
+   "answer": {"reasoning": "The floods are in Bangladesh. Germany and the United Kingdom only receive the goods, so they are not listed. Factories in general are hit, not one sector.", "is_disruption": true, "disruption_type": "natural_disaster", "summary": "Floods close factories and roads in Bangladesh.", "countries": ["Bangladesh"], "industries": [], "companies": []}},
+
+  {"id": "ex_ctry_korea_general_strike", "kind": "country",
+   "article": "A general strike in South Korea has stopped work at factories, ports and trucking firms for a third day, the unions said.",
+   "answer": {"reasoning": "A general strike across the whole economy of South Korea. Many kinds of firms are named, but it is a country-wide event, so industries stay empty.", "is_disruption": true, "disruption_type": "labour_action", "summary": "General strike stops work across South Korea.", "countries": ["South Korea"], "industries": [], "companies": []}},
+
+  {"id": "ex_ctry_mexico_border", "kind": "country",
+   "article": "Mexico closed its main northern border crossings after violent protests, leaving thousands of trucks stranded. Exporters to the United States say shipments of produce and auto parts are stuck.",
+   "answer": {"reasoning": "The disruption is caused in Mexico. The United States is only the destination of the goods.", "is_disruption": true, "disruption_type": "geopolitical", "summary": "Border closures strand exports from Mexico.", "countries": ["Mexico"], "industries": [], "companies": []}},
+
+  {"id": "ex_ctry_taiwan_typhoon", "kind": "country",
+   "article": "Typhoon Kalmar made landfall in Taiwan on Sunday, shutting ports, airports and most factories for three days. Electronics buyers in Japan are bracing for delays.",
+   "answer": {"reasoning": "The typhoon is in Taiwan and shuts most activity there. Japan is only a buyer, and electronics buyers are mentioned, not a disrupted sector.", "is_disruption": true, "disruption_type": "natural_disaster", "summary": "Typhoon shuts ports and factories in Taiwan.", "countries": ["Taiwan"], "industries": [], "companies": []}},
+
+  {"id": "ex_ctry_ghana_shutdown", "kind": "country",
+   "article": "Ghana's government imposed a nationwide shutdown after unrest, closing ports and halting cocoa shipments. Traders in the Netherlands say they have several weeks of stock.",
+   "answer": {"reasoning": "A nationwide shutdown in Ghana. The Netherlands is only where traders are.", "is_disruption": true, "disruption_type": "geopolitical", "summary": "Nationwide shutdown closes ports in Ghana.", "countries": ["Ghana"], "industries": [], "companies": []}},
+
+  {"id": "ex_ctry_two_countries", "kind": "country",
+   "article": "Fighting along the border between Colombia and Ecuador has closed highways and ports in both countries, stopping exports of coffee, bananas and flowers.",
+   "answer": {"reasoning": "Both Colombia and Ecuador are directly affected. Products are listed, but no sector is singled out.", "is_disruption": true, "disruption_type": "geopolitical", "summary": "Border fighting closes highways and ports in Colombia and Ecuador.", "countries": ["Colombia", "Ecuador"], "industries": [], "companies": []}},
+
+  {"id": "ex_ctry_sanctions", "kind": "country",
+   "article": "New sanctions bar all trade with Russia and close its ports to foreign ships, cutting off the country's exports of grain, fertilizer and fuel.",
+   "answer": {"reasoning": "Sanctions stop all trade with Russia. The goods named are examples of everything cut off, so it is a country-wide event and industries stay empty.", "is_disruption": true, "disruption_type": "geopolitical", "summary": "Sanctions stop all trade with Russia.", "countries": ["Russia"], "industries": [], "companies": []}},
+
+  {"id": "ex_ind_sugar_ban", "kind": "industry",
+   "article": "A global sugar export ban agreed by major producing nations has left refiners without raw cane. Industry groups say refined sugar supplies will be short for months.",
+   "answer": {"reasoning": "The whole sugar sector is hit worldwide; no single country or company is named as the source.", "is_disruption": true, "disruption_type": "regulatory", "summary": "Global export ban leaves sugar refiners short of cane.", "countries": [], "industries": ["Sugar"], "companies": []}},
+
+  {"id": "ex_ind_feed", "kind": "industry",
+   "article": "A contaminated vitamin premix used across the animal feed industry has forced feed mills worldwide to stop production, the sector's trade association said.",
+   "answer": {"reasoning": "Feed mills across the whole sector have stopped, so Animal Feed is listed. No country or company is named.", "is_disruption": true, "disruption_type": "industrial_accident", "summary": "Contaminated premix stops animal feed production worldwide.", "countries": [], "industries": ["Animal Feed"], "companies": []}},
+
+  {"id": "ex_ind_paper", "kind": "industry",
+   "article": "Paper and pulp mills across the sector have cut output after a sharp rise in wood prices, and makers of kraft paper warn of shortages.",
+   "answer": {"reasoning": "The whole paper and pulp sector has cut output.", "is_disruption": true, "disruption_type": "economic_crisis", "summary": "Paper and pulp mills cut output on wood costs.", "countries": [], "industries": ["Paper & Pulp"], "companies": []}},
+
+  {"id": "ex_ind_resin", "kind": "industry",
+   "article": "A worldwide shortage of PET resin has hit the plastics industry, with producers rationing supplies to all customers.",
+   "answer": {"reasoning": "The plastics industry as a whole is short of supply.", "is_disruption": true, "disruption_type": "other", "summary": "Worldwide PET resin shortage hits plastics producers.", "countries": [], "industries": ["Plastics"], "companies": []}},
+
+  {"id": "ex_ind_emulsifier_ban", "kind": "industry",
+   "article": "A ban on a widely used emulsifier has forced food ingredients makers across the sector to halt several production lines.",
+   "answer": {"reasoning": "A regulatory ban hits the whole food ingredients sector.", "is_disruption": true, "disruption_type": "regulatory", "summary": "Emulsifier ban halts food ingredients production lines.", "countries": [], "industries": ["Food Ingredients"], "companies": []}},
+
+  {"id": "ex_ind_diesel", "kind": "industry",
+   "article": "Fuel and energy suppliers worldwide have cut diesel deliveries after a series of refinery outages, the industry body said.",
+   "answer": {"reasoning": "The whole fuel and energy sector has cut deliveries.", "is_disruption": true, "disruption_type": "industrial_accident", "summary": "Refinery outages cut diesel deliveries worldwide.", "countries": [], "industries": ["Fuel & Energy"], "companies": []}},
+
+  {"id": "ex_mix_trucking_poland", "kind": "country_industry",
+   "article": "Truck drivers across Poland walked out on Monday, and logistics firms in the country say freight and cold-chain deliveries have stopped.",
+   "answer": {"reasoning": "The strike is in Poland and the article says the country's logistics firms have stopped, so both Poland and Logistics are listed.", "is_disruption": true, "disruption_type": "labour_action", "summary": "Truckers' strike stops logistics in Poland.", "countries": ["Poland"], "industries": ["Logistics"], "companies": []}},
+
+  {"id": "ex_mix_dairy_nz", "kind": "country_industry",
+   "article": "A disease outbreak in New Zealand's dairy herds has forced dairy processors across the country to stop collecting milk. Importers in China expect shortages of milk powder.",
+   "answer": {"reasoning": "Dairy processors across New Zealand are stopped, so New Zealand and Dairy are listed. China is only an importer.", "is_disruption": true, "disruption_type": "natural_disaster", "summary": "Herd disease stops dairy processing in New Zealand.", "countries": ["New Zealand"], "industries": ["Dairy"], "companies": []}},
+
+  {"id": "ex_mix_palm_indonesia", "kind": "country_industry",
+   "article": "Indonesia has banned exports of palm oil and other edible oils to control domestic prices. Buyers in India and Malaysia are scrambling for supplies.",
+   "answer": {"reasoning": "The ban comes from Indonesia and covers edible oils, so Indonesia and Edible Oils are listed. India and Malaysia are only buyers.", "is_disruption": true, "disruption_type": "regulatory", "summary": "Indonesia bans edible oil exports.", "countries": ["Indonesia"], "industries": ["Edible Oils"], "companies": []}},
+
+  {"id": "ex_mix_mining_peru", "kind": "country_industry",
+   "article": "Protesters have blockaded mining operations across Peru, halting output of copper and phosphate rock at most of the country's mines.",
+   "answer": {"reasoning": "The blockades are in Peru and hit the country's mines, so Peru and Mining are listed.", "is_disruption": true, "disruption_type": "geopolitical", "summary": "Blockades halt mining across Peru.", "countries": ["Peru"], "industries": ["Mining"], "companies": []}},
+
+  {"id": "ex_mix_fert_morocco", "kind": "country_industry",
+   "article": "Fertilizer plants in Morocco have stopped production after a gas pipeline failure, cutting the country's exports of phosphate fertilizer.",
+   "answer": {"reasoning": "The fertilizer plants of Morocco are stopped, so Morocco and Fertilizers are listed.", "is_disruption": true, "disruption_type": "industrial_accident", "summary": "Pipeline failure stops fertilizer production in Morocco.", "countries": ["Morocco"], "industries": ["Fertilizers"], "companies": []}},
+
+  {"id": "ex_mix_meat_argentina", "kind": "country_industry",
+   "article": "Meat processing plants across Argentina have closed after a strike by slaughterhouse workers, and the government has suspended beef exports.",
+   "answer": {"reasoning": "Meat processing across Argentina has stopped, so Argentina and Meat Processing are listed.", "is_disruption": true, "disruption_type": "labour_action", "summary": "Strike closes meat processing plants in Argentina.", "countries": ["Argentina"], "industries": ["Meat Processing"], "companies": []}},
+
+  {"id": "ex_fp_forecast", "kind": "false_positive",
+   "article": "Analysts warn that a hurricane season forecast to be stronger than average could disrupt Caribbean shipping later this year, though no storms have formed yet.",
+   "answer": {"reasoning": "A forecast of possible future trouble; nothing is disrupted now.", "is_disruption": false, "disruption_type": "none", "summary": "No disruption.", "countries": [], "industries": [], "companies": []}},
+
+  {"id": "ex_fp_recovered", "kind": "false_positive",
+   "article": "Six months after the floods in Thailand, factories have reopened and exports are back to normal levels, the trade ministry said.",
+   "answer": {"reasoning": "It describes a past event that is over; supply is back to normal, so nothing is disrupted now.", "is_disruption": false, "disruption_type": "none", "summary": "No disruption.", "countries": [], "industries": [], "companies": []}},
+
+  {"id": "ex_fp_retailer_news", "kind": "false_positive",
+   "article": "Maple Fresh Markets appointed a new chief executive on Tuesday and said like-for-like sales rose 4% in the last quarter.",
+   "answer": {"reasoning": "Routine news about the retailer itself. Nothing is disrupted, and the retailer is not a supplier.", "is_disruption": false, "disruption_type": "none", "summary": "No disruption.", "countries": [], "industries": [], "companies": []}},
+
+  {"id": "ex_fp_local_weather", "kind": "false_positive",
+   "article": "Snow closed schools and some local roads in a small town in Norway on Tuesday, and a ski race was postponed until the weekend.",
+   "answer": {"reasoning": "A minor local weather story with no effect on the supply of goods.", "is_disruption": false, "disruption_type": "none", "summary": "No disruption.", "countries": [], "industries": [], "companies": []}},
+
+  {"id": "ex_fp_outside_sectors", "kind": "false_positive",
+   "article": "Shortages of aircraft parts are delaying deliveries of new jets at the major plane makers, who say the backlog will last into next year.",
+   "answer": {"reasoning": "A real shortage, but in aerospace, which is not one of the listed industries, and no listed country or company is affected.", "is_disruption": true, "disruption_type": "other", "summary": "Aircraft parts shortage delays jet deliveries.", "countries": [], "industries": [], "companies": []}},
+
+  {"id": "ex_fp_minor_incident", "kind": "false_positive",
+   "article": "A small fire at the Brightwater Optics workshop outside Vienna was put out within minutes, and the company says all orders will ship on time.",
+   "answer": {"reasoning": "The fire was minor and nothing is delayed, so it is not a disruption.", "is_disruption": false, "disruption_type": "none", "summary": "No disruption.", "countries": [], "industries": [], "companies": []}},
+
+  {"id": "ex_fp_price_speculation", "kind": "false_positive",
+   "article": "Coffee prices rose 8% this month on speculation about next year's harvest in Brazil, traders said.",
+   "answer": {"reasoning": "Price speculation about a future harvest; supply is not actually disrupted, so Brazil is not listed.", "is_disruption": false, "disruption_type": "none", "summary": "No disruption.", "countries": [], "industries": [], "companies": []}},
+
+  {"id": "ex_fp_trade_talks", "kind": "false_positive",
+   "article": "Ministers from Egypt and Morocco met to discuss a possible trade agreement that could lower tariffs on fruit from 2028.",
+   "answer": {"reasoning": "Talks about a possible future agreement; nothing is disrupted.", "is_disruption": false, "disruption_type": "none", "summary": "No disruption.", "countries": [], "industries": [], "companies": []}},
+
+  {"id": "ex_fp_anniversary", "kind": "false_positive",
+   "article": "Ten years after the port fire in Tianjin, China, officials opened a memorial and said safety rules have been tightened.",
+   "answer": {"reasoning": "A look back at an old event; nothing is disrupted now, so China is not listed.", "is_disruption": false, "disruption_type": "none", "summary": "No disruption.", "countries": [], "industries": [], "companies": []}}
+]

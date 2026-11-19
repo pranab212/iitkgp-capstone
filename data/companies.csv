@@ -1,0 +1,2954 @@
+company_id,name,country,industry,is_focal
+F1,Northwind Grocers,United Kingdom,Grocery Retail,True
+C00001,Lunve Supply 001,United States,Logistics,False
+C00002,Vebel Beverages 002,China,Beverages,False
+C00003,Taka Beverages 003,South Africa,Beverages,False
+C00004,Dellun Personal 004,Ecuador,Personal Care,False
+C00005,Delve Personal 005,Egypt,Personal Care,False
+C00006,Kalo Household 006,Morocco,Household Goods,False
+C00007,Lomi Trading 007,Morocco,Bakery,False
+C00008,Faka Supply 008,South Africa,Food Processing,False
+C00009,Anpra Meat 009,Bangladesh,Meat Processing,False
+C00010,Tami Trading 010,Bangladesh,Dairy,False
+C00011,Ostta Group 011,Spain,Meat Processing,False
+C00012,Zenkri Packaging 012,South Korea,Packaging,False
+C00013,Kami Food 013,Turkey,Food Processing,False
+C00014,Anta Logistics 014,France,Logistics,False
+C00015,Helgra Meat 015,Bangladesh,Meat Processing,False
+C00016,Graco Group 016,Argentina,Personal Care,False
+C00017,Vemon Supply 017,Malaysia,Meat Processing,False
+C00018,Torta Fresh 018,Ireland,Fresh Produce,False
+C00019,Kaar Supply 019,Kenya,Packaging,False
+C00020,Sakri Packaging 020,India,Packaging,False
+C00021,Arvi Food 021,United Kingdom,Food Processing,False
+C00022,Krigra Group 022,Japan,Packaging,False
+C00023,Kaco Holdings 023,Peru,Meat Processing,False
+C00024,Praost Food 024,Germany,Food Processing,False
+C00025,Arpra Fresh 025,Colombia,Fresh Produce,False
+C00026,Lohel Meat 026,Brazil,Meat Processing,False
+C00027,Normon Works 027,Australia,Household Goods,False
+C00028,Vilun Works 028,France,Dairy,False
+C00029,Delka Group 029,New Zealand,Household Goods,False
+C00030,Delco Trading 030,India,Logistics,False
+C00031,Nornor Electronics 031,Indonesia,Electronics,False
+C00032,Ostpra Glass 032,Ukraine,Glass,False
+C00033,Montor Plastics 033,Ghana,Plastics,False
+C00034,Lunpra Chemicals 034,France,Chemicals,False
+C00035,Torsa Trading 035,South Africa,Paper & Pulp,False
+C00036,Coan Holdings 036,Peru,Agriculture,False
+C00037,Krinor Agriculture 037,Poland,Agriculture,False
+C00038,Osttor Packaging 038,Argentina,Packaging,False
+C00039,Hellun Agriculture 039,Netherlands,Agriculture,False
+C00040,Monmon Logistics 040,Germany,Logistics,False
+C00041,Rikri Food 041,Norway,Food Ingredients,False
+C00042,Ribel Works 042,Italy,Electronics,False
+C00043,Ostnor Trading 043,Poland,Logistics,False
+C00044,Vezen Works 044,Australia,Chemicals,False
+C00045,Delmon Industries 045,Indonesia,Animal Feed,False
+C00046,Taan Agriculture 046,Turkey,Agriculture,False
+C00047,Graar Trading 047,Ukraine,Metals,False
+C00048,Kamon Group 048,Ukraine,Metals,False
+C00049,Anzen Edible 049,United States,Edible Oils,False
+C00050,Vilo Plastics 050,Poland,Plastics,False
+C00051,Krian Logistics 051,India,Logistics,False
+C00052,Fadel Agriculture 052,Ireland,Agriculture,False
+C00053,Zenri Supply 053,Sweden,Fertilizers,False
+C00054,Norco Paper 054,Brazil,Paper & Pulp,False
+C00055,Dello Agriculture 055,France,Agriculture,False
+C00056,Arco Holdings 056,Poland,Fuel & Energy,False
+C00057,Norlun Agriculture 057,France,Agriculture,False
+C00058,Arlo Packaging 058,Russia,Packaging,False
+C00059,Arost Plastics 059,Italy,Plastics,False
+C00060,Arve Trading 060,Denmark,Edible Oils,False
+C00061,Monvi Paper 061,Ukraine,Paper & Pulp,False
+C00062,Delan Logistics 062,Netherlands,Logistics,False
+C00063,Cobel Agriculture 063,Bangladesh,Agriculture,False
+C00064,Grahel Animal 064,Italy,Animal Feed,False
+C00065,Talun Industries 065,Thailand,Paper & Pulp,False
+C00066,Ansa Industries 066,Ireland,Electronics,False
+C00067,Cota Animal 067,Taiwan,Animal Feed,False
+C00068,Norta Logistics 068,Thailand,Logistics,False
+C00069,Norvi Plastics 069,Bangladesh,Plastics,False
+C00070,Krivi Supply 070,Ghana,Edible Oils,False
+C00071,Belbel Logistics 071,Morocco,Logistics,False
+C00072,Anka Logistics 072,Norway,Logistics,False
+C00073,Arnor Supply 073,Russia,Animal Feed,False
+C00074,Fabel Industries 074,United States,Plastics,False
+C00075,Delhel Group 075,China,Agriculture,False
+C00076,Cota Plastics 076,Taiwan,Plastics,False
+C00077,Monta Holdings 077,Colombia,Electronics,False
+C00078,Falo Packaging 078,China,Packaging,False
+C00079,Anan Glass 079,Spain,Glass,False
+C00080,Vian Industries 080,United States,Plastics,False
+C00081,Monta Plastics 081,Ecuador,Plastics,False
+C00082,Prakri Chemicals 082,Colombia,Chemicals,False
+C00083,Torco Agriculture 083,Germany,Agriculture,False
+C00084,Vihel Supply 084,Poland,Agriculture,False
+C00085,Zennor Packaging 085,Turkey,Packaging,False
+C00086,Prari Industries 086,Indonesia,Paper & Pulp,False
+C00087,Kamon Works 087,France,Chemicals,False
+C00088,Lunvi Trading 088,South Korea,Logistics,False
+C00089,Kafa Paper 089,Peru,Paper & Pulp,False
+C00090,Beltor Packaging 090,Egypt,Packaging,False
+C00091,Rikri Supply 091,Egypt,Paper & Pulp,False
+C00092,Cori Supply 092,Australia,Agriculture,False
+C00093,Fabel Paper 093,Australia,Paper & Pulp,False
+C00094,Vinor Paper 094,Italy,Paper & Pulp,False
+C00095,Mitor Supply 095,United Kingdom,Electronics,False
+C00096,Anan Works 096,Vietnam,Electronics,False
+C00097,Belfa Sugar 097,Netherlands,Sugar,False
+C00098,Kridel Packaging 098,Morocco,Packaging,False
+C00099,Arbel Holdings 099,South Africa,Edible Oils,False
+C00100,Zenlun Edible 100,Vietnam,Edible Oils,False
+C00101,Rigra Packaging 101,Bangladesh,Packaging,False
+C00102,Ripra Holdings 102,Peru,Animal Feed,False
+C00103,Tamon Works 103,South Korea,Plastics,False
+C00104,Andel Food 104,Thailand,Food Ingredients,False
+C00105,Sadel Fuel 105,South Korea,Fuel & Energy,False
+C00106,Coan Trading 106,Turkey,Animal Feed,False
+C00107,Salun Agriculture 107,Australia,Agriculture,False
+C00108,Taar Paper 108,France,Paper & Pulp,False
+C00109,Monco Edible 109,Argentina,Edible Oils,False
+C00110,Zenpra Packaging 110,Taiwan,Packaging,False
+C00111,Vear Agriculture 111,Sweden,Agriculture,False
+C00112,Arzen Animal 112,Ghana,Animal Feed,False
+C00113,Vinor Group 113,Colombia,Paper & Pulp,False
+C00114,Graan Animal 114,Mexico,Animal Feed,False
+C00115,Torsa Paper 115,United Kingdom,Paper & Pulp,False
+C00116,Zenan Fuel 116,Chile,Fuel & Energy,False
+C00117,Rita Fuel 117,Canada,Fuel & Energy,False
+C00118,Sadel Supply 118,Italy,Chemicals,False
+C00119,Kafa Holdings 119,Spain,Plastics,False
+C00120,Delsa Edible 120,Vietnam,Edible Oils,False
+C00121,Lunan Industries 121,Canada,Agriculture,False
+C00122,Prave Supply 122,Malaysia,Animal Feed,False
+C00123,Saan Packaging 123,Colombia,Packaging,False
+C00124,Monar Animal 124,Canada,Animal Feed,False
+C00125,Prasa Chemicals 125,Ghana,Chemicals,False
+C00126,Kakri Holdings 126,New Zealand,Agriculture,False
+C00127,Vevi Paper 127,Morocco,Paper & Pulp,False
+C00128,Lunmon Group 128,Peru,Plastics,False
+C00129,Mipra Supply 129,Russia,Chemicals,False
+C00130,Prahel Forestry 130,Japan,Forestry,False
+C00131,Tormon Fertilizers 131,Bangladesh,Fertilizers,False
+C00132,Veost Plastics 132,Mexico,Plastics,False
+C00133,Lundel Trading 133,Ghana,Fuel & Energy,False
+C00134,Monve Fuel 134,Peru,Fuel & Energy,False
+C00135,Helmon Chemicals 135,Canada,Chemicals,False
+C00136,Delri Electronics 136,Mexico,Electronics,False
+C00137,Norost Metals 137,South Korea,Metals,False
+C00138,Sator Supply 138,Peru,Agriculture,False
+C00139,Belfa Works 139,Canada,Mining,False
+C00140,Tapra Trading 140,Ghana,Fertilizers,False
+C00141,Prave Chemicals 141,Sweden,Chemicals,False
+C00142,Arka Industries 142,Peru,Metals,False
+C00143,Kripra Fuel 143,Brazil,Fuel & Energy,False
+C00144,Krivi Trading 144,Ghana,Electronics,False
+C00145,Tordel Trading 145,Ghana,Chemicals,False
+C00146,Rimi Forestry 146,Bangladesh,Forestry,False
+C00147,Krinor Trading 147,Vietnam,Metals,False
+C00148,Lunka Industries 148,Argentina,Electronics,False
+C00149,Delsa Agriculture 149,Norway,Agriculture,False
+C00150,Kriri Trading 150,Sweden,Fuel & Energy,False
+C00151,Torgra Holdings 151,New Zealand,Electronics,False
+C00152,Tahel Supply 152,Ukraine,Chemicals,False
+C00153,Lunve Chemicals 153,Spain,Chemicals,False
+C00154,Grave Group 154,Indonesia,Fuel & Energy,False
+C00155,Cozen Plastics 155,Colombia,Plastics,False
+C00156,Faka Holdings 156,Taiwan,Fuel & Energy,False
+C00157,Heldel Chemicals 157,Morocco,Chemicals,False
+C00158,Misa Chemicals 158,Poland,Chemicals,False
+C00159,Vekri Industries 159,Canada,Chemicals,False
+C00160,Tagra Holdings 160,Mexico,Plastics,False
+C00161,Talun Holdings 161,Malaysia,Forestry,False
+C00162,Beltor Works 162,Malaysia,Metals,False
+C00163,Mimon Chemicals 163,France,Chemicals,False
+C00164,Vive Forestry 164,United Kingdom,Forestry,False
+C00165,Misa Plastics 165,Malaysia,Plastics,False
+C00166,Lunta Metals 166,South Korea,Metals,False
+C00167,Cohel Fertilizers 167,France,Fertilizers,False
+C00168,Saco Fertilizers 168,India,Fertilizers,False
+C00169,Lunve Works 169,Argentina,Agriculture,False
+C00170,Faka Supply 170,Turkey,Paper & Pulp,False
+C00171,Delkri Works 171,Brazil,Chemicals,False
+C00172,Graost Chemicals 172,Poland,Chemicals,False
+C00173,Sadel Group 173,Turkey,Agriculture,False
+C00174,Safa Industries 174,Netherlands,Mining,False
+C00175,Monco Forestry 175,Russia,Forestry,False
+C00176,Delbel Holdings 176,Malaysia,Agriculture,False
+C00177,Lungra Holdings 177,Ecuador,Chemicals,False
+C00178,Zenar Forestry 178,Netherlands,Forestry,False
+C00179,Saar Holdings 179,South Africa,Agriculture,False
+C00180,Torlo Mining 180,Canada,Mining,False
+C00181,Lunpra Fuel 181,Australia,Fuel & Energy,False
+C00182,Fasa Fuel 182,Peru,Fuel & Energy,False
+C00183,Coco Fertilizers 183,Norway,Fertilizers,False
+C00184,Grafa Fertilizers 184,Argentina,Fertilizers,False
+C00185,Anmon Supply 185,Ireland,Metals,False
+C00186,Lunka Supply 186,India,Agriculture,False
+C00187,Anvi Supply 187,Egypt,Metals,False
+C00188,Graco Group 188,Thailand,Chemicals,False
+C00189,Pradel Group 189,Bangladesh,Forestry,False
+C00190,Fapra Industries 190,Poland,Plastics,False
+C00191,Minor Chemicals 191,United Kingdom,Chemicals,False
+C00192,Lomi Fuel 192,Poland,Fuel & Energy,False
+C00193,Krimon Forestry 193,Peru,Forestry,False
+C00194,Faka Industries 194,Bangladesh,Fuel & Energy,False
+C00195,Helan Chemicals 195,Spain,Chemicals,False
+C00196,Torka Supply 196,Norway,Paper & Pulp,False
+C00197,Torsa Trading 197,New Zealand,Chemicals,False
+C00198,Mitor Fuel 198,Malaysia,Fuel & Energy,False
+C00199,Tasa Holdings 199,Chile,Chemicals,False
+C00200,Lobel Group 200,Taiwan,Metals,False
+C00201,Monvi Chemicals 201,South Africa,Chemicals,False
+C00202,Zenbel Fuel 202,Indonesia,Fuel & Energy,False
+C00203,Monzen Group 203,Bangladesh,Mining,False
+C00204,Helka Agriculture 204,Peru,Agriculture,False
+C00205,Vemon Chemicals 205,Taiwan,Chemicals,False
+C00206,Graost Holdings 206,France,Electronics,False
+C00207,Salo Fertilizers 207,Denmark,Fertilizers,False
+C00208,Norpra Holdings 208,Italy,Fuel & Energy,False
+C00209,Rive Trading 209,Turkey,Metals,False
+C00210,Vetor Chemicals 210,Morocco,Chemicals,False
+C00211,Graco Fertilizers 211,Ukraine,Fertilizers,False
+C00212,Fakri Mining 212,Taiwan,Mining,False
+C00213,Norfa Plastics 213,Spain,Plastics,False
+C00214,Norar Chemicals 214,Morocco,Chemicals,False
+C00215,Vepra Fertilizers 215,Poland,Fertilizers,False
+C00216,Venor Electronics 216,Norway,Electronics,False
+C00217,Vivi Supply 217,Colombia,Fuel & Energy,False
+C00218,Mihel Chemicals 218,Ukraine,Chemicals,False
+C00219,Coan Metals 219,Indonesia,Metals,False
+C00220,Miri Group 220,Vietnam,Fuel & Energy,False
+C00221,Anvi Trading 221,United Kingdom,Fuel & Energy,False
+C00222,Fator Works 222,Argentina,Paper & Pulp,False
+C00223,Heldel Electronics 223,Bangladesh,Electronics,False
+C00224,Armi Chemicals 224,United Kingdom,Chemicals,False
+C00225,Prata Fuel 225,India,Fuel & Energy,False
+C00226,Belzen Fuel 226,Taiwan,Fuel & Energy,False
+C00227,Cobel Plastics 227,Poland,Plastics,False
+C00228,Lopra Plastics 228,Russia,Plastics,False
+C00229,Vemon Fuel 229,Morocco,Fuel & Energy,False
+C00230,Saco Chemicals 230,France,Chemicals,False
+C00231,Ostlun Industries 231,Peru,Paper & Pulp,False
+C00232,Midel Metals 232,France,Metals,False
+C00233,Delhel Forestry 233,India,Forestry,False
+C00234,Kanor Industries 234,Norway,Fuel & Energy,False
+C00235,Mimi Group 235,Ukraine,Forestry,False
+C00236,Andel Forestry 236,Poland,Forestry,False
+C00237,Vesa Chemicals 237,India,Chemicals,False
+C00238,Anlo Chemicals 238,Mexico,Chemicals,False
+C00239,Deltor Forestry 239,Spain,Forestry,False
+C00240,Krian Metals 240,Poland,Metals,False
+C00241,Armi Fertilizers 241,Malaysia,Fertilizers,False
+C00242,Belve Fertilizers 242,China,Fertilizers,False
+C00243,Monpra Fertilizers 243,South Africa,Fertilizers,False
+C00244,Viri Plastics 244,Ireland,Plastics,False
+C00245,Belvi Fuel 245,Denmark,Fuel & Energy,False
+C00246,Sabel Mining 246,India,Mining,False
+C00247,Monkri Trading 247,Ghana,Fuel & Energy,False
+C00248,Vilun Agriculture 248,South Korea,Agriculture,False
+C00249,Faar Trading 249,Vietnam,Plastics,False
+C00250,Sagra Fuel 250,Chile,Fuel & Energy,False
+C00251,Belta Chemicals 251,Spain,Chemicals,False
+C00252,Graco Group 252,Morocco,Forestry,False
+C00253,Anbel Supply 253,Germany,Chemicals,False
+C00254,Pralo Industries 254,Denmark,Metals,False
+C00255,Fami Trading 255,Russia,Fuel & Energy,False
+C00256,Lunco Agriculture 256,Kenya,Agriculture,False
+C00257,Vepra Metals 257,Brazil,Metals,False
+C00258,Zenco Works 258,Egypt,Agriculture,False
+C00259,Delri Group 259,United Kingdom,Metals,False
+C00260,Rimon Fertilizers 260,Japan,Fertilizers,False
+C00261,Velun Industries 261,Ghana,Plastics,False
+C00262,Ostlo Industries 262,Thailand,Fuel & Energy,False
+C00263,Lovi Group 263,Argentina,Chemicals,False
+C00264,Krian Forestry 264,Spain,Forestry,False
+C00265,Ardel Chemicals 265,France,Chemicals,False
+C00266,Lunco Chemicals 266,Sweden,Chemicals,False
+C00267,Tortor Paper 267,Bangladesh,Paper & Pulp,False
+C00268,Prasa Electronics 268,Vietnam,Electronics,False
+C00269,Monvi Chemicals 269,Norway,Chemicals,False
+C00270,Anfa Group 270,Norway,Metals,False
+C00271,Delfa Works 271,Poland,Electronics,False
+C00272,Monost Metals 272,Ghana,Metals,False
+C00273,Arlun Supply 273,Italy,Agriculture,False
+C00274,Kriri Works 274,Indonesia,Mining,False
+C00275,Anvi Mining 275,Argentina,Mining,False
+C00276,Colun Fertilizers 276,Turkey,Fertilizers,False
+C00277,Kavi Fuel 277,Poland,Fuel & Energy,False
+C00278,Zenzen Electronics 278,Colombia,Electronics,False
+C00279,Ribel Metals 279,Australia,Metals,False
+C00280,Fapra Chemicals 280,Ukraine,Chemicals,False
+C00281,Kami Mining 281,Poland,Mining,False
+C00282,Ostmi Chemicals 282,Brazil,Chemicals,False
+C00283,Tavi Plastics 283,Japan,Plastics,False
+C00284,Zenbel Chemicals 284,Kenya,Chemicals,False
+C00285,Monri Fertilizers 285,Denmark,Fertilizers,False
+C00286,Helve Holdings 286,Kenya,Forestry,False
+C00287,Norfa Chemicals 287,Germany,Chemicals,False
+C00288,Arlun Agriculture 288,New Zealand,Agriculture,False
+C00289,Lokri Forestry 289,Ireland,Forestry,False
+C00290,Lunnor Industries 290,Ecuador,Chemicals,False
+C00291,Save Fuel 291,Indonesia,Fuel & Energy,False
+C00292,Delve Trading 292,Ireland,Fuel & Energy,False
+C00293,Tadel Supply 293,Mexico,Electronics,False
+C00294,Praka Supply 294,Vietnam,Plastics,False
+C00295,Rive Plastics 295,Indonesia,Plastics,False
+C00296,Sapra Trading 296,Argentina,Fuel & Energy,False
+C00297,Vitor Trading 297,Japan,Metals,False
+C00298,Arost Holdings 298,Ukraine,Fertilizers,False
+C00299,Belmon Chemicals 299,Italy,Chemicals,False
+C00300,Arhel Metals 300,Mexico,Metals,False
+C00301,Norco Metals 301,France,Metals,False
+C00302,Tagra Trading 302,Bangladesh,Metals,False
+C00303,Lunkri Holdings 303,Indonesia,Chemicals,False
+C00304,Prari Holdings 304,Germany,Plastics,False
+C00305,Fave Holdings 305,Peru,Chemicals,False
+C00306,Cohel Trading 306,Canada,Forestry,False
+C00307,Torgra Metals 307,Australia,Metals,False
+C00308,Norlo Plastics 308,Malaysia,Plastics,False
+C00309,Zenmon Industries 309,Argentina,Agriculture,False
+C00310,Ostdel Holdings 310,Indonesia,Plastics,False
+C00311,Lunan Holdings 311,Japan,Fertilizers,False
+C00312,Belkri Metals 312,South Korea,Metals,False
+C00313,Arsa Works 313,New Zealand,Agriculture,False
+C00314,Vesa Chemicals 314,Argentina,Chemicals,False
+C00315,Lunpra Fuel 315,Bangladesh,Fuel & Energy,False
+C00316,Lunlo Forestry 316,Egypt,Forestry,False
+C00317,Anco Agriculture 317,China,Agriculture,False
+C00318,Lolun Mining 318,South Korea,Mining,False
+C00319,Vilun Plastics 319,Ghana,Plastics,False
+C00320,Helnor Metals 320,Germany,Metals,False
+C00321,Ostzen Holdings 321,Mexico,Agriculture,False
+C00322,Prakri Fuel 322,Egypt,Fuel & Energy,False
+C00323,Cove Holdings 323,China,Metals,False
+C00324,Viost Chemicals 324,Ecuador,Chemicals,False
+C00325,Anlun Fuel 325,Peru,Fuel & Energy,False
+C00326,Monhel Fertilizers 326,Chile,Fertilizers,False
+C00327,Rikri Works 327,Malaysia,Forestry,False
+C00328,Zenta Metals 328,Ukraine,Metals,False
+C00329,Vinor Chemicals 329,Ukraine,Chemicals,False
+C00330,Belan Chemicals 330,South Africa,Chemicals,False
+C00331,Helfa Industries 331,Brazil,Metals,False
+C00332,Lunkri Chemicals 332,Bangladesh,Chemicals,False
+C00333,Mondel Fuel 333,Ukraine,Fuel & Energy,False
+C00334,Miri Fertilizers 334,Chile,Fertilizers,False
+C00335,Lodel Plastics 335,Denmark,Plastics,False
+C00336,Arlun Fuel 336,Netherlands,Fuel & Energy,False
+C00337,Andel Electronics 337,New Zealand,Electronics,False
+C00338,Kribel Supply 338,Egypt,Agriculture,False
+C00339,Loan Works 339,Peru,Metals,False
+C00340,Praost Trading 340,Norway,Fuel & Energy,False
+C00341,Kriri Agriculture 341,France,Agriculture,False
+C00342,Sapra Group 342,Brazil,Fertilizers,False
+C00343,Prabel Mining 343,Australia,Mining,False
+C00344,Ostlo Agriculture 344,Canada,Agriculture,False
+C00345,Lonor Fuel 345,South Korea,Fuel & Energy,False
+C00346,Kavi Fertilizers 346,Mexico,Fertilizers,False
+C00347,Annor Group 347,Germany,Fuel & Energy,False
+C00348,Veve Plastics 348,United States,Plastics,False
+C00349,Anco Holdings 349,India,Chemicals,False
+C00350,Sapra Mining 350,Russia,Mining,False
+C00351,Norzen Group 351,Ecuador,Fuel & Energy,False
+C00352,Arco Trading 352,Indonesia,Chemicals,False
+C00353,Mikri Fertilizers 353,Canada,Fertilizers,False
+C00354,Milun Holdings 354,Netherlands,Forestry,False
+C00355,Krifa Electronics 355,United States,Electronics,False
+C00356,Lundel Chemicals 356,Argentina,Chemicals,False
+C00357,Prakri Trading 357,Italy,Chemicals,False
+C00358,Anco Supply 358,Morocco,Metals,False
+C00359,Helvi Agriculture 359,Thailand,Agriculture,False
+C00360,Tator Holdings 360,Turkey,Fertilizers,False
+C00361,Salun Electronics 361,Indonesia,Electronics,False
+C00362,Zenzen Trading 362,Germany,Chemicals,False
+C00363,Veri Trading 363,Canada,Plastics,False
+C00364,Coar Works 364,Russia,Metals,False
+C00365,Zenve Chemicals 365,Kenya,Chemicals,False
+C00366,Prari Group 366,Argentina,Chemicals,False
+C00367,Kagra Fertilizers 367,Russia,Fertilizers,False
+C00368,Arkri Chemicals 368,Thailand,Chemicals,False
+C00369,Krilun Group 369,India,Metals,False
+C00370,Veka Industries 370,Japan,Plastics,False
+C00371,Belnor Trading 371,Argentina,Fuel & Energy,False
+C00372,Lunpra Electronics 372,Mexico,Electronics,False
+C00373,Lunco Metals 373,Argentina,Metals,False
+C00374,Cofa Forestry 374,India,Forestry,False
+C00375,Tormon Chemicals 375,Morocco,Chemicals,False
+C00376,Krivi Group 376,Malaysia,Plastics,False
+C00377,Anmon Fertilizers 377,Ecuador,Fertilizers,False
+C00378,Ansa Industries 378,South Africa,Plastics,False
+C00379,Norkri Trading 379,Bangladesh,Fertilizers,False
+C00380,Lunfa Metals 380,Peru,Metals,False
+C00381,Lungra Agriculture 381,United Kingdom,Agriculture,False
+C00382,Rigra Chemicals 382,Netherlands,Chemicals,False
+C00383,Lolo Agriculture 383,South Korea,Agriculture,False
+C00384,Lobel Agriculture 384,Argentina,Agriculture,False
+C00385,Grari Chemicals 385,Indonesia,Chemicals,False
+C00386,Rikri Agriculture 386,United Kingdom,Agriculture,False
+C00387,Monfa Trading 387,Spain,Chemicals,False
+C00388,Graka Mining 388,Turkey,Mining,False
+C00389,Minor Mining 389,Taiwan,Mining,False
+C00390,Mika Metals 390,Mexico,Metals,False
+C00391,Belar Metals 391,Ghana,Metals,False
+C00392,Delost Chemicals 392,Thailand,Chemicals,False
+C00393,Mitor Fertilizers 393,Morocco,Fertilizers,False
+C00394,Pradel Chemicals 394,Denmark,Chemicals,False
+C00395,Vezen Holdings 395,Mexico,Metals,False
+C00396,Vian Chemicals 396,Spain,Chemicals,False
+C00397,Belkri Chemicals 397,United Kingdom,Chemicals,False
+C00398,Prabel Works 398,Brazil,Plastics,False
+C00399,Aran Metals 399,France,Metals,False
+C00400,Anco Holdings 400,Chile,Fuel & Energy,False
+C00401,Lunost Supply 401,Thailand,Fuel & Energy,False
+C00402,Ostmon Plastics 402,Ecuador,Plastics,False
+C00403,Tata Fertilizers 403,Ukraine,Fertilizers,False
+C00404,Lunnor Electronics 404,Netherlands,Electronics,False
+C00405,Torsa Chemicals 405,United States,Chemicals,False
+C00406,Norfa Plastics 406,India,Plastics,False
+C00407,Favi Fuel 407,Egypt,Fuel & Energy,False
+C00408,Delta Metals 408,Morocco,Metals,False
+C00409,Mian Trading 409,Norway,Agriculture,False
+C00410,Veka Fertilizers 410,Kenya,Fertilizers,False
+C00411,Krizen Holdings 411,Brazil,Chemicals,False
+C00412,Rifa Mining 412,Norway,Mining,False
+C00413,Anfa Chemicals 413,South Korea,Chemicals,False
+C00414,Angra Mining 414,Egypt,Mining,False
+C00415,Tari Mining 415,Morocco,Mining,False
+C00416,Ostan Works 416,Peru,Chemicals,False
+C00417,Rilun Metals 417,Spain,Metals,False
+C00418,Osttor Mining 418,Denmark,Mining,False
+C00419,Delfa Supply 419,Malaysia,Fuel & Energy,False
+C00420,Tave Mining 420,Kenya,Mining,False
+C00421,Rikri Fuel 421,Norway,Fuel & Energy,False
+C00422,Kahel Holdings 422,Poland,Fuel & Energy,False
+C00423,Cokri Mining 423,Malaysia,Mining,False
+C00424,Vepra Industries 424,Spain,Mining,False
+C00425,Tavi Works 425,South Korea,Metals,False
+C00426,Tamon Fuel 426,South Korea,Fuel & Energy,False
+C00427,Tamon Chemicals 427,Italy,Chemicals,False
+C00428,Mivi Trading 428,Canada,Fuel & Energy,False
+C00429,Tahel Mining 429,Egypt,Mining,False
+C00430,Saost Metals 430,Peru,Metals,False
+C00431,Mipra Metals 431,United States,Metals,False
+C00432,Zennor Industries 432,Taiwan,Mining,False
+C00433,Kave Mining 433,Japan,Mining,False
+C00434,Kamon Metals 434,Italy,Metals,False
+C00435,Vetor Fuel 435,Morocco,Fuel & Energy,False
+C00436,Ostbel Fuel 436,Spain,Fuel & Energy,False
+C00437,Vedel Holdings 437,United States,Metals,False
+C00438,Anmi Fuel 438,Denmark,Fuel & Energy,False
+C00439,Rive Metals 439,France,Metals,False
+C00440,Prakri Trading 440,China,Chemicals,False
+C00441,Nortor Industries 441,Canada,Mining,False
+C00442,Tamon Holdings 442,Norway,Fuel & Energy,False
+C00443,Sari Works 443,Mexico,Metals,False
+C00444,Lunfa Metals 444,Brazil,Metals,False
+C00445,Fazen Chemicals 445,Colombia,Chemicals,False
+C00446,Riost Mining 446,Bangladesh,Mining,False
+C00447,Vevi Fuel 447,Brazil,Fuel & Energy,False
+C00448,Arzen Supply 448,Poland,Fertilizers,False
+C00449,Ostmon Works 449,Ireland,Metals,False
+C00450,Helpra Group 450,Netherlands,Fuel & Energy,False
+C00451,Rita Holdings 451,Japan,Mining,False
+C00452,Vifa Group 452,Mexico,Mining,False
+C00453,Pragra Fuel 453,Germany,Fuel & Energy,False
+C00454,Belkri Forestry 454,Colombia,Forestry,False
+C00455,Norar Fuel 455,Poland,Fuel & Energy,False
+C00456,Milun Mining 456,Indonesia,Mining,False
+C00457,Tafa Fuel 457,Mexico,Fuel & Energy,False
+C00458,Sami Metals 458,South Korea,Metals,False
+C00459,Vesa Mining 459,Bangladesh,Mining,False
+C00460,Grasa Group 460,Indonesia,Metals,False
+C00461,Vekri Group 461,Indonesia,Metals,False
+C00462,Pragra Fuel 462,Peru,Fuel & Energy,False
+C00463,Delta Group 463,Egypt,Metals,False
+C00464,Salun Group 464,Denmark,Fuel & Energy,False
+C00465,Zenco Holdings 465,Peru,Plastics,False
+C00466,Favi Fuel 466,Italy,Fuel & Energy,False
+C00467,Belnor Industries 467,Morocco,Fuel & Energy,False
+C00468,Arfa Mining 468,Italy,Mining,False
+C00469,Lovi Works 469,Canada,Mining,False
+C00470,Gragra Chemicals 470,Mexico,Chemicals,False
+C00471,Arost Works 471,China,Metals,False
+C00472,Anmi Chemicals 472,Egypt,Chemicals,False
+C00473,Tordel Chemicals 473,Malaysia,Chemicals,False
+C00474,Kamon Metals 474,Malaysia,Metals,False
+C00475,Belar Mining 475,South Africa,Mining,False
+C00476,Tami Fuel 476,Spain,Fuel & Energy,False
+C00477,Delfa Chemicals 477,Norway,Chemicals,False
+C00478,Luntor Fuel 478,Morocco,Fuel & Energy,False
+C00479,Ostan Holdings 479,Sweden,Mining,False
+C00480,Monar Holdings 480,Sweden,Metals,False
+C00481,Norta Holdings 481,Argentina,Fuel & Energy,False
+C00482,Pravi Mining 482,Netherlands,Mining,False
+C00483,Norgra Chemicals 483,Russia,Chemicals,False
+C00484,Zenzen Fuel 484,Taiwan,Fuel & Energy,False
+C00485,Comon Chemicals 485,Argentina,Chemicals,False
+C00486,Arbel Mining 486,South Africa,Mining,False
+C00487,Krikri Supply 487,United Kingdom,Fuel & Energy,False
+C00488,Nornor Mining 488,France,Mining,False
+C00489,Kaan Chemicals 489,South Korea,Chemicals,False
+C00490,Lunfa Metals 490,Ukraine,Metals,False
+C00491,Lunfa Mining 491,Vietnam,Mining,False
+C00492,Krilo Works 492,South Korea,Fuel & Energy,False
+C00493,Norco Trading 493,Morocco,Mining,False
+C00494,Dello Industries 494,Sweden,Fertilizers,False
+C00495,Delfa Mining 495,Canada,Mining,False
+C00496,Vekri Fuel 496,Russia,Fuel & Energy,False
+C00497,Gralo Fuel 497,Denmark,Fuel & Energy,False
+C00498,Belco Mining 498,United Kingdom,Mining,False
+C00499,Kaost Works 499,Ghana,Chemicals,False
+C00500,Cofa Supply 500,United Kingdom,Mining,False
+C00501,Belpra Fuel 501,Netherlands,Fuel & Energy,False
+C00502,Tapra Industries 502,Indonesia,Forestry,False
+C00503,Ostmi Plastics 503,Brazil,Plastics,False
+C00504,Riost Mining 504,Morocco,Mining,False
+C00505,Norve Industries 505,Germany,Metals,False
+C00506,Ostvi Fuel 506,Ukraine,Fuel & Energy,False
+C00507,Ardel Group 507,United Kingdom,Plastics,False
+C00508,Love Metals 508,Turkey,Metals,False
+C00509,Ansa Fuel 509,China,Fuel & Energy,False
+C00510,Belgra Fuel 510,France,Fuel & Energy,False
+C00511,Saost Metals 511,Ukraine,Metals,False
+C00512,Codel Fuel 512,Brazil,Fuel & Energy,False
+C00513,Graco Mining 513,Bangladesh,Mining,False
+C00514,Tapra Mining 514,United States,Mining,False
+C00515,Graar Works 515,Ukraine,Metals,False
+C00516,Anzen Industries 516,Turkey,Chemicals,False
+C00517,Monpra Industries 517,Brazil,Mining,False
+C00518,Tasa Mining 518,Ecuador,Mining,False
+C00519,Arlun Fuel 519,France,Fuel & Energy,False
+C00520,Kahel Mining 520,Denmark,Mining,False
+C00521,Prasa Fuel 521,Australia,Fuel & Energy,False
+C00522,Conor Fuel 522,India,Fuel & Energy,False
+C00523,Luntor Trading 523,Thailand,Chemicals,False
+C00524,Sadel Fertilizers 524,South Africa,Fertilizers,False
+C00525,Zenka Chemicals 525,Norway,Chemicals,False
+C00526,Ostco Mining 526,Spain,Mining,False
+C00527,Sabel Fuel 527,Turkey,Fuel & Energy,False
+C00528,Anlun Metals 528,Turkey,Metals,False
+C00529,Arsa Fertilizers 529,Japan,Fertilizers,False
+C00530,Kalun Industries 530,India,Chemicals,False
+C00531,Zenhel Mining 531,Canada,Mining,False
+C00532,Delnor Fuel 532,Colombia,Fuel & Energy,False
+C00533,Ankri Group 533,Sweden,Mining,False
+C00534,Norfa Supply 534,Ireland,Fuel & Energy,False
+C00535,Torpra Metals 535,Japan,Metals,False
+C00536,Tormon Mining 536,Bangladesh,Mining,False
+C00537,Norkri Metals 537,Colombia,Metals,False
+C00538,Cokri Metals 538,Thailand,Metals,False
+C00539,Zenve Fuel 539,Ireland,Fuel & Energy,False
+C00540,Grari Chemicals 540,Netherlands,Chemicals,False
+C00541,Norvi Mining 541,United States,Mining,False
+C00542,Belco Metals 542,Bangladesh,Metals,False
+C00543,Armi Mining 543,Mexico,Mining,False
+C00544,Belar Mining 544,United States,Mining,False
+C00545,Torzen Fuel 545,Denmark,Fuel & Energy,False
+C00546,Rita Chemicals 546,China,Chemicals,False
+C00547,Prahel Trading 547,Chile,Mining,False
+C00548,Dellun Fuel 548,China,Fuel & Energy,False
+C00549,Anzen Fuel 549,Morocco,Fuel & Energy,False
+C00550,Sator Metals 550,Germany,Metals,False
+C00551,Kalun Group 551,China,Mining,False
+C00552,Pravi Trading 552,Thailand,Forestry,False
+C00553,Vemon Works 553,United Kingdom,Fuel & Energy,False
+C00554,Delsa Metals 554,Thailand,Metals,False
+C00555,Helzen Metals 555,Brazil,Metals,False
+C00556,Vita Trading 556,Taiwan,Metals,False
+C00557,Graan Chemicals 557,Russia,Chemicals,False
+C00558,Rikri Mining 558,United Kingdom,Mining,False
+C00559,Belka Fuel 559,Brazil,Fuel & Energy,False
+C00560,Fagra Holdings 560,Bangladesh,Mining,False
+C00561,Ostzen Plastics 561,France,Plastics,False
+C00562,Normon Supply 562,Turkey,Fuel & Energy,False
+C00563,Vita Fuel 563,Netherlands,Fuel & Energy,False
+C00564,Fabel Fuel 564,India,Fuel & Energy,False
+C00565,Grapra Supply 565,New Zealand,Fuel & Energy,False
+C00566,Anta Fuel 566,Indonesia,Fuel & Energy,False
+C00567,Krita Works 567,Russia,Mining,False
+C00568,Cogra Metals 568,Netherlands,Metals,False
+C00569,Kaost Fertilizers 569,Kenya,Fertilizers,False
+C00570,Krihel Fuel 570,Sweden,Fuel & Energy,False
+C00571,Delnor Fuel 571,Thailand,Fuel & Energy,False
+C00572,Sahel Group 572,Brazil,Mining,False
+C00573,Nordel Fuel 573,Morocco,Fuel & Energy,False
+C00574,Veve Mining 574,Turkey,Mining,False
+C00575,Pravi Metals 575,Chile,Metals,False
+C00576,Delnor Metals 576,Kenya,Metals,False
+C00577,Viar Trading 577,Japan,Chemicals,False
+C00578,Delka Fuel 578,Brazil,Fuel & Energy,False
+C00579,Zenkri Mining 579,New Zealand,Mining,False
+C00580,Zentor Supply 580,Russia,Mining,False
+C00581,Talo Chemicals 581,Spain,Chemicals,False
+C00582,Prata Mining 582,Ghana,Mining,False
+C00583,Anlun Plastics 583,Peru,Plastics,False
+C00584,Lunmi Metals 584,Taiwan,Metals,False
+C00585,Prami Fuel 585,Netherlands,Fuel & Energy,False
+C00586,Fadel Mining 586,China,Mining,False
+C00587,Gralo Holdings 587,Morocco,Fuel & Energy,False
+C00588,Grakri Chemicals 588,South Africa,Chemicals,False
+C00589,Pralo Holdings 589,India,Mining,False
+C00590,Rimon Mining 590,Turkey,Mining,False
+C00591,Kabel Supply 591,United Kingdom,Metals,False
+C00592,Sasa Mining 592,Germany,Mining,False
+C00593,Vemon Mining 593,Japan,Mining,False
+C00594,Monkri Works 594,Poland,Mining,False
+C00595,Ostgra Fuel 595,Thailand,Fuel & Energy,False
+C00596,Anve Mining 596,France,Mining,False
+C00597,Delka Mining 597,Thailand,Mining,False
+C00598,Monar Holdings 598,South Africa,Chemicals,False
+C00599,Tata Plastics 599,Egypt,Plastics,False
+C00600,Mondel Metals 600,Ireland,Metals,False
+C00601,Salun Mining 601,China,Mining,False
+C00602,Belmon Metals 602,Taiwan,Metals,False
+C00603,Rizen Mining 603,Argentina,Mining,False
+C00604,Mika Fuel 604,United Kingdom,Fuel & Energy,False
+C00605,Cori Holdings 605,Ghana,Mining,False
+C00606,Norfa Holdings 606,Poland,Metals,False
+C00607,Fadel Metals 607,Brazil,Metals,False
+C00608,Lokri Group 608,Germany,Fuel & Energy,False
+C00609,Belnor Fuel 609,Argentina,Fuel & Energy,False
+C00610,Arzen Industries 610,Malaysia,Chemicals,False
+C00611,Tamon Mining 611,China,Mining,False
+C00612,Hello Fuel 612,Poland,Fuel & Energy,False
+C00613,Heltor Fuel 613,Mexico,Fuel & Energy,False
+C00614,Ostkri Trading 614,Bangladesh,Mining,False
+C00615,Monost Mining 615,Argentina,Mining,False
+C00616,Zenco Supply 616,Kenya,Fuel & Energy,False
+C00617,Anka Industries 617,Morocco,Chemicals,False
+C00618,Lunzen Fuel 618,Peru,Fuel & Energy,False
+C00619,Kritor Metals 619,Denmark,Metals,False
+C00620,Grabel Mining 620,United Kingdom,Mining,False
+C00621,Cohel Metals 621,Kenya,Metals,False
+C00622,Sazen Works 622,Mexico,Metals,False
+C00623,Faost Fuel 623,United Kingdom,Fuel & Energy,False
+C00624,Ostzen Fuel 624,Ireland,Fuel & Energy,False
+C00625,Vekri Supply 625,South Africa,Fuel & Energy,False
+C00626,Rigra Fuel 626,United Kingdom,Fuel & Energy,False
+C00627,Arlo Fuel 627,Colombia,Fuel & Energy,False
+C00628,Helan Industries 628,Chile,Chemicals,False
+C00629,Talun Trading 629,Thailand,Fuel & Energy,False
+C00630,Anlun Group 630,Turkey,Fuel & Energy,False
+C00631,Love Fuel 631,Poland,Fuel & Energy,False
+C00632,Helkri Holdings 632,Argentina,Fuel & Energy,False
+C00633,Vemon Chemicals 633,Russia,Chemicals,False
+C00634,Ostsa Mining 634,Italy,Mining,False
+C00635,Zensa Group 635,Ireland,Mining,False
+C00636,Arve Fuel 636,India,Fuel & Energy,False
+C00637,Coka Holdings 637,Ghana,Fuel & Energy,False
+C00638,Monar Fuel 638,Ireland,Fuel & Energy,False
+C00639,Kritor Metals 639,Taiwan,Metals,False
+C00640,Tormi Fuel 640,Brazil,Fuel & Energy,False
+C00641,Lokri Metals 641,South Korea,Metals,False
+C00642,Zennor Mining 642,Turkey,Mining,False
+C00643,Grapra Holdings 643,Taiwan,Metals,False
+C00644,Vigra Group 644,Vietnam,Forestry,False
+C00645,Falo Trading 645,Malaysia,Mining,False
+C00646,Arve Industries 646,South Africa,Fuel & Energy,False
+C00647,Sanor Works 647,Morocco,Metals,False
+C00648,Monlo Mining 648,Indonesia,Mining,False
+C00649,Coco Fuel 649,Germany,Fuel & Energy,False
+C00650,Veri Industries 650,Ghana,Plastics,False
+C00651,Kakri Group 651,Ireland,Mining,False
+C00652,Norhel Fuel 652,Norway,Fuel & Energy,False
+C00653,Tator Fuel 653,Ecuador,Fuel & Energy,False
+C00654,Anbel Industries 654,Vietnam,Metals,False
+C00655,Tari Metals 655,Bangladesh,Metals,False
+C00656,Grabel Industries 656,South Africa,Mining,False
+C00657,Lunhel Holdings 657,Ireland,Mining,False
+C00658,Annor Mining 658,India,Mining,False
+C00659,Arfa Fuel 659,Brazil,Fuel & Energy,False
+C00660,Takri Supply 660,France,Chemicals,False
+C00661,Loco Holdings 661,Japan,Fuel & Energy,False
+C00662,Sami Mining 662,Canada,Mining,False
+C00663,Graar Forestry 663,Ireland,Forestry,False
+C00664,Faar Trading 664,Spain,Metals,False
+C00665,Helka Fuel 665,Ecuador,Fuel & Energy,False
+C00666,Norri Fuel 666,South Africa,Fuel & Energy,False
+C00667,Lungra Mining 667,Ukraine,Mining,False
+C00668,Kaco Works 668,New Zealand,Fuel & Energy,False
+C00669,Torzen Group 669,China,Mining,False
+C00670,Prata Supply 670,Chile,Chemicals,False
+C00671,Helfa Chemicals 671,Thailand,Chemicals,False
+C00672,Ostbel Metals 672,Bangladesh,Metals,False
+C00673,Rikri Mining 673,Turkey,Mining,False
+C00674,Rimon Supply 674,Poland,Fertilizers,False
+C00675,Coco Industries 675,Denmark,Fuel & Energy,False
+C00676,Zenzen Chemicals 676,Italy,Chemicals,False
+C00677,Love Group 677,Morocco,Fuel & Energy,False
+C00678,Monan Fuel 678,Bangladesh,Fuel & Energy,False
+C00679,Ridel Plastics 679,Brazil,Plastics,False
+C00680,Kavi Fuel 680,Indonesia,Fuel & Energy,False
+C00681,Faco Fuel 681,Russia,Fuel & Energy,False
+C00682,Cosa Works 682,Netherlands,Metals,False
+C00683,Anmon Group 683,United Kingdom,Fuel & Energy,False
+C00684,Norri Fertilizers 684,Kenya,Fertilizers,False
+C00685,Delco Trading 685,Argentina,Metals,False
+C00686,Zenkri Holdings 686,Brazil,Fuel & Energy,False
+C00687,Famon Chemicals 687,New Zealand,Chemicals,False
+C00688,Graan Metals 688,Ireland,Metals,False
+C00689,Tormon Metals 689,New Zealand,Metals,False
+C00690,Lunbel Group 690,Italy,Fertilizers,False
+C00691,Kaka Group 691,Italy,Fuel & Energy,False
+C00692,Delfa Works 692,Ukraine,Mining,False
+C00693,Toran Group 693,Egypt,Plastics,False
+C00694,Ostost Chemicals 694,Canada,Chemicals,False
+C00695,Belnor Fuel 695,Germany,Fuel & Energy,False
+C00696,Lunzen Mining 696,Colombia,Mining,False
+C00697,Sagra Fuel 697,Malaysia,Fuel & Energy,False
+C00698,Anost Trading 698,Indonesia,Fuel & Energy,False
+C00699,Tafa Mining 699,Egypt,Mining,False
+C00700,Coan Mining 700,Sweden,Mining,False
+C00701,Dello Chemicals 701,China,Chemicals,False
+C00702,Tornor Metals 702,Ghana,Metals,False
+C00703,Monlun Fertilizers 703,Vietnam,Fertilizers,False
+C00704,Viar Fuel 704,Italy,Fuel & Energy,False
+C00705,Fagra Chemicals 705,South Africa,Chemicals,False
+C00706,Anlun Chemicals 706,Japan,Chemicals,False
+C00707,Kari Industries 707,China,Fertilizers,False
+C00708,Prapra Mining 708,Netherlands,Mining,False
+C00709,Vikri Mining 709,Thailand,Mining,False
+C00710,Zenhel Industries 710,Netherlands,Fuel & Energy,False
+C00711,Prave Trading 711,Turkey,Fuel & Energy,False
+C00712,Delvi Metals 712,Kenya,Metals,False
+C00713,Beltor Mining 713,Indonesia,Mining,False
+C00714,Fave Trading 714,Egypt,Fuel & Energy,False
+C00715,Bello Works 715,France,Fuel & Energy,False
+C00716,Luntor Mining 716,Ireland,Mining,False
+C00717,Gralun Supply 717,China,Plastics,False
+C00718,Vinor Fuel 718,Mexico,Fuel & Energy,False
+C00719,Takri Fuel 719,Norway,Fuel & Energy,False
+C00720,Tahel Fuel 720,United States,Fuel & Energy,False
+C00721,Saost Holdings 721,Peru,Mining,False
+C00722,Belan Industries 722,Bangladesh,Fuel & Energy,False
+C00723,Delco Mining 723,Sweden,Mining,False
+C00724,Belka Supply 724,Indonesia,Fuel & Energy,False
+C00725,Monkri Mining 725,Ukraine,Mining,False
+C00726,Rikri Trading 726,Indonesia,Fuel & Energy,False
+C00727,Veost Fuel 727,Ukraine,Fuel & Energy,False
+C00728,Loco Mining 728,Bangladesh,Mining,False
+C00729,Torta Forestry 729,Germany,Forestry,False
+C00730,Kamon Industries 730,Colombia,Fuel & Energy,False
+C00731,Vemi Plastics 731,Netherlands,Plastics,False
+C00732,Monmi Fuel 732,Indonesia,Fuel & Energy,False
+C00733,Kaar Chemicals 733,Japan,Chemicals,False
+C00734,Delpra Mining 734,Spain,Mining,False
+C00735,Ribel Plastics 735,Indonesia,Plastics,False
+C00736,Arost Supply 736,China,Fuel & Energy,False
+C00737,Taar Fuel 737,Denmark,Fuel & Energy,False
+C00738,Ansa Supply 738,Netherlands,Fuel & Energy,False
+C00739,Fagra Metals 739,Egypt,Metals,False
+C00740,Comon Fuel 740,Mexico,Fuel & Energy,False
+C00741,Tadel Metals 741,United States,Metals,False
+C00742,Antor Fuel 742,Brazil,Fuel & Energy,False
+C00743,Kafa Trading 743,Denmark,Fuel & Energy,False
+C00744,Krikri Works 744,Egypt,Metals,False
+C00745,Taar Fuel 745,China,Fuel & Energy,False
+C00746,Annor Fuel 746,Ukraine,Fuel & Energy,False
+C00747,Belta Fuel 747,Vietnam,Fuel & Energy,False
+C00748,Minor Mining 748,Ecuador,Mining,False
+C00749,Kaan Trading 749,Indonesia,Chemicals,False
+C00750,Vimi Fuel 750,Turkey,Fuel & Energy,False
+C00751,Zenar Fuel 751,Thailand,Fuel & Energy,False
+C00752,Anan Metals 752,Morocco,Metals,False
+C00753,Lodel Fertilizers 753,Italy,Fertilizers,False
+C00754,Velun Fuel 754,Denmark,Fuel & Energy,False
+C00755,Nornor Mining 755,Taiwan,Mining,False
+C00756,Delkri Metals 756,Norway,Metals,False
+C00757,Norzen Works 757,Canada,Metals,False
+C00758,Grator Supply 758,Chile,Fuel & Energy,False
+C00759,Colun Metals 759,Thailand,Metals,False
+C00760,Lotor Chemicals 760,Netherlands,Chemicals,False
+C00761,Belost Mining 761,Germany,Mining,False
+C00762,Veost Group 762,Kenya,Mining,False
+C00763,Tordel Mining 763,Argentina,Mining,False
+C00764,Ostost Fuel 764,Norway,Fuel & Energy,False
+C00765,Comi Works 765,Germany,Fuel & Energy,False
+C00766,Kriost Works 766,Taiwan,Plastics,False
+C00767,Krizen Industries 767,Norway,Fuel & Energy,False
+C00768,Ardel Chemicals 768,Mexico,Chemicals,False
+C00769,Lodel Mining 769,Ukraine,Mining,False
+C00770,Ansa Fuel 770,Egypt,Fuel & Energy,False
+C00771,Norco Mining 771,Egypt,Mining,False
+C00772,Anbel Fuel 772,Poland,Fuel & Energy,False
+C00773,Arlo Mining 773,Denmark,Mining,False
+C00774,Sazen Fuel 774,Peru,Fuel & Energy,False
+C00775,Kridel Mining 775,Germany,Mining,False
+C00776,Anlo Fuel 776,France,Fuel & Energy,False
+C00777,Tanor Plastics 777,France,Plastics,False
+C00778,Praan Mining 778,New Zealand,Mining,False
+C00779,Rivi Mining 779,Malaysia,Mining,False
+C00780,Anta Industries 780,Morocco,Metals,False
+C00781,Nortor Mining 781,Mexico,Mining,False
+C00782,Helhel Plastics 782,France,Plastics,False
+C00783,Torost Works 783,Ghana,Fuel & Energy,False
+C00784,Rigra Industries 784,Germany,Fuel & Energy,False
+C00785,Rinor Trading 785,Russia,Plastics,False
+C00786,Comon Group 786,Kenya,Mining,False
+C00787,Lodel Plastics 787,United States,Plastics,False
+C00788,Rifa Fuel 788,Argentina,Fuel & Energy,False
+C00789,Vita Chemicals 789,China,Chemicals,False
+C00790,Kari Mining 790,New Zealand,Mining,False
+C00791,Mongra Fuel 791,France,Fuel & Energy,False
+C00792,Prata Group 792,Poland,Fuel & Energy,False
+C00793,Saan Fuel 793,Denmark,Fuel & Energy,False
+C00794,Ostgra Trading 794,Peru,Plastics,False
+C00795,Kazen Industries 795,Mexico,Metals,False
+C00796,Tanor Supply 796,Morocco,Fuel & Energy,False
+C00797,Monri Supply 797,Egypt,Fuel & Energy,False
+C00798,Monzen Chemicals 798,Taiwan,Chemicals,False
+C00799,Vika Trading 799,South Korea,Metals,False
+C00800,Norlo Fuel 800,Malaysia,Fuel & Energy,False
+C00801,Mikri Chemicals 801,Netherlands,Chemicals,False
+C00802,Lunan Metals 802,Malaysia,Metals,False
+C00803,Nordel Holdings 803,Brazil,Chemicals,False
+C00804,Zennor Group 804,Bangladesh,Chemicals,False
+C00805,Monpra Trading 805,Spain,Mining,False
+C00806,Kasa Group 806,Taiwan,Fuel & Energy,False
+C00807,Arost Chemicals 807,Netherlands,Chemicals,False
+C00808,Grabel Mining 808,Vietnam,Mining,False
+C00809,Fave Metals 809,Sweden,Metals,False
+C00810,Vegra Fuel 810,Brazil,Fuel & Energy,False
+C00811,Lobel Holdings 811,Ghana,Mining,False
+C00812,Comon Group 812,Argentina,Metals,False
+C00813,Kabel Chemicals 813,Spain,Chemicals,False
+C00814,Krilo Fuel 814,Sweden,Fuel & Energy,False
+C00815,Kave Mining 815,Bangladesh,Mining,False
+C00816,Arzen Metals 816,Bangladesh,Metals,False
+C00817,Prafa Mining 817,Ecuador,Mining,False
+C00818,Tabel Holdings 818,Canada,Fuel & Energy,False
+C00819,Ostfa Mining 819,Thailand,Mining,False
+C00820,Belve Fertilizers 820,Indonesia,Fertilizers,False
+C00821,Delkri Trading 821,Germany,Metals,False
+C00822,Norri Metals 822,Kenya,Metals,False
+C00823,Helve Mining 823,Peru,Mining,False
+C00824,Kribel Mining 824,Peru,Mining,False
+C00825,Lobel Works 825,New Zealand,Fuel & Energy,False
+C00826,Monri Holdings 826,Bangladesh,Fuel & Energy,False
+C00827,Torsa Metals 827,Canada,Metals,False
+C00828,Helmon Industries 828,Ukraine,Mining,False
+C00829,Belbel Holdings 829,Ecuador,Fuel & Energy,False
+C00830,Tormi Mining 830,Kenya,Mining,False
+C00831,Arpra Chemicals 831,Bangladesh,Chemicals,False
+C00832,Lopra Metals 832,Canada,Metals,False
+C00833,Delfa Industries 833,Vietnam,Mining,False
+C00834,Anco Supply 834,Spain,Fuel & Energy,False
+C00835,Lopra Group 835,Ecuador,Chemicals,False
+C00836,Monta Fuel 836,Ukraine,Fuel & Energy,False
+C00837,Zenta Forestry 837,Ukraine,Forestry,False
+C00838,Zenost Industries 838,Germany,Fuel & Energy,False
+C00839,Belzen Holdings 839,Canada,Mining,False
+C00840,Belar Chemicals 840,Thailand,Chemicals,False
+C00841,Argra Metals 841,Ukraine,Metals,False
+C00842,Monhel Fuel 842,Brazil,Fuel & Energy,False
+C00843,Torco Fuel 843,Poland,Fuel & Energy,False
+C00844,Sabel Group 844,Brazil,Mining,False
+C00845,Krikri Chemicals 845,Chile,Chemicals,False
+C00846,Vegra Holdings 846,Morocco,Mining,False
+C00847,Lunmi Industries 847,South Africa,Chemicals,False
+C00848,Zenan Mining 848,Canada,Mining,False
+C00849,Lunpra Supply 849,Egypt,Metals,False
+C00850,Lungra Works 850,Turkey,Fuel & Energy,False
+C00851,Ardel Mining 851,Ireland,Mining,False
+C00852,Milo Fuel 852,Egypt,Fuel & Energy,False
+C00853,Ostve Industries 853,Denmark,Mining,False
+C00854,Krika Mining 854,Malaysia,Mining,False
+C00855,Copra Fuel 855,France,Fuel & Energy,False
+C00856,Kalun Works 856,Morocco,Chemicals,False
+C00857,Zenzen Plastics 857,Kenya,Plastics,False
+C00858,Krian Metals 858,Russia,Metals,False
+C00859,Kaka Fuel 859,Ecuador,Fuel & Energy,False
+C00860,Veve Supply 860,Australia,Metals,False
+C00861,Takri Mining 861,Vietnam,Mining,False
+C00862,Ostgra Fuel 862,United Kingdom,Fuel & Energy,False
+C00863,Sabel Trading 863,Morocco,Chemicals,False
+C00864,Delfa Metals 864,Turkey,Metals,False
+C00865,Rikri Fuel 865,Ghana,Fuel & Energy,False
+C00866,Zenlun Works 866,United Kingdom,Fuel & Energy,False
+C00867,Zentor Fuel 867,Peru,Fuel & Energy,False
+C00868,Lotor Fuel 868,United States,Fuel & Energy,False
+C00869,Kaka Mining 869,Ukraine,Mining,False
+C00870,Torhel Plastics 870,China,Plastics,False
+C00871,Grakri Chemicals 871,New Zealand,Chemicals,False
+C00872,Delzen Chemicals 872,Germany,Chemicals,False
+C00873,Lungra Fuel 873,Ireland,Fuel & Energy,False
+C00874,Velo Metals 874,Russia,Metals,False
+C00875,Norhel Mining 875,South Korea,Mining,False
+C00876,Ostlo Supply 876,Brazil,Mining,False
+C00877,Normi Metals 877,United States,Metals,False
+C00878,Norpra Industries 878,China,Fuel & Energy,False
+C00879,Norta Metals 879,New Zealand,Metals,False
+C00880,Rinor Group 880,Malaysia,Fuel & Energy,False
+C00881,Delka Fertilizers 881,Australia,Fertilizers,False
+C00882,Krita Fuel 882,Russia,Fuel & Energy,False
+C00883,Arbel Works 883,Brazil,Mining,False
+C00884,Ostka Supply 884,Morocco,Fuel & Energy,False
+C00885,Kami Fertilizers 885,Norway,Fertilizers,False
+C00886,Tagra Mining 886,New Zealand,Mining,False
+C00887,Ostpra Industries 887,Turkey,Chemicals,False
+C00888,Milo Mining 888,Ukraine,Mining,False
+C00889,Deldel Fertilizers 889,Netherlands,Fertilizers,False
+C00890,Sazen Mining 890,Mexico,Mining,False
+C00891,Anka Industries 891,South Korea,Fuel & Energy,False
+C00892,Krita Group 892,Ghana,Mining,False
+C00893,Fakri Fuel 893,Ghana,Fuel & Energy,False
+C00894,Sazen Works 894,Chile,Fuel & Energy,False
+C00895,Mondel Trading 895,Argentina,Fuel & Energy,False
+C00896,Annor Holdings 896,Peru,Mining,False
+C00897,Bellun Mining 897,Italy,Mining,False
+C00898,Lunost Group 898,Sweden,Fuel & Energy,False
+C00899,Delzen Mining 899,Japan,Mining,False
+C00900,Gralo Metals 900,Germany,Metals,False
+C00901,Norlun Group 901,Ghana,Fuel & Energy,False
+C00902,Fagra Mining 902,Russia,Mining,False
+C00903,Norvi Supply 903,Brazil,Mining,False
+C00904,Torta Holdings 904,Spain,Mining,False
+C00905,Lunbel Works 905,Vietnam,Fertilizers,False
+C00906,Grami Mining 906,Ecuador,Mining,False
+C00907,Rimon Forestry 907,Ukraine,Forestry,False
+C00908,Tata Mining 908,Netherlands,Mining,False
+C00909,Grata Plastics 909,Ghana,Plastics,False
+C00910,Krilun Metals 910,Brazil,Metals,False
+C00911,Vevi Supply 911,China,Mining,False
+C00912,Falun Works 912,Ecuador,Fertilizers,False
+C00913,Helkri Works 913,United States,Fuel & Energy,False
+C00914,Sator Industries 914,Ireland,Metals,False
+C00915,Toran Industries 915,China,Metals,False
+C00916,Belta Supply 916,Germany,Fuel & Energy,False
+C00917,Mico Chemicals 917,Indonesia,Chemicals,False
+C00918,Ridel Mining 918,Thailand,Mining,False
+C00919,Torka Trading 919,Ireland,Fuel & Energy,False
+C00920,Fata Holdings 920,India,Fuel & Energy,False
+C00921,Miri Mining 921,Australia,Mining,False
+C00922,Rika Fuel 922,New Zealand,Fuel & Energy,False
+C00923,Vevi Holdings 923,China,Fuel & Energy,False
+C00924,Delri Fuel 924,Taiwan,Fuel & Energy,False
+C00925,Riri Fuel 925,Indonesia,Fuel & Energy,False
+C00926,Fator Chemicals 926,Canada,Chemicals,False
+C00927,Torsa Metals 927,New Zealand,Metals,False
+C00928,Prator Fuel 928,Japan,Fuel & Energy,False
+C00929,Norlun Fuel 929,Egypt,Fuel & Energy,False
+C00930,Norkri Metals 930,Italy,Metals,False
+C00931,Mibel Fuel 931,Canada,Fuel & Energy,False
+C00932,Kami Trading 932,Morocco,Fuel & Energy,False
+C00933,Cobel Group 933,Chile,Metals,False
+C00934,Torar Metals 934,Denmark,Metals,False
+C00935,Tari Chemicals 935,Japan,Chemicals,False
+C00936,Torpra Mining 936,Thailand,Mining,False
+C00937,Deltor Trading 937,Indonesia,Chemicals,False
+C00938,Viost Industries 938,Norway,Metals,False
+C00939,Belmi Works 939,Russia,Fuel & Energy,False
+C00940,Salo Supply 940,Turkey,Mining,False
+C00941,Kriar Trading 941,Peru,Fuel & Energy,False
+C00942,Pralo Works 942,Canada,Mining,False
+C00943,Mihel Mining 943,Ukraine,Mining,False
+C00944,Colo Industries 944,Brazil,Chemicals,False
+C00945,Tordel Mining 945,Colombia,Mining,False
+C00946,Nornor Holdings 946,United States,Chemicals,False
+C00947,Lolo Plastics 947,Brazil,Plastics,False
+C00948,Lolo Chemicals 948,India,Chemicals,False
+C00949,Copra Mining 949,Taiwan,Mining,False
+C00950,Coost Fuel 950,South Africa,Fuel & Energy,False
+C00951,Tornor Fuel 951,Poland,Fuel & Energy,False
+C00952,Tordel Mining 952,Argentina,Mining,False
+C00953,Visa Chemicals 953,Mexico,Chemicals,False
+C00954,Lolo Works 954,China,Mining,False
+C00955,Lunmi Metals 955,South Korea,Metals,False
+C00956,Vive Plastics 956,Russia,Plastics,False
+C00957,Monta Chemicals 957,Ghana,Chemicals,False
+C00958,Sata Mining 958,Peru,Mining,False
+C00959,Lunost Plastics 959,Japan,Plastics,False
+C00960,Norost Fuel 960,Poland,Fuel & Energy,False
+C00961,Taar Holdings 961,Russia,Mining,False
+C00962,Migra Fuel 962,Argentina,Fuel & Energy,False
+C00963,Monkri Holdings 963,Netherlands,Metals,False
+C00964,Tazen Metals 964,Denmark,Metals,False
+C00965,Vigra Metals 965,India,Metals,False
+C00966,Kadel Fuel 966,Ireland,Fuel & Energy,False
+C00967,Artor Industries 967,Norway,Fuel & Energy,False
+C00968,Graost Industries 968,South Africa,Mining,False
+C00969,Grator Fuel 969,Italy,Fuel & Energy,False
+C00970,Belgra Metals 970,Russia,Metals,False
+C00971,Norfa Chemicals 971,Argentina,Chemicals,False
+C00972,Saost Fuel 972,Indonesia,Fuel & Energy,False
+C00973,Arnor Trading 973,Kenya,Fuel & Energy,False
+C00974,Faar Works 974,South Korea,Chemicals,False
+C00975,Ardel Fuel 975,Norway,Fuel & Energy,False
+C00976,Arost Group 976,Japan,Fertilizers,False
+C00977,Arve Group 977,Colombia,Fuel & Energy,False
+C00978,Cori Trading 978,Bangladesh,Fertilizers,False
+C00979,Zenmon Works 979,United Kingdom,Chemicals,False
+C00980,Milun Mining 980,China,Mining,False
+C00981,Kripra Trading 981,Italy,Fuel & Energy,False
+C00982,Faka Holdings 982,Denmark,Mining,False
+C00983,Vean Chemicals 983,Turkey,Chemicals,False
+C00984,Taka Mining 984,China,Mining,False
+C00985,Arlun Works 985,Australia,Metals,False
+C00986,Krigra Metals 986,Canada,Metals,False
+C00987,Anri Mining 987,Kenya,Mining,False
+C00988,Belmon Industries 988,Italy,Mining,False
+C00989,Viri Chemicals 989,China,Chemicals,False
+C00990,Delan Mining 990,Ecuador,Mining,False
+C00991,Rita Supply 991,Malaysia,Metals,False
+C00992,Miar Holdings 992,France,Mining,False
+C00993,Kaan Holdings 993,France,Fuel & Energy,False
+F2,Alpenmarkt,Germany,Grocery Retail,True
+C00995,Lunta Meat 995,France,Meat Processing,False
+C00996,Prabel Beverages 996,Thailand,Beverages,False
+C00997,Beldel Fresh 997,Chile,Fresh Produce,False
+C00998,Krimon Dairy 998,Chile,Dairy,False
+C00999,Kator Dairy 999,Indonesia,Dairy,False
+C01000,Milun Personal 000,Indonesia,Personal Care,False
+C01001,Kritor Bakery 001,Australia,Bakery,False
+C01002,Cogra Beverages 002,Egypt,Beverages,False
+C01003,Cogra Packaging 003,Ecuador,Packaging,False
+C01004,Monlo Fresh 004,Peru,Fresh Produce,False
+C01005,Graan Personal 005,Denmark,Personal Care,False
+C01006,Vian Works 006,Canada,Meat Processing,False
+C01007,Ostdel Works 007,Thailand,Logistics,False
+C01008,Belnor Group 008,South Korea,Food Processing,False
+C01009,Ostlo Food 009,Australia,Food Processing,False
+C01010,Ostnor Supply 010,Egypt,Dairy,False
+C01011,Graan Industries 011,France,Dairy,False
+C01012,Tabel Meat 012,New Zealand,Meat Processing,False
+C01013,Conor Supply 013,Kenya,Agriculture,False
+C01014,Torpra Agriculture 014,South Korea,Agriculture,False
+C01015,Kavi Animal 015,Ireland,Animal Feed,False
+C01016,Arbel Animal 016,Turkey,Animal Feed,False
+C01017,Kaan Agriculture 017,Bangladesh,Agriculture,False
+C01018,Ostbel Metals 018,Denmark,Metals,False
+C01019,Anbel Packaging 019,Egypt,Packaging,False
+C01020,Zenhel Fertilizers 020,Chile,Fertilizers,False
+C01021,Tave Chemicals 021,Norway,Chemicals,False
+C01022,Lomon Animal 022,Argentina,Animal Feed,False
+C01023,Anhel Fuel 023,Spain,Fuel & Energy,False
+C01024,Monzen Metals 024,Spain,Metals,False
+C01025,Prata Animal 025,Chile,Animal Feed,False
+C01026,Comi Holdings 026,Ecuador,Agriculture,False
+C01027,Grata Animal 027,Brazil,Animal Feed,False
+C01028,Tabel Agriculture 028,Poland,Agriculture,False
+C01029,Sadel Logistics 029,Russia,Logistics,False
+C01030,Arar Packaging 030,Egypt,Packaging,False
+C01031,Beltor Edible 031,Taiwan,Edible Oils,False
+C01032,Anta Packaging 032,Ireland,Packaging,False
+C01033,Cozen Supply 033,Morocco,Agriculture,False
+C01034,Torbel Works 034,Japan,Metals,False
+C01035,Zengra Food 035,Indonesia,Food Ingredients,False
+C01036,Fabel Packaging 036,United Kingdom,Packaging,False
+C01037,Anve Paper 037,United States,Paper & Pulp,False
+C01038,Viost Paper 038,Kenya,Paper & Pulp,False
+C01039,Belan Fertilizers 039,New Zealand,Fertilizers,False
+C01040,Gragra Trading 040,Turkey,Fuel & Energy,False
+C01041,Grazen Agriculture 041,India,Agriculture,False
+C01042,Sakri Paper 042,France,Paper & Pulp,False
+C01043,Helkri Packaging 043,Argentina,Packaging,False
+C01044,Kaco Agriculture 044,Japan,Agriculture,False
+C01045,Losa Holdings 045,Ecuador,Packaging,False
+C01046,Fata Group 046,Netherlands,Glass,False
+C01047,Ankri Group 047,New Zealand,Fertilizers,False
+C01048,Arsa Agriculture 048,Spain,Agriculture,False
+C01049,Pranor Chemicals 049,New Zealand,Chemicals,False
+C01050,Artor Sugar 050,Morocco,Sugar,False
+C01051,Logra Trading 051,Netherlands,Chemicals,False
+C01052,Loco Group 052,France,Packaging,False
+C01053,Milo Industries 053,South Africa,Packaging,False
+C01054,Tormon Glass 054,Mexico,Glass,False
+C01055,Kaka Plastics 055,Thailand,Plastics,False
+C01056,Norco Agriculture 056,Australia,Agriculture,False
+C01057,Norbel Logistics 057,United Kingdom,Logistics,False
+C01058,Vipra Paper 058,New Zealand,Paper & Pulp,False
+C01059,Cobel Packaging 059,Spain,Packaging,False
+C01060,Helri Packaging 060,Peru,Packaging,False
+C01061,Vemon Animal 061,Turkey,Animal Feed,False
+C01062,Gralun Animal 062,Kenya,Animal Feed,False
+C01063,Cokri Packaging 063,United Kingdom,Packaging,False
+C01064,Milun Works 064,United States,Packaging,False
+C01065,Monsa Trading 065,Canada,Chemicals,False
+C01066,Vizen Agriculture 066,Canada,Agriculture,False
+C01067,Helmon Packaging 067,Mexico,Packaging,False
+C01068,Anhel Plastics 068,Thailand,Plastics,False
+C01069,Arve Trading 069,Taiwan,Logistics,False
+C01070,Mipra Plastics 070,Australia,Plastics,False
+C01071,Belan Holdings 071,South Korea,Logistics,False
+C01072,Zenco Fuel 072,Germany,Fuel & Energy,False
+C01073,Faan Food 073,India,Food Ingredients,False
+C01074,Sagra Agriculture 074,Colombia,Agriculture,False
+C01075,Ostkri Animal 075,Poland,Animal Feed,False
+C01076,Helfa Animal 076,Colombia,Animal Feed,False
+C01077,Cota Agriculture 077,Bangladesh,Agriculture,False
+C01078,Tavi Agriculture 078,Kenya,Agriculture,False
+C01079,Kazen Holdings 079,Australia,Edible Oils,False
+C01080,Cori Glass 080,United Kingdom,Glass,False
+C01081,Tami Packaging 081,Taiwan,Packaging,False
+C01082,Mika Packaging 082,Egypt,Packaging,False
+C01083,Grari Group 083,Bangladesh,Paper & Pulp,False
+C01084,Rikri Agriculture 084,Netherlands,Agriculture,False
+C01085,Cohel Edible 085,United Kingdom,Edible Oils,False
+C01086,Ostdel Animal 086,Germany,Animal Feed,False
+C01087,Praost Industries 087,United States,Agriculture,False
+C01088,Monlun Paper 088,Turkey,Paper & Pulp,False
+C01089,Mipra Agriculture 089,China,Agriculture,False
+C01090,Anri Holdings 090,Russia,Animal Feed,False
+C01091,Gragra Works 091,Ukraine,Packaging,False
+C01092,Rihel Group 092,New Zealand,Agriculture,False
+C01093,Belmi Trading 093,Argentina,Agriculture,False
+C01094,Krimi Packaging 094,Russia,Packaging,False
+C01095,Mimon Agriculture 095,Vietnam,Agriculture,False
+C01096,Grami Paper 096,Netherlands,Paper & Pulp,False
+C01097,Torpra Group 097,South Korea,Metals,False
+C01098,Coka Holdings 098,South Korea,Agriculture,False
+C01099,Ostsa Chemicals 099,Ghana,Chemicals,False
+C01100,Delta Food 100,Bangladesh,Food Ingredients,False
+C01101,Salo Agriculture 101,Ukraine,Agriculture,False
+C01102,Krilo Chemicals 102,Malaysia,Chemicals,False
+C01103,Norkri Supply 103,Ukraine,Fertilizers,False
+C01104,Anost Chemicals 104,Australia,Chemicals,False
+C01105,Osthel Agriculture 105,Denmark,Agriculture,False
+C01106,Miost Trading 106,South Korea,Chemicals,False
+C01107,Grabel Holdings 107,Colombia,Fuel & Energy,False
+C01108,Tami Mining 108,Malaysia,Mining,False
+C01109,Praost Paper 109,Egypt,Paper & Pulp,False
+C01110,Prazen Fuel 110,Norway,Fuel & Energy,False
+C01111,Norsa Trading 111,Indonesia,Chemicals,False
+C01112,Grazen Fuel 112,Italy,Fuel & Energy,False
+C01113,Cofa Fuel 113,Australia,Fuel & Energy,False
+C01114,Krikri Mining 114,Germany,Mining,False
+C01115,Lunka Metals 115,Japan,Metals,False
+C01116,Fari Trading 116,Spain,Agriculture,False
+C01117,Grazen Chemicals 117,Morocco,Chemicals,False
+C01118,Arvi Plastics 118,Peru,Plastics,False
+C01119,Norar Plastics 119,Mexico,Plastics,False
+C01120,Arost Chemicals 120,France,Chemicals,False
+C01121,Vico Metals 121,Argentina,Metals,False
+C01122,Saan Supply 122,Ecuador,Forestry,False
+C01123,Angra Chemicals 123,China,Chemicals,False
+C01124,Vepra Fertilizers 124,Ecuador,Fertilizers,False
+C01125,Fabel Works 125,United States,Mining,False
+C01126,Tari Holdings 126,Italy,Fertilizers,False
+C01127,Grave Fertilizers 127,United States,Fertilizers,False
+C01128,Copra Fuel 128,India,Fuel & Energy,False
+C01129,Helkri Fuel 129,Taiwan,Fuel & Energy,False
+C01130,Prapra Fertilizers 130,Poland,Fertilizers,False
+C01131,Vevi Paper 131,Russia,Paper & Pulp,False
+C01132,Fafa Industries 132,Brazil,Agriculture,False
+C01133,Helhel Fuel 133,Taiwan,Fuel & Energy,False
+C01134,Faco Metals 134,United Kingdom,Metals,False
+C01135,Mive Works 135,New Zealand,Fuel & Energy,False
+C01136,Prahel Trading 136,Peru,Chemicals,False
+C01137,Kakri Fuel 137,China,Fuel & Energy,False
+C01138,Toran Chemicals 138,South Africa,Chemicals,False
+C01139,Delve Trading 139,Mexico,Fuel & Energy,False
+C01140,Tormi Plastics 140,Netherlands,Plastics,False
+C01141,Cotor Holdings 141,Mexico,Forestry,False
+C01142,Rivi Group 142,Chile,Paper & Pulp,False
+C01143,Sata Industries 143,Egypt,Plastics,False
+C01144,Cotor Chemicals 144,India,Chemicals,False
+C01145,Hellun Supply 145,Denmark,Agriculture,False
+C01146,Veka Fuel 146,Norway,Fuel & Energy,False
+C01147,Mita Metals 147,Egypt,Metals,False
+C01148,Sanor Works 148,Ghana,Fuel & Energy,False
+C01149,Tormon Trading 149,Bangladesh,Chemicals,False
+C01150,Vive Electronics 150,South Africa,Electronics,False
+C01151,Prave Industries 151,Russia,Mining,False
+C01152,Covi Supply 152,Peru,Chemicals,False
+C01153,Luntor Trading 153,India,Fertilizers,False
+C01154,Osttor Industries 154,Sweden,Fertilizers,False
+C01155,Delka Supply 155,Bangladesh,Fuel & Energy,False
+C01156,Monhel Chemicals 156,Russia,Chemicals,False
+C01157,Gravi Agriculture 157,Australia,Agriculture,False
+C01158,Viost Fuel 158,Norway,Fuel & Energy,False
+C01159,Talo Works 159,Colombia,Fertilizers,False
+C01160,Loost Fuel 160,Turkey,Fuel & Energy,False
+C01161,Lofa Holdings 161,Thailand,Chemicals,False
+C01162,Nordel Mining 162,Sweden,Mining,False
+C01163,Grami Works 163,Norway,Metals,False
+C01164,Delnor Supply 164,Netherlands,Chemicals,False
+C01165,Zenan Forestry 165,Japan,Forestry,False
+C01166,Venor Fuel 166,Poland,Fuel & Energy,False
+C01167,Helbel Industries 167,Turkey,Agriculture,False
+C01168,Lunfa Trading 168,Taiwan,Agriculture,False
+C01169,Vebel Supply 169,South Korea,Mining,False
+C01170,Vikri Group 170,Kenya,Chemicals,False
+C01171,Vipra Fuel 171,South Africa,Fuel & Energy,False
+C01172,Kagra Supply 172,Spain,Chemicals,False
+C01173,Samon Chemicals 173,Netherlands,Chemicals,False
+C01174,Rinor Holdings 174,Denmark,Fertilizers,False
+C01175,Ostzen Fuel 175,Canada,Fuel & Energy,False
+C01176,Lunar Trading 176,Italy,Chemicals,False
+C01177,Anve Chemicals 177,Bangladesh,Chemicals,False
+C01178,Monhel Fuel 178,New Zealand,Fuel & Energy,False
+C01179,Conor Mining 179,Peru,Mining,False
+C01180,Faost Agriculture 180,France,Agriculture,False
+C01181,Monan Group 181,Spain,Agriculture,False
+C01182,Helvi Holdings 182,Taiwan,Fertilizers,False
+C01183,Belpra Industries 183,Kenya,Fuel & Energy,False
+C01184,Vemon Metals 184,South Africa,Metals,False
+C01185,Lunbel Trading 185,Egypt,Agriculture,False
+C01186,Ostfa Chemicals 186,Vietnam,Chemicals,False
+C01187,Torbel Fertilizers 187,Japan,Fertilizers,False
+C01188,Gravi Supply 188,Peru,Fertilizers,False
+C01189,Vemi Works 189,Italy,Mining,False
+C01190,Ostvi Fuel 190,Spain,Fuel & Energy,False
+C01191,Anar Chemicals 191,Denmark,Chemicals,False
+C01192,Norpra Holdings 192,Ecuador,Mining,False
+C01193,Ostri Industries 193,Turkey,Fertilizers,False
+C01194,Grafa Fuel 194,Morocco,Fuel & Energy,False
+C01195,Helgra Metals 195,Poland,Metals,False
+C01196,Hellun Industries 196,Chile,Chemicals,False
+C01197,Belkri Agriculture 197,Ireland,Agriculture,False
+C01198,Fata Holdings 198,Taiwan,Electronics,False
+C01199,Prakri Plastics 199,Netherlands,Plastics,False
+C01200,Mimon Industries 200,Peru,Agriculture,False
+C01201,Zenbel Paper 201,New Zealand,Paper & Pulp,False
+C01202,Cogra Fuel 202,Ukraine,Fuel & Energy,False
+C01203,Norzen Industries 203,Bangladesh,Fertilizers,False
+C01204,Delnor Mining 204,India,Mining,False
+C01205,Normi Agriculture 205,Malaysia,Agriculture,False
+C01206,Migra Paper 206,Denmark,Paper & Pulp,False
+C01207,Arhel Supply 207,Japan,Chemicals,False
+C01208,Losa Fuel 208,Poland,Fuel & Energy,False
+C01209,Kaka Fertilizers 209,Sweden,Fertilizers,False
+C01210,Vezen Fuel 210,Sweden,Fuel & Energy,False
+C01211,Grahel Mining 211,Morocco,Mining,False
+C01212,Sari Fertilizers 212,Indonesia,Fertilizers,False
+C01213,Riri Metals 213,United States,Metals,False
+C01214,Delnor Paper 214,Peru,Paper & Pulp,False
+C01215,Belka Works 215,United Kingdom,Paper & Pulp,False
+C01216,Vekri Fuel 216,Poland,Fuel & Energy,False
+C01217,Ansa Group 217,Ukraine,Fuel & Energy,False
+C01218,Delnor Fertilizers 218,Malaysia,Fertilizers,False
+C01219,Lolo Group 219,Morocco,Metals,False
+C01220,Taan Metals 220,Mexico,Metals,False
+C01221,Cohel Fuel 221,Netherlands,Fuel & Energy,False
+C01222,Vebel Fuel 222,Argentina,Fuel & Energy,False
+C01223,Pradel Metals 223,Ghana,Metals,False
+C01224,Kaan Supply 224,Indonesia,Fuel & Energy,False
+C01225,Kata Chemicals 225,India,Chemicals,False
+C01226,Talun Fuel 226,Canada,Fuel & Energy,False
+C01227,Zenpra Electronics 227,Japan,Electronics,False
+C01228,Fafa Supply 228,South Africa,Metals,False
+C01229,Praost Agriculture 229,Russia,Agriculture,False
+C01230,Ostfa Paper 230,Peru,Paper & Pulp,False
+C01231,Norlo Chemicals 231,United Kingdom,Chemicals,False
+C01232,Mibel Industries 232,India,Agriculture,False
+C01233,Vihel Industries 233,Netherlands,Fuel & Energy,False
+C01234,Sanor Paper 234,Ecuador,Paper & Pulp,False
+C01235,Lota Supply 235,New Zealand,Metals,False
+C01236,Kari Mining 236,Brazil,Mining,False
+C01237,Ostve Chemicals 237,Australia,Chemicals,False
+C01238,Zensa Fuel 238,New Zealand,Fuel & Energy,False
+C01239,Anlo Supply 239,Russia,Chemicals,False
+C01240,Gradel Fuel 240,Poland,Fuel & Energy,False
+C01241,Monan Mining 241,Spain,Mining,False
+C01242,Delvi Works 242,Morocco,Fertilizers,False
+C01243,Fabel Holdings 243,Spain,Chemicals,False
+C01244,Krigra Chemicals 244,Bangladesh,Chemicals,False
+C01245,Covi Agriculture 245,Thailand,Agriculture,False
+C01246,Grapra Group 246,Malaysia,Chemicals,False
+C01247,Codel Chemicals 247,United States,Chemicals,False
+C01248,Saka Fuel 248,Russia,Fuel & Energy,False
+C01249,Anlo Group 249,Bangladesh,Metals,False
+C01250,Prari Metals 250,Brazil,Metals,False
+C01251,Granor Chemicals 251,United States,Chemicals,False
+C01252,Rizen Agriculture 252,Sweden,Agriculture,False
+C01253,Helpra Industries 253,Japan,Mining,False
+C01254,Rian Trading 254,Morocco,Fuel & Energy,False
+C01255,Fagra Forestry 255,Malaysia,Forestry,False
+C01256,Delbel Industries 256,Colombia,Fuel & Energy,False
+C01257,Sadel Metals 257,Argentina,Metals,False
+C01258,Grami Group 258,Denmark,Fertilizers,False
+C01259,Fadel Trading 259,Italy,Chemicals,False
+C01260,Delhel Trading 260,China,Chemicals,False
+C01261,Famon Holdings 261,Turkey,Plastics,False
+C01262,Tormon Group 262,New Zealand,Agriculture,False
+C01263,Delnor Fertilizers 263,Germany,Fertilizers,False
+C01264,Cotor Group 264,Taiwan,Forestry,False
+C01265,Coka Chemicals 265,India,Chemicals,False
+C01266,Ridel Group 266,Sweden,Fertilizers,False
+C01267,Ostan Mining 267,Kenya,Mining,False
+C01268,Fasa Agriculture 268,New Zealand,Agriculture,False
+C01269,Mive Chemicals 269,Chile,Chemicals,False
+C01270,Saar Fuel 270,China,Fuel & Energy,False
+C01271,Kriri Holdings 271,Denmark,Fertilizers,False
+C01272,Save Group 272,Taiwan,Mining,False
+C01273,Gravi Paper 273,Netherlands,Paper & Pulp,False
+C01274,Andel Metals 274,Kenya,Metals,False
+C01275,Mive Supply 275,Bangladesh,Fuel & Energy,False
+C01276,Krigra Forestry 276,New Zealand,Forestry,False
+C01277,Lolo Supply 277,Ecuador,Fuel & Energy,False
+C01278,Saost Metals 278,Taiwan,Metals,False
+C01279,Prapra Chemicals 279,Germany,Chemicals,False
+C01280,Norri Mining 280,Ghana,Mining,False
+C01281,Krizen Fuel 281,Australia,Fuel & Energy,False
+C01282,Samon Metals 282,Canada,Metals,False
+C01283,Pravi Chemicals 283,Ecuador,Chemicals,False
+C01284,Torvi Chemicals 284,Germany,Chemicals,False
+C01285,Lunlo Group 285,France,Chemicals,False
+C01286,Love Industries 286,Brazil,Fuel & Energy,False
+C01287,Tavi Supply 287,Russia,Fuel & Energy,False
+C01288,Arkri Industries 288,Ghana,Fertilizers,False
+C01289,Rizen Group 289,Ukraine,Paper & Pulp,False
+C01290,Arar Agriculture 290,Denmark,Agriculture,False
+C01291,Armi Industries 291,Ukraine,Fuel & Energy,False
+C01292,Gralo Group 292,Brazil,Fuel & Energy,False
+C01293,Saka Industries 293,Kenya,Forestry,False
+C01294,Tormon Works 294,South Korea,Forestry,False
+C01295,Prata Supply 295,New Zealand,Mining,False
+C01296,Fadel Fertilizers 296,Turkey,Fertilizers,False
+C01297,Norco Fuel 297,Netherlands,Fuel & Energy,False
+C01298,Zenlun Fertilizers 298,Turkey,Fertilizers,False
+C01299,Tagra Supply 299,South Africa,Chemicals,False
+C01300,Conor Paper 300,Egypt,Paper & Pulp,False
+C01301,Pralo Metals 301,Denmark,Metals,False
+C01302,Lodel Mining 302,Japan,Mining,False
+C01303,Vifa Chemicals 303,Ghana,Chemicals,False
+C01304,Loar Supply 304,Mexico,Plastics,False
+C01305,Tadel Fuel 305,China,Fuel & Energy,False
+C01306,Salo Trading 306,Vietnam,Plastics,False
+C01307,Coka Fuel 307,United States,Fuel & Energy,False
+C01308,Vebel Works 308,Ecuador,Plastics,False
+C01309,Monzen Supply 309,France,Fuel & Energy,False
+C01310,Tami Fuel 310,Taiwan,Fuel & Energy,False
+C01311,Delvi Works 311,Argentina,Chemicals,False
+C01312,Salun Fuel 312,Kenya,Fuel & Energy,False
+C01313,Torka Metals 313,Morocco,Metals,False
+C01314,Delve Trading 314,Canada,Agriculture,False
+C01315,Krive Industries 315,Japan,Plastics,False
+C01316,Arzen Paper 316,Italy,Paper & Pulp,False
+C01317,Arco Chemicals 317,Ireland,Chemicals,False
+C01318,Tasa Fuel 318,Brazil,Fuel & Energy,False
+C01319,Norlun Trading 319,Spain,Paper & Pulp,False
+C01320,Belmon Mining 320,Turkey,Mining,False
+C01321,Belka Fuel 321,South Korea,Fuel & Energy,False
+C01322,Belpra Group 322,Ireland,Fuel & Energy,False
+C01323,Lunvi Fuel 323,Japan,Fuel & Energy,False
+C01324,Torbel Supply 324,Japan,Fuel & Energy,False
+C01325,Sadel Chemicals 325,South Africa,Chemicals,False
+C01326,Torlo Chemicals 326,United States,Chemicals,False
+C01327,Delco Works 327,New Zealand,Chemicals,False
+C01328,Pradel Chemicals 328,France,Chemicals,False
+C01329,Belkri Fuel 329,Taiwan,Fuel & Energy,False
+C01330,Anmi Agriculture 330,Netherlands,Agriculture,False
+C01331,Delco Agriculture 331,South Africa,Agriculture,False
+C01332,Rihel Group 332,Denmark,Fuel & Energy,False
+C01333,Belan Holdings 333,Ukraine,Chemicals,False
+C01334,Cogra Fuel 334,India,Fuel & Energy,False
+C01335,Vezen Fuel 335,South Africa,Fuel & Energy,False
+C01336,Fami Paper 336,New Zealand,Paper & Pulp,False
+C01337,Ostco Supply 337,Mexico,Agriculture,False
+C01338,Savi Agriculture 338,India,Agriculture,False
+C01339,Coco Mining 339,Colombia,Mining,False
+C01340,Codel Supply 340,India,Fuel & Energy,False
+C01341,Torlo Industries 341,Denmark,Chemicals,False
+C01342,Zenco Supply 342,Ghana,Chemicals,False
+C01343,Zenfa Works 343,Chile,Chemicals,False
+C01344,Anlo Chemicals 344,United Kingdom,Chemicals,False
+C01345,Tortor Metals 345,Ghana,Metals,False
+C01346,Zendel Fuel 346,Vietnam,Fuel & Energy,False
+C01347,Miri Chemicals 347,Russia,Chemicals,False
+C01348,Zenco Group 348,Thailand,Mining,False
+C01349,Vive Fuel 349,Japan,Fuel & Energy,False
+C01350,Anhel Fuel 350,Colombia,Fuel & Energy,False
+C01351,Anbel Mining 351,Turkey,Mining,False
+C01352,Kave Chemicals 352,Ghana,Chemicals,False
+C01353,Ostkri Group 353,Germany,Fuel & Energy,False
+C01354,Fave Chemicals 354,United States,Chemicals,False
+C01355,Ridel Agriculture 355,Norway,Agriculture,False
+C01356,Vifa Supply 356,New Zealand,Fuel & Energy,False
+C01357,Krive Supply 357,Japan,Mining,False
+C01358,Belzen Fuel 358,Brazil,Fuel & Energy,False
+C01359,Belan Mining 359,United Kingdom,Mining,False
+C01360,Anka Industries 360,South Africa,Fuel & Energy,False
+C01361,Vebel Chemicals 361,Mexico,Chemicals,False
+C01362,Helta Mining 362,South Korea,Mining,False
+C01363,Lota Fertilizers 363,Vietnam,Fertilizers,False
+C01364,Osthel Fuel 364,China,Fuel & Energy,False
+C01365,Sata Paper 365,Japan,Paper & Pulp,False
+C01366,Grami Works 366,Indonesia,Fertilizers,False
+C01367,Coost Fuel 367,Egypt,Fuel & Energy,False
+C01368,Arsa Metals 368,Morocco,Metals,False
+C01369,Delmon Works 369,South Africa,Agriculture,False
+C01370,Belbel Metals 370,India,Metals,False
+C01371,Monmi Forestry 371,Italy,Forestry,False
+C01372,Gralun Mining 372,United States,Mining,False
+C01373,Grabel Works 373,Denmark,Fertilizers,False
+C01374,Kavi Supply 374,Taiwan,Electronics,False
+C01375,Lozen Mining 375,Russia,Mining,False
+C01376,Ritor Chemicals 376,Vietnam,Chemicals,False
+C01377,Grari Trading 377,Thailand,Paper & Pulp,False
+C01378,Anar Chemicals 378,Ghana,Chemicals,False
+C01379,Zenpra Fuel 379,Morocco,Fuel & Energy,False
+C01380,Tata Supply 380,Poland,Fuel & Energy,False
+C01381,Arlun Metals 381,Spain,Metals,False
+C01382,Prafa Agriculture 382,United States,Agriculture,False
+C01383,Sahel Group 383,Taiwan,Fuel & Energy,False
+C01384,Lohel Trading 384,South Korea,Fuel & Energy,False
+C01385,Colun Fuel 385,Italy,Fuel & Energy,False
+C01386,Norvi Fuel 386,Ghana,Fuel & Energy,False
+C01387,Monlun Chemicals 387,China,Chemicals,False
+C01388,Kari Fuel 388,Spain,Fuel & Energy,False
+C01389,Belhel Trading 389,Poland,Mining,False
+C01390,Helmon Trading 390,Ukraine,Fuel & Energy,False
+C01391,Zendel Mining 391,Ireland,Mining,False
+C01392,Kamon Holdings 392,Australia,Fuel & Energy,False
+C01393,Vive Chemicals 393,Vietnam,Chemicals,False
+C01394,Zenzen Fuel 394,Italy,Fuel & Energy,False
+C01395,Faar Fuel 395,Brazil,Fuel & Energy,False
+C01396,Fave Holdings 396,Japan,Fuel & Energy,False
+C01397,Fanor Plastics 397,Argentina,Plastics,False
+C01398,Delvi Chemicals 398,Norway,Chemicals,False
+C01399,Arar Mining 399,Argentina,Mining,False
+C01400,Kami Trading 400,Australia,Chemicals,False
+C01401,Helgra Industries 401,Brazil,Fuel & Energy,False
+C01402,Zenost Trading 402,Canada,Mining,False
+C01403,Monlun Fuel 403,United States,Fuel & Energy,False
+C01404,Kasa Industries 404,Sweden,Mining,False
+C01405,Tazen Plastics 405,Denmark,Plastics,False
+C01406,Riost Mining 406,Netherlands,Mining,False
+C01407,Ostfa Fuel 407,Ecuador,Fuel & Energy,False
+C01408,Prami Holdings 408,Colombia,Mining,False
+C01409,Lunlo Trading 409,Spain,Fuel & Energy,False
+C01410,Kasa Chemicals 410,Turkey,Chemicals,False
+C01411,Mivi Mining 411,Morocco,Mining,False
+C01412,Anta Mining 412,Indonesia,Mining,False
+C01413,Mipra Mining 413,United States,Mining,False
+C01414,Delost Mining 414,Australia,Mining,False
+C01415,Kaka Mining 415,Morocco,Mining,False
+C01416,Belzen Mining 416,Ghana,Mining,False
+C01417,Krian Fuel 417,Denmark,Fuel & Energy,False
+C01418,Vico Mining 418,Russia,Mining,False
+C01419,Torri Industries 419,Morocco,Fuel & Energy,False
+C01420,Losa Fuel 420,France,Fuel & Energy,False
+C01421,Norzen Fuel 421,Ecuador,Fuel & Energy,False
+C01422,Delost Mining 422,Spain,Mining,False
+C01423,Delan Mining 423,Italy,Mining,False
+C01424,Kalo Trading 424,Germany,Plastics,False
+C01425,Graost Metals 425,United Kingdom,Metals,False
+C01426,Takri Fuel 426,United Kingdom,Fuel & Energy,False
+C01427,Hellun Fuel 427,Morocco,Fuel & Energy,False
+C01428,Pravi Industries 428,Taiwan,Mining,False
+C01429,Monkri Fuel 429,Ireland,Fuel & Energy,False
+C01430,Zenbel Group 430,Spain,Mining,False
+C01431,Tortor Holdings 431,Colombia,Mining,False
+C01432,Zenvi Mining 432,Italy,Mining,False
+C01433,Kasa Mining 433,Morocco,Mining,False
+C01434,Zenri Fuel 434,Argentina,Fuel & Energy,False
+C01435,Krikri Industries 435,Germany,Fuel & Energy,False
+C01436,Zengra Metals 436,Mexico,Metals,False
+C01437,Colun Fuel 437,Chile,Fuel & Energy,False
+C01438,Monsa Fertilizers 438,Australia,Fertilizers,False
+C01439,Delri Trading 439,Canada,Fuel & Energy,False
+C01440,Arri Metals 440,Kenya,Metals,False
+C01441,Mizen Mining 441,Australia,Mining,False
+C01442,Vesa Fuel 442,Chile,Fuel & Energy,False
+C01443,Delsa Supply 443,India,Metals,False
+C01444,Graar Holdings 444,India,Metals,False
+C01445,Coar Mining 445,Denmark,Mining,False
+C01446,Torka Chemicals 446,Chile,Chemicals,False
+C01447,Helbel Trading 447,China,Mining,False
+C01448,Gragra Supply 448,Mexico,Mining,False
+C01449,Graco Metals 449,Thailand,Metals,False
+C01450,Monar Mining 450,New Zealand,Mining,False
+C01451,Pravi Mining 451,India,Mining,False
+C01452,Delvi Fuel 452,Indonesia,Fuel & Energy,False
+C01453,Arvi Mining 453,Netherlands,Mining,False
+C01454,Mibel Industries 454,Denmark,Fuel & Energy,False
+C01455,Faan Fuel 455,Peru,Fuel & Energy,False
+C01456,Vivi Mining 456,Germany,Mining,False
+C01457,Monta Group 457,Australia,Fuel & Energy,False
+C01458,Torost Works 458,Chile,Fertilizers,False
+C01459,Loan Works 459,Sweden,Metals,False
+C01460,Vigra Industries 460,Sweden,Fuel & Energy,False
+C01461,Sagra Supply 461,South Africa,Fertilizers,False
+C01462,Vipra Industries 462,United States,Fuel & Energy,False
+C01463,Ostka Holdings 463,Sweden,Chemicals,False
+C01464,Gramon Fuel 464,Canada,Fuel & Energy,False
+C01465,Monzen Mining 465,Japan,Mining,False
+C01466,Visa Mining 466,Netherlands,Mining,False
+C01467,Krimi Supply 467,Thailand,Chemicals,False
+C01468,Coar Chemicals 468,Malaysia,Chemicals,False
+C01469,Coco Holdings 469,New Zealand,Mining,False
+C01470,Rimi Industries 470,Peru,Fuel & Energy,False
+C01471,Tortor Trading 471,Morocco,Fuel & Energy,False
+C01472,Krisa Trading 472,South Korea,Fuel & Energy,False
+C01473,Delost Holdings 473,Russia,Mining,False
+C01474,Prafa Trading 474,New Zealand,Metals,False
+C01475,Riost Metals 475,Spain,Metals,False
+C01476,Migra Fuel 476,Mexico,Fuel & Energy,False
+C01477,Samon Fuel 477,Russia,Fuel & Energy,False
+C01478,Zenri Supply 478,Turkey,Chemicals,False
+C01479,Ostlo Fuel 479,Vietnam,Fuel & Energy,False
+C01480,Lori Mining 480,Italy,Mining,False
+C01481,Riost Forestry 481,United Kingdom,Forestry,False
+C01482,Tamon Forestry 482,India,Forestry,False
+C01483,Tamon Fuel 483,Australia,Fuel & Energy,False
+C01484,Andel Mining 484,Brazil,Mining,False
+C01485,Ostmon Metals 485,Ecuador,Metals,False
+C01486,Tanor Mining 486,Russia,Mining,False
+C01487,Belka Fuel 487,Kenya,Fuel & Energy,False
+C01488,Loka Fuel 488,Sweden,Fuel & Energy,False
+C01489,Montor Metals 489,Egypt,Metals,False
+C01490,Lodel Industries 490,Taiwan,Fuel & Energy,False
+C01491,Lunve Industries 491,Australia,Fuel & Energy,False
+C01492,Luntor Metals 492,Taiwan,Metals,False
+C01493,Famon Fuel 493,Morocco,Fuel & Energy,False
+C01494,Tari Mining 494,Ukraine,Mining,False
+C01495,Monbel Fuel 495,Turkey,Fuel & Energy,False
+C01496,Vika Group 496,Peru,Fuel & Energy,False
+C01497,Delhel Metals 497,New Zealand,Metals,False
+C01498,Delka Supply 498,India,Metals,False
+C01499,Faan Mining 499,United States,Mining,False
+C01500,Delri Industries 500,Germany,Mining,False
+C01501,Torhel Group 501,Indonesia,Fuel & Energy,False
+C01502,Beldel Fuel 502,Sweden,Fuel & Energy,False
+C01503,Monvi Fertilizers 503,Argentina,Fertilizers,False
+C01504,Anzen Supply 504,United Kingdom,Fuel & Energy,False
+C01505,Tave Works 505,Ghana,Mining,False
+C01506,Monar Holdings 506,Denmark,Metals,False
+C01507,Belar Trading 507,United Kingdom,Mining,False
+C01508,Tormi Fuel 508,Ecuador,Fuel & Energy,False
+C01509,Normon Fuel 509,Turkey,Fuel & Energy,False
+C01510,Lovi Group 510,Indonesia,Chemicals,False
+C01511,Taost Mining 511,South Africa,Mining,False
+C01512,Taost Supply 512,Australia,Mining,False
+C01513,Ostco Works 513,Argentina,Mining,False
+C01514,Coar Mining 514,Malaysia,Mining,False
+C01515,Lunpra Mining 515,New Zealand,Mining,False
+C01516,Bello Holdings 516,Sweden,Metals,False
+C01517,Graar Metals 517,New Zealand,Metals,False
+C01518,Deldel Mining 518,South Korea,Mining,False
+C01519,Lobel Mining 519,United Kingdom,Mining,False
+C01520,Aran Trading 520,South Africa,Forestry,False
+C01521,Deldel Works 521,Brazil,Fertilizers,False
+C01522,Delfa Mining 522,Netherlands,Mining,False
+C01523,Pragra Mining 523,Peru,Mining,False
+C01524,Helan Metals 524,Peru,Metals,False
+C01525,Zenvi Fuel 525,Brazil,Fuel & Energy,False
+C01526,Takri Mining 526,Colombia,Mining,False
+C01527,Lunta Mining 527,India,Mining,False
+C01528,Rian Fuel 528,Thailand,Fuel & Energy,False
+C01529,Vibel Supply 529,Norway,Chemicals,False
+C01530,Veve Works 530,Poland,Fuel & Energy,False
+C01531,Graka Trading 531,Turkey,Mining,False
+C01532,Torgra Group 532,South Korea,Fuel & Energy,False
+C01533,Rita Mining 533,Germany,Mining,False
+C01534,Grahel Mining 534,Poland,Mining,False
+C01535,Sami Fertilizers 535,Peru,Fertilizers,False
+C01536,Zenka Fuel 536,Peru,Fuel & Energy,False
+C01537,Loco Holdings 537,Sweden,Chemicals,False
+C01538,Saco Fuel 538,Russia,Fuel & Energy,False
+C01539,Kritor Chemicals 539,Kenya,Chemicals,False
+C01540,Krive Forestry 540,Taiwan,Forestry,False
+C01541,Ankri Mining 541,United Kingdom,Mining,False
+C01542,Heldel Works 542,South Korea,Mining,False
+C01543,Cohel Chemicals 543,Taiwan,Chemicals,False
+C01544,Zensa Mining 544,Spain,Mining,False
+C01545,Pradel Mining 545,Brazil,Mining,False
+C01546,Kritor Mining 546,India,Mining,False
+C01547,Belhel Trading 547,Egypt,Metals,False
+C01548,Tadel Fuel 548,Peru,Fuel & Energy,False
+C01549,Krivi Metals 549,South Korea,Metals,False
+C01550,Love Holdings 550,Egypt,Chemicals,False
+C01551,Faar Supply 551,Peru,Mining,False
+C01552,Gralo Mining 552,United States,Mining,False
+C01553,Riar Group 553,Sweden,Chemicals,False
+C01554,Veost Chemicals 554,France,Chemicals,False
+C01555,Saco Fuel 555,Colombia,Fuel & Energy,False
+C01556,Vibel Metals 556,Thailand,Metals,False
+C01557,Saar Fuel 557,Spain,Fuel & Energy,False
+C01558,Armi Works 558,Italy,Fuel & Energy,False
+C01559,Mian Industries 559,Vietnam,Metals,False
+C01560,Tormi Supply 560,Egypt,Metals,False
+C01561,Delost Mining 561,France,Mining,False
+C01562,Lunmi Trading 562,South Korea,Mining,False
+C01563,Vegra Mining 563,Colombia,Mining,False
+C01564,Zenmi Metals 564,Norway,Metals,False
+C01565,Lobel Mining 565,Peru,Mining,False
+C01566,Lundel Fuel 566,Denmark,Fuel & Energy,False
+C01567,Love Fuel 567,Italy,Fuel & Energy,False
+C01568,Fanor Fuel 568,United Kingdom,Fuel & Energy,False
+C01569,Ostlo Mining 569,Canada,Mining,False
+C01570,Aran Works 570,Poland,Mining,False
+C01571,Lofa Chemicals 571,South Africa,Chemicals,False
+C01572,Kaka Mining 572,Brazil,Mining,False
+C01573,Milo Fuel 573,South Africa,Fuel & Energy,False
+C01574,Anka Fertilizers 574,Sweden,Fertilizers,False
+C01575,Tormi Mining 575,Japan,Mining,False
+C01576,Torve Mining 576,Sweden,Mining,False
+C01577,Ostvi Mining 577,United States,Mining,False
+C01578,Monlun Works 578,South Africa,Fuel & Energy,False
+C01579,Rilun Chemicals 579,Norway,Chemicals,False
+C01580,Save Fuel 580,Kenya,Fuel & Energy,False
+C01581,Ostdel Fuel 581,Russia,Fuel & Energy,False
+C01582,Sadel Metals 582,Ireland,Metals,False
+C01583,Cotor Works 583,Chile,Fuel & Energy,False
+C01584,Antor Metals 584,Thailand,Metals,False
+C01585,Falo Industries 585,South Africa,Metals,False
+C01586,Kamon Fuel 586,Colombia,Fuel & Energy,False
+C01587,Monlun Supply 587,Egypt,Forestry,False
+C01588,Delfa Mining 588,Canada,Mining,False
+C01589,Aran Mining 589,Ghana,Mining,False
+C01590,Comon Holdings 590,Ghana,Chemicals,False
+C01591,Love Chemicals 591,Taiwan,Chemicals,False
+C01592,Sami Trading 592,Argentina,Fertilizers,False
+C01593,Lundel Mining 593,Spain,Mining,False
+C01594,Vefa Fuel 594,Denmark,Fuel & Energy,False
+C01595,Vear Fuel 595,Sweden,Fuel & Energy,False
+C01596,Helka Mining 596,United Kingdom,Mining,False
+C01597,Granor Supply 597,Ecuador,Forestry,False
+C01598,Colun Forestry 598,Norway,Forestry,False
+C01599,Mika Mining 599,Spain,Mining,False
+C01600,Savi Works 600,Norway,Mining,False
+C01601,Rifa Metals 601,Colombia,Metals,False
+C01602,Monka Mining 602,Morocco,Mining,False
+C01603,Helta Mining 603,Australia,Mining,False
+C01604,Helka Fuel 604,United States,Fuel & Energy,False
+C01605,Coar Fuel 605,Vietnam,Fuel & Energy,False
+C01606,Torvi Group 606,Chile,Fuel & Energy,False
+C01607,Veco Supply 607,Vietnam,Plastics,False
+C01608,Dellun Supply 608,Japan,Fuel & Energy,False
+C01609,Nortor Group 609,Poland,Chemicals,False
+C01610,Norzen Fuel 610,Denmark,Fuel & Energy,False
+C01611,Pradel Mining 611,Peru,Mining,False
+C01612,Mita Works 612,Ireland,Fuel & Energy,False
+C01613,Logra Works 613,Germany,Metals,False
+C01614,Helco Works 614,Ireland,Metals,False
+C01615,Riar Group 615,Turkey,Fuel & Energy,False
+C01616,Bellun Mining 616,Colombia,Mining,False
+C01617,Prari Holdings 617,Australia,Fuel & Energy,False
+C01618,Krinor Industries 618,Russia,Forestry,False
+C01619,Conor Mining 619,France,Mining,False
+C01620,Lolun Fuel 620,France,Fuel & Energy,False
+C01621,Arco Fuel 621,Bangladesh,Fuel & Energy,False
+C01622,Arzen Forestry 622,Turkey,Forestry,False
+C01623,Grasa Supply 623,Thailand,Mining,False
+C01624,Osttor Fuel 624,Germany,Fuel & Energy,False
+C01625,Zenlo Works 625,Bangladesh,Mining,False
+C01626,Armi Fuel 626,Bangladesh,Fuel & Energy,False
+C01627,Krimi Mining 627,Bangladesh,Mining,False
+C01628,Lunmi Chemicals 628,Indonesia,Chemicals,False
+C01629,Ostgra Group 629,South Africa,Metals,False
+C01630,Velun Holdings 630,Chile,Fertilizers,False
+C01631,Cota Trading 631,Netherlands,Mining,False
+C01632,Vehel Metals 632,Bangladesh,Metals,False
+C01633,Torta Mining 633,United Kingdom,Mining,False
+C01634,Graka Mining 634,South Africa,Mining,False
+C01635,Torco Holdings 635,Ecuador,Metals,False
+C01636,Krivi Metals 636,Chile,Metals,False
+C01637,Mitor Metals 637,India,Metals,False
+C01638,Monmon Mining 638,Malaysia,Mining,False
+C01639,Cosa Fuel 639,Poland,Fuel & Energy,False
+C01640,Tami Industries 640,Denmark,Fuel & Energy,False
+C01641,Zenkri Mining 641,Ecuador,Mining,False
+C01642,Prazen Metals 642,New Zealand,Metals,False
+C01643,Takri Industries 643,Indonesia,Fuel & Energy,False
+C01644,Fapra Holdings 644,India,Mining,False
+C01645,Zenfa Group 645,Argentina,Fuel & Energy,False
+C01646,Fafa Metals 646,South Africa,Metals,False
+C01647,Saka Metals 647,Chile,Metals,False
+C01648,Savi Works 648,Poland,Metals,False
+C01649,Tave Mining 649,Italy,Mining,False
+C01650,Comon Metals 650,New Zealand,Metals,False
+C01651,Torri Trading 651,Poland,Fuel & Energy,False
+C01652,Angra Holdings 652,Mexico,Fuel & Energy,False
+C01653,Norsa Industries 653,South Korea,Mining,False
+C01654,Arnor Mining 654,Peru,Mining,False
+C01655,Lomi Works 655,Denmark,Metals,False
+C01656,Vegra Mining 656,Bangladesh,Mining,False
+C01657,Zenlun Metals 657,India,Metals,False
+C01658,Taka Mining 658,Bangladesh,Mining,False
+C01659,Helzen Fuel 659,Kenya,Fuel & Energy,False
+C01660,Kafa Fertilizers 660,Malaysia,Fertilizers,False
+C01661,Rive Mining 661,Peru,Mining,False
+C01662,Praka Supply 662,South Africa,Mining,False
+C01663,Vebel Fuel 663,United Kingdom,Fuel & Energy,False
+C01664,Graka Chemicals 664,Ukraine,Chemicals,False
+C01665,Cofa Metals 665,Bangladesh,Metals,False
+C01666,Belvi Fuel 666,France,Fuel & Energy,False
+C01667,Tavi Fuel 667,Turkey,Fuel & Energy,False
+C01668,Arvi Holdings 668,Italy,Fuel & Energy,False
+C01669,Cosa Works 669,Mexico,Metals,False
+C01670,Coka Metals 670,Bangladesh,Metals,False
+C01671,Zenhel Metals 671,Turkey,Metals,False
+C01672,Monnor Fertilizers 672,Japan,Fertilizers,False
+C01673,Beltor Metals 673,Thailand,Metals,False
+C01674,Prave Group 674,Turkey,Fuel & Energy,False
+C01675,Krikri Fertilizers 675,Australia,Fertilizers,False
+C01676,Fagra Supply 676,Poland,Fuel & Energy,False
+C01677,Sakri Holdings 677,Brazil,Mining,False
+C01678,Angra Fuel 678,France,Fuel & Energy,False
+C01679,Lunlo Holdings 679,Poland,Fertilizers,False
+C01680,Taan Group 680,France,Fuel & Energy,False
+C01681,Torco Mining 681,Egypt,Mining,False
+C01682,Torve Mining 682,Ukraine,Mining,False
+C01683,Veost Fuel 683,Japan,Fuel & Energy,False
+C01684,Lomi Forestry 684,United Kingdom,Forestry,False
+C01685,Vear Supply 685,Chile,Chemicals,False
+C01686,Faka Mining 686,Argentina,Mining,False
+C01687,Anri Works 687,Ecuador,Mining,False
+C01688,Gradel Mining 688,Germany,Mining,False
+C01689,Delmon Mining 689,Mexico,Mining,False
+C01690,Norco Fuel 690,Malaysia,Fuel & Energy,False
+C01691,Pramon Industries 691,Mexico,Mining,False
+C01692,Anka Group 692,Mexico,Mining,False
+C01693,Kritor Group 693,Norway,Metals,False
+C01694,Gradel Group 694,Mexico,Chemicals,False
+C01695,Sator Forestry 695,Vietnam,Forestry,False
+C01696,Krisa Trading 696,Norway,Fuel & Energy,False
+C01697,Granor Fuel 697,India,Fuel & Energy,False
+C01698,Vegra Mining 698,Chile,Mining,False
+C01699,Vian Mining 699,Argentina,Mining,False
+C01700,Pramon Chemicals 700,Malaysia,Chemicals,False
+C01701,Anpra Fuel 701,France,Fuel & Energy,False
+C01702,Krizen Fuel 702,India,Fuel & Energy,False
+C01703,Norka Fertilizers 703,Turkey,Fertilizers,False
+C01704,Krigra Fuel 704,Bangladesh,Fuel & Energy,False
+C01705,Colo Trading 705,Ghana,Mining,False
+C01706,Sabel Mining 706,Denmark,Mining,False
+C01707,Anmi Industries 707,New Zealand,Fuel & Energy,False
+C01708,Helgra Fuel 708,Ukraine,Fuel & Energy,False
+C01709,Bello Trading 709,Ghana,Metals,False
+C01710,Viar Chemicals 710,Ecuador,Chemicals,False
+C01711,Arta Fuel 711,Sweden,Fuel & Energy,False
+C01712,Lodel Mining 712,Italy,Mining,False
+C01713,Norpra Supply 713,Colombia,Mining,False
+C01714,Monka Mining 714,Italy,Mining,False
+C01715,Kripra Fuel 715,Malaysia,Fuel & Energy,False
+C01716,Belost Holdings 716,Bangladesh,Chemicals,False
+C01717,Anost Works 717,Spain,Chemicals,False
+C01718,Ostbel Holdings 718,South Korea,Fuel & Energy,False
+C01719,Tami Metals 719,Japan,Metals,False
+C01720,Pranor Metals 720,Bangladesh,Metals,False
+C01721,Zendel Metals 721,Bangladesh,Metals,False
+C01722,Delve Trading 722,Ireland,Mining,False
+C01723,Kadel Fuel 723,Poland,Fuel & Energy,False
+C01724,Vipra Supply 724,Egypt,Chemicals,False
+C01725,Tapra Supply 725,Ecuador,Fuel & Energy,False
+C01726,Lunpra Supply 726,South Korea,Mining,False
+C01727,Lunve Industries 727,Malaysia,Mining,False
+C01728,Arlo Fuel 728,Kenya,Fuel & Energy,False
+C01729,Anri Metals 729,Ukraine,Metals,False
+C01730,Graco Mining 730,Morocco,Mining,False
+C01731,Pralo Fuel 731,New Zealand,Fuel & Energy,False
+C01732,Norkri Fuel 732,Denmark,Fuel & Energy,False
+C01733,Belbel Holdings 733,Canada,Metals,False
+C01734,Kator Holdings 734,Russia,Mining,False
+C01735,Belar Mining 735,Canada,Mining,False
+C01736,Kaar Fuel 736,Ireland,Fuel & Energy,False
+C01737,Fafa Chemicals 737,France,Chemicals,False
+C01738,Grabel Chemicals 738,Netherlands,Chemicals,False
+C01739,Torlo Trading 739,Netherlands,Mining,False
+C01740,Lonor Group 740,Germany,Mining,False
+C01741,Mibel Group 741,Indonesia,Mining,False
+C01742,Mitor Chemicals 742,Japan,Chemicals,False
+C01743,Normon Industries 743,Colombia,Chemicals,False
+C01744,Delar Mining 744,Peru,Mining,False
+C01745,Krilun Mining 745,Brazil,Mining,False
+C01746,Arbel Metals 746,Sweden,Metals,False
+C01747,Arri Fuel 747,Argentina,Fuel & Energy,False
+C01748,Fami Mining 748,Peru,Mining,False
+C01749,Lunmon Metals 749,China,Metals,False
+C01750,Copra Forestry 750,New Zealand,Forestry,False
+C01751,Helvi Industries 751,Colombia,Mining,False
+C01752,Talun Fuel 752,South Africa,Fuel & Energy,False
+C01753,Veri Supply 753,Peru,Mining,False
+C01754,Colo Fuel 754,Vietnam,Fuel & Energy,False
+C01755,Vefa Supply 755,Poland,Mining,False
+C01756,Norve Holdings 756,Spain,Chemicals,False
+C01757,Viri Fuel 757,Turkey,Fuel & Energy,False
+C01758,Mibel Mining 758,India,Mining,False
+C01759,Migra Group 759,Colombia,Metals,False
+C01760,Andel Holdings 760,Egypt,Fuel & Energy,False
+C01761,Vemi Works 761,Indonesia,Forestry,False
+C01762,Helpra Fuel 762,Indonesia,Fuel & Energy,False
+C01763,Monzen Works 763,Kenya,Forestry,False
+C01764,Vehel Holdings 764,Germany,Fuel & Energy,False
+C01765,Helta Supply 765,Norway,Mining,False
+C01766,Sator Mining 766,Thailand,Mining,False
+C01767,Dellun Fuel 767,Ukraine,Fuel & Energy,False
+C01768,Arkri Fuel 768,Japan,Fuel & Energy,False
+C01769,Krigra Industries 769,New Zealand,Fuel & Energy,False
+C01770,Norka Mining 770,South Korea,Mining,False
+C01771,Nordel Supply 771,Russia,Fuel & Energy,False
+C01772,Belzen Fertilizers 772,Germany,Fertilizers,False
+C01773,Tadel Trading 773,China,Metals,False
+C01774,Arsa Mining 774,Turkey,Mining,False
+C01775,Lunost Works 775,Kenya,Chemicals,False
+C01776,Falo Fuel 776,Spain,Fuel & Energy,False
+C01777,Prazen Fuel 777,Sweden,Fuel & Energy,False
+C01778,Anlo Supply 778,Spain,Mining,False
+C01779,Vear Fuel 779,Ghana,Fuel & Energy,False
+C01780,Losa Fuel 780,United States,Fuel & Energy,False
+C01781,Belpra Fuel 781,New Zealand,Fuel & Energy,False
+C01782,Ansa Mining 782,Italy,Mining,False
+C01783,Helco Fuel 783,Ecuador,Fuel & Energy,False
+C01784,Vemon Mining 784,Kenya,Mining,False
+C01785,Risa Supply 785,Thailand,Mining,False
+C01786,Fapra Trading 786,Denmark,Metals,False
+C01787,Krikri Mining 787,South Africa,Mining,False
+C01788,Zenlo Industries 788,Germany,Metals,False
+C01789,Annor Industries 789,Morocco,Fertilizers,False
+C01790,Faco Mining 790,Spain,Mining,False
+C01791,Kalun Mining 791,Vietnam,Mining,False
+C01792,Prator Chemicals 792,Japan,Chemicals,False
+C01793,Kritor Mining 793,Denmark,Mining,False
+C01794,Videl Metals 794,Poland,Metals,False
+C01795,Mimi Works 795,Brazil,Mining,False
+C01796,Vepra Mining 796,Poland,Mining,False
+C01797,Norar Holdings 797,Brazil,Chemicals,False
+C01798,Lofa Mining 798,Italy,Mining,False
+C01799,Velun Mining 799,Ghana,Mining,False
+C01800,Torar Mining 800,China,Mining,False
+C01801,Krinor Mining 801,Italy,Mining,False
+C01802,Anta Mining 802,Argentina,Mining,False
+C01803,Belar Industries 803,Morocco,Fuel & Energy,False
+C01804,Tadel Fuel 804,Thailand,Fuel & Energy,False
+C01805,Riri Mining 805,Brazil,Mining,False
+C01806,Sator Plastics 806,Ireland,Plastics,False
+C01807,Monco Mining 807,Chile,Mining,False
+C01808,Lunbel Metals 808,Thailand,Metals,False
+C01809,Nornor Group 809,Colombia,Fuel & Energy,False
+C01810,Graka Supply 810,India,Forestry,False
+C01811,Nornor Fuel 811,Colombia,Fuel & Energy,False
+C01812,Belnor Fuel 812,Kenya,Fuel & Energy,False
+C01813,Praost Forestry 813,Thailand,Forestry,False
+C01814,Lomon Fuel 814,United States,Fuel & Energy,False
+C01815,Grasa Holdings 815,Sweden,Chemicals,False
+C01816,Krifa Fuel 816,Colombia,Fuel & Energy,False
+C01817,Delbel Mining 817,Chile,Mining,False
+C01818,Sazen Fuel 818,Chile,Fuel & Energy,False
+C01819,Norhel Mining 819,Brazil,Mining,False
+C01820,Arzen Works 820,France,Fuel & Energy,False
+C01821,Torzen Fuel 821,Ecuador,Fuel & Energy,False
+C01822,Vilun Supply 822,Canada,Mining,False
+C01823,Grazen Chemicals 823,Denmark,Chemicals,False
+C01824,Copra Supply 824,Brazil,Mining,False
+C01825,Kagra Fuel 825,Egypt,Fuel & Energy,False
+C01826,Zenbel Mining 826,China,Mining,False
+C01827,Belost Supply 827,Australia,Mining,False
+C01828,Zenbel Holdings 828,Ukraine,Metals,False
+C01829,Delmi Mining 829,Japan,Mining,False
+C01830,Veka Mining 830,Brazil,Mining,False
+C01831,Lobel Industries 831,Colombia,Fertilizers,False
+C01832,Vefa Mining 832,Ireland,Mining,False
+C01833,Faost Fuel 833,Argentina,Fuel & Energy,False
+C01834,Rifa Metals 834,Spain,Metals,False
+C01835,Prapra Group 835,Indonesia,Chemicals,False
+C01836,Zenpra Works 836,China,Fuel & Energy,False
+C01837,Sasa Industries 837,Vietnam,Fuel & Energy,False
+C01838,Torkri Fuel 838,Peru,Fuel & Energy,False
+C01839,Kaco Mining 839,New Zealand,Mining,False
+C01840,Toran Supply 840,Colombia,Fuel & Energy,False
+C01841,Antor Metals 841,Spain,Metals,False
+C01842,Monvi Metals 842,Japan,Metals,False
+C01843,Tavi Group 843,Spain,Mining,False
+C01844,Graco Fuel 844,Kenya,Fuel & Energy,False
+C01845,Norost Supply 845,Brazil,Fuel & Energy,False
+C01846,Kazen Fuel 846,New Zealand,Fuel & Energy,False
+C01847,Ostgra Mining 847,Morocco,Mining,False
+C01848,Gradel Forestry 848,India,Forestry,False
+C01849,Vikri Mining 849,Morocco,Mining,False
+C01850,Lunbel Mining 850,Indonesia,Mining,False
+C01851,Coost Fuel 851,United States,Fuel & Energy,False
+C01852,Beltor Mining 852,Chile,Mining,False
+C01853,Delhel Chemicals 853,United Kingdom,Chemicals,False
+C01854,Ostbel Holdings 854,United Kingdom,Fuel & Energy,False
+C01855,Grazen Mining 855,United Kingdom,Mining,False
+C01856,Anta Mining 856,United States,Mining,False
+C01857,Vedel Metals 857,New Zealand,Metals,False
+C01858,Risa Mining 858,Norway,Mining,False
+C01859,Norvi Fertilizers 859,South Africa,Fertilizers,False
+C01860,Cokri Chemicals 860,Brazil,Chemicals,False
+C01861,Belta Trading 861,Peru,Fuel & Energy,False
+C01862,Lunlo Fuel 862,Egypt,Fuel & Energy,False
+C01863,Cotor Fertilizers 863,South Africa,Fertilizers,False
+C01864,Fapra Holdings 864,Ukraine,Mining,False
+C01865,Grazen Mining 865,India,Mining,False
+C01866,Zensa Mining 866,Thailand,Mining,False
+C01867,Vesa Mining 867,Ukraine,Mining,False
+C01868,Delar Mining 868,Italy,Mining,False
+C01869,Rihel Plastics 869,Netherlands,Plastics,False
+C01870,Tari Metals 870,Spain,Metals,False
+C01871,Anco Supply 871,New Zealand,Fuel & Energy,False
+C01872,Belsa Mining 872,Egypt,Mining,False
+C01873,Sapra Mining 873,New Zealand,Mining,False
+C01874,Grabel Mining 874,Vietnam,Mining,False
+C01875,Vika Mining 875,Spain,Mining,False
+C01876,Fapra Mining 876,Japan,Mining,False
+C01877,Kafa Mining 877,Turkey,Mining,False
+C01878,Kadel Holdings 878,Ghana,Metals,False
+C01879,Mive Fuel 879,Vietnam,Fuel & Energy,False
+C01880,Delfa Metals 880,Colombia,Metals,False
+C01881,Vian Fuel 881,South Africa,Fuel & Energy,False
+C01882,Belvi Fuel 882,Peru,Fuel & Energy,False
+C01883,Rian Metals 883,Australia,Metals,False
+C01884,Helka Fuel 884,Denmark,Fuel & Energy,False
+C01885,Helco Holdings 885,Australia,Metals,False
+C01886,Veta Supply 886,Brazil,Fuel & Energy,False
+C01887,Anar Trading 887,India,Mining,False
+C01888,Tasa Fuel 888,New Zealand,Fuel & Energy,False
+C01889,Praka Fuel 889,South Korea,Fuel & Energy,False
+C01890,Mihel Mining 890,Poland,Mining,False
+C01891,Norri Group 891,South Africa,Mining,False
+C01892,Coan Metals 892,Bangladesh,Metals,False
+C01893,Torlun Mining 893,Morocco,Mining,False
+C01894,Monbel Mining 894,Ecuador,Mining,False
+C01895,Ostlun Chemicals 895,Ukraine,Chemicals,False
+C01896,Belpra Trading 896,Kenya,Mining,False
+C01897,Arsa Fuel 897,Taiwan,Fuel & Energy,False
+C01898,Comi Fuel 898,Indonesia,Fuel & Energy,False
+C01899,Viar Fuel 899,Norway,Fuel & Energy,False
+C01900,Talo Trading 900,Japan,Fuel & Energy,False
+C01901,Rimi Trading 901,United States,Mining,False
+C01902,Kalo Mining 902,Egypt,Mining,False
+C01903,Rivi Fuel 903,South Africa,Fuel & Energy,False
+C01904,Zenvi Trading 904,Ecuador,Fuel & Energy,False
+C01905,Mikri Mining 905,South Korea,Mining,False
+C01906,Normi Mining 906,Ukraine,Mining,False
+C01907,Sasa Holdings 907,South Korea,Mining,False
+C01908,Belta Fuel 908,France,Fuel & Energy,False
+C01909,Zenlun Fertilizers 909,Spain,Fertilizers,False
+C01910,Belan Metals 910,Indonesia,Metals,False
+C01911,Ostzen Plastics 911,Japan,Plastics,False
+C01912,Lunost Fertilizers 912,Italy,Fertilizers,False
+C01913,Tavi Holdings 913,Australia,Mining,False
+C01914,Helost Fuel 914,Mexico,Fuel & Energy,False
+C01915,Ostpra Chemicals 915,Brazil,Chemicals,False
+C01916,Monnor Chemicals 916,Indonesia,Chemicals,False
+C01917,Viost Holdings 917,South Korea,Fuel & Energy,False
+C01918,Fanor Supply 918,China,Mining,False
+C01919,Sabel Mining 919,Egypt,Mining,False
+C01920,Ripra Fuel 920,Japan,Fuel & Energy,False
+C01921,Fami Group 921,Bangladesh,Chemicals,False
+C01922,Zenta Chemicals 922,Ghana,Chemicals,False
+C01923,Normi Mining 923,Poland,Mining,False
+C01924,Delkri Mining 924,China,Mining,False
+C01925,Vefa Holdings 925,Vietnam,Fuel & Energy,False
+C01926,Monlo Trading 926,Ghana,Mining,False
+C01927,Monkri Mining 927,Kenya,Mining,False
+C01928,Monmi Industries 928,Taiwan,Mining,False
+C01929,Norhel Mining 929,Taiwan,Mining,False
+C01930,Osttor Fuel 930,Vietnam,Fuel & Energy,False
+C01931,Helost Supply 931,Poland,Mining,False
+C01932,Kalo Supply 932,India,Fuel & Energy,False
+C01933,Andel Supply 933,Mexico,Fertilizers,False
+C01934,Ostan Industries 934,Taiwan,Chemicals,False
+C01935,Norco Works 935,Bangladesh,Chemicals,False
+C01936,Mondel Fuel 936,India,Fuel & Energy,False
+C01937,Fave Industries 937,France,Chemicals,False
+C01938,Sakri Mining 938,Indonesia,Mining,False
+C01939,Fazen Forestry 939,Poland,Forestry,False
+C01940,Milo Mining 940,South Africa,Mining,False
+C01941,Monsa Supply 941,Norway,Mining,False
+C01942,Krizen Mining 942,Bangladesh,Mining,False
+C01943,Lunlun Group 943,Poland,Fuel & Energy,False
+C01944,Anta Chemicals 944,Kenya,Chemicals,False
+C01945,Ribel Metals 945,Poland,Metals,False
+C01946,Torgra Fuel 946,Mexico,Fuel & Energy,False
+C01947,Lobel Metals 947,Canada,Metals,False
+C01948,Monsa Holdings 948,India,Fuel & Energy,False
+C01949,Helzen Industries 949,Colombia,Fuel & Energy,False
+C01950,Delzen Fuel 950,Ireland,Fuel & Energy,False
+C01951,Helgra Mining 951,Turkey,Mining,False
+C01952,Vipra Trading 952,France,Mining,False
+C01953,Zenost Trading 953,Thailand,Fuel & Energy,False
+C01954,Arbel Industries 954,Norway,Fuel & Energy,False
+C01955,Sapra Works 955,Spain,Metals,False
+C01956,Norka Mining 956,Mexico,Mining,False
+F3,Maple Fresh Markets,Canada,Grocery Retail,True
+C01958,Mihel Fresh 958,Norway,Fresh Produce,False
+C01959,Kalo Works 959,United Kingdom,Meat Processing,False
+C01960,Ridel Dairy 960,Kenya,Dairy,False
+C01961,Norgra Holdings 961,Vietnam,Food Processing,False
+C01962,Cogra Meat 962,Kenya,Meat Processing,False
+C01963,Mipra Industries 963,Ireland,Beverages,False
+C01964,Rilun Dairy 964,Poland,Dairy,False
+C01965,Kapra Group 965,New Zealand,Food Processing,False
+C01966,Ardel Fresh 966,United States,Fresh Produce,False
+C01967,Zenost Group 967,Chile,Packaging,False
+C01968,Torsa Bakery 968,Canada,Bakery,False
+C01969,Torlo Packaging 969,Argentina,Packaging,False
+C01970,Veost Supply 970,Ireland,Logistics,False
+C01971,Delan Group 971,Russia,Logistics,False
+C01972,Anan Packaging 972,Ireland,Packaging,False
+C01973,Helta Logistics 973,Germany,Logistics,False
+C01974,Helka Household 974,Italy,Household Goods,False
+C01975,Zensa Works 975,New Zealand,Household Goods,False
+C01976,Talun Food 976,Taiwan,Food Processing,False
+C01977,Ritor Meat 977,South Africa,Meat Processing,False
+C01978,Monve Holdings 978,United States,Fresh Produce,False
+C01979,Vitor Meat 979,Denmark,Meat Processing,False
+C01980,Grakri Trading 980,Bangladesh,Beverages,False
+C01981,Antor Packaging 981,Poland,Packaging,False
+C01982,Ostco Group 982,Malaysia,Animal Feed,False
+C01983,Fadel Industries 983,Italy,Agriculture,False
+C01984,Lonor Trading 984,Denmark,Logistics,False
+C01985,Lunbel Agriculture 985,Morocco,Agriculture,False
+C01986,Tormi Packaging 986,Thailand,Packaging,False
+C01987,Miar Holdings 987,India,Paper & Pulp,False
+C01988,Kahel Group 988,Thailand,Food Ingredients,False
+C01989,Prari Works 989,Peru,Packaging,False
+C01990,Loka Group 990,Ecuador,Logistics,False
+C01991,Helve Trading 991,Kenya,Edible Oils,False
+C01992,Belkri Edible 992,New Zealand,Edible Oils,False
+C01993,Belzen Metals 993,Denmark,Metals,False
+C01994,Grari Holdings 994,Egypt,Plastics,False
+C01995,Coan Supply 995,Chile,Packaging,False
+C01996,Tadel Works 996,Argentina,Electronics,False
+C01997,Ostlun Group 997,Taiwan,Electronics,False
+C01998,Norvi Holdings 998,Spain,Plastics,False
+C01999,Cotor Trading 999,India,Fuel & Energy,False
+C02000,Prafa Supply 000,Poland,Chemicals,False
+C02001,Faan Paper 001,Thailand,Paper & Pulp,False
+C02002,Lunka Food 002,United States,Food Ingredients,False
+C02003,Love Packaging 003,Mexico,Packaging,False
+C02004,Tapra Supply 004,Morocco,Glass,False
+C02005,Vilun Agriculture 005,Bangladesh,Agriculture,False
+C02006,Belpra Logistics 006,Netherlands,Logistics,False
+C02007,Monfa Packaging 007,United States,Packaging,False
+C02008,Delvi Packaging 008,China,Packaging,False
+C02009,Zenkri Packaging 009,Indonesia,Packaging,False
+C02010,Ostsa Glass 010,Norway,Glass,False
+C02011,Heltor Agriculture 011,China,Agriculture,False
+C02012,Monta Paper 012,Brazil,Paper & Pulp,False
+C02013,Krico Works 013,China,Electronics,False
+C02014,Mizen Group 014,Norway,Agriculture,False
+C02015,Arzen Works 015,Mexico,Agriculture,False
+C02016,Armi Metals 016,Mexico,Metals,False
+C02017,Rivi Paper 017,Norway,Paper & Pulp,False
+C02018,Lofa Group 018,Italy,Electronics,False
+C02019,Ardel Electronics 019,Norway,Electronics,False
+C02020,Dellun Electronics 020,Ireland,Electronics,False
+C02021,Toran Chemicals 021,Vietnam,Chemicals,False
+C02022,Arost Supply 022,Malaysia,Plastics,False
+C02023,Vive Fertilizers 023,South Korea,Fertilizers,False
+C02024,Monbel Packaging 024,India,Packaging,False
+C02025,Zenan Works 025,South Korea,Agriculture,False
+C02026,Comon Agriculture 026,Kenya,Agriculture,False
+C02027,Sator Agriculture 027,Russia,Agriculture,False
+C02028,Logra Packaging 028,Canada,Packaging,False
+C02029,Vilun Agriculture 029,Malaysia,Agriculture,False
+C02030,Rifa Agriculture 030,Mexico,Agriculture,False
+C02031,Veve Electronics 031,Australia,Electronics,False
+C02032,Rive Holdings 032,Denmark,Packaging,False
+C02033,Kalun Holdings 033,France,Fertilizers,False
+C02034,Sata Sugar 034,Indonesia,Sugar,False
+C02035,Rilo Sugar 035,Thailand,Sugar,False
+C02036,Vita Group 036,United Kingdom,Paper & Pulp,False
+C02037,Lunka Holdings 037,Turkey,Electronics,False
+C02038,Belar Metals 038,Norway,Metals,False
+C02039,Sakri Electronics 039,Brazil,Electronics,False
+C02040,Noran Group 040,France,Plastics,False
+C02041,Zennor Logistics 041,Netherlands,Logistics,False
+C02042,Lunka Chemicals 042,Taiwan,Chemicals,False
+C02043,Norlo Edible 043,Malaysia,Edible Oils,False
+C02044,Lunan Animal 044,Turkey,Animal Feed,False
+C02045,Viost Agriculture 045,Ecuador,Agriculture,False
+C02046,Vesa Agriculture 046,India,Agriculture,False
+C02047,Cohel Supply 047,Italy,Agriculture,False
+C02048,Cosa Works 048,France,Packaging,False
+C02049,Cohel Glass 049,India,Glass,False
+C02050,Mongra Group 050,Canada,Animal Feed,False
+C02051,Ostgra Plastics 051,India,Plastics,False
+C02052,Samon Works 052,United Kingdom,Electronics,False
+C02053,Milo Food 053,Taiwan,Food Ingredients,False
+C02054,Praka Group 054,Argentina,Packaging,False
+C02055,Torta Works 055,United States,Agriculture,False
+C02056,Kalun Agriculture 056,Turkey,Agriculture,False
+C02057,Aran Group 057,Malaysia,Fuel & Energy,False
+C02058,Ostar Trading 058,United Kingdom,Plastics,False
+C02059,Heltor Plastics 059,Germany,Plastics,False
+C02060,Fadel Works 060,Kenya,Chemicals,False
+C02061,Zendel Logistics 061,Argentina,Logistics,False
+C02062,Cogra Industries 062,Egypt,Agriculture,False
+C02063,Helan Animal 063,South Korea,Animal Feed,False
+C02064,Fasa Agriculture 064,Poland,Agriculture,False
+C02065,Kanor Packaging 065,Canada,Packaging,False
+C02066,Zenmon Glass 066,South Africa,Glass,False
+C02067,Miri Packaging 067,Indonesia,Packaging,False
+C02068,Helka Edible 068,United Kingdom,Edible Oils,False
+C02069,Anfa Holdings 069,South Africa,Agriculture,False
+C02070,Ostan Mining 070,Ukraine,Mining,False
+C02071,Lunka Industries 071,Mexico,Paper & Pulp,False
+C02072,Saka Fuel 072,United States,Fuel & Energy,False
+C02073,Fata Holdings 073,China,Fuel & Energy,False
+C02074,Rihel Plastics 074,Turkey,Plastics,False
+C02075,Arka Supply 075,Morocco,Forestry,False
+C02076,Loka Trading 076,New Zealand,Fuel & Energy,False
+C02077,Toran Agriculture 077,Netherlands,Agriculture,False
+C02078,Anan Chemicals 078,Egypt,Chemicals,False
+C02079,Vehel Chemicals 079,Turkey,Chemicals,False
+C02080,Colun Chemicals 080,Bangladesh,Chemicals,False
+C02081,Krigra Trading 081,Denmark,Fuel & Energy,False
+C02082,Vinor Mining 082,New Zealand,Mining,False
+C02083,Tormon Metals 083,Colombia,Metals,False
+C02084,Sadel Electronics 084,Taiwan,Electronics,False
+C02085,Vigra Fuel 085,Thailand,Fuel & Energy,False
+C02086,Anpra Chemicals 086,Norway,Chemicals,False
+C02087,Ostzen Fuel 087,Thailand,Fuel & Energy,False
+C02088,Monmon Metals 088,Poland,Metals,False
+C02089,Vimon Group 089,Indonesia,Paper & Pulp,False
+C02090,Krico Trading 090,Ecuador,Fuel & Energy,False
+C02091,Saar Supply 091,Bangladesh,Chemicals,False
+C02092,Ostlo Group 092,Morocco,Plastics,False
+C02093,Mizen Trading 093,Ghana,Fuel & Energy,False
+C02094,Veka Trading 094,Sweden,Fuel & Energy,False
+C02095,Belmon Agriculture 095,South Africa,Agriculture,False
+C02096,Arlun Trading 096,Germany,Fuel & Energy,False
+C02097,Kanor Fertilizers 097,Peru,Fertilizers,False
+C02098,Zengra Supply 098,Poland,Fuel & Energy,False
+C02099,Vifa Metals 099,Vietnam,Metals,False
+C02100,Anve Plastics 100,Indonesia,Plastics,False
+C02101,Prator Fuel 101,Bangladesh,Fuel & Energy,False
+C02102,Lunpra Supply 102,Bangladesh,Agriculture,False
+C02103,Ostfa Works 103,Sweden,Metals,False
+C02104,Beldel Chemicals 104,Netherlands,Chemicals,False
+C02105,Normi Fuel 105,Canada,Fuel & Energy,False
+C02106,Praar Mining 106,Indonesia,Mining,False
+C02107,Dellun Industries 107,Taiwan,Fuel & Energy,False
+C02108,Fafa Works 108,Malaysia,Chemicals,False
+C02109,Taka Holdings 109,Ghana,Agriculture,False
+C02110,Pravi Agriculture 110,United Kingdom,Agriculture,False
+C02111,Favi Group 111,United States,Fertilizers,False
+C02112,Tornor Paper 112,Ireland,Paper & Pulp,False
+C02113,Sapra Industries 113,Netherlands,Chemicals,False
+C02114,Mimi Works 114,Australia,Plastics,False
+C02115,Delpra Holdings 115,Indonesia,Agriculture,False
+C02116,Praar Plastics 116,Canada,Plastics,False
+C02117,Anzen Fuel 117,Argentina,Fuel & Energy,False
+C02118,Vivi Fertilizers 118,Poland,Fertilizers,False
+C02119,Anlun Chemicals 119,Ireland,Chemicals,False
+C02120,Lunvi Forestry 120,South Korea,Forestry,False
+C02121,Delri Holdings 121,Peru,Paper & Pulp,False
+C02122,Tari Fuel 122,Taiwan,Fuel & Energy,False
+C02123,Fator Supply 123,New Zealand,Chemicals,False
+C02124,Arost Plastics 124,Denmark,Plastics,False
+C02125,Sator Trading 125,Italy,Fuel & Energy,False
+C02126,Grafa Chemicals 126,United States,Chemicals,False
+C02127,Rivi Chemicals 127,Canada,Chemicals,False
+C02128,Prazen Chemicals 128,South Korea,Chemicals,False
+C02129,Saco Fertilizers 129,Colombia,Fertilizers,False
+C02130,Pragra Supply 130,Colombia,Chemicals,False
+C02131,Anlo Paper 131,Colombia,Paper & Pulp,False
+C02132,Norka Holdings 132,Mexico,Fuel & Energy,False
+C02133,Vigra Agriculture 133,South Korea,Agriculture,False
+C02134,Risa Group 134,Denmark,Fuel & Energy,False
+C02135,Lungra Supply 135,Egypt,Chemicals,False
+C02136,Lunsa Supply 136,Peru,Plastics,False
+C02137,Rimi Agriculture 137,Egypt,Agriculture,False
+C02138,Ostkri Chemicals 138,New Zealand,Chemicals,False
+C02139,Mita Supply 139,Sweden,Fuel & Energy,False
+C02140,Lolo Holdings 140,Indonesia,Fertilizers,False
+C02141,Kanor Mining 141,Turkey,Mining,False
+C02142,Grata Fuel 142,New Zealand,Fuel & Energy,False
+C02143,Norlun Plastics 143,Thailand,Plastics,False
+C02144,Delfa Agriculture 144,New Zealand,Agriculture,False
+C02145,Ostan Fertilizers 145,Russia,Fertilizers,False
+C02146,Lunta Supply 146,United States,Metals,False
+C02147,Kaka Agriculture 147,Poland,Agriculture,False
+C02148,Vitor Industries 148,New Zealand,Agriculture,False
+C02149,Praka Metals 149,Thailand,Metals,False
+C02150,Riost Trading 150,Colombia,Metals,False
+C02151,Mita Metals 151,Brazil,Metals,False
+C02152,Arco Trading 152,Ukraine,Fertilizers,False
+C02153,Prazen Trading 153,France,Fuel & Energy,False
+C02154,Fagra Industries 154,Canada,Chemicals,False
+C02155,Kaar Chemicals 155,Japan,Chemicals,False
+C02156,Monkri Trading 156,Vietnam,Electronics,False
+C02157,Vevi Fertilizers 157,Poland,Fertilizers,False
+C02158,Zennor Paper 158,Argentina,Paper & Pulp,False
+C02159,Codel Group 159,United Kingdom,Chemicals,False
+C02160,Lungra Plastics 160,Thailand,Plastics,False
+C02161,Belkri Chemicals 161,South Korea,Chemicals,False
+C02162,Monlo Supply 162,Ecuador,Plastics,False
+C02163,Zenlo Agriculture 163,New Zealand,Agriculture,False
+C02164,Kabel Supply 164,Ghana,Fertilizers,False
+C02165,Mifa Fuel 165,Argentina,Fuel & Energy,False
+C02166,Monan Trading 166,Colombia,Agriculture,False
+C02167,Ostsa Trading 167,New Zealand,Fertilizers,False
+C02168,Arlun Trading 168,New Zealand,Fuel & Energy,False
+C02169,Gragra Metals 169,Ghana,Metals,False
+C02170,Grabel Group 170,Japan,Plastics,False
+C02171,Arfa Fuel 171,Germany,Fuel & Energy,False
+C02172,Anbel Holdings 172,China,Fuel & Energy,False
+C02173,Krilun Chemicals 173,Argentina,Chemicals,False
+C02174,Miar Industries 174,Thailand,Forestry,False
+C02175,Conor Agriculture 175,Norway,Agriculture,False
+C02176,Loan Group 176,Ecuador,Electronics,False
+C02177,Ostzen Metals 177,Spain,Metals,False
+C02178,Belka Chemicals 178,Vietnam,Chemicals,False
+C02179,Anvi Fuel 179,Norway,Fuel & Energy,False
+C02180,Saco Group 180,Morocco,Metals,False
+C02181,Grator Paper 181,Canada,Paper & Pulp,False
+C02182,Zenkri Works 182,Denmark,Chemicals,False
+C02183,Tave Forestry 183,Turkey,Forestry,False
+C02184,Pralun Plastics 184,Ukraine,Plastics,False
+C02185,Dellun Chemicals 185,Malaysia,Chemicals,False
+C02186,Lopra Group 186,Russia,Chemicals,False
+C02187,Prata Industries 187,Vietnam,Fuel & Energy,False
+C02188,Zenfa Fertilizers 188,India,Fertilizers,False
+C02189,Arpra Chemicals 189,India,Chemicals,False
+C02190,Lunco Supply 190,Peru,Fuel & Energy,False
+C02191,Mian Works 191,Taiwan,Paper & Pulp,False
+C02192,Monlo Works 192,Colombia,Metals,False
+C02193,Mimon Works 193,Ireland,Fuel & Energy,False
+C02194,Helmon Group 194,Ukraine,Fertilizers,False
+C02195,Arar Supply 195,Ireland,Fuel & Energy,False
+C02196,Vivi Mining 196,Italy,Mining,False
+C02197,Gragra Paper 197,Poland,Paper & Pulp,False
+C02198,Helnor Fuel 198,Italy,Fuel & Energy,False
+C02199,Grapra Agriculture 199,Peru,Agriculture,False
+C02200,Ostbel Agriculture 200,United Kingdom,Agriculture,False
+C02201,Ridel Paper 201,Taiwan,Paper & Pulp,False
+C02202,Lokri Fuel 202,Ghana,Fuel & Energy,False
+C02203,Fafa Fertilizers 203,South Africa,Fertilizers,False
+C02204,Covi Fuel 204,Poland,Fuel & Energy,False
+C02205,Vimi Supply 205,Ecuador,Plastics,False
+C02206,Norar Trading 206,India,Fertilizers,False
+C02207,Taar Plastics 207,Ukraine,Plastics,False
+C02208,Monar Group 208,Morocco,Fuel & Energy,False
+C02209,Loost Metals 209,Thailand,Metals,False
+C02210,Zenar Fertilizers 210,South Africa,Fertilizers,False
+C02211,Arco Fuel 211,Kenya,Fuel & Energy,False
+C02212,Noran Group 212,Russia,Chemicals,False
+C02213,Lori Trading 213,United States,Metals,False
+C02214,Praar Mining 214,Spain,Mining,False
+C02215,Ritor Works 215,Bangladesh,Fuel & Energy,False
+C02216,Cohel Fuel 216,China,Fuel & Energy,False
+C02217,Veve Fertilizers 217,Bangladesh,Fertilizers,False
+C02218,Midel Holdings 218,Bangladesh,Chemicals,False
+C02219,Torka Electronics 219,Poland,Electronics,False
+C02220,Ostkri Chemicals 220,Malaysia,Chemicals,False
+C02221,Kapra Paper 221,Spain,Paper & Pulp,False
+C02222,Veta Trading 222,Germany,Agriculture,False
+C02223,Fave Chemicals 223,Denmark,Chemicals,False
+C02224,Monost Holdings 224,Kenya,Agriculture,False
+C02225,Vigra Plastics 225,Ecuador,Plastics,False
+C02226,Krimon Trading 226,Mexico,Mining,False
+C02227,Codel Industries 227,South Korea,Mining,False
+C02228,Covi Fuel 228,Chile,Fuel & Energy,False
+C02229,Krian Chemicals 229,Ireland,Chemicals,False
+C02230,Torvi Works 230,Malaysia,Fuel & Energy,False
+C02231,Rive Chemicals 231,Brazil,Chemicals,False
+C02232,Kave Mining 232,Malaysia,Mining,False
+C02233,Zenhel Trading 233,Thailand,Chemicals,False
+C02234,Ribel Trading 234,Ireland,Metals,False
+C02235,Rinor Metals 235,Poland,Metals,False
+C02236,Mico Trading 236,Ukraine,Chemicals,False
+C02237,Torpra Holdings 237,Kenya,Chemicals,False
+C02238,Belsa Holdings 238,Turkey,Paper & Pulp,False
+C02239,Mongra Plastics 239,India,Plastics,False
+C02240,Anfa Agriculture 240,Italy,Agriculture,False
+C02241,Mihel Holdings 241,Vietnam,Chemicals,False
+C02242,Fata Metals 242,Taiwan,Metals,False
+C02243,Fabel Fuel 243,New Zealand,Fuel & Energy,False
+C02244,Logra Metals 244,United States,Metals,False
+C02245,Delve Group 245,Taiwan,Fertilizers,False
+C02246,Helri Mining 246,Thailand,Mining,False
+C02247,Gralo Plastics 247,Argentina,Plastics,False
+C02248,Lunka Group 248,Ghana,Chemicals,False
+C02249,Lunka Fertilizers 249,India,Fertilizers,False
+C02250,Belbel Holdings 250,Morocco,Fertilizers,False
+C02251,Ostve Metals 251,Peru,Metals,False
+C02252,Tata Group 252,South Africa,Forestry,False
+C02253,Helpra Metals 253,Australia,Metals,False
+C02254,Graan Industries 254,New Zealand,Chemicals,False
+C02255,Vezen Group 255,Ghana,Paper & Pulp,False
+C02256,Norka Supply 256,Norway,Electronics,False
+C02257,Norri Agriculture 257,Chile,Agriculture,False
+C02258,Norzen Agriculture 258,Peru,Agriculture,False
+C02259,Vehel Works 259,Argentina,Fuel & Energy,False
+C02260,Krifa Holdings 260,Taiwan,Fertilizers,False
+C02261,Hellun Works 261,Spain,Metals,False
+C02262,Helve Metals 262,Colombia,Metals,False
+C02263,Norpra Supply 263,Thailand,Fuel & Energy,False
+C02264,Lunka Metals 264,United Kingdom,Metals,False
+C02265,Helmon Trading 265,France,Mining,False
+C02266,Ostsa Chemicals 266,Peru,Chemicals,False
+C02267,Favi Holdings 267,Denmark,Electronics,False
+C02268,Cobel Fuel 268,Thailand,Fuel & Energy,False
+C02269,Tator Metals 269,Ecuador,Metals,False
+C02270,Lunbel Fuel 270,Norway,Fuel & Energy,False
+C02271,Rizen Electronics 271,Sweden,Electronics,False
+C02272,Taar Industries 272,Poland,Plastics,False
+C02273,Kritor Metals 273,Canada,Metals,False
+C02274,Ostlun Trading 274,Colombia,Fuel & Energy,False
+C02275,Zenbel Chemicals 275,Turkey,Chemicals,False
+C02276,Delka Chemicals 276,Ecuador,Chemicals,False
+C02277,Vedel Holdings 277,Kenya,Metals,False
+C02278,Armon Industries 278,France,Fuel & Energy,False
+C02279,Noran Fertilizers 279,Brazil,Fertilizers,False
+C02280,Krivi Fertilizers 280,Sweden,Fertilizers,False
+C02281,Cokri Fertilizers 281,Malaysia,Fertilizers,False
+C02282,Taka Fuel 282,Malaysia,Fuel & Energy,False
+C02283,Vivi Fertilizers 283,Ghana,Fertilizers,False
+C02284,Ostzen Industries 284,New Zealand,Electronics,False
+C02285,Norzen Chemicals 285,Spain,Chemicals,False
+C02286,Aran Industries 286,South Korea,Metals,False
+C02287,Fator Plastics 287,Kenya,Plastics,False
+C02288,Coan Metals 288,Poland,Metals,False
+C02289,Norve Mining 289,Brazil,Mining,False
+C02290,Comon Fertilizers 290,Brazil,Fertilizers,False
+C02291,Veost Plastics 291,Mexico,Plastics,False
+C02292,Monhel Holdings 292,Ukraine,Chemicals,False
+C02293,Delan Works 293,Colombia,Mining,False
+C02294,Faco Trading 294,Thailand,Chemicals,False
+C02295,Cota Chemicals 295,Spain,Chemicals,False
+C02296,Kazen Industries 296,Sweden,Fertilizers,False
+C02297,Prator Chemicals 297,Taiwan,Chemicals,False
+C02298,Prami Metals 298,Ukraine,Metals,False
+C02299,Cove Metals 299,Indonesia,Metals,False
+C02300,Norfa Agriculture 300,United Kingdom,Agriculture,False
+C02301,Lunco Group 301,Taiwan,Plastics,False
+C02302,Salo Paper 302,Morocco,Paper & Pulp,False
+C02303,Monco Works 303,Bangladesh,Chemicals,False
+C02304,Torhel Agriculture 304,Taiwan,Agriculture,False
+C02305,Tagra Chemicals 305,Russia,Chemicals,False
+C02306,Grata Metals 306,Kenya,Metals,False
+C02307,Graan Works 307,South Korea,Chemicals,False
+C02308,Logra Works 308,Egypt,Fuel & Energy,False
+C02309,Monhel Agriculture 309,New Zealand,Agriculture,False
+C02310,Norost Supply 310,Spain,Fertilizers,False
+C02311,Zentor Fertilizers 311,Mexico,Fertilizers,False
+C02312,Prave Fuel 312,New Zealand,Fuel & Energy,False
+C02313,Rilo Chemicals 313,Ghana,Chemicals,False
+C02314,Torfa Paper 314,Ireland,Paper & Pulp,False
+C02315,Prasa Holdings 315,Egypt,Plastics,False
+C02316,Zensa Chemicals 316,Netherlands,Chemicals,False
+C02317,Pralo Chemicals 317,Brazil,Chemicals,False
+C02318,Ostmi Metals 318,Italy,Metals,False
+C02319,Zenfa Supply 319,Norway,Plastics,False
+C02320,Kazen Industries 320,France,Mining,False
+C02321,Norost Works 321,Argentina,Agriculture,False
+C02322,Loar Trading 322,Indonesia,Fuel & Energy,False
+C02323,Ostkri Chemicals 323,Australia,Chemicals,False
+C02324,Zenlo Fertilizers 324,Russia,Fertilizers,False
+C02325,Hello Chemicals 325,New Zealand,Chemicals,False
+C02326,Mika Plastics 326,Bangladesh,Plastics,False
+C02327,Monka Fuel 327,Chile,Fuel & Energy,False
+C02328,Vesa Fuel 328,Netherlands,Fuel & Energy,False
+C02329,Delvi Chemicals 329,New Zealand,Chemicals,False
+C02330,Belhel Supply 330,Malaysia,Chemicals,False
+C02331,Vipra Metals 331,South Africa,Metals,False
+C02332,Coco Chemicals 332,China,Chemicals,False
+C02333,Kasa Works 333,Egypt,Chemicals,False
+C02334,Anfa Plastics 334,Egypt,Plastics,False
+C02335,Lunlun Holdings 335,Vietnam,Metals,False
+C02336,Arvi Fertilizers 336,Colombia,Fertilizers,False
+C02337,Lundel Chemicals 337,United States,Chemicals,False
+C02338,Grapra Fuel 338,Malaysia,Fuel & Energy,False
+C02339,Vimon Plastics 339,Argentina,Plastics,False
+C02340,Rimi Chemicals 340,New Zealand,Chemicals,False
+C02341,Lori Supply 341,Germany,Fertilizers,False
+C02342,Risa Electronics 342,Malaysia,Electronics,False
+C02343,Copra Industries 343,United States,Chemicals,False
+C02344,Loan Supply 344,Ireland,Paper & Pulp,False
+C02345,Conor Chemicals 345,Norway,Chemicals,False
+C02346,Saar Plastics 346,Vietnam,Plastics,False
+C02347,Zenbel Agriculture 347,Russia,Agriculture,False
+C02348,Coost Fertilizers 348,Ireland,Fertilizers,False
+C02349,Helbel Fertilizers 349,New Zealand,Fertilizers,False
+C02350,Logra Works 350,Poland,Chemicals,False
+C02351,Save Paper 351,Italy,Paper & Pulp,False
+C02352,Grave Plastics 352,Ecuador,Plastics,False
+C02353,Delfa Chemicals 353,Indonesia,Chemicals,False
+C02354,Ripra Supply 354,South Korea,Fuel & Energy,False
+C02355,Beldel Forestry 355,Brazil,Forestry,False
+C02356,Hello Fuel 356,Kenya,Fuel & Energy,False
+C02357,Belnor Group 357,Egypt,Mining,False
+C02358,Comi Mining 358,Colombia,Mining,False
+C02359,Taco Industries 359,Turkey,Fuel & Energy,False
+C02360,Helmi Industries 360,Ukraine,Fuel & Energy,False
+C02361,Krita Industries 361,Poland,Fuel & Energy,False
+C02362,Norhel Fertilizers 362,Sweden,Fertilizers,False
+C02363,Delgra Metals 363,Colombia,Metals,False
+C02364,Kafa Trading 364,Germany,Chemicals,False
+C02365,Love Fuel 365,South Korea,Fuel & Energy,False
+C02366,Graco Supply 366,Taiwan,Mining,False
+C02367,Fami Chemicals 367,Ukraine,Chemicals,False
+C02368,Monta Plastics 368,Egypt,Plastics,False
+C02369,Krico Mining 369,Peru,Mining,False
+C02370,Coost Mining 370,Russia,Mining,False
+C02371,Helri Fuel 371,Morocco,Fuel & Energy,False
+C02372,Loan Metals 372,Sweden,Metals,False
+C02373,Gradel Industries 373,South Africa,Mining,False
+C02374,Mive Fuel 374,Germany,Fuel & Energy,False
+C02375,Krive Metals 375,Spain,Metals,False
+C02376,Aran Mining 376,New Zealand,Mining,False
+C02377,Pranor Fuel 377,Denmark,Fuel & Energy,False
+C02378,Tami Supply 378,United Kingdom,Fertilizers,False
+C02379,Lomon Mining 379,Argentina,Mining,False
+C02380,Pradel Trading 380,Argentina,Mining,False
+C02381,Ostnor Mining 381,South Korea,Mining,False
+C02382,Luntor Fuel 382,Kenya,Fuel & Energy,False
+C02383,Monnor Trading 383,Ghana,Mining,False
+C02384,Delmi Chemicals 384,Colombia,Chemicals,False
+C02385,Kazen Fuel 385,China,Fuel & Energy,False
+C02386,Vinor Supply 386,Indonesia,Mining,False
+C02387,Cogra Trading 387,Japan,Forestry,False
+C02388,Vean Mining 388,Norway,Mining,False
+C02389,Monhel Fuel 389,India,Fuel & Energy,False
+C02390,Faan Fuel 390,United Kingdom,Fuel & Energy,False
+C02391,Montor Mining 391,Morocco,Mining,False
+C02392,Lunbel Fuel 392,Chile,Fuel & Energy,False
+C02393,Anhel Works 393,South Africa,Mining,False
+C02394,Lozen Chemicals 394,Morocco,Chemicals,False
+C02395,Lonor Supply 395,Norway,Fuel & Energy,False
+C02396,Torgra Mining 396,Vietnam,Mining,False
+C02397,Loka Works 397,Netherlands,Chemicals,False
+C02398,Helka Metals 398,Japan,Metals,False
+C02399,Viost Mining 399,Argentina,Mining,False
+C02400,Monfa Mining 400,Indonesia,Mining,False
+C02401,Montor Works 401,Bangladesh,Forestry,False
+C02402,Rizen Works 402,Sweden,Fuel & Energy,False
+C02403,Torpra Fuel 403,Italy,Fuel & Energy,False
+C02404,Belmi Works 404,Ireland,Chemicals,False
+C02405,Kripra Fuel 405,Canada,Fuel & Energy,False
+C02406,Helnor Metals 406,United States,Metals,False
+C02407,Lolun Metals 407,New Zealand,Metals,False
+C02408,Delka Industries 408,Netherlands,Plastics,False
+C02409,Krika Fuel 409,United States,Fuel & Energy,False
+C02410,Belka Industries 410,Russia,Metals,False
+C02411,Norka Fuel 411,Mexico,Fuel & Energy,False
+C02412,Mongra Trading 412,Morocco,Forestry,False
+C02413,Zenan Chemicals 413,Vietnam,Chemicals,False
+C02414,Mihel Trading 414,Poland,Mining,False
+C02415,Delhel Fuel 415,Mexico,Fuel & Energy,False
+C02416,Viar Trading 416,Taiwan,Mining,False
+C02417,Anbel Fuel 417,Australia,Fuel & Energy,False
+C02418,Rivi Metals 418,Malaysia,Metals,False
+C02419,Helco Fuel 419,Bangladesh,Fuel & Energy,False
+C02420,Ankri Supply 420,Morocco,Mining,False
+C02421,Cogra Metals 421,India,Metals,False
+C02422,Helvi Chemicals 422,Germany,Chemicals,False
+C02423,Ostnor Fuel 423,Norway,Fuel & Energy,False
+C02424,Norfa Industries 424,Ukraine,Mining,False
+C02425,Loan Mining 425,Canada,Mining,False
+C02426,Kaan Mining 426,Ghana,Mining,False
+C02427,Vico Supply 427,France,Mining,False
+C02428,Favi Trading 428,New Zealand,Fertilizers,False
+C02429,Samon Works 429,United States,Metals,False
+C02430,Sator Mining 430,Germany,Mining,False
+C02431,Fanor Mining 431,China,Mining,False
+C02432,Pralo Chemicals 432,Malaysia,Chemicals,False
+C02433,Pradel Group 433,Canada,Metals,False
+C02434,Zendel Mining 434,Mexico,Mining,False
+C02435,Anri Holdings 435,Norway,Fuel & Energy,False
+C02436,Lozen Chemicals 436,Colombia,Chemicals,False
+C02437,Krive Fuel 437,United Kingdom,Fuel & Energy,False
+C02438,Belri Metals 438,Mexico,Metals,False
+C02439,Arar Group 439,Russia,Fertilizers,False
+C02440,Grasa Fuel 440,Australia,Fuel & Energy,False
+C02441,Belan Works 441,Netherlands,Mining,False
+C02442,Lolun Mining 442,Spain,Mining,False
+C02443,Arpra Fuel 443,Mexico,Fuel & Energy,False
+C02444,Rifa Chemicals 444,Morocco,Chemicals,False
+C02445,Faan Fuel 445,Japan,Fuel & Energy,False
+C02446,Anpra Mining 446,Norway,Mining,False
+C02447,Krigra Industries 447,Mexico,Mining,False
+C02448,Delzen Mining 448,Germany,Mining,False
+C02449,Krivi Fertilizers 449,Australia,Fertilizers,False
+C02450,Cota Metals 450,South Africa,Metals,False
+C02451,Grami Mining 451,Canada,Mining,False
+C02452,Kribel Trading 452,Russia,Fuel & Energy,False
+C02453,Ostnor Group 453,Thailand,Metals,False
+C02454,Ostpra Industries 454,China,Forestry,False
+C02455,Vitor Fuel 455,Turkey,Fuel & Energy,False
+C02456,Norpra Chemicals 456,Norway,Chemicals,False
+C02457,Arost Fuel 457,Ecuador,Fuel & Energy,False
+C02458,Tasa Mining 458,Peru,Mining,False
+C02459,Kafa Metals 459,Ukraine,Metals,False
+C02460,Kazen Trading 460,Ghana,Mining,False
+C02461,Tave Mining 461,Italy,Mining,False
+C02462,Krika Chemicals 462,Ghana,Chemicals,False
+C02463,Helta Mining 463,Japan,Mining,False
+C02464,Delta Holdings 464,Kenya,Mining,False
+C02465,Ostri Trading 465,Mexico,Mining,False
+C02466,Delta Works 466,China,Fuel & Energy,False
+C02467,Delmi Mining 467,Turkey,Mining,False
+C02468,Norbel Trading 468,Indonesia,Forestry,False
+C02469,Vikri Metals 469,Denmark,Metals,False
+C02470,Vifa Group 470,Thailand,Mining,False
+C02471,Krivi Fertilizers 471,Ireland,Fertilizers,False
+C02472,Torlo Industries 472,Brazil,Fuel & Energy,False
+C02473,Ostdel Forestry 473,Denmark,Forestry,False
+C02474,Torfa Industries 474,Germany,Mining,False
+C02475,Lobel Mining 475,Russia,Mining,False
+C02476,Norar Works 476,Russia,Mining,False
+C02477,Riri Fuel 477,Kenya,Fuel & Energy,False
+C02478,Ostdel Chemicals 478,France,Chemicals,False
+C02479,Helka Industries 479,Vietnam,Mining,False
+C02480,Norpra Group 480,Indonesia,Mining,False
+C02481,Torbel Industries 481,United Kingdom,Fuel & Energy,False
+C02482,Krika Holdings 482,Taiwan,Mining,False
+C02483,Faar Fuel 483,Taiwan,Fuel & Energy,False
+C02484,Delnor Works 484,Denmark,Mining,False
+C02485,Graka Chemicals 485,Egypt,Chemicals,False
+C02486,Love Mining 486,Ukraine,Mining,False
+C02487,Vezen Holdings 487,Brazil,Mining,False
+C02488,Cogra Group 488,Japan,Mining,False
+C02489,Cotor Fuel 489,United States,Fuel & Energy,False
+C02490,Lolo Fuel 490,Ghana,Fuel & Energy,False
+C02491,Torpra Group 491,Vietnam,Plastics,False
+C02492,Kripra Metals 492,South Korea,Metals,False
+C02493,Risa Fuel 493,Mexico,Fuel & Energy,False
+C02494,Bello Industries 494,Spain,Metals,False
+C02495,Falun Chemicals 495,United States,Chemicals,False
+C02496,Monlun Supply 496,Netherlands,Chemicals,False
+C02497,Ostgra Fuel 497,Indonesia,Fuel & Energy,False
+C02498,Ostkri Chemicals 498,Norway,Chemicals,False
+C02499,Delri Mining 499,Ukraine,Mining,False
+C02500,Helvi Fuel 500,Turkey,Fuel & Energy,False
+C02501,Torve Mining 501,Denmark,Mining,False
+C02502,Vilo Metals 502,Kenya,Metals,False
+C02503,Zenfa Fuel 503,Sweden,Fuel & Energy,False
+C02504,Krita Fuel 504,Ireland,Fuel & Energy,False
+C02505,Anhel Mining 505,Ecuador,Mining,False
+C02506,Logra Mining 506,Ghana,Mining,False
+C02507,Torpra Mining 507,France,Mining,False
+C02508,Lundel Fuel 508,Taiwan,Fuel & Energy,False
+C02509,Fanor Chemicals 509,China,Chemicals,False
+C02510,Belost Fuel 510,Spain,Fuel & Energy,False
+C02511,Osttor Metals 511,Ecuador,Metals,False
+C02512,Ostmi Works 512,Peru,Fuel & Energy,False
+C02513,Tata Mining 513,Chile,Mining,False
+C02514,Helvi Mining 514,Peru,Mining,False
+C02515,Fahel Fuel 515,Japan,Fuel & Energy,False
+C02516,Tamon Fuel 516,Canada,Fuel & Energy,False
+C02517,Cosa Mining 517,Sweden,Mining,False
+C02518,Mita Works 518,Vietnam,Mining,False
+C02519,Vive Forestry 519,Mexico,Forestry,False
+C02520,Delan Mining 520,Egypt,Mining,False
+C02521,Savi Holdings 521,Thailand,Mining,False
+C02522,Monve Supply 522,France,Mining,False
+C02523,Salun Mining 523,Morocco,Mining,False
+C02524,Comon Mining 524,Turkey,Mining,False
+C02525,Helzen Mining 525,Peru,Mining,False
+C02526,Torfa Supply 526,Netherlands,Fuel & Energy,False
+C02527,Helve Industries 527,Ecuador,Metals,False
+C02528,Belpra Holdings 528,South Africa,Fuel & Energy,False
+C02529,Comi Chemicals 529,Germany,Chemicals,False
+C02530,Coco Fuel 530,Kenya,Fuel & Energy,False
+C02531,Norri Mining 531,Chile,Mining,False
+C02532,Prakri Metals 532,Brazil,Metals,False
+C02533,Argra Industries 533,India,Fuel & Energy,False
+C02534,Tafa Mining 534,United Kingdom,Mining,False
+C02535,Veka Industries 535,Australia,Metals,False
+C02536,Zenve Metals 536,Ireland,Metals,False
+C02537,Mikri Holdings 537,Japan,Mining,False
+C02538,Monost Mining 538,Denmark,Mining,False
+C02539,Torost Mining 539,United States,Mining,False
+C02540,Belka Holdings 540,Ghana,Mining,False
+C02541,Kalun Plastics 541,India,Plastics,False
+C02542,Krivi Metals 542,United Kingdom,Metals,False
+C02543,Veka Trading 543,Denmark,Fuel & Energy,False
+C02544,Tadel Industries 544,Ukraine,Fuel & Energy,False
+C02545,Kanor Group 545,Germany,Mining,False
+C02546,Toran Fuel 546,Bangladesh,Fuel & Energy,False
+C02547,Granor Supply 547,France,Mining,False
+C02548,Dello Industries 548,Morocco,Mining,False
+C02549,Torlun Mining 549,Russia,Mining,False
+C02550,Fasa Mining 550,Ukraine,Mining,False
+C02551,Rive Fuel 551,Argentina,Fuel & Energy,False
+C02552,Mimi Holdings 552,Colombia,Metals,False
+C02553,Tormon Mining 553,Denmark,Mining,False
+C02554,Krizen Industries 554,Colombia,Fertilizers,False
+C02555,Prabel Supply 555,Sweden,Fuel & Energy,False
+C02556,Saost Metals 556,Ireland,Metals,False
+C02557,Arsa Trading 557,Australia,Mining,False
+C02558,Lolun Industries 558,Colombia,Chemicals,False
+C02559,Fapra Mining 559,China,Mining,False
+C02560,Coost Mining 560,United Kingdom,Mining,False
+C02561,Copra Mining 561,Ukraine,Mining,False
+C02562,Grahel Mining 562,China,Mining,False
+C02563,Comi Fuel 563,Taiwan,Fuel & Energy,False
+C02564,Arsa Fuel 564,Spain,Fuel & Energy,False
+C02565,Mihel Works 565,Malaysia,Fuel & Energy,False
+C02566,Lunka Metals 566,China,Metals,False
+C02567,Veka Chemicals 567,New Zealand,Chemicals,False
+C02568,Nordel Chemicals 568,Ukraine,Chemicals,False
+C02569,Midel Supply 569,Poland,Fuel & Energy,False
+C02570,Cobel Fuel 570,Taiwan,Fuel & Energy,False
+C02571,Tazen Fuel 571,Turkey,Fuel & Energy,False
+C02572,Krimi Mining 572,Kenya,Mining,False
+C02573,Rihel Mining 573,Peru,Mining,False
+C02574,Belzen Industries 574,Spain,Fuel & Energy,False
+C02575,Vepra Holdings 575,Norway,Mining,False
+C02576,Belzen Holdings 576,Malaysia,Mining,False
+C02577,Riar Metals 577,Colombia,Metals,False
+C02578,Sami Mining 578,Japan,Mining,False
+C02579,Tata Trading 579,Mexico,Fuel & Energy,False
+C02580,Krimon Works 580,Spain,Mining,False
+C02581,Osthel Fuel 581,Colombia,Fuel & Energy,False
+C02582,Delhel Fuel 582,Brazil,Fuel & Energy,False
+C02583,Vivi Supply 583,Ecuador,Fuel & Energy,False
+C02584,Cozen Works 584,Norway,Fuel & Energy,False
+C02585,Monost Group 585,United States,Fuel & Energy,False
+C02586,Zennor Mining 586,Indonesia,Mining,False
+C02587,Bellun Fuel 587,Indonesia,Fuel & Energy,False
+C02588,Rimon Holdings 588,Ghana,Mining,False
+C02589,Rimi Chemicals 589,Germany,Chemicals,False
+C02590,Lunlo Mining 590,Germany,Mining,False
+C02591,Vemon Metals 591,China,Metals,False
+C02592,Anvi Fuel 592,Morocco,Fuel & Energy,False
+C02593,Venor Chemicals 593,Ecuador,Chemicals,False
+C02594,Vegra Trading 594,Argentina,Fertilizers,False
+C02595,Kata Fuel 595,Ecuador,Fuel & Energy,False
+C02596,Mitor Industries 596,Russia,Fuel & Energy,False
+C02597,Anmi Chemicals 597,United States,Chemicals,False
+C02598,Miost Group 598,Mexico,Fuel & Energy,False
+C02599,Grabel Fuel 599,Bangladesh,Fuel & Energy,False
+C02600,Prami Chemicals 600,Thailand,Chemicals,False
+C02601,Vika Holdings 601,Spain,Fuel & Energy,False
+C02602,Lunve Fuel 602,Ireland,Fuel & Energy,False
+C02603,Mibel Mining 603,Indonesia,Mining,False
+C02604,Grapra Forestry 604,Ghana,Forestry,False
+C02605,Viar Trading 605,South Africa,Mining,False
+C02606,Salun Supply 606,Ukraine,Mining,False
+C02607,Grami Mining 607,Denmark,Mining,False
+C02608,Loost Supply 608,Russia,Chemicals,False
+C02609,Prata Fuel 609,Australia,Fuel & Energy,False
+C02610,Mive Mining 610,France,Mining,False
+C02611,Helgra Metals 611,Germany,Metals,False
+C02612,Fator Fertilizers 612,Ghana,Fertilizers,False
+C02613,Kaco Supply 613,Peru,Mining,False
+C02614,Torkri Industries 614,South Korea,Metals,False
+C02615,Norzen Forestry 615,Ghana,Forestry,False
+C02616,Pralo Group 616,Mexico,Mining,False
+C02617,Krihel Metals 617,Poland,Metals,False
+C02618,Grabel Mining 618,France,Mining,False
+C02619,Lungra Mining 619,New Zealand,Mining,False
+C02620,Annor Metals 620,Germany,Metals,False
+C02621,Vear Metals 621,Indonesia,Metals,False
+C02622,Rikri Industries 622,Ukraine,Mining,False
+C02623,Taco Mining 623,Germany,Mining,False
+C02624,Norpra Fuel 624,China,Fuel & Energy,False
+C02625,Krilo Mining 625,Mexico,Mining,False
+C02626,Belhel Holdings 626,Argentina,Fuel & Energy,False
+C02627,Krifa Holdings 627,Canada,Chemicals,False
+C02628,Belmon Fuel 628,South Korea,Fuel & Energy,False
+C02629,Anlo Holdings 629,France,Mining,False
+C02630,Arpra Fuel 630,Indonesia,Fuel & Energy,False
+C02631,Delco Supply 631,Russia,Fuel & Energy,False
+C02632,Monta Mining 632,Egypt,Mining,False
+C02633,Lodel Mining 633,Poland,Mining,False
+C02634,Vika Mining 634,Morocco,Mining,False
+C02635,Kaar Mining 635,Taiwan,Mining,False
+C02636,Saan Mining 636,Denmark,Mining,False
+C02637,Rihel Fuel 637,Malaysia,Fuel & Energy,False
+C02638,Tari Fuel 638,Kenya,Fuel & Energy,False
+C02639,Rika Mining 639,Canada,Mining,False
+C02640,Mongra Fuel 640,France,Fuel & Energy,False
+C02641,Graco Fuel 641,Indonesia,Fuel & Energy,False
+C02642,Vitor Works 642,Netherlands,Fuel & Energy,False
+C02643,Kari Mining 643,United States,Mining,False
+C02644,Beltor Fertilizers 644,Denmark,Fertilizers,False
+C02645,Belan Industries 645,Spain,Fuel & Energy,False
+C02646,Belmi Mining 646,Ecuador,Mining,False
+C02647,Gravi Metals 647,Turkey,Metals,False
+C02648,Norkri Supply 648,Brazil,Fuel & Energy,False
+C02649,Veta Mining 649,New Zealand,Mining,False
+C02650,Delvi Industries 650,Ireland,Fuel & Energy,False
+C02651,Grator Fuel 651,France,Fuel & Energy,False
+C02652,Arri Holdings 652,New Zealand,Mining,False
+C02653,Belzen Forestry 653,Chile,Forestry,False
+C02654,Prafa Mining 654,Chile,Mining,False
+C02655,Kavi Fuel 655,South Korea,Fuel & Energy,False
+C02656,Monar Mining 656,Ecuador,Mining,False
+C02657,Comon Mining 657,Brazil,Mining,False
+C02658,Rian Fuel 658,Kenya,Fuel & Energy,False
+C02659,Belbel Mining 659,Mexico,Mining,False
+C02660,Lunlun Fuel 660,Bangladesh,Fuel & Energy,False
+C02661,Helzen Mining 661,United States,Mining,False
+C02662,Mifa Fuel 662,Ecuador,Fuel & Energy,False
+C02663,Kanor Fuel 663,Germany,Fuel & Energy,False
+C02664,Norri Fuel 664,Ireland,Fuel & Energy,False
+C02665,Norlo Supply 665,Taiwan,Metals,False
+C02666,Norlun Fuel 666,Chile,Fuel & Energy,False
+C02667,Arsa Forestry 667,Australia,Forestry,False
+C02668,Delve Group 668,Bangladesh,Fertilizers,False
+C02669,Cobel Group 669,Mexico,Mining,False
+C02670,Rinor Supply 670,Argentina,Fuel & Energy,False
+C02671,Sakri Industries 671,India,Fuel & Energy,False
+C02672,Helmi Chemicals 672,New Zealand,Chemicals,False
+C02673,Torzen Mining 673,France,Mining,False
+C02674,Prapra Group 674,China,Fuel & Energy,False
+C02675,Ostve Trading 675,Denmark,Mining,False
+C02676,Belost Mining 676,Poland,Mining,False
+C02677,Cotor Fuel 677,Malaysia,Fuel & Energy,False
+C02678,Helan Works 678,Turkey,Fuel & Energy,False
+C02679,Sazen Works 679,United Kingdom,Fuel & Energy,False
+C02680,Montor Supply 680,Ecuador,Fuel & Energy,False
+C02681,Torsa Trading 681,Thailand,Mining,False
+C02682,Aran Fuel 682,Canada,Fuel & Energy,False
+C02683,Torgra Supply 683,Argentina,Fuel & Energy,False
+C02684,Minor Metals 684,Japan,Metals,False
+C02685,Monnor Holdings 685,India,Mining,False
+C02686,Belka Metals 686,Brazil,Metals,False
+C02687,Sazen Supply 687,Malaysia,Metals,False
+C02688,Ostlun Fuel 688,United States,Fuel & Energy,False
+C02689,Lunsa Chemicals 689,India,Chemicals,False
+C02690,Fave Plastics 690,Vietnam,Plastics,False
+C02691,Armi Group 691,China,Fuel & Energy,False
+C02692,Normon Fertilizers 692,Malaysia,Fertilizers,False
+C02693,Andel Mining 693,Turkey,Mining,False
+C02694,Lunfa Mining 694,Chile,Mining,False
+C02695,Lolun Group 695,France,Mining,False
+C02696,Norhel Chemicals 696,China,Chemicals,False
+C02697,Arta Chemicals 697,Taiwan,Chemicals,False
+C02698,Armon Mining 698,Vietnam,Mining,False
+C02699,Arbel Metals 699,Ghana,Metals,False
+C02700,Lolun Trading 700,Norway,Chemicals,False
+C02701,Pramon Works 701,Taiwan,Metals,False
+C02702,Lunan Fuel 702,Indonesia,Fuel & Energy,False
+C02703,Mizen Fuel 703,Ukraine,Fuel & Energy,False
+C02704,Falo Trading 704,Argentina,Fuel & Energy,False
+C02705,Helar Fuel 705,Russia,Fuel & Energy,False
+C02706,Delan Group 706,Ukraine,Metals,False
+C02707,Save Holdings 707,Argentina,Mining,False
+C02708,Vifa Fuel 708,France,Fuel & Energy,False
+C02709,Ardel Metals 709,Egypt,Metals,False
+C02710,Lunta Group 710,Italy,Fuel & Energy,False
+C02711,Kaka Works 711,Chile,Mining,False
+C02712,Gragra Group 712,Brazil,Metals,False
+C02713,Velun Mining 713,Thailand,Mining,False
+C02714,Ostpra Fertilizers 714,Taiwan,Fertilizers,False
+C02715,Fator Holdings 715,United Kingdom,Mining,False
+C02716,Torco Supply 716,Mexico,Forestry,False
+C02717,Belco Mining 717,Argentina,Mining,False
+C02718,Kavi Mining 718,Germany,Mining,False
+C02719,Zengra Mining 719,Spain,Mining,False
+C02720,Vizen Mining 720,South Korea,Mining,False
+C02721,Kritor Trading 721,Canada,Mining,False
+C02722,Norta Supply 722,Norway,Mining,False
+C02723,Love Group 723,South Korea,Metals,False
+C02724,Mondel Mining 724,Indonesia,Mining,False
+C02725,Norsa Mining 725,Mexico,Mining,False
+C02726,Delvi Holdings 726,Ecuador,Fuel & Energy,False
+C02727,Mian Supply 727,Vietnam,Mining,False
+C02728,Tafa Chemicals 728,Germany,Chemicals,False
+C02729,Mivi Fuel 729,Peru,Fuel & Energy,False
+C02730,Arost Chemicals 730,South Africa,Chemicals,False
+C02731,Lunlun Mining 731,Denmark,Mining,False
+C02732,Rilo Mining 732,Poland,Mining,False
+C02733,Fafa Fuel 733,Kenya,Fuel & Energy,False
+C02734,Lunve Fuel 734,Colombia,Fuel & Energy,False
+C02735,Belvi Group 735,Vietnam,Mining,False
+C02736,Famon Mining 736,Thailand,Mining,False
+C02737,Helsa Group 737,Ukraine,Chemicals,False
+C02738,Codel Mining 738,Ghana,Mining,False
+C02739,Prazen Holdings 739,New Zealand,Mining,False
+C02740,Vivi Group 740,Russia,Fuel & Energy,False
+C02741,Mizen Industries 741,Ghana,Fuel & Energy,False
+C02742,Kata Chemicals 742,Germany,Chemicals,False
+C02743,Vedel Metals 743,Thailand,Metals,False
+C02744,Kalun Metals 744,Norway,Metals,False
+C02745,Cosa Group 745,Netherlands,Fuel & Energy,False
+C02746,Ostmon Group 746,Turkey,Fertilizers,False
+C02747,Kazen Works 747,Morocco,Fuel & Energy,False
+C02748,Monmi Trading 748,Peru,Fuel & Energy,False
+C02749,Riar Mining 749,Ukraine,Mining,False
+C02750,Ribel Industries 750,South Korea,Mining,False
+C02751,Norbel Fuel 751,Russia,Fuel & Energy,False
+C02752,Torlun Works 752,Ireland,Fuel & Energy,False
+C02753,Vilo Holdings 753,France,Chemicals,False
+C02754,Cota Fuel 754,France,Fuel & Energy,False
+C02755,Belgra Group 755,France,Fuel & Energy,False
+C02756,Lozen Fuel 756,South Africa,Fuel & Energy,False
+C02757,Helco Mining 757,Norway,Mining,False
+C02758,Grakri Trading 758,Taiwan,Mining,False
+C02759,Mian Fuel 759,Bangladesh,Fuel & Energy,False
+C02760,Lunzen Metals 760,Germany,Metals,False
+C02761,Deldel Fuel 761,China,Fuel & Energy,False
+C02762,Kanor Group 762,Netherlands,Mining,False
+C02763,Velo Fuel 763,Mexico,Fuel & Energy,False
+C02764,Anta Group 764,India,Chemicals,False
+C02765,Faka Holdings 765,China,Plastics,False
+C02766,Arost Works 766,South Korea,Fuel & Energy,False
+C02767,Rika Fertilizers 767,Colombia,Fertilizers,False
+C02768,Anta Mining 768,India,Mining,False
+C02769,Zenta Mining 769,Thailand,Mining,False
+C02770,Tamon Mining 770,Morocco,Mining,False
+C02771,Vizen Industries 771,Ecuador,Fuel & Energy,False
+C02772,Sasa Trading 772,China,Mining,False
+C02773,Helmon Trading 773,Ghana,Mining,False
+C02774,Vipra Metals 774,China,Metals,False
+C02775,Norve Holdings 775,Mexico,Chemicals,False
+C02776,Zenri Industries 776,Malaysia,Mining,False
+C02777,Viri Metals 777,Italy,Metals,False
+C02778,Sabel Chemicals 778,Mexico,Chemicals,False
+C02779,Helmon Supply 779,Indonesia,Fuel & Energy,False
+C02780,Losa Fuel 780,South Korea,Fuel & Energy,False
+C02781,Delnor Supply 781,Argentina,Fuel & Energy,False
+C02782,Graco Group 782,Indonesia,Fuel & Energy,False
+C02783,Zenbel Mining 783,Bangladesh,Mining,False
+C02784,Ostost Mining 784,Ireland,Mining,False
+C02785,Arsa Trading 785,South Korea,Mining,False
+C02786,Ostlo Chemicals 786,India,Chemicals,False
+C02787,Tave Mining 787,Turkey,Mining,False
+C02788,Krita Plastics 788,Australia,Plastics,False
+C02789,Tanor Metals 789,Brazil,Metals,False
+C02790,Anve Supply 790,South Korea,Chemicals,False
+C02791,Anve Mining 791,France,Mining,False
+C02792,Anve Works 792,Egypt,Mining,False
+C02793,Anpra Fuel 793,Morocco,Fuel & Energy,False
+C02794,Graar Works 794,Brazil,Mining,False
+C02795,Fabel Trading 795,Vietnam,Fuel & Energy,False
+C02796,Fakri Supply 796,Chile,Mining,False
+C02797,Loco Holdings 797,Mexico,Fuel & Energy,False
+C02798,Mibel Group 798,Canada,Mining,False
+C02799,Belka Mining 799,Peru,Mining,False
+C02800,Velo Metals 800,Egypt,Metals,False
+C02801,Osthel Mining 801,Argentina,Mining,False
+C02802,Zenco Fuel 802,Spain,Fuel & Energy,False
+C02803,Famon Trading 803,Bangladesh,Fuel & Energy,False
+C02804,Vikri Group 804,Taiwan,Mining,False
+C02805,Norvi Works 805,Mexico,Mining,False
+C02806,Delhel Fertilizers 806,Italy,Fertilizers,False
+C02807,Tornor Fuel 807,United Kingdom,Fuel & Energy,False
+C02808,Praar Forestry 808,Kenya,Forestry,False
+C02809,Falun Metals 809,Canada,Metals,False
+C02810,Ostve Fuel 810,Taiwan,Fuel & Energy,False
+C02811,Vita Metals 811,Turkey,Metals,False
+C02812,Salo Chemicals 812,Brazil,Chemicals,False
+C02813,Cofa Mining 813,Morocco,Mining,False
+C02814,Monbel Fuel 814,United States,Fuel & Energy,False
+C02815,Kapra Mining 815,Morocco,Mining,False
+C02816,Delco Plastics 816,Chile,Plastics,False
+C02817,Krita Fuel 817,France,Fuel & Energy,False
+C02818,Krimon Metals 818,Ghana,Metals,False
+C02819,Lomon Trading 819,Thailand,Fuel & Energy,False
+C02820,Lovi Industries 820,Brazil,Chemicals,False
+C02821,Arco Chemicals 821,Denmark,Chemicals,False
+C02822,Sator Group 822,Colombia,Mining,False
+C02823,Angra Metals 823,Morocco,Metals,False
+C02824,Helri Mining 824,Argentina,Mining,False
+C02825,Norpra Holdings 825,Ireland,Fuel & Energy,False
+C02826,Krimi Holdings 826,Mexico,Mining,False
+C02827,Kaost Plastics 827,United States,Plastics,False
+C02828,Belmon Fuel 828,Norway,Fuel & Energy,False
+C02829,Kagra Fuel 829,Brazil,Fuel & Energy,False
+C02830,Torlun Metals 830,Morocco,Metals,False
+C02831,Nornor Fuel 831,Malaysia,Fuel & Energy,False
+C02832,Torta Metals 832,New Zealand,Metals,False
+C02833,Grata Mining 833,Netherlands,Mining,False
+C02834,Rinor Holdings 834,Ecuador,Mining,False
+C02835,Zendel Trading 835,Peru,Fuel & Energy,False
+C02836,Prami Mining 836,Peru,Mining,False
+C02837,Miar Mining 837,Malaysia,Mining,False
+C02838,Fadel Chemicals 838,Sweden,Chemicals,False
+C02839,Helvi Holdings 839,Morocco,Fuel & Energy,False
+C02840,Monkri Fuel 840,Germany,Fuel & Energy,False
+C02841,Rian Chemicals 841,Ukraine,Chemicals,False
+C02842,Ostmi Metals 842,Denmark,Metals,False
+C02843,Helar Works 843,Poland,Fuel & Energy,False
+C02844,Norgra Fuel 844,Ecuador,Fuel & Energy,False
+C02845,Mimi Plastics 845,Japan,Plastics,False
+C02846,Bellun Fuel 846,Kenya,Fuel & Energy,False
+C02847,Risa Chemicals 847,France,Chemicals,False
+C02848,Grator Trading 848,Denmark,Fuel & Energy,False
+C02849,Delzen Forestry 849,Chile,Forestry,False
+C02850,Sasa Fuel 850,Chile,Fuel & Energy,False
+C02851,Grata Mining 851,Norway,Mining,False
+C02852,Belkri Mining 852,Argentina,Mining,False
+C02853,Falo Trading 853,Japan,Chemicals,False
+C02854,Lobel Mining 854,Netherlands,Mining,False
+C02855,Prabel Trading 855,South Africa,Fuel & Energy,False
+C02856,Granor Fuel 856,Russia,Fuel & Energy,False
+C02857,Belan Industries 857,South Korea,Fuel & Energy,False
+C02858,Krikri Mining 858,Ireland,Mining,False
+C02859,Anve Fertilizers 859,New Zealand,Fertilizers,False
+C02860,Anhel Fuel 860,South Korea,Fuel & Energy,False
+C02861,Grata Fuel 861,New Zealand,Fuel & Energy,False
+C02862,Riar Works 862,Kenya,Forestry,False
+C02863,Monka Holdings 863,Australia,Fuel & Energy,False
+C02864,Veco Works 864,Mexico,Fuel & Energy,False
+C02865,Grahel Fuel 865,China,Fuel & Energy,False
+C02866,Lolun Industries 866,Ireland,Mining,False
+C02867,Krian Trading 867,United States,Fuel & Energy,False
+C02868,Kafa Plastics 868,South Africa,Plastics,False
+C02869,Mita Group 869,Taiwan,Fuel & Energy,False
+C02870,Mitor Metals 870,Thailand,Metals,False
+C02871,Anar Mining 871,Argentina,Mining,False
+C02872,Lofa Supply 872,Malaysia,Fuel & Energy,False
+C02873,Sagra Chemicals 873,Colombia,Chemicals,False
+C02874,Ansa Mining 874,Turkey,Mining,False
+C02875,Torlun Fuel 875,Chile,Fuel & Energy,False
+C02876,Arsa Fuel 876,South Korea,Fuel & Energy,False
+C02877,Krifa Group 877,France,Metals,False
+C02878,Midel Fertilizers 878,Denmark,Fertilizers,False
+C02879,Sakri Mining 879,Ireland,Mining,False
+C02880,Vean Industries 880,Kenya,Mining,False
+C02881,Loco Holdings 881,Canada,Fuel & Energy,False
+C02882,Milun Mining 882,United Kingdom,Mining,False
+C02883,Helzen Group 883,United Kingdom,Fuel & Energy,False
+C02884,Mive Fuel 884,Chile,Fuel & Energy,False
+C02885,Arka Mining 885,United States,Mining,False
+C02886,Grafa Chemicals 886,Germany,Chemicals,False
+C02887,Kator Mining 887,United States,Mining,False
+C02888,Monhel Trading 888,Ukraine,Mining,False
+C02889,Lodel Mining 889,New Zealand,Mining,False
+C02890,Samon Works 890,Bangladesh,Fuel & Energy,False
+C02891,Granor Fuel 891,France,Fuel & Energy,False
+C02892,Coar Fertilizers 892,Argentina,Fertilizers,False
+C02893,Anka Fuel 893,Ukraine,Fuel & Energy,False
+C02894,Vegra Fuel 894,Sweden,Fuel & Energy,False
+C02895,Prata Mining 895,United States,Mining,False
+C02896,Norar Chemicals 896,South Korea,Chemicals,False
+C02897,Toran Trading 897,Ecuador,Fuel & Energy,False
+C02898,Delan Mining 898,India,Mining,False
+C02899,Ostan Trading 899,Taiwan,Chemicals,False
+C02900,Normon Group 900,Australia,Mining,False
+C02901,Anbel Mining 901,Malaysia,Mining,False
+C02902,Zennor Trading 902,Malaysia,Forestry,False
+C02903,Lobel Works 903,Thailand,Mining,False
+C02904,Monco Mining 904,United Kingdom,Mining,False
+C02905,Belco Holdings 905,South Africa,Fuel & Energy,False
+C02906,Vibel Metals 906,Sweden,Metals,False
+C02907,Vemi Metals 907,France,Metals,False
+C02908,Gralo Works 908,Ecuador,Metals,False
+C02909,Arsa Fuel 909,Egypt,Fuel & Energy,False
+C02910,Prazen Chemicals 910,Colombia,Chemicals,False
+C02911,Prakri Industries 911,China,Mining,False
+C02912,Fator Fertilizers 912,Netherlands,Fertilizers,False
+C02913,Loka Mining 913,Taiwan,Mining,False
+C02914,Hellun Group 914,Vietnam,Mining,False
+C02915,Norvi Group 915,Ireland,Fuel & Energy,False
+C02916,Cotor Group 916,Colombia,Chemicals,False
+C02917,Covi Works 917,Turkey,Fuel & Energy,False
+C02918,Lunlo Group 918,Canada,Mining,False
+C02919,Arost Industries 919,Egypt,Mining,False
+C02920,Loka Trading 920,Poland,Fuel & Energy,False
+C02921,Prave Holdings 921,Japan,Chemicals,False
+C02922,Arhel Mining 922,Chile,Mining,False
+C02923,Delhel Group 923,India,Mining,False
+C02924,Lunan Mining 924,Brazil,Mining,False
+C02925,Prakri Supply 925,Chile,Mining,False
+C02926,Venor Chemicals 926,Australia,Chemicals,False
+C02927,Vilun Fertilizers 927,Ukraine,Fertilizers,False
+C02928,Ostar Industries 928,Germany,Mining,False
+C02929,Rigra Mining 929,Colombia,Mining,False
+C02930,Grator Fuel 930,Russia,Fuel & Energy,False
+C02931,Prahel Mining 931,France,Mining,False
+C02932,Fadel Group 932,Brazil,Mining,False
+C02933,Zenar Metals 933,Turkey,Metals,False
+C02934,Belka Group 934,Russia,Fuel & Energy,False
+C02935,Armi Holdings 935,Ireland,Mining,False
+C02936,Helpra Chemicals 936,South Africa,Chemicals,False
+C02937,Ostmon Works 937,Malaysia,Metals,False
+C02938,Monve Fuel 938,South Africa,Fuel & Energy,False
+C02939,Osttor Fuel 939,Egypt,Fuel & Energy,False
+C02940,Miri Industries 940,Brazil,Chemicals,False
+C02941,Ostgra Chemicals 941,Russia,Chemicals,False
+C02942,Torve Mining 942,Vietnam,Mining,False
+C02943,Belost Group 943,Poland,Mining,False
+C02944,Zenmon Chemicals 944,Thailand,Chemicals,False
+C02945,Helta Mining 945,Canada,Mining,False
+C02946,Grata Works 946,Ecuador,Mining,False
+C02947,Praan Metals 947,Germany,Metals,False
+C02948,Loar Fertilizers 948,Poland,Fertilizers,False
+C02949,Praar Trading 949,Vietnam,Plastics,False
+C02950,Helta Mining 950,Spain,Mining,False
+C02951,Ostpra Mining 951,Spain,Mining,False
+C02952,Mivi Chemicals 952,Morocco,Chemicals,False

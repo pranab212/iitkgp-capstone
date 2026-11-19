@@ -1,0 +1,691 @@
+[
+  {
+    "id": "co_t1",
+    "kind": "company",
+    "tier": 1,
+    "focal": "Northwind Grocers",
+    "article": "Taka Beverages 003 said on Monday that a ransomware attack has forced it to shut its bottling lines. The soft-drinks and juice maker expects to be offline for at least three weeks while systems are rebuilt, and has warned customers of delivery gaps.",
+    "truth": {
+      "countries": [],
+      "industries": [],
+      "companies": [
+        "Taka Beverages 003"
+      ]
+    },
+    "expected": {
+      "focal_id": "F1",
+      "company_ids": [
+        "C00003"
+      ],
+      "disrupted_count": 1,
+      "per_tier": {
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "exposed_tier1": 1,
+      "top_supplier": {
+        "company_id": "C00003",
+        "name": "Taka Beverages 003",
+        "risk_score": 0.477,
+        "risk_level": "MEDIUM"
+      },
+      "top_high_supplier": null,
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "co_t2",
+    "kind": "company",
+    "tier": 2,
+    "focal": "Northwind Grocers",
+    "article": "A fire at the Nornor Electronics 031 factory destroyed its refrigeration-controller line late on Tuesday. No one was hurt. The company told customers, including buyers in Germany, to expect shipment delays of two months.",
+    "truth": {
+      "countries": [],
+      "industries": [],
+      "companies": [
+        "Nornor Electronics 031"
+      ]
+    },
+    "expected": {
+      "focal_id": "F1",
+      "company_ids": [
+        "C00031"
+      ],
+      "disrupted_count": 1,
+      "per_tier": {
+        "1": 0,
+        "2": 1,
+        "3": 0,
+        "4": 0
+      },
+      "exposed_tier1": 1,
+      "top_supplier": {
+        "company_id": "C00001",
+        "name": "Lunve Supply 001",
+        "risk_score": 0.236,
+        "risk_level": "LOW"
+      },
+      "top_high_supplier": null,
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "co_t3",
+    "kind": "company",
+    "tier": 3,
+    "focal": "Maple Fresh Markets",
+    "article": "Production at Kave Mining 433 has stopped after a section of its main shaft collapsed. Engineers will inspect the site before work can restart, and the firm has declared force majeure on all open contracts.",
+    "truth": {
+      "countries": [],
+      "industries": [],
+      "companies": [
+        "Kave Mining 433"
+      ]
+    },
+    "expected": {
+      "focal_id": "F3",
+      "company_ids": [
+        "C00433"
+      ],
+      "disrupted_count": 1,
+      "per_tier": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0
+      },
+      "exposed_tier1": 4,
+      "top_supplier": {
+        "company_id": "C00018",
+        "name": "Torta Fresh 018",
+        "risk_score": 0.291,
+        "risk_level": "LOW"
+      },
+      "top_high_supplier": null,
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "co_t4",
+    "kind": "company",
+    "tier": 4,
+    "focal": "Maple Fresh Markets",
+    "article": "Workers at Kalun Group 551 walked out on Thursday in a dispute over pay. The mining company's output of bauxite has halted, and the union says the strike will continue until a new offer is made.",
+    "truth": {
+      "countries": [],
+      "industries": [],
+      "companies": [
+        "Kalun Group 551"
+      ]
+    },
+    "expected": {
+      "focal_id": "F3",
+      "company_ids": [
+        "C00551"
+      ],
+      "disrupted_count": 1,
+      "per_tier": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1
+      },
+      "exposed_tier1": 2,
+      "top_supplier": {
+        "company_id": "C01978",
+        "name": "Monve Holdings 978",
+        "risk_score": 0.247,
+        "risk_level": "LOW"
+      },
+      "top_high_supplier": null,
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "ctry_turkey",
+    "kind": "country",
+    "focal": "Northwind Grocers",
+    "article": "A magnitude 7.4 earthquake struck central Turkey overnight, damaging factories, roads and ports. Authorities have suspended industrial output across the affected provinces and say the recovery will take months.",
+    "truth": {
+      "countries": [
+        "Turkey"
+      ],
+      "industries": [],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F1",
+      "company_ids": [],
+      "disrupted_count": 55,
+      "per_tier": {
+        "1": 1,
+        "2": 5,
+        "3": 21,
+        "4": 28
+      },
+      "exposed_tier1": 28,
+      "top_supplier": {
+        "company_id": "C00013",
+        "name": "Kami Food 013",
+        "risk_score": 0.651,
+        "risk_level": "HIGH"
+      },
+      "top_high_supplier": {
+        "company_id": "C00013",
+        "name": "Kami Food 013",
+        "risk_score": 0.651,
+        "risk_level": "HIGH"
+      },
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "ctry_egypt",
+    "kind": "country",
+    "focal": "Alpenmarkt",
+    "article": "Unrest in Egypt escalated this week, with protesters blocking roads to the main ports and the government imposing a nationwide curfew. Shipping lines have suspended calls at Egyptian terminals. Importers in Italy and Spain are looking for other routes.",
+    "truth": {
+      "countries": [
+        "Egypt"
+      ],
+      "industries": [],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F2",
+      "company_ids": [],
+      "disrupted_count": 48,
+      "per_tier": {
+        "1": 3,
+        "2": 3,
+        "3": 14,
+        "4": 28
+      },
+      "exposed_tier1": 23,
+      "top_supplier": {
+        "company_id": "C01010",
+        "name": "Ostnor Supply 010",
+        "risk_score": 0.621,
+        "risk_level": "HIGH"
+      },
+      "top_high_supplier": {
+        "company_id": "C01010",
+        "name": "Ostnor Supply 010",
+        "risk_score": 0.621,
+        "risk_level": "HIGH"
+      },
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "ctry_chile",
+    "kind": "country",
+    "focal": "Maple Fresh Markets",
+    "article": "A strong earthquake and tsunami warning hit the coast of Chile on Friday. Ports and factories along the coast have been evacuated, and the government declared a state of emergency that will last at least a month.",
+    "truth": {
+      "countries": [
+        "Chile"
+      ],
+      "industries": [],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F3",
+      "company_ids": [],
+      "disrupted_count": 46,
+      "per_tier": {
+        "1": 1,
+        "2": 3,
+        "3": 14,
+        "4": 28
+      },
+      "exposed_tier1": 28,
+      "top_supplier": {
+        "company_id": "C01967",
+        "name": "Zenost Group 967",
+        "risk_score": 0.558,
+        "risk_level": "MEDIUM"
+      },
+      "top_high_supplier": null,
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "ctry_india",
+    "kind": "country",
+    "focal": "Maple Fresh Markets",
+    "article": "Severe flooding across India has cut road and rail links and forced factories to close in several states. Officials said it is the worst monsoon flooding in a decade and that exports from the country will be disrupted for weeks.",
+    "truth": {
+      "countries": [
+        "India"
+      ],
+      "industries": [],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F3",
+      "company_ids": [],
+      "disrupted_count": 52,
+      "per_tier": {
+        "1": 0,
+        "2": 10,
+        "3": 12,
+        "4": 30
+      },
+      "exposed_tier1": 27,
+      "top_supplier": {
+        "company_id": "C00999",
+        "name": "Kator Dairy 999",
+        "risk_score": 0.608,
+        "risk_level": "HIGH"
+      },
+      "top_high_supplier": {
+        "company_id": "C00999",
+        "name": "Kator Dairy 999",
+        "risk_score": 0.608,
+        "risk_level": "HIGH"
+      },
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "ctry_brazil",
+    "kind": "country",
+    "focal": "Alpenmarkt",
+    "article": "Truckers in Brazil began a nationwide strike on Wednesday, blocking highways to protest fuel prices. Deliveries between farms, factories and ports have largely stopped, and analysts expect shortages in export markets such as the United Kingdom.",
+    "truth": {
+      "countries": [
+        "Brazil"
+      ],
+      "industries": [],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F2",
+      "company_ids": [],
+      "disrupted_count": 64,
+      "per_tier": {
+        "1": 0,
+        "2": 3,
+        "3": 20,
+        "4": 41
+      },
+      "exposed_tier1": 23,
+      "top_supplier": {
+        "company_id": "C00005",
+        "name": "Delve Personal 005",
+        "risk_score": 0.624,
+        "risk_level": "HIGH"
+      },
+      "top_high_supplier": {
+        "company_id": "C00005",
+        "name": "Delve Personal 005",
+        "risk_score": 0.624,
+        "risk_level": "HIGH"
+      },
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "ind_fert",
+    "kind": "industry",
+    "focal": "Maple Fresh Markets",
+    "article": "Fertilizer producers worldwide have cut output after a sharp rise in natural gas costs. Supplies of potash, urea and ammonia are tight, and the industry body warns that shortages will hit farmers for the rest of the season.",
+    "truth": {
+      "countries": [],
+      "industries": [
+        "Fertilizers"
+      ],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F3",
+      "company_ids": [],
+      "disrupted_count": 128,
+      "per_tier": {
+        "1": 0,
+        "2": 5,
+        "3": 82,
+        "4": 41
+      },
+      "exposed_tier1": 21,
+      "top_supplier": {
+        "company_id": "C00007",
+        "name": "Lomi Trading 007",
+        "risk_score": 0.78,
+        "risk_level": "HIGH"
+      },
+      "top_high_supplier": {
+        "company_id": "C00007",
+        "name": "Lomi Trading 007",
+        "risk_score": 0.78,
+        "risk_level": "HIGH"
+      },
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "ind_glass",
+    "kind": "industry",
+    "focal": "Northwind Grocers",
+    "article": "Glass manufacturers say they have been forced to shut furnaces because of a shortage of soda ash. Makers of bottles and jars across the sector expect output to fall by a third, and food and drink companies are being warned to expect supply problems.",
+    "truth": {
+      "countries": [],
+      "industries": [
+        "Glass"
+      ],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F1",
+      "company_ids": [],
+      "disrupted_count": 3,
+      "per_tier": {
+        "1": 0,
+        "2": 3,
+        "3": 0,
+        "4": 0
+      },
+      "exposed_tier1": 2,
+      "top_supplier": {
+        "company_id": "C00003",
+        "name": "Taka Beverages 003",
+        "risk_score": 0.358,
+        "risk_level": "LOW"
+      },
+      "top_high_supplier": null,
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "ind_metals",
+    "kind": "industry",
+    "focal": "Alpenmarkt",
+    "article": "A new alliance of governments has banned exports of aluminium coil and tinplate steel to protect its own supplies, hitting the global metals industry. Can and packaging makers say they will struggle to find replacement metal for months.",
+    "truth": {
+      "countries": [],
+      "industries": [
+        "Metals"
+      ],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F2",
+      "company_ids": [],
+      "disrupted_count": 259,
+      "per_tier": {
+        "1": 0,
+        "2": 13,
+        "3": 71,
+        "4": 175
+      },
+      "exposed_tier1": 24,
+      "top_supplier": {
+        "company_id": "C00020",
+        "name": "Sakri Packaging 020",
+        "risk_score": 0.776,
+        "risk_level": "HIGH"
+      },
+      "top_high_supplier": {
+        "company_id": "C00020",
+        "name": "Sakri Packaging 020",
+        "risk_score": 0.776,
+        "risk_level": "HIGH"
+      },
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "mix_pack_india",
+    "kind": "country_industry",
+    "focal": "Northwind Grocers",
+    "article": "Packaging manufacturers across India have halted production after a gas supply failure at industrial parks. Makers of plastic film, cartons and PET bottles in the country say customers in Europe should expect delays.",
+    "truth": {
+      "countries": [
+        "India"
+      ],
+      "industries": [
+        "Packaging"
+      ],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F1",
+      "company_ids": [],
+      "disrupted_count": 64,
+      "per_tier": {
+        "1": 5,
+        "2": 15,
+        "3": 25,
+        "4": 19
+      },
+      "exposed_tier1": 30,
+      "top_supplier": {
+        "company_id": "C00020",
+        "name": "Sakri Packaging 020",
+        "risk_score": 0.807,
+        "risk_level": "HIGH"
+      },
+      "top_high_supplier": {
+        "company_id": "C00020",
+        "name": "Sakri Packaging 020",
+        "risk_score": 0.807,
+        "risk_level": "HIGH"
+      },
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "mix_log_vietnam",
+    "kind": "country_industry",
+    "focal": "Maple Fresh Markets",
+    "article": "Dockworkers in Vietnam began an indefinite strike today, shutting container terminals. Logistics operators say cold-chain transport, warehousing and freight forwarding out of the country are suspended.",
+    "truth": {
+      "countries": [
+        "Vietnam"
+      ],
+      "industries": [
+        "Logistics"
+      ],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F3",
+      "company_ids": [],
+      "disrupted_count": 62,
+      "per_tier": {
+        "1": 5,
+        "2": 15,
+        "3": 16,
+        "4": 26
+      },
+      "exposed_tier1": 29,
+      "top_supplier": {
+        "company_id": "C01057",
+        "name": "Norbel Logistics 057",
+        "risk_score": 0.636,
+        "risk_level": "HIGH"
+      },
+      "top_high_supplier": {
+        "company_id": "C01057",
+        "name": "Norbel Logistics 057",
+        "risk_score": 0.636,
+        "risk_level": "HIGH"
+      },
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "mix_oil_blacksea",
+    "kind": "country_industry",
+    "focal": "Alpenmarkt",
+    "article": "Sunflower, palm and rapeseed oil exports from Russia and Ukraine have stopped as ports on the Black Sea were closed because of the fighting. Edible oil buyers in Germany and France are warning of shortages and price spikes.",
+    "truth": {
+      "countries": [
+        "Russia",
+        "Ukraine"
+      ],
+      "industries": [
+        "Edible Oils"
+      ],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F2",
+      "company_ids": [],
+      "disrupted_count": 112,
+      "per_tier": {
+        "1": 0,
+        "2": 18,
+        "3": 38,
+        "4": 56
+      },
+      "exposed_tier1": 24,
+      "top_supplier": {
+        "company_id": "C00003",
+        "name": "Taka Beverages 003",
+        "risk_score": 0.674,
+        "risk_level": "HIGH"
+      },
+      "top_high_supplier": {
+        "company_id": "C00003",
+        "name": "Taka Beverages 003",
+        "risk_score": 0.674,
+        "risk_level": "HIGH"
+      },
+      "final_status": "completed"
+    }
+  },
+  {
+    "id": "fp_earnings",
+    "kind": "false_positive",
+    "focal": "Northwind Grocers",
+    "article": "Northwind Grocers reported record quarterly profit on Thursday, helped by strong demand for ready meals. The retailer said it will open twelve new stores next year and raise its dividend.",
+    "truth": {
+      "countries": [],
+      "industries": [],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F1",
+      "company_ids": [],
+      "disrupted_count": 0,
+      "per_tier": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "exposed_tier1": 0,
+      "top_supplier": null,
+      "top_high_supplier": null,
+      "final_status": "no_exposure"
+    }
+  },
+  {
+    "id": "fp_iceland",
+    "kind": "false_positive",
+    "focal": "Alpenmarkt",
+    "article": "A heavy storm closed roads in Iceland on Saturday and forced the cancellation of a music festival. Organisers said tickets will be refunded and the event will return next summer.",
+    "truth": {
+      "countries": [],
+      "industries": [],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F2",
+      "company_ids": [],
+      "disrupted_count": 0,
+      "per_tier": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "exposed_tier1": 0,
+      "top_supplier": null,
+      "top_high_supplier": null,
+      "final_status": "no_exposure"
+    }
+  },
+  {
+    "id": "fp_unknown_co",
+    "kind": "false_positive",
+    "focal": "Maple Fresh Markets",
+    "article": "A fire damaged the Helios Photonics plant near Luxembourg City on Sunday. The company, which makes optical sensors for medical scanners, said the damage is limited and that production at its other sites is unaffected.",
+    "truth": {
+      "countries": [],
+      "industries": [],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F3",
+      "company_ids": [],
+      "disrupted_count": 0,
+      "per_tier": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "exposed_tier1": 0,
+      "top_supplier": null,
+      "top_high_supplier": null,
+      "final_status": "no_exposure"
+    }
+  },
+  {
+    "id": "fp_chips",
+    "kind": "false_positive",
+    "focal": "Northwind Grocers",
+    "article": "The global semiconductor shortage is lifting prices for graphics cards and games consoles. Chip makers say lead times for advanced processors have reached a year, but carmakers and phone makers are the hardest hit.",
+    "truth": {
+      "countries": [],
+      "industries": [],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F1",
+      "company_ids": [],
+      "disrupted_count": 0,
+      "per_tier": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "exposed_tier1": 0,
+      "top_supplier": null,
+      "top_high_supplier": null,
+      "final_status": "no_exposure"
+    }
+  },
+  {
+    "id": "fp_retrospective",
+    "kind": "false_positive",
+    "focal": "Alpenmarkt",
+    "article": "A year on from the shock to Ukraine's grain exports, analysts say food supply chains have fully recovered. Prices have returned to normal and shipments from the region are flowing without interruption, according to a new industry review.",
+    "truth": {
+      "countries": [],
+      "industries": [],
+      "companies": []
+    },
+    "expected": {
+      "focal_id": "F2",
+      "company_ids": [],
+      "disrupted_count": 0,
+      "per_tier": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "exposed_tier1": 0,
+      "top_supplier": null,
+      "top_high_supplier": null,
+      "final_status": "no_exposure"
+    }
+  }
+]

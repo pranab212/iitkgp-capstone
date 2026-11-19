@@ -1,0 +1,9 @@
+# Core (graph data + tools)
+pandas>=2.0
+networkx>=3.2
+scipy>=1.11            # needed by networkx.pagerank (risk scoring)
+
+# Phase 2 (agents)
+pydantic>=2.5
+langgraph>=0.2
+openai>=1.40           # only for the optional Azure OpenAI path; Qwen and the mock do not need it

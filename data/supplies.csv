@@ -1,0 +1,4439 @@
+supplier_id,customer_id,product
+C00001,F1,Freight forwarding
+C00002,F1,Soft drinks
+C00003,F1,Soft drinks
+C00004,F1,Shampoo
+C00005,F1,Shampoo
+C00006,F1,Paper towels
+C00007,F1,Bread
+C00008,F1,Frozen foods
+C00009,F1,Fresh poultry
+C00010,F1,Yoghurt
+C00011,F1,Pork products
+C00012,F1,Aluminium cans
+C00013,F1,Frozen foods
+C00014,F1,Warehousing
+C00015,F1,Pork products
+C00016,F1,Shampoo
+C00017,F1,Fresh poultry
+C00018,F1,Vegetables
+C00019,F1,PET bottles
+C00020,F1,Corrugated boxes
+C00021,F1,Canned vegetables
+C00022,F1,Plastic film
+C00023,F1,Beef cuts
+C00024,F1,Ready meals
+C00025,F1,Vegetables
+C00026,F1,Pork products
+C00027,F1,Paper towels
+C00028,F1,Yoghurt
+C00029,F1,Cleaning sprays
+C00030,F1,Cold-chain transport
+C00031,C00001,Refrigeration controllers
+C00032,C00002,Glass jars
+C00032,C00003,Glass bottles
+C00033,C00004,Polypropylene
+C00034,C00005,Surfactants
+C00035,C00006,Wood pulp
+C00036,C00007,Coffee beans
+C00037,C00008,Cocoa
+C00038,C00009,Corrugated boxes
+C00039,C00010,Cocoa
+C00040,C00011,Warehousing
+C00033,C00012,Polypropylene
+C00041,C00013,Emulsifiers
+C00042,C00014,Telematics units
+C00043,C00015,Cold-chain transport
+C00044,C00016,Pesticides
+C00045,C00017,Compound feed
+C00046,C00018,Cocoa
+C00047,C00019,Tinplate steel
+C00048,C00020,Aluminium coil
+C00049,C00021,Rapeseed oil
+C00050,C00022,Polypropylene
+C00051,C00023,Freight forwarding
+C00052,C00024,Coffee beans
+C00053,C00025,Urea
+C00020,C00026,Plastic film
+C00054,C00027,Wood pulp
+C00055,C00028,Soybeans
+C00035,C00029,Wood pulp
+C00056,C00030,Natural gas
+C00057,C00002,Soybeans
+C00058,C00003,Plastic film
+C00059,C00004,PET resin
+C00060,C00005,Sunflower oil
+C00061,C00006,Kraft paper
+C00049,C00007,Palm oil
+C00055,C00008,Cocoa
+C00062,C00009,Freight forwarding
+C00063,C00010,Coffee beans
+C00064,C00011,Soy meal
+C00065,C00012,Wood pulp
+C00058,C00013,Aluminium cans
+C00066,C00014,Refrigeration controllers
+C00020,C00015,PET bottles
+C00049,C00016,Palm oil
+C00067,C00017,Soy meal
+C00068,C00018,Cold-chain transport
+C00069,C00019,Polypropylene
+C00050,C00020,Polypropylene
+C00070,C00021,Rapeseed oil
+C00069,C00022,Polypropylene
+C00071,C00023,Cold-chain transport
+C00012,C00024,Corrugated boxes
+C00072,C00025,Freight forwarding
+C00073,C00026,Compound feed
+C00074,C00027,Polypropylene
+C00075,C00028,Corn
+C00076,C00029,Polypropylene
+C00077,C00030,Telematics units
+C00066,C00001,Telematics units
+C00078,C00002,Aluminium cans
+C00079,C00003,Glass bottles
+C00080,C00004,Polypropylene
+C00081,C00005,PET resin
+C00082,C00006,Caustic soda
+C00083,C00007,Corn
+C00084,C00008,Sunflower seed
+C00085,C00009,PET bottles
+C00022,C00010,Plastic film
+C00051,C00011,Cold-chain transport
+C00086,C00012,Kraft paper
+C00056,C00014,Natural gas
+C00051,C00015,Warehousing
+C00087,C00016,Surfactants
+C00088,C00017,Cold-chain transport
+C00061,C00019,Wood pulp
+C00089,C00020,Kraft paper
+C00090,C00021,Corrugated boxes
+C00091,C00022,Kraft paper
+C00067,C00023,Compound feed
+C00041,C00024,Emulsifiers
+C00092,C00025,Corn
+C00012,C00026,Aluminium cans
+C00093,C00027,Kraft paper
+C00064,C00028,Soy meal
+C00094,C00029,Kraft paper
+C00095,C00030,Telematics units
+C00096,C00001,Telematics units
+C00097,C00002,Glucose syrup
+C00098,C00003,Plastic film
+C00099,C00004,Rapeseed oil
+C00082,C00005,Solvents
+C00100,C00007,Palm oil
+C00101,C00008,Plastic film
+C00073,C00009,Compound feed
+C00078,C00010,PET bottles
+C00102,C00011,Compound feed
+C00103,C00012,PET resin
+C00104,C00013,Flavourings
+C00105,C00014,Natural gas
+C00072,C00015,Cold-chain transport
+C00033,C00016,Polypropylene
+C00106,C00017,Compound feed
+C00107,C00018,Coffee beans
+C00091,C00019,Wood pulp
+C00108,C00020,Wood pulp
+C00109,C00021,Palm oil
+C00093,C00022,Kraft paper
+C00110,C00023,Plastic film
+C00109,C00024,Palm oil
+C00111,C00025,Coffee beans
+C00112,C00026,Compound feed
+C00113,C00027,Kraft paper
+C00114,C00028,Soy meal
+C00115,C00029,Wood pulp
+C00116,C00030,Diesel
+C00117,C00001,Natural gas
+C00079,C00002,Glass bottles
+C00019,C00003,Corrugated boxes
+C00118,C00004,Pesticides
+C00119,C00005,Polyethylene
+C00086,C00006,Wood pulp
+C00120,C00007,Sunflower oil
+C00098,C00008,Corrugated boxes
+C00121,C00010,Wheat
+C00122,C00011,Compound feed
+C00119,C00012,Polypropylene
+C00123,C00013,PET bottles
+C00116,C00014,Diesel
+C00124,C00015,Compound feed
+C00125,C00016,Caustic soda
+C00114,C00017,Soy meal
+C00126,C00018,Wheat
+C00048,C00019,Tinplate steel
+C00127,C00020,Wood pulp
+C00128,C00031,Polypropylene
+C00056,C00032,Natural gas
+C00129,C00033,Solvents
+C00105,C00034,Natural gas
+C00130,C00035,Pulpwood logs
+C00053,C00036,Ammonia
+C00131,C00037,Potash
+C00132,C00038,PET resin
+C00133,C00039,Natural gas
+C00134,C00040,Diesel
+C00135,C00041,Surfactants
+C00119,C00042,Polyethylene
+C00136,C00043,Refrigeration controllers
+C00137,C00044,Tinplate steel
+C00138,C00045,Wheat
+C00131,C00046,Urea
+C00139,C00047,Bauxite
+C00139,C00048,Potash ore
+C00138,C00049,Sunflower seed
+C00044,C00050,Surfactants
+C00117,C00051,Natural gas
+C00140,C00052,Urea
+C00139,C00053,Phosphate rock
+C00081,C00020,PET resin
+C00141,C00054,Solvents
+C00118,C00055,Caustic soda
+C00139,C00056,Bauxite
+C00116,C00057,Natural gas
+C00142,C00058,Tinplate steel
+C00143,C00059,Diesel
+C00140,C00060,Ammonia
+C00130,C00061,Pulpwood logs
+C00144,C00062,Refrigeration controllers
+C00145,C00063,Surfactants
+C00092,C00064,Soybeans
+C00146,C00065,Pulpwood logs
+C00147,C00066,Aluminium coil
+C00082,C00067,Caustic soda
+C00148,C00068,Refrigeration controllers
+C00056,C00069,Diesel
+C00149,C00070,Wheat
+C00150,C00071,Natural gas
+C00137,C00012,Aluminium coil
+C00151,C00072,Telematics units
+C00152,C00073,Solvents
+C00153,C00074,Caustic soda
+C00154,C00075,Natural gas
+C00117,C00076,Diesel
+C00048,C00077,Aluminium coil
+C00155,C00078,PET resin
+C00156,C00079,Natural gas
+C00157,C00080,Caustic soda
+C00158,C00081,Surfactants
+C00156,C00082,Diesel
+C00159,C00083,Surfactants
+C00156,C00084,Natural gas
+C00160,C00085,PET resin
+C00161,C00086,Pulpwood logs
+C00117,C00087,Natural gas
+C00095,C00088,Telematics units
+C00118,C00089,Surfactants
+C00162,C00090,Aluminium coil
+C00141,C00091,Surfactants
+C00163,C00092,Caustic soda
+C00164,C00093,Pulpwood logs
+C00125,C00094,Pesticides
+C00165,C00095,PET resin
+C00166,C00096,Aluminium coil
+C00167,C00097,Urea
+C00048,C00098,Tinplate steel
+C00168,C00099,Urea
+C00169,C00100,Cocoa
+C00170,C00101,Kraft paper
+C00171,C00102,Pesticides
+C00172,C00103,Solvents
+C00173,C00104,Corn
+C00174,C00105,Bauxite
+C00118,C00106,Caustic soda
+C00133,C00107,Diesel
+C00175,C00108,Pulpwood logs
+C00176,C00109,Sunflower seed
+C00119,C00110,Polypropylene
+C00135,C00111,Pesticides
+C00177,C00112,Solvents
+C00178,C00113,Pulpwood logs
+C00179,C00114,Sunflower seed
+C00158,C00115,Solvents
+C00180,C00116,Phosphate rock
+C00139,C00117,Potash ore
+C00108,C00019,Wood pulp
+C00181,C00118,Natural gas
+C00182,C00119,Diesel
+C00183,C00120,Potash
+C00184,C00121,Ammonia
+C00145,C00122,Pesticides
+C00185,C00123,Aluminium coil
+C00186,C00124,Corn
+C00187,C00125,Aluminium coil
+C00188,C00126,Pesticides
+C00189,C00127,Pulpwood logs
+C00190,C00031,Polyethylene
+C00156,C00032,Natural gas
+C00191,C00033,Solvents
+C00192,C00034,Diesel
+C00193,C00035,Pulpwood logs
+C00194,C00036,Diesel
+C00195,C00037,Surfactants
+C00196,C00038,Wood pulp
+C00197,C00039,Surfactants
+C00198,C00040,Natural gas
+C00199,C00041,Surfactants
+C00200,C00042,Tinplate steel
+C00182,C00043,Natural gas
+C00194,C00044,Natural gas
+C00201,C00045,Caustic soda
+C00044,C00046,Caustic soda
+C00202,C00047,Natural gas
+C00203,C00048,Bauxite
+C00204,C00049,Cocoa
+C00205,C00050,Surfactants
+C00206,C00051,Telematics units
+C00207,C00052,Potash
+C00208,C00053,Natural gas
+C00209,C00020,Aluminium coil
+C00210,C00054,Surfactants
+C00211,C00055,Potash
+C00212,C00056,Phosphate rock
+C00202,C00057,Diesel
+C00213,C00058,PET resin
+C00214,C00059,Solvents
+C00215,C00060,Ammonia
+C00193,C00061,Pulpwood logs
+C00216,C00062,Telematics units
+C00217,C00063,Diesel
+C00218,C00064,Pesticides
+C00219,C00066,Tinplate steel
+C00188,C00067,Caustic soda
+C00220,C00068,Natural gas
+C00221,C00069,Natural gas
+C00140,C00070,Ammonia
+C00133,C00071,Diesel
+C00222,C00012,Kraft paper
+C00223,C00072,Telematics units
+C00224,C00073,Pesticides
+C00225,C00074,Natural gas
+C00226,C00075,Diesel
+C00082,C00076,Solvents
+C00227,C00077,PET resin
+C00228,C00078,PET resin
+C00034,C00079,Caustic soda
+C00229,C00080,Natural gas
+C00201,C00081,Caustic soda
+C00185,C00082,Aluminium coil
+C00230,C00083,Surfactants
+C00183,C00084,Ammonia
+C00231,C00085,Kraft paper
+C00232,C00022,Tinplate steel
+C00233,C00086,Pulpwood logs
+C00234,C00087,Natural gas
+C00066,C00088,Refrigeration controllers
+C00235,C00089,Pulpwood logs
+C00094,C00090,Wood pulp
+C00236,C00091,Pulpwood logs
+C00237,C00092,Surfactants
+C00238,C00093,Surfactants
+C00239,C00094,Pulpwood logs
+C00219,C00095,Aluminium coil
+C00240,C00096,Tinplate steel
+C00241,C00097,Urea
+C00069,C00098,Polyethylene
+C00242,C00099,Ammonia
+C00243,C00100,Urea
+C00244,C00101,PET resin
+C00044,C00102,Pesticides
+C00245,C00103,Natural gas
+C00210,C00104,Solvents
+C00246,C00105,Potash ore
+C00039,C00106,Wheat
+C00247,C00107,Diesel
+C00118,C00108,Pesticides
+C00248,C00109,Wheat
+C00249,C00110,PET resin
+C00250,C00111,Diesel
+C00251,C00112,Caustic soda
+C00252,C00113,Pulpwood logs
+C00253,C00114,Solvents
+C00146,C00115,Pulpwood logs
+C00246,C00117,Potash ore
+C00244,C00019,Polypropylene
+C00254,C00118,Aluminium coil
+C00202,C00119,Natural gas
+C00107,C00120,Corn
+C00255,C00121,Natural gas
+C00256,C00122,Cocoa
+C00257,C00123,Tinplate steel
+C00258,C00124,Wheat
+C00259,C00125,Tinplate steel
+C00260,C00126,Ammonia
+C00261,C00031,Polyethylene
+C00262,C00032,Diesel
+C00263,C00033,Solvents
+C00208,C00034,Natural gas
+C00264,C00035,Pulpwood logs
+C00265,C00036,Caustic soda
+C00266,C00037,Caustic soda
+C00267,C00038,Kraft paper
+C00167,C00039,Ammonia
+C00268,C00040,Refrigeration controllers
+C00269,C00041,Surfactants
+C00270,C00042,Tinplate steel
+C00271,C00043,Refrigeration controllers
+C00272,C00044,Tinplate steel
+C00273,C00045,Sunflower seed
+C00243,C00046,Ammonia
+C00274,C00047,Potash ore
+C00275,C00048,Phosphate rock
+C00276,C00049,Potash
+C00277,C00050,Natural gas
+C00278,C00051,Telematics units
+C00214,C00052,Surfactants
+C00275,C00053,Phosphate rock
+C00279,C00020,Tinplate steel
+C00280,C00054,Surfactants
+C00150,C00055,Diesel
+C00281,C00056,Bauxite
+C00282,C00057,Surfactants
+C00283,C00058,PET resin
+C00284,C00059,Solvents
+C00285,C00060,Potash
+C00286,C00061,Pulpwood logs
+C00229,C00062,Diesel
+C00287,C00063,Solvents
+C00288,C00064,Cocoa
+C00289,C00065,Pulpwood logs
+C00162,C00066,Tinplate steel
+C00290,C00067,Caustic soda
+C00291,C00068,Diesel
+C00218,C00069,Pesticides
+C00288,C00070,Sunflower seed
+C00292,C00071,Diesel
+C00196,C00012,Wood pulp
+C00293,C00072,Telematics units
+C00237,C00073,Surfactants
+C00152,C00074,Caustic soda
+C00177,C00075,Pesticides
+C00245,C00076,Natural gas
+C00294,C00077,Polyethylene
+C00295,C00078,Polypropylene
+C00145,C00079,Solvents
+C00172,C00080,Solvents
+C00296,C00081,Diesel
+C00297,C00082,Aluminium coil
+C00298,C00083,Ammonia
+C00299,C00084,Surfactants
+C00300,C00085,Aluminium coil
+C00301,C00022,Aluminium coil
+C00164,C00086,Pulpwood logs
+C00302,C00087,Aluminium coil
+C00247,C00088,Natural gas
+C00303,C00089,Solvents
+C00304,C00090,Polypropylene
+C00205,C00091,Caustic soda
+C00220,C00092,Diesel
+C00305,C00093,Surfactants
+C00306,C00094,Pulpwood logs
+C00307,C00095,Tinplate steel
+C00308,C00096,PET resin
+C00309,C00097,Coffee beans
+C00310,C00098,Polypropylene
+C00111,C00099,Sunflower seed
+C00311,C00100,Potash
+C00312,C00101,Aluminium coil
+C00313,C00102,Corn
+C00314,C00103,Caustic soda
+C00282,C00104,Caustic soda
+C00275,C00105,Potash ore
+C00163,C00106,Surfactants
+C00315,C00107,Diesel
+C00316,C00108,Pulpwood logs
+C00317,C00109,Wheat
+C00219,C00110,Tinplate steel
+C00211,C00111,Urea
+C00173,C00112,Sunflower seed
+C00286,C00113,Pulpwood logs
+C00263,C00114,Surfactants
+C00289,C00115,Pulpwood logs
+C00318,C00116,Phosphate rock
+C00281,C00117,Phosphate rock
+C00319,C00019,Polypropylene
+C00320,C00118,Tinplate steel
+C00153,C00119,Solvents
+C00321,C00120,Corn
+C00322,C00121,Natural gas
+C00082,C00122,Surfactants
+C00323,C00123,Tinplate steel
+C00324,C00124,Surfactants
+C00325,C00125,Diesel
+C00326,C00126,Potash
+C00327,C00127,Pulpwood logs
+C00328,C00031,Aluminium coil
+C00329,C00032,Caustic soda
+C00330,C00033,Solvents
+C00331,C00034,Tinplate steel
+C00332,C00035,Caustic soda
+C00333,C00036,Diesel
+C00334,C00037,Ammonia
+C00335,C00038,PET resin
+C00336,C00039,Diesel
+C00337,C00040,Telematics units
+C00338,C00041,Cocoa
+C00339,C00042,Aluminium coil
+C00340,C00043,Natural gas
+C00116,C00044,Diesel
+C00341,C00045,Cocoa
+C00342,C00046,Ammonia
+C00343,C00047,Phosphate rock
+C00340,C00048,Natural gas
+C00344,C00049,Coffee beans
+C00157,C00050,Pesticides
+C00345,C00051,Diesel
+C00346,C00052,Potash
+C00347,C00053,Natural gas
+C00348,C00020,PET resin
+C00349,C00054,Surfactants
+C00158,C00055,Caustic soda
+C00350,C00056,Phosphate rock
+C00351,C00057,Natural gas
+C00093,C00058,Wood pulp
+C00352,C00059,Surfactants
+C00353,C00060,Ammonia
+C00354,C00061,Pulpwood logs
+C00355,C00062,Refrigeration controllers
+C00356,C00063,Pesticides
+C00195,C00064,Caustic soda
+C00357,C00065,Solvents
+C00358,C00066,Tinplate steel
+C00359,C00067,Coffee beans
+C00136,C00068,Telematics units
+C00197,C00069,Pesticides
+C00360,C00070,Potash
+C00361,C00071,Telematics units
+C00142,C00012,Tinplate steel
+C00361,C00072,Refrigeration controllers
+C00046,C00073,Corn
+C00332,C00074,Caustic soda
+C00192,C00075,Natural gas
+C00362,C00076,Pesticides
+C00363,C00077,PET resin
+C00364,C00078,Aluminium coil
+C00365,C00079,Caustic soda
+C00145,C00080,Solvents
+C00366,C00081,Solvents
+C00259,C00082,Tinplate steel
+C00367,C00083,Ammonia
+C00368,C00084,Surfactants
+C00369,C00085,Tinplate steel
+C00370,C00022,PET resin
+C00354,C00086,Pulpwood logs
+C00371,C00087,Diesel
+C00372,C00088,Refrigeration controllers
+C00130,C00089,Pulpwood logs
+C00373,C00090,Aluminium coil
+C00374,C00091,Pulpwood logs
+C00303,C00092,Pesticides
+C00189,C00093,Pulpwood logs
+C00375,C00094,Solvents
+C00376,C00095,PET resin
+C00190,C00096,PET resin
+C00377,C00097,Potash
+C00378,C00098,PET resin
+C00379,C00099,Potash
+C00183,C00100,Urea
+C00380,C00101,Tinplate steel
+C00381,C00102,Wheat
+C00382,C00103,Surfactants
+C00383,C00104,Corn
+C00203,C00105,Potash ore
+C00384,C00106,Sunflower seed
+C00184,C00107,Potash
+C00178,C00108,Pulpwood logs
+C00131,C00109,Potash
+C00380,C00110,Tinplate steel
+C00299,C00111,Surfactants
+C00385,C00112,Pesticides
+C00210,C00113,Pesticides
+C00386,C00114,Corn
+C00387,C00115,Surfactants
+C00388,C00116,Potash ore
+C00389,C00117,Potash ore
+C00390,C00019,Aluminium coil
+C00391,C00118,Tinplate steel
+C00392,C00119,Caustic soda
+C00393,C00120,Potash
+C00367,C00121,Ammonia
+C00394,C00122,Solvents
+C00395,C00123,Tinplate steel
+C00188,C00124,Caustic soda
+C00301,C00125,Tinplate steel
+C00396,C00126,Pesticides
+C00397,C00127,Solvents
+C00398,C00031,Polyethylene
+C00192,C00032,Diesel
+C00182,C00033,Natural gas
+C00399,C00034,Tinplate steel
+C00400,C00036,Diesel
+C00401,C00037,Natural gas
+C00402,C00038,Polyethylene
+C00403,C00039,Urea
+C00404,C00040,Refrigeration controllers
+C00405,C00041,Pesticides
+C00406,C00042,Polypropylene
+C00407,C00043,Natural gas
+C00408,C00044,Aluminium coil
+C00409,C00045,Coffee beans
+C00410,C00046,Ammonia
+C00411,C00128,Solvents
+C00307,C00129,Tinplate steel
+C00412,C00105,Phosphate rock
+C00245,C00053,Natural gas
+C00154,C00131,Diesel
+C00413,C00132,Solvents
+C00414,C00133,Potash ore
+C00415,C00134,Phosphate rock
+C00262,C00135,Natural gas
+C00416,C00119,Pesticides
+C00417,C00136,Aluminium coil
+C00418,C00137,Bauxite
+C00419,C00138,Diesel
+C00407,C00044,Diesel
+C00420,C00117,Bauxite
+C00421,C00140,Diesel
+C00365,C00081,Caustic soda
+C00422,C00141,Natural gas
+C00240,C00118,Aluminium coil
+C00423,C00116,Bauxite
+C00212,C00142,Potash ore
+C00424,C00143,Potash ore
+C00425,C00144,Tinplate steel
+C00426,C00145,Natural gas
+C00427,C00092,Pesticides
+C00428,C00147,Diesel
+C00301,C00148,Tinplate steel
+C00305,C00149,Solvents
+C00429,C00150,Phosphate rock
+C00430,C00151,Tinplate steel
+C00296,C00152,Diesel
+C00431,C00153,Tinplate steel
+C00432,C00154,Phosphate rock
+C00253,C00155,Surfactants
+C00433,C00156,Phosphate rock
+C00434,C00157,Aluminium coil
+C00435,C00158,Diesel
+C00181,C00159,Diesel
+C00436,C00160,Natural gas
+C00214,C00050,Solvents
+C00437,C00095,Tinplate steel
+C00423,C00162,Potash ore
+C00438,C00163,Diesel
+C00439,C00125,Aluminium coil
+C00440,C00165,Solvents
+C00441,C00166,Phosphate rock
+C00442,C00167,Natural gas
+C00407,C00168,Natural gas
+C00292,C00169,Natural gas
+C00235,C00170,Pulpwood logs
+C00443,C00171,Tinplate steel
+C00428,C00172,Natural gas
+C00326,C00173,Urea
+C00292,C00176,Diesel
+C00444,C00177,Tinplate steel
+C00445,C00179,Pesticides
+C00385,C00108,Surfactants
+C00446,C00181,Phosphate rock
+C00274,C00182,Bauxite
+C00447,C00183,Diesel
+C00262,C00184,Natural gas
+C00429,C00185,Potash ore
+C00448,C00186,Urea
+C00423,C00187,Phosphate rock
+C00449,C00188,Tinplate steel
+C00197,C00190,Surfactants
+C00450,C00191,Natural gas
+C00451,C00192,Potash ore
+C00452,C00194,Potash ore
+C00453,C00195,Diesel
+C00454,C00196,Pulpwood logs
+C00455,C00197,Diesel
+C00456,C00198,Potash ore
+C00322,C00199,Diesel
+C00457,C00200,Natural gas
+C00458,C00201,Aluminium coil
+C00459,C00202,Potash ore
+C00221,C00204,Diesel
+C00460,C00205,Tinplate steel
+C00249,C00206,Polyethylene
+C00208,C00207,Natural gas
+C00446,C00208,Phosphate rock
+C00457,C00209,Natural gas
+C00461,C00210,Tinplate steel
+C00462,C00211,Natural gas
+C00044,C00213,Surfactants
+C00463,C00214,Aluminium coil
+C00464,C00215,Diesel
+C00465,C00216,Polyethylene
+C00246,C00217,Potash ore
+C00466,C00218,Diesel
+C00467,C00219,Diesel
+C00468,C00220,Bauxite
+C00469,C00221,Potash ore
+C00470,C00222,Caustic soda
+C00471,C00223,Aluminium coil
+C00430,C00224,Aluminium coil
+C00212,C00225,Bauxite
+C00459,C00226,Potash ore
+C00472,C00227,Surfactants
+C00473,C00228,Caustic soda
+C00474,C00034,Aluminium coil
+C00475,C00229,Phosphate rock
+C00476,C00230,Natural gas
+C00477,C00231,Caustic soda
+C00478,C00232,Diesel
+C00479,C00234,Phosphate rock
+C00209,C00066,Tinplate steel
+C00480,C00237,Tinplate steel
+C00481,C00238,Diesel
+C00315,C00240,Natural gas
+C00482,C00241,Bauxite
+C00483,C00069,Surfactants
+C00221,C00242,Natural gas
+C00484,C00243,Diesel
+C00485,C00244,Caustic soda
+C00486,C00245,Potash ore
+C00487,C00039,Diesel
+C00488,C00247,Phosphate rock
+C00326,C00248,Ammonia
+C00489,C00249,Solvents
+C00432,C00250,Phosphate rock
+C00208,C00251,Diesel
+C00490,C00253,Aluminium coil
+C00491,C00254,Potash ore
+C00492,C00107,Natural gas
+C00493,C00255,Potash ore
+C00494,C00256,Potash
+C00495,C00257,Potash ore
+C00496,C00258,Diesel
+C00497,C00259,Diesel
+C00498,C00260,Bauxite
+C00499,C00261,Surfactants
+C00500,C00262,Potash ore
+C00476,C00263,Natural gas
+C00250,C00265,Natural gas
+C00501,C00266,Diesel
+C00502,C00267,Pulpwood logs
+C00503,C00268,PET resin
+C00134,C00269,Diesel
+C00504,C00270,Potash ore
+C00505,C00271,Aluminium coil
+C00506,C00272,Natural gas
+C00340,C00273,Natural gas
+C00274,C00276,Bauxite
+C00500,C00277,Potash ore
+C00507,C00278,Polyethylene
+C00482,C00279,Phosphate rock
+C00444,C00280,Aluminium coil
+C00508,C00282,Tinplate steel
+C00509,C00283,Diesel
+C00510,C00284,Diesel
+C00139,C00285,Potash ore
+C00511,C00287,Aluminium coil
+C00512,C00288,Natural gas
+C00250,C00290,Natural gas
+C00513,C00291,Bauxite
+C00514,C00292,Bauxite
+C00515,C00293,Aluminium coil
+C00330,C00294,Pesticides
+C00516,C00295,Solvents
+C00517,C00296,Phosphate rock
+C00518,C00297,Phosphate rock
+C00220,C00298,Natural gas
+C00519,C00299,Diesel
+C00139,C00300,Phosphate rock
+C00520,C00301,Bauxite
+C00521,C00302,Diesel
+C00522,C00303,Diesel
+C00523,C00304,Surfactants
+C00422,C00305,Natural gas
+C00468,C00307,Phosphate rock
+C00455,C00308,Natural gas
+C00524,C00309,Urea
+C00141,C00310,Caustic soda
+C00525,C00111,Surfactants
+C00526,C00311,Bauxite
+C00527,C00312,Diesel
+C00298,C00313,Urea
+C00528,C00314,Aluminium coil
+C00433,C00315,Bauxite
+C00529,C00317,Potash
+C00530,C00319,Pesticides
+C00531,C00320,Phosphate rock
+C00532,C00321,Natural gas
+C00533,C00322,Phosphate rock
+C00534,C00323,Diesel
+C00535,C00324,Tinplate steel
+C00536,C00325,Phosphate rock
+C00351,C00326,Diesel
+C00436,C00328,Diesel
+C00537,C00329,Tinplate steel
+C00538,C00330,Aluminium coil
+C00451,C00331,Bauxite
+C00539,C00332,Diesel
+C00491,C00333,Phosphate rock
+C00501,C00334,Diesel
+C00540,C00335,Surfactants
+C00541,C00336,Phosphate rock
+C00542,C00337,Aluminium coil
+C00523,C00338,Caustic soda
+C00543,C00339,Bauxite
+C00544,C00340,Potash ore
+C00462,C00341,Diesel
+C00545,C00342,Natural gas
+C00546,C00344,Pesticides
+C00547,C00345,Phosphate rock
+C00548,C00346,Natural gas
+C00281,C00347,Phosphate rock
+C00549,C00348,Natural gas
+C00550,C00349,Aluminium coil
+C00551,C00351,Potash ore
+C00552,C00093,Pulpwood logs
+C00553,C00352,Natural gas
+C00056,C00353,Diesel
+C00554,C00355,Aluminium coil
+C00181,C00356,Diesel
+C00371,C00357,Diesel
+C00438,C00358,Natural gas
+C00152,C00359,Caustic soda
+C00212,C00360,Potash ore
+C00555,C00361,Tinplate steel
+C00167,C00046,Potash
+C00556,C00362,Aluminium coil
+C00557,C00363,Solvents
+C00558,C00364,Bauxite
+C00532,C00365,Natural gas
+C00559,C00366,Diesel
+C00174,C00367,Bauxite
+C00490,C00368,Aluminium coil
+C00423,C00369,Potash ore
+C00150,C00370,Diesel
+C00560,C00371,Phosphate rock
+C00561,C00372,Polyethylene
+C00414,C00373,Bauxite
+C00562,C00375,Diesel
+C00563,C00376,Diesel
+C00564,C00377,Natural gas
+C00565,C00378,Natural gas
+C00566,C00379,Diesel
+C00567,C00380,Potash ore
+C00545,C00381,Diesel
+C00568,C00382,Aluminium coil
+C00211,C00383,Ammonia
+C00569,C00384,Potash
+C00442,C00385,Natural gas
+C00237,C00386,Pesticides
+C00565,C00387,Natural gas
+C00234,C00390,Natural gas
+C00570,C00391,Natural gas
+C00571,C00392,Natural gas
+C00572,C00393,Potash ore
+C00573,C00394,Natural gas
+C00574,C00395,Bauxite
+C00575,C00396,Tinplate steel
+C00576,C00397,Aluminium coil
+C00577,C00398,Caustic soda
+C00578,C00399,Diesel
+C00579,C00400,Potash ore
+C00580,C00401,Potash ore
+C00581,C00402,Caustic soda
+C00582,C00403,Bauxite
+C00583,C00404,Polyethylene
+C00584,C00405,Tinplate steel
+C00585,C00406,Diesel
+C00586,C00407,Bauxite
+C00587,C00408,Diesel
+C00588,C00409,Surfactants
+C00589,C00410,Potash ore
+C00357,C00128,Solvents
+C00590,C00056,Phosphate rock
+C00591,C00129,Aluminium coil
+C00592,C00105,Potash ore
+C00593,C00053,Bauxite
+C00594,C00131,Potash ore
+C00595,C00132,Natural gas
+C00596,C00133,Bauxite
+C00597,C00134,Bauxite
+C00229,C00135,Diesel
+C00598,C00119,Surfactants
+C00599,C00136,Polypropylene
+C00455,C00137,Diesel
+C00492,C00138,Natural gas
+C00600,C00044,Tinplate steel
+C00601,C00117,Phosphate rock
+C00498,C00140,Bauxite
+C00464,C00081,Natural gas
+C00602,C00141,Aluminium coil
+C00407,C00118,Natural gas
+C00603,C00116,Potash ore
+C00604,C00142,Diesel
+C00605,C00143,Phosphate rock
+C00606,C00144,Tinplate steel
+C00607,C00145,Aluminium coil
+C00608,C00092,Natural gas
+C00609,C00147,Natural gas
+C00364,C00082,Tinplate steel
+C00295,C00148,PET resin
+C00610,C00149,Pesticides
+C00611,C00150,Bauxite
+C00331,C00151,Aluminium coil
+C00612,C00152,Diesel
+C00613,C00153,Natural gas
+C00614,C00154,Bauxite
+C00414,C00048,Bauxite
+C00546,C00155,Solvents
+C00615,C00156,Potash ore
+C00616,C00157,Natural gas
+C00142,C00158,Aluminium coil
+C00221,C00159,Natural gas
+C00617,C00160,Surfactants
+C00618,C00050,Diesel
+C00619,C00095,Tinplate steel
+C00620,C00162,Phosphate rock
+C00621,C00163,Tinplate steel
+C00622,C00125,Aluminium coil
+C00623,C00165,Natural gas
+C00624,C00166,Natural gas
+C00625,C00167,Diesel
+C00626,C00168,Diesel
+C00627,C00169,Natural gas
+C00628,C00170,Surfactants
+C00629,C00171,Natural gas
+C00537,C00172,Tinplate steel
+C00630,C00173,Natural gas
+C00631,C00176,Natural gas
+C00632,C00177,Natural gas
+C00524,C00179,Potash
+C00633,C00108,Pesticides
+C00634,C00181,Potash ore
+C00635,C00182,Bauxite
+C00636,C00183,Diesel
+C00637,C00184,Natural gas
+C00572,C00185,Phosphate rock
+C00426,C00186,Diesel
+C00638,C00187,Diesel
+C00639,C00188,Tinplate steel
+C00640,C00190,Diesel
+C00641,C00191,Tinplate steel
+C00642,C00192,Bauxite
+C00488,C00194,Phosphate rock
+C00643,C00195,Aluminium coil
+C00644,C00196,Pulpwood logs
+C00555,C00197,Aluminium coil
+C00645,C00198,Bauxite
+C00646,C00199,Diesel
+C00501,C00200,Diesel
+C00647,C00201,Aluminium coil
+C00648,C00202,Potash ore
+C00649,C00204,Diesel
+C00373,C00205,Aluminium coil
+C00650,C00206,Polypropylene
+C00565,C00207,Natural gas
+C00651,C00208,Bauxite
+C00605,C00209,Bauxite
+C00501,C00210,Diesel
+C00652,C00211,Diesel
+C00637,C00213,Diesel
+C00653,C00214,Natural gas
+C00578,C00215,Diesel
+C00654,C00216,Aluminium coil
+C00479,C00217,Bauxite
+C00655,C00218,Aluminium coil
+C00221,C00219,Diesel
+C00656,C00220,Bauxite
+C00657,C00221,Potash ore
+C00146,C00222,Pulpwood logs
+C00307,C00223,Tinplate steel
+C00250,C00224,Natural gas
+C00658,C00225,Potash ore
+C00541,C00226,Bauxite
+C00659,C00227,Diesel
+C00660,C00228,Surfactants
+C00661,C00034,Natural gas
+C00651,C00229,Phosphate rock
+C00584,C00230,Tinplate steel
+C00289,C00231,Pulpwood logs
+C00662,C00232,Potash ore
+C00500,C00234,Bauxite
+C00373,C00066,Tinplate steel
+C00663,C00094,Pulpwood logs
+C00259,C00237,Aluminium coil
+C00664,C00238,Aluminium coil
+C00262,C00240,Diesel
+C00517,C00241,Bauxite
+C00665,C00069,Natural gas
+C00451,C00242,Phosphate rock
+C00563,C00243,Diesel
+C00666,C00244,Diesel
+C00667,C00245,Phosphate rock
+C00668,C00039,Natural gas
+C00669,C00247,Potash ore
+C00670,C00248,Solvents
+C00671,C00249,Caustic soda
+C00275,C00250,Phosphate rock
+C00672,C00251,Aluminium coil
+C00240,C00253,Aluminium coil
+C00428,C00254,Natural gas
+C00171,C00107,Caustic soda
+C00673,C00255,Bauxite
+C00347,C00256,Natural gas
+C00466,C00257,Natural gas
+C00674,C00258,Urea
+C00482,C00259,Phosphate rock
+C00675,C00260,Natural gas
+C00676,C00261,Surfactants
+C00603,C00262,Potash ore
+C00435,C00263,Diesel
+C00677,C00265,Natural gas
+C00678,C00266,Natural gas
+C00224,C00267,Surfactants
+C00679,C00268,Polypropylene
+C00680,C00269,Natural gas
+C00681,C00270,Diesel
+C00682,C00271,Tinplate steel
+C00683,C00272,Diesel
+C00684,C00273,Ammonia
+C00562,C00276,Natural gas
+C00590,C00277,Phosphate rock
+C00685,C00278,Tinplate steel
+C00226,C00279,Natural gas
+C00686,C00280,Diesel
+C00137,C00282,Tinplate steel
+C00687,C00283,Pesticides
+C00688,C00284,Tinplate steel
+C00456,C00285,Phosphate rock
+C00689,C00287,Aluminium coil
+C00690,C00288,Ammonia
+C00691,C00290,Natural gas
+C00495,C00291,Phosphate rock
+C00692,C00292,Potash ore
+C00693,C00293,PET resin
+C00694,C00294,Solvents
+C00695,C00295,Diesel
+C00658,C00296,Phosphate rock
+C00696,C00297,Bauxite
+C00281,C00298,Bauxite
+C00697,C00299,Natural gas
+C00698,C00300,Diesel
+C00699,C00301,Phosphate rock
+C00700,C00302,Bauxite
+C00537,C00303,Aluminium coil
+C00701,C00304,Pesticides
+C00702,C00305,Tinplate steel
+C00559,C00307,Natural gas
+C00345,C00308,Natural gas
+C00703,C00309,Urea
+C00299,C00310,Surfactants
+C00470,C00111,Solvents
+C00704,C00311,Diesel
+C00388,C00312,Potash ore
+C00705,C00313,Solvents
+C00401,C00314,Diesel
+C00547,C00315,Phosphate rock
+C00199,C00317,Solvents
+C00706,C00319,Pesticides
+C00446,C00320,Phosphate rock
+C00707,C00321,Urea
+C00708,C00322,Phosphate rock
+C00709,C00323,Potash ore
+C00192,C00324,Diesel
+C00475,C00325,Phosphate rock
+C00433,C00326,Phosphate rock
+C00567,C00328,Bauxite
+C00682,C00329,Tinplate steel
+C00710,C00330,Natural gas
+C00711,C00331,Natural gas
+C00712,C00332,Aluminium coil
+C00713,C00333,Bauxite
+C00714,C00334,Diesel
+C00715,C00335,Natural gas
+C00716,C00336,Bauxite
+C00717,C00337,PET resin
+C00718,C00338,Natural gas
+C00719,C00339,Diesel
+C00491,C00340,Phosphate rock
+C00720,C00341,Natural gas
+C00721,C00342,Potash ore
+C00722,C00344,Natural gas
+C00723,C00345,Phosphate rock
+C00724,C00346,Diesel
+C00725,C00347,Phosphate rock
+C00726,C00348,Diesel
+C00727,C00349,Natural gas
+C00728,C00351,Potash ore
+C00729,C00093,Pulpwood logs
+C00730,C00352,Diesel
+C00543,C00353,Phosphate rock
+C00731,C00355,Polypropylene
+C00185,C00356,Aluminium coil
+C00732,C00357,Natural gas
+C00626,C00358,Diesel
+C00733,C00359,Surfactants
+C00734,C00360,Phosphate rock
+C00735,C00361,Polypropylene
+C00736,C00046,Diesel
+C00737,C00362,Natural gas
+C00738,C00363,Natural gas
+C00642,C00364,Potash ore
+C00307,C00365,Tinplate steel
+C00739,C00366,Tinplate steel
+C00740,C00367,Diesel
+C00741,C00368,Aluminium coil
+C00742,C00369,Natural gas
+C00743,C00370,Diesel
+C00597,C00371,Potash ore
+C00744,C00372,Aluminium coil
+C00745,C00373,Natural gas
+C00746,C00375,Natural gas
+C00224,C00376,Pesticides
+C00726,C00377,Diesel
+C00747,C00378,Natural gas
+C00198,C00379,Natural gas
+C00748,C00380,Potash ore
+C00749,C00381,Caustic soda
+C00219,C00382,Tinplate steel
+C00750,C00383,Diesel
+C00751,C00384,Natural gas
+C00752,C00385,Tinplate steel
+C00753,C00386,Potash
+C00548,C00387,Diesel
+C00754,C00390,Diesel
+C00755,C00391,Potash ore
+C00756,C00392,Tinplate steel
+C00634,C00393,Phosphate rock
+C00757,C00394,Tinplate steel
+C00174,C00395,Bauxite
+C00758,C00396,Diesel
+C00759,C00397,Tinplate steel
+C00760,C00398,Pesticides
+C00761,C00399,Bauxite
+C00762,C00400,Potash ore
+C00763,C00401,Potash ore
+C00764,C00402,Natural gas
+C00765,C00403,Natural gas
+C00766,C00404,Polyethylene
+C00767,C00405,Diesel
+C00768,C00406,Solvents
+C00769,C00407,Potash ore
+C00770,C00408,Natural gas
+C00253,C00409,Pesticides
+C00771,C00410,Potash ore
+C00145,C00128,Solvents
+C00493,C00056,Potash ore
+C00772,C00129,Natural gas
+C00423,C00105,Phosphate rock
+C00773,C00053,Phosphate rock
+C00774,C00131,Diesel
+C00476,C00132,Diesel
+C00775,C00133,Potash ore
+C00495,C00134,Bauxite
+C00688,C00135,Tinplate steel
+C00776,C00119,Natural gas
+C00777,C00136,Polypropylene
+C00467,C00137,Natural gas
+C00612,C00138,Natural gas
+C00553,C00044,Diesel
+C00778,C00117,Phosphate rock
+C00779,C00140,Potash ore
+C00284,C00081,Pesticides
+C00619,C00141,Tinplate steel
+C00780,C00118,Tinplate steel
+C00479,C00116,Phosphate rock
+C00662,C00142,Potash ore
+C00781,C00143,Phosphate rock
+C00782,C00144,Polyethylene
+C00677,C00145,Diesel
+C00706,C00092,Pesticides
+C00783,C00147,Diesel
+C00784,C00082,Natural gas
+C00785,C00148,Polyethylene
+C00776,C00149,Diesel
+C00786,C00150,Phosphate rock
+C00787,C00151,Polyethylene
+C00788,C00152,Natural gas
+C00743,C00153,Natural gas
+C00498,C00154,Phosphate rock
+C00665,C00048,Diesel
+C00789,C00155,Solvents
+C00790,C00156,Bauxite
+C00791,C00157,Natural gas
+C00792,C00158,Natural gas
+C00162,C00159,Aluminium coil
+C00609,C00160,Natural gas
+C00793,C00050,Diesel
+C00794,C00095,Polypropylene
+C00518,C00162,Potash ore
+C00795,C00163,Aluminium coil
+C00474,C00125,Tinplate steel
+C00457,C00165,Diesel
+C00746,C00166,Natural gas
+C00796,C00167,Diesel
+C00797,C00168,Diesel
+C00798,C00169,Surfactants
+C00546,C00170,Solvents
+C00799,C00171,Aluminium coil
+C00800,C00172,Natural gas
+C00336,C00173,Diesel
+C00801,C00176,Caustic soda
+C00802,C00177,Tinplate steel
+C00803,C00179,Solvents
+C00804,C00108,Caustic soda
+C00805,C00181,Potash ore
+C00586,C00182,Bauxite
+C00720,C00183,Natural gas
+C00681,C00184,Diesel
+C00806,C00185,Natural gas
+C00807,C00186,Solvents
+C00808,C00187,Bauxite
+C00809,C00188,Aluminium coil
+C00810,C00190,Diesel
+C00291,C00191,Natural gas
+C00811,C00192,Bauxite
+C00812,C00195,Aluminium coil
+C00813,C00196,Pesticides
+C00814,C00197,Natural gas
+C00815,C00198,Potash ore
+C00816,C00199,Aluminium coil
+C00817,C00200,Phosphate rock
+C00818,C00201,Diesel
+C00819,C00202,Phosphate rock
+C00820,C00204,Potash
+C00821,C00205,Tinplate steel
+C00822,C00206,Aluminium coil
+C00823,C00207,Potash ore
+C00824,C00208,Bauxite
+C00226,C00209,Diesel
+C00825,C00210,Diesel
+C00433,C00211,Phosphate rock
+C00163,C00213,Surfactants
+C00219,C00214,Tinplate steel
+C00826,C00215,Diesel
+C00827,C00216,Tinplate steel
+C00828,C00217,Bauxite
+C00829,C00218,Diesel
+C00830,C00219,Potash ore
+C00762,C00220,Potash ore
+C00574,C00221,Potash ore
+C00831,C00222,Surfactants
+C00693,C00223,PET resin
+C00832,C00224,Aluminium coil
+C00389,C00225,Potash ore
+C00833,C00226,Phosphate rock
+C00834,C00227,Diesel
+C00835,C00228,Pesticides
+C00836,C00034,Natural gas
+C00180,C00229,Phosphate rock
+C00672,C00230,Aluminium coil
+C00837,C00231,Pulpwood logs
+C00838,C00232,Diesel
+C00839,C00234,Phosphate rock
+C00320,C00066,Aluminium coil
+C00840,C00094,Caustic soda
+C00841,C00237,Aluminium coil
+C00842,C00238,Diesel
+C00843,C00240,Natural gas
+C00844,C00241,Potash ore
+C00845,C00069,Pesticides
+C00656,C00242,Potash ore
+C00796,C00243,Natural gas
+C00251,C00244,Surfactants
+C00605,C00245,Potash ore
+C00237,C00039,Caustic soda
+C00846,C00247,Potash ore
+C00182,C00248,Diesel
+C00847,C00249,Solvents
+C00848,C00250,Phosphate rock
+C00849,C00251,Tinplate steel
+C00850,C00253,Natural gas
+C00229,C00254,Diesel
+C00367,C00107,Urea
+C00851,C00255,Potash ore
+C00852,C00256,Diesel
+C00839,C00257,Potash ore
+C00845,C00258,Pesticides
+C00571,C00259,Diesel
+C00853,C00260,Bauxite
+C00784,C00261,Diesel
+C00854,C00262,Phosphate rock
+C00371,C00263,Natural gas
+C00395,C00265,Tinplate steel
+C00855,C00266,Natural gas
+C00856,C00267,Surfactants
+C00857,C00268,PET resin
+C00793,C00269,Natural gas
+C00336,C00270,Natural gas
+C00858,C00271,Aluminium coil
+C00796,C00272,Diesel
+C00198,C00273,Natural gas
+C00859,C00276,Natural gas
+C00420,C00277,Phosphate rock
+C00860,C00278,Tinplate steel
+C00861,C00279,Bauxite
+C00862,C00280,Diesel
+C00810,C00282,Diesel
+C00863,C00283,Pesticides
+C00864,C00284,Tinplate steel
+C00865,C00285,Natural gas
+C00866,C00287,Natural gas
+C00867,C00288,Natural gas
+C00868,C00290,Diesel
+C00589,C00291,Potash ore
+C00869,C00292,Potash ore
+C00870,C00293,Polyethylene
+C00871,C00294,Pesticides
+C00872,C00295,Pesticides
+C00203,C00296,Potash ore
+C00772,C00297,Natural gas
+C00873,C00298,Natural gas
+C00874,C00299,Tinplate steel
+C00875,C00300,Bauxite
+C00456,C00301,Phosphate rock
+C00876,C00302,Phosphate rock
+C00877,C00303,Tinplate steel
+C00878,C00304,Natural gas
+C00879,C00305,Tinplate steel
+C00710,C00307,Natural gas
+C00880,C00308,Natural gas
+C00881,C00309,Ammonia
+C00549,C00310,Diesel
+C00882,C00111,Natural gas
+C00883,C00311,Potash ore
+C00884,C00312,Diesel
+C00885,C00313,Potash
+C00460,C00314,Tinplate steel
+C00886,C00315,Bauxite
+C00690,C00317,Ammonia
+C00887,C00319,Surfactants
+C00888,C00320,Bauxite
+C00889,C00321,Urea
+C00634,C00322,Phosphate rock
+C00890,C00323,Phosphate rock
+C00891,C00324,Diesel
+C00892,C00325,Potash ore
+C00893,C00326,Natural gas
+C00637,C00328,Natural gas
+C00894,C00329,Diesel
+C00784,C00330,Natural gas
+C00895,C00331,Natural gas
+C00291,C00332,Natural gas
+C00896,C00333,Bauxite
+C00897,C00334,Bauxite
+C00898,C00335,Natural gas
+C00899,C00336,Bauxite
+C00900,C00337,Tinplate steel
+C00901,C00338,Natural gas
+C00902,C00339,Phosphate rock
+C00903,C00340,Phosphate rock
+C00168,C00341,Urea
+C00904,C00342,Phosphate rock
+C00905,C00344,Urea
+C00645,C00345,Potash ore
+C00906,C00346,Bauxite
+C00567,C00347,Bauxite
+C00540,C00348,Pesticides
+C00767,C00349,Diesel
+C00614,C00351,Potash ore
+C00907,C00093,Pulpwood logs
+C00430,C00352,Tinplate steel
+C00908,C00353,Bauxite
+C00909,C00355,PET resin
+C00296,C00356,Diesel
+C00910,C00357,Tinplate steel
+C00911,C00358,Potash ore
+C00912,C00359,Ammonia
+C00913,C00360,Diesel
+C00914,C00361,Aluminium coil
+C00578,C00046,Diesel
+C00369,C00362,Aluminium coil
+C00484,C00363,Natural gas
+C00133,C00364,Natural gas
+C00915,C00365,Tinplate steel
+C00666,C00366,Natural gas
+C00520,C00367,Potash ore
+C00916,C00368,Diesel
+C00850,C00369,Diesel
+C00917,C00370,Solvents
+C00918,C00371,Phosphate rock
+C00766,C00372,Polypropylene
+C00596,C00373,Bauxite
+C00919,C00375,Diesel
+C00671,C00376,Surfactants
+C00920,C00377,Diesel
+C00201,C00378,Surfactants
+C00921,C00379,Phosphate rock
+C00922,C00380,Diesel
+C00923,C00381,Diesel
+C00924,C00382,Diesel
+C00925,C00383,Natural gas
+C00926,C00384,Pesticides
+C00927,C00385,Tinplate steel
+C00856,C00386,Surfactants
+C00928,C00387,Natural gas
+C00929,C00390,Diesel
+C00563,C00391,Natural gas
+C00930,C00392,Aluminium coil
+C00545,C00393,Natural gas
+C00931,C00394,Diesel
+C00932,C00395,Diesel
+C00933,C00396,Aluminium coil
+C00934,C00397,Tinplate steel
+C00935,C00398,Caustic soda
+C00446,C00399,Phosphate rock
+C00936,C00400,Bauxite
+C00500,C00401,Potash ore
+C00937,C00402,Pesticides
+C00590,C00403,Potash ore
+C00938,C00404,Tinplate steel
+C00939,C00405,Diesel
+C00438,C00406,Natural gas
+C00389,C00407,Phosphate rock
+C00224,C00409,Solvents
+C00940,C00410,Phosphate rock
+C00941,C00128,Diesel
+C00429,C00056,Phosphate rock
+C00928,C00129,Diesel
+C00642,C00105,Bauxite
+C00942,C00053,Potash ore
+C00943,C00131,Phosphate rock
+C00944,C00132,Surfactants
+C00883,C00133,Bauxite
+C00945,C00134,Phosphate rock
+C00788,C00135,Diesel
+C00946,C00119,Solvents
+C00947,C00136,PET resin
+C00533,C00137,Potash ore
+C00948,C00138,Solvents
+C00255,C00044,Natural gas
+C00949,C00117,Bauxite
+C00778,C00140,Bauxite
+C00950,C00081,Diesel
+C00951,C00141,Diesel
+C00915,C00118,Tinplate steel
+C00586,C00116,Bauxite
+C00952,C00142,Phosphate rock
+C00614,C00143,Potash ore
+C00074,C00144,Polypropylene
+C00931,C00145,Natural gas
+C00953,C00092,Caustic soda
+C00954,C00147,Potash ore
+C00955,C00082,Tinplate steel
+C00956,C00148,PET resin
+C00957,C00149,Surfactants
+C00958,C00150,Bauxite
+C00959,C00151,PET resin
+C00960,C00152,Diesel
+C00301,C00153,Aluminium coil
+C00961,C00154,Phosphate rock
+C00962,C00048,Diesel
+C00798,C00155,Surfactants
+C00648,C00156,Bauxite
+C00963,C00157,Aluminium coil
+C00964,C00158,Aluminium coil
+C00965,C00159,Tinplate steel
+C00966,C00160,Diesel
+C00967,C00050,Natural gas
+C00080,C00095,Polyethylene
+C00968,C00162,Phosphate rock
+C00969,C00163,Natural gas
+C00970,C00125,Tinplate steel
+C00971,C00165,Pesticides
+C00833,C00166,Bauxite
+C00919,C00167,Diesel
+C00972,C00168,Natural gas
+C00973,C00169,Natural gas
+C00974,C00170,Pesticides
+C00672,C00171,Aluminium coil
+C00975,C00172,Natural gas
+C00976,C00173,Potash
+C00326,C00176,Potash
+C00977,C00177,Diesel
+C00978,C00179,Ammonia
+C00979,C00108,Surfactants
+C00692,C00181,Potash ore
+C00980,C00182,Bauxite
+C00981,C00183,Natural gas
+C00982,C00184,Phosphate rock
+C00536,C00185,Phosphate rock
+C00983,C00186,Surfactants
+C00984,C00187,Potash ore
+C00985,C00188,Tinplate steel
+C00953,C00190,Surfactants
+C00986,C00191,Aluminium coil
+C00987,C00192,Phosphate rock
+C00988,C00194,Potash ore
+C00654,C00195,Aluminium coil
+C00989,C00196,Caustic soda
+C00770,C00197,Natural gas
+C00990,C00198,Potash ore
+C00991,C00199,Aluminium coil
+C00421,C00200,Diesel
+C00505,C00201,Aluminium coil
+C00992,C00202,Bauxite
+C00993,C00204,Natural gas
+C00995,F2,Beef cuts
+C00996,F2,Soft drinks
+C00997,F2,Vegetables
+C00998,F2,Cheese
+C00005,F2,Toothpaste
+C00999,F2,Milk
+C00003,F2,Juices
+C01000,F2,Shampoo
+C01001,F2,Bread
+C00038,F2,Corrugated boxes
+C00013,F2,Ready meals
+C01002,F2,Soft drinks
+C01003,F2,PET bottles
+C00020,F2,Corrugated boxes
+C01004,F2,Fruit
+C01005,F2,Toothpaste
+C01006,F2,Beef cuts
+C01007,F2,Warehousing
+C01008,F2,Sauces
+C00078,F2,Corrugated boxes
+C01009,F2,Canned vegetables
+C01010,F2,Cheese
+C01011,F2,Yoghurt
+C01012,F2,Pork products
+C00122,C00995,Compound feed
+C01013,C00996,Sunflower seed
+C01014,C00997,Wheat
+C01015,C00998,Compound feed
+C00581,C00005,Solvents
+C01016,C00999,Compound feed
+C00109,C01000,Rapeseed oil
+C01017,C01001,Cocoa
+C01018,C00038,Tinplate steel
+C00110,C00013,Corrugated boxes
+C01019,C01002,Plastic film
+C00702,C01003,Tinplate steel
+C00086,C00020,Kraft paper
+C01020,C01004,Ammonia
+C01021,C01005,Solvents
+C01022,C01006,Soy meal
+C01023,C01007,Natural gas
+C00052,C01008,Corn
+C01024,C00078,Aluminium coil
+C00012,C01009,PET bottles
+C01025,C01010,Soy meal
+C01026,C01011,Soybeans
+C01025,C01012,Compound feed
+C01027,C00995,Compound feed
+C01028,C00996,Soybeans
+C01029,C00997,Freight forwarding
+C01030,C00998,Plastic film
+C01031,C00005,Rapeseed oil
+C01032,C00999,Aluminium cans
+C00097,C00003,Glucose syrup
+C00394,C01000,Solvents
+C01033,C01001,Corn
+C01034,C00038,Aluminium coil
+C01035,C00013,Emulsifiers
+C01036,C01002,Aluminium cans
+C01037,C01003,Wood pulp
+C01038,C00020,Kraft paper
+C01039,C01004,Urea
+C00060,C01005,Sunflower oil
+C00014,C01006,Cold-chain transport
+C01040,C01007,Diesel
+C01041,C01008,Corn
+C01042,C00078,Kraft paper
+C00049,C01009,Sunflower oil
+C01043,C01010,PET bottles
+C01044,C01011,Cocoa
+C00098,C01012,Aluminium cans
+C01045,C00995,Plastic film
+C01046,C00996,Glass jars
+C01047,C00997,Ammonia
+C01048,C00998,Cocoa
+C01049,C00005,Caustic soda
+C00020,C00999,Corrugated boxes
+C01050,C00003,Refined sugar
+C01051,C01000,Surfactants
+C01052,C01001,Aluminium cans
+C00294,C00038,PET resin
+C01053,C00013,Corrugated boxes
+C01054,C01002,Glass bottles
+C00503,C01003,Polypropylene
+C01055,C00020,Polyethylene
+C01056,C01004,Coffee beans
+C00049,C01005,Palm oil
+C01057,C01006,Cold-chain transport
+C00148,C01007,Refrigeration controllers
+C00041,C01008,Flavourings
+C01058,C00078,Wood pulp
+C01059,C01009,PET bottles
+C01056,C01010,Cocoa
+C01060,C01011,PET bottles
+C01061,C01012,Soy meal
+C01062,C00995,Compound feed
+C00097,C00996,Glucose syrup
+C00260,C00997,Ammonia
+C01063,C00998,Plastic film
+C01064,C00999,Corrugated boxes
+C01065,C01000,Surfactants
+C00060,C01001,Sunflower oil
+C00712,C00038,Tinplate steel
+C01066,C00013,Wheat
+C01067,C01002,PET bottles
+C00331,C01003,Aluminium coil
+C01068,C00020,PET resin
+C01069,C01004,Freight forwarding
+C01070,C01005,PET resin
+C01071,C01006,Cold-chain transport
+C01072,C01007,Diesel
+C01073,C01008,Emulsifiers
+C00310,C00078,Polypropylene
+C01074,C01009,Sunflower seed
+C00063,C01010,Wheat
+C00173,C01011,Coffee beans
+C01075,C01012,Compound feed
+C01076,C00995,Soy meal
+C01077,C00996,Wheat
+C01078,C00997,Coffee beans
+C01066,C00998,Wheat
+C01079,C00005,Sunflower oil
+C01025,C00999,Compound feed
+C01080,C00003,Glass bottles
+C00165,C01000,PET resin
+C01050,C01001,Glucose syrup
+C00955,C00038,Aluminium coil
+C01081,C00013,PET bottles
+C01082,C01002,Plastic film
+C00267,C01003,Wood pulp
+C01083,C00020,Wood pulp
+C01084,C01004,Sunflower seed
+C01085,C01005,Palm oil
+C01086,C01006,Compound feed
+C00972,C01007,Diesel
+C01087,C01008,Cocoa
+C01088,C00078,Wood pulp
+C01089,C01010,Soybeans
+C01090,C01011,Compound feed
+C00122,C01012,Compound feed
+C01091,C00995,Aluminium cans
+C01050,C00996,Refined sugar
+C01092,C00997,Corn
+C01093,C00998,Corn
+C00782,C00005,Polypropylene
+C01094,C00999,Plastic film
+C01091,C00003,Aluminium cans
+C00120,C01000,Palm oil
+C01095,C01001,Coffee beans
+C01096,C00038,Wood pulp
+C00109,C00013,Palm oil
+C01084,C01002,Soybeans
+C01097,C01003,Aluminium coil
+C00035,C00020,Wood pulp
+C01098,C01004,Wheat
+C01099,C01005,Surfactants
+C01030,C01006,PET bottles
+C00487,C01007,Natural gas
+C01100,C01008,Emulsifiers
+C01101,C00122,Corn
+C01102,C01013,Solvents
+C01103,C01014,Potash
+C01104,C01015,Solvents
+C00770,C00581,Diesel
+C01105,C01016,Sunflower seed
+C01106,C00079,Caustic soda
+C00346,C00109,Potash
+C01107,C01017,Diesel
+C01108,C01018,Phosphate rock
+C00267,C00110,Kraft paper
+C01109,C01019,Wood pulp
+C01110,C00702,Natural gas
+C01111,C00086,Solvents
+C01112,C01020,Natural gas
+C01113,C01021,Diesel
+C01021,C01022,Surfactants
+C01114,C01023,Bauxite
+C00400,C00052,Diesel
+C00156,C01024,Natural gas
+C01115,C00012,Tinplate steel
+C01116,C01025,Corn
+C00379,C01026,Ammonia
+C00362,C01027,Surfactants
+C01117,C01028,Caustic soda
+C00031,C01029,Refrigeration controllers
+C01118,C01030,Polyethylene
+C00276,C01031,Ammonia
+C01119,C01032,Polypropylene
+C00258,C00097,Cocoa
+C00270,C00394,Aluminium coil
+C00754,C01033,Diesel
+C00482,C01034,Phosphate rock
+C01120,C01035,Pesticides
+C01121,C01036,Aluminium coil
+C01122,C01037,Pulpwood logs
+C01123,C01038,Caustic soda
+C00716,C01039,Potash ore
+C01124,C00060,Potash
+C00144,C00014,Refrigeration controllers
+C01125,C01040,Potash ore
+C00393,C01041,Urea
+C00768,C01042,Solvents
+C01126,C00049,Urea
+C00162,C01043,Tinplate steel
+C01127,C01044,Ammonia
+C00323,C00098,Tinplate steel
+C00108,C01045,Kraft paper
+C01128,C01046,Diesel
+C01129,C01047,Diesel
+C01130,C01048,Ammonia
+C00647,C01049,Tinplate steel
+C01131,C00020,Wood pulp
+C01132,C01050,Sunflower seed
+C00715,C01051,Natural gas
+C00802,C01052,Tinplate steel
+C01133,C00294,Natural gas
+C01134,C01053,Aluminium coil
+C01135,C01054,Natural gas
+C01136,C00503,Surfactants
+C01137,C01055,Natural gas
+C01138,C01056,Pesticides
+C01139,C01057,Natural gas
+C01140,C00148,Polyethylene
+C00039,C00041,Cocoa
+C01141,C01058,Pulpwood logs
+C01142,C01059,Wood pulp
+C01143,C01060,Polypropylene
+C01144,C01061,Caustic soda
+C01145,C01062,Wheat
+C01146,C00260,Natural gas
+C00682,C01063,Aluminium coil
+C01147,C01064,Tinplate steel
+C00799,C01065,Tinplate steel
+C01148,C00712,Diesel
+C01149,C01066,Solvents
+C01109,C01067,Kraft paper
+C00559,C00331,Natural gas
+C00340,C01068,Natural gas
+C01150,C01069,Refrigeration controllers
+C00157,C01070,Caustic soda
+C00095,C01071,Telematics units
+C01151,C01072,Potash ore
+C01152,C01073,Caustic soda
+C00873,C00310,Diesel
+C01153,C01074,Urea
+C01154,C00063,Potash
+C01155,C00173,Natural gas
+C01156,C01075,Pesticides
+C01157,C01076,Sunflower seed
+C00867,C01077,Natural gas
+C01158,C01078,Diesel
+C01159,C01079,Potash
+C01160,C01080,Diesel
+C01161,C00165,Pesticides
+C01162,C00955,Phosphate rock
+C00190,C01081,Polypropylene
+C01163,C01082,Aluminium coil
+C01164,C00267,Solvents
+C01165,C01083,Pulpwood logs
+C01166,C01084,Natural gas
+C01167,C01085,Cocoa
+C01168,C01086,Corn
+C01169,C00972,Bauxite
+C00205,C01087,Surfactants
+C00263,C01088,Solvents
+C00366,C01089,Surfactants
+C01170,C01090,Caustic soda
+C00584,C01091,Aluminium coil
+C01171,C01092,Diesel
+C01172,C01093,Pesticides
+C01173,C00782,Pesticides
+C00160,C01094,Polyethylene
+C01174,C00120,Urea
+C01175,C01095,Diesel
+C01176,C01096,Surfactants
+C00419,C01097,Natural gas
+C01177,C00035,Pesticides
+C01178,C01098,Diesel
+C00916,C01099,Diesel
+C01179,C00487,Potash ore
+C01180,C01100,Cocoa
+C01181,C00122,Corn
+C01182,C01013,Ammonia
+C01183,C01014,Diesel
+C00807,C01015,Solvents
+C01184,C00581,Aluminium coil
+C01185,C01016,Sunflower seed
+C01186,C00079,Caustic soda
+C01187,C00109,Urea
+C01188,C01017,Urea
+C00351,C01018,Natural gas
+C00113,C00110,Kraft paper
+C00650,C01019,Polypropylene
+C01189,C00702,Potash ore
+C00158,C00086,Surfactants
+C01190,C01020,Diesel
+C00795,C01021,Tinplate steel
+C01191,C01022,Solvents
+C01192,C01023,Phosphate rock
+C01193,C00052,Urea
+C01194,C01024,Diesel
+C01195,C00012,Tinplate steel
+C01196,C01025,Caustic soda
+C00397,C01026,Pesticides
+C01197,C01027,Corn
+C01065,C01028,Pesticides
+C01198,C01029,Refrigeration controllers
+C01199,C01030,Polypropylene
+C01200,C01031,Soybeans
+C01201,C01032,Wood pulp
+C00111,C00097,Cocoa
+C01202,C00394,Natural gas
+C01203,C01033,Potash
+C01204,C01034,Phosphate rock
+C01205,C01035,Corn
+C01206,C01036,Wood pulp
+C01207,C01037,Solvents
+C00164,C01038,Pulpwood logs
+C01208,C01039,Diesel
+C01209,C00060,Urea
+C01210,C00014,Diesel
+C01211,C01040,Bauxite
+C00540,C01041,Pesticides
+C01172,C01042,Caustic soda
+C01212,C00049,Ammonia
+C01213,C01043,Tinplate steel
+C01130,C01044,Urea
+C01214,C00098,Wood pulp
+C01215,C01045,Wood pulp
+C01216,C01046,Diesel
+C01217,C01047,Diesel
+C01218,C01048,Potash
+C01219,C01049,Aluminium coil
+C01220,C00020,Aluminium coil
+C00379,C01050,Urea
+C01221,C01051,Diesel
+C00328,C01052,Aluminium coil
+C01222,C00294,Natural gas
+C01223,C01053,Tinplate steel
+C01148,C01054,Natural gas
+C01224,C00503,Natural gas
+C01225,C01055,Solvents
+C01226,C01056,Natural gas
+C01227,C01057,Telematics units
+C01228,C00148,Tinplate steel
+C01229,C00041,Sunflower seed
+C00663,C01058,Pulpwood logs
+C01230,C01059,Wood pulp
+C00050,C01060,Polyethylene
+C01231,C01061,Pesticides
+C01232,C01062,Coffee beans
+C01233,C00260,Natural gas
+C00054,C01063,Wood pulp
+C01234,C01064,Kraft paper
+C01235,C01065,Aluminium coil
+C00981,C00712,Diesel
+C00975,C01066,Diesel
+C00782,C01067,Polyethylene
+C01236,C00331,Bauxite
+C01237,C01068,Caustic soda
+C01238,C01069,Natural gas
+C01239,C01070,Surfactants
+C01240,C01071,Natural gas
+C01241,C01072,Bauxite
+C00057,C01073,Wheat
+C00405,C00310,Pesticides
+C01242,C01074,Potash
+C01243,C00063,Pesticides
+C01244,C00173,Pesticides
+C01245,C01075,Sunflower seed
+C01074,C01076,Coffee beans
+C00674,C01077,Ammonia
+C01246,C01078,Solvents
+C01130,C01079,Ammonia
+C01247,C01080,Pesticides
+C01248,C00165,Diesel
+C00522,C00955,Natural gas
+C01249,C01081,Aluminium coil
+C01250,C01082,Tinplate steel
+C00485,C00267,Caustic soda
+C00087,C01083,Pesticides
+C01251,C01084,Solvents
+C01252,C01085,Sunflower seed
+C00789,C01086,Caustic soda
+C01253,C00972,Phosphate rock
+C01254,C01087,Diesel
+C01255,C01088,Pulpwood logs
+C01256,C01089,Diesel
+C00989,C01090,Solvents
+C01257,C01091,Tinplate steel
+C01258,C01092,Potash
+C01259,C01093,Surfactants
+C01260,C00782,Pesticides
+C01261,C01094,Polyethylene
+C01262,C00120,Corn
+C01263,C01095,Urea
+C01264,C01096,Pulpwood logs
+C00642,C01097,Phosphate rock
+C01265,C00035,Solvents
+C01266,C01098,Potash
+C01240,C01099,Natural gas
+C01267,C00487,Bauxite
+C01268,C01100,Sunflower seed
+C01120,C00122,Solvents
+C01269,C01013,Caustic soda
+C00706,C01014,Pesticides
+C00173,C01015,Soybeans
+C00975,C00581,Diesel
+C01168,C01016,Sunflower seed
+C01270,C00079,Natural gas
+C01271,C00109,Urea
+C00125,C01017,Surfactants
+C01272,C01018,Phosphate rock
+C01273,C00110,Kraft paper
+C01274,C01019,Aluminium coil
+C01275,C00702,Diesel
+C01276,C00086,Pulpwood logs
+C01277,C01020,Natural gas
+C01278,C01021,Aluminium coil
+C01279,C01022,Pesticides
+C01280,C01023,Bauxite
+C01281,C00052,Diesel
+C00512,C01024,Diesel
+C01282,C00012,Tinplate steel
+C01283,C01025,Caustic soda
+C01284,C01026,Solvents
+C01285,C01027,Caustic soda
+C01286,C01028,Natural gas
+C01287,C01029,Diesel
+C00870,C01030,Polypropylene
+C01288,C01031,Potash
+C01289,C01032,Wood pulp
+C01290,C00097,Wheat
+C00047,C00394,Aluminium coil
+C01291,C01033,Natural gas
+C01292,C01034,Diesel
+C00248,C01035,Cocoa
+C00170,C01036,Wood pulp
+C01293,C01037,Pulpwood logs
+C01294,C01038,Pulpwood logs
+C01295,C01039,Bauxite
+C01296,C00060,Urea
+C01297,C00014,Diesel
+C00911,C01040,Phosphate rock
+C01298,C01041,Ammonia
+C01299,C01042,Caustic soda
+C00243,C00049,Potash
+C00639,C01043,Tinplate steel
+C00617,C01044,Pesticides
+C01300,C00098,Wood pulp
+C01301,C01045,Aluminium coil
+C00427,C01046,Surfactants
+C01302,C01047,Phosphate rock
+C01303,C01048,Surfactants
+C00741,C01049,Tinplate steel
+C01304,C00020,PET resin
+C00753,C01050,Ammonia
+C01305,C01051,Natural gas
+C01306,C01052,Polyethylene
+C01307,C00294,Diesel
+C01308,C01053,Polypropylene
+C00129,C01054,Pesticides
+C01309,C00503,Natural gas
+C01310,C01055,Natural gas
+C01311,C01056,Pesticides
+C01312,C01057,Natural gas
+C01313,C00148,Aluminium coil
+C01314,C00041,Corn
+C00917,C01058,Pesticides
+C01315,C01059,Polypropylene
+C01316,C01060,Wood pulp
+C00413,C01061,Solvents
+C01317,C01062,Surfactants
+C00402,C01063,Polyethylene
+C00061,C01064,Kraft paper
+C00187,C01065,Aluminium coil
+C00572,C00712,Potash ore
+C01318,C01066,Natural gas
+C01319,C01067,Kraft paper
+C01320,C00331,Phosphate rock
+C01321,C01068,Natural gas
+C01322,C01069,Diesel
+C01323,C01070,Natural gas
+C01324,C01071,Diesel
+C00658,C01072,Bauxite
+C01325,C01073,Surfactants
+C01326,C00310,Solvents
+C01327,C01074,Pesticides
+C01328,C00063,Surfactants
+C01329,C00173,Natural gas
+C01330,C01075,Cocoa
+C01331,C01076,Soybeans
+C01332,C01077,Diesel
+C01333,C01078,Caustic soda
+C01132,C01079,Wheat
+C01334,C01080,Diesel
+C01335,C00165,Diesel
+C01210,C00955,Natural gas
+C00507,C01081,Polypropylene
+C01336,C01082,Wood pulp
+C00218,C00267,Surfactants
+C00706,C01083,Solvents
+C01159,C01084,Ammonia
+C01337,C01085,Cocoa
+C01338,C01086,Wheat
+C01339,C00972,Phosphate rock
+C01340,C01087,Diesel
+C01341,C01088,Caustic soda
+C01342,C01089,Surfactants
+C01156,C01090,Caustic soda
+C00759,C01091,Tinplate steel
+C01343,C01092,Pesticides
+C01344,C01093,Pesticides
+C00548,C00782,Diesel
+C01345,C01094,Tinplate steel
+C01181,C00120,Coffee beans
+C01346,C01095,Diesel
+C01347,C01096,Surfactants
+C01348,C01097,Phosphate rock
+C00178,C00035,Pulpwood logs
+C01349,C01098,Diesel
+C01350,C01099,Diesel
+C01351,C00487,Bauxite
+C00411,C01100,Solvents
+C01352,C00122,Solvents
+C01353,C01013,Diesel
+C01354,C01014,Caustic soda
+C01117,C01015,Surfactants
+C01139,C00581,Natural gas
+C01355,C01016,Corn
+C00738,C00079,Diesel
+C00690,C00109,Urea
+C01356,C01017,Diesel
+C01357,C01018,Potash ore
+C00261,C00110,PET resin
+C00402,C01019,Polypropylene
+C01358,C00702,Diesel
+C01156,C00086,Surfactants
+C01359,C01020,Phosphate rock
+C01360,C01021,Natural gas
+C01361,C01022,Caustic soda
+C01362,C01023,Phosphate rock
+C01363,C00052,Potash
+C01364,C01024,Natural gas
+C01365,C00012,Wood pulp
+C00309,C01025,Cocoa
+C00242,C01026,Potash
+C00176,C01027,Coffee beans
+C01366,C01028,Urea
+C01367,C01029,Natural gas
+C01368,C01030,Tinplate steel
+C00334,C01031,Urea
+C00537,C01032,Tinplate steel
+C00149,C00097,Soybeans
+C00776,C00394,Natural gas
+C00789,C01033,Solvents
+C00748,C01034,Bauxite
+C01369,C01035,Corn
+C01370,C01036,Aluminium coil
+C00314,C01037,Surfactants
+C01371,C01038,Pulpwood logs
+C01372,C01039,Bauxite
+C01373,C00060,Urea
+C01374,C00014,Telematics units
+C01375,C01040,Phosphate rock
+C00829,C01041,Diesel
+C01376,C01042,Pesticides
+C00140,C00049,Potash
+C01377,C01043,Kraft paper
+C01378,C01044,Pesticides
+C00091,C01045,Kraft paper
+C01379,C01046,Diesel
+C00700,C01047,Phosphate rock
+C01380,C01048,Diesel
+C01381,C01049,Aluminium coil
+C00249,C00020,Polyethylene
+C01382,C01050,Wheat
+C01383,C01101,Natural gas
+C00950,C01102,Natural gas
+C01384,C01103,Diesel
+C01318,C01104,Natural gas
+C00851,C00770,Bauxite
+C01385,C01105,Diesel
+C01386,C01106,Diesel
+C00274,C00346,Bauxite
+C00771,C01107,Bauxite
+C01387,C00267,Pesticides
+C00230,C01109,Pesticides
+C00748,C01110,Phosphate rock
+C01388,C01111,Natural gas
+C00551,C01112,Potash ore
+C01389,C01113,Potash ore
+C01390,C01021,Diesel
+C01391,C00400,Phosphate rock
+C00980,C00156,Potash ore
+C01392,C01115,Natural gas
+C01393,C01116,Solvents
+C01394,C00379,Natural gas
+C01395,C00362,Diesel
+C01396,C01117,Natural gas
+C01397,C00031,PET resin
+C01398,C01118,Solvents
+C01399,C00276,Potash ore
+C01400,C01119,Solvents
+C00394,C00258,Surfactants
+C01401,C00270,Natural gas
+C00716,C00754,Potash ore
+C00312,C01120,Aluminium coil
+C01402,C01121,Bauxite
+C01403,C01123,Diesel
+C01404,C01124,Phosphate rock
+C01405,C00144,Polyethylene
+C01406,C00393,Bauxite
+C01407,C00768,Diesel
+C01408,C01126,Phosphate rock
+C00931,C00162,Natural gas
+C00980,C01127,Potash ore
+C01409,C00323,Diesel
+C01410,C00108,Solvents
+C01411,C01128,Phosphate rock
+C00945,C01129,Phosphate rock
+C01412,C01130,Bauxite
+C01413,C00647,Bauxite
+C00264,C01131,Pulpwood logs
+C00356,C01132,Surfactants
+C00620,C00715,Bauxite
+C01414,C00802,Phosphate rock
+C00645,C01133,Potash ore
+C00457,C01134,Natural gas
+C01415,C01135,Potash ore
+C00568,C01136,Tinplate steel
+C01416,C01137,Potash ore
+C01417,C01138,Diesel
+C01418,C01139,Potash ore
+C00237,C01140,Pesticides
+C01419,C00039,Natural gas
+C00164,C01142,Pulpwood logs
+C01334,C01143,Natural gas
+C01420,C01144,Diesel
+C01421,C01145,Diesel
+C01416,C01146,Bauxite
+C00868,C00682,Natural gas
+C01422,C01147,Phosphate rock
+C00150,C00799,Diesel
+C00673,C01148,Phosphate rock
+C00612,C01149,Natural gas
+C00853,C00559,Phosphate rock
+C01423,C00340,Bauxite
+C01424,C01150,Polypropylene
+C01217,C00157,Natural gas
+C00731,C00095,Polypropylene
+C01425,C01152,Tinplate steel
+C00614,C00873,Bauxite
+C01426,C01153,Natural gas
+C01427,C01154,Diesel
+C01428,C01155,Phosphate rock
+C01429,C01156,Diesel
+C01103,C01157,Urea
+C01430,C00867,Bauxite
+C01431,C01158,Bauxite
+C01432,C01159,Phosphate rock
+C01433,C01160,Potash ore
+C01434,C01161,Natural gas
+C01435,C00190,Diesel
+C00056,C01163,Diesel
+C01436,C01164,Aluminium coil
+C01372,C01166,Potash ore
+C01437,C01167,Diesel
+C01438,C01168,Potash
+C01439,C00205,Diesel
+C01440,C00263,Aluminium coil
+C00750,C00366,Diesel
+C01440,C01170,Tinplate steel
+C00536,C00584,Potash ore
+C01441,C01171,Bauxite
+C00390,C01172,Aluminium coil
+C00320,C01173,Aluminium coil
+C00856,C00160,Pesticides
+C01442,C01174,Natural gas
+C00533,C01175,Bauxite
+C01443,C01176,Aluminium coil
+C01375,C00419,Phosphate rock
+C01444,C01177,Aluminium coil
+C00854,C01178,Potash ore
+C01445,C00916,Potash ore
+C01303,C01180,Caustic soda
+C01446,C01181,Solvents
+C01447,C01182,Bauxite
+C01448,C01183,Potash ore
+C01449,C00807,Tinplate steel
+C01450,C01184,Bauxite
+C00265,C01185,Caustic soda
+C00702,C01186,Tinplate steel
+C01451,C01187,Potash ore
+C01452,C01188,Diesel
+C01453,C00351,Bauxite
+C01165,C00113,Pulpwood logs
+C01454,C00650,Natural gas
+C00591,C00158,Aluminium coil
+C00961,C01190,Phosphate rock
+C00281,C00795,Potash ore
+C00913,C01191,Natural gas
+C01455,C01193,Diesel
+C00468,C01194,Bauxite
+C01456,C01195,Phosphate rock
+C01457,C01196,Diesel
+C00641,C00397,Tinplate steel
+C01458,C01197,Potash
+C00302,C01065,Tinplate steel
+C01459,C01198,Aluminium coil
+C00349,C01199,Surfactants
+C01460,C01200,Diesel
+C00235,C01201,Pulpwood logs
+C01461,C00111,Ammonia
+C00504,C01202,Phosphate rock
+C01462,C01203,Natural gas
+C01462,C01205,Natural gas
+C01463,C01206,Caustic soda
+C01464,C01207,Natural gas
+C01465,C01208,Bauxite
+C01466,C01209,Potash ore
+C00533,C01210,Potash ore
+C00927,C00540,Aluminium coil
+C00479,C01212,Bauxite
+C00635,C01213,Phosphate rock
+C01467,C01214,Pesticides
+C01468,C01215,Surfactants
+C01267,C01216,Bauxite
+C01469,C01217,Bauxite
+C01470,C01218,Natural gas
+C01471,C01219,Diesel
+C01472,C01220,Natural gas
+C01411,C01221,Phosphate rock
+C00451,C00328,Bauxite
+C00853,C01222,Phosphate rock
+C00824,C01223,Phosphate rock
+C01473,C01224,Phosphate rock
+C01474,C01225,Aluminium coil
+C00945,C01226,Bauxite
+C01475,C01227,Tinplate steel
+C01476,C01228,Natural gas
+C01477,C01229,Diesel
+C01371,C01230,Pulpwood logs
+C01478,C00050,Caustic soda
+C01282,C01231,Tinplate steel
+C01479,C01232,Diesel
+C01480,C01233,Potash ore
+C01481,C00054,Pulpwood logs
+C01482,C01234,Pulpwood logs
+C01483,C01235,Natural gas
+C00475,C00981,Phosphate rock
+C01484,C00975,Potash ore
+C00221,C00782,Natural gas
+C01485,C01237,Tinplate steel
+C00551,C01238,Bauxite
+C01248,C01239,Natural gas
+C01486,C01240,Bauxite
+C01487,C00057,Natural gas
+C00333,C00405,Natural gas
+C01488,C01242,Diesel
+C01489,C01243,Tinplate steel
+C01490,C01244,Natural gas
+C01491,C01245,Natural gas
+C00920,C01074,Diesel
+C01407,C00674,Natural gas
+C01492,C01246,Tinplate steel
+C01493,C01247,Natural gas
+C01494,C01248,Phosphate rock
+C00911,C00522,Bauxite
+C01495,C01249,Diesel
+C01496,C01250,Diesel
+C01497,C00485,Aluminium coil
+C01498,C00087,Tinplate steel
+C01440,C01251,Tinplate steel
+C01123,C01252,Surfactants
+C00453,C00789,Natural gas
+C01499,C01254,Potash ore
+C01494,C01256,Bauxite
+C01110,C00989,Diesel
+C01500,C01257,Phosphate rock
+C01501,C01258,Natural gas
+C01502,C01259,Natural gas
+C00732,C01260,Natural gas
+C00946,C01261,Solvents
+C01503,C01262,Potash
+C00486,C01263,Phosphate rock
+C01504,C01265,Diesel
+C01505,C01266,Phosphate rock
+C00410,C01268,Ammonia
+C01506,C01269,Aluminium coil
+C00336,C00706,Diesel
+C01496,C00173,Natural gas
+C01507,C01270,Potash ore
+C01508,C01271,Natural gas
+C01509,C00125,Diesel
+C01510,C01273,Caustic soda
+C01447,C01274,Phosphate rock
+C01295,C01275,Potash ore
+C01511,C01277,Potash ore
+C01512,C01278,Phosphate rock
+C01474,C01279,Tinplate steel
+C01513,C01281,Bauxite
+C01514,C00512,Potash ore
+C01515,C01282,Phosphate rock
+C01516,C01283,Aluminium coil
+C00938,C01284,Aluminium coil
+C01517,C01285,Aluminium coil
+C01518,C01286,Potash ore
+C00692,C01287,Bauxite
+C00492,C00870,Natural gas
+C01519,C01288,Phosphate rock
+C01520,C01289,Pulpwood logs
+C01521,C01290,Potash
+C01522,C00047,Bauxite
+C01412,C01291,Potash ore
+C01357,C01292,Potash ore
+C00379,C00248,Urea
+C00252,C00170,Pulpwood logs
+C01494,C01296,Bauxite
+C01523,C01297,Potash ore
+C00432,C01298,Bauxite
+C01524,C01299,Tinplate steel
+C01525,C00243,Natural gas
+C00709,C00639,Phosphate rock
+C01322,C00617,Diesel
+C00239,C01300,Pulpwood logs
+C01526,C01301,Potash ore
+C01455,C00427,Natural gas
+C00221,C01303,Natural gas
+C01527,C00741,Potash ore
+C00810,C01304,Natural gas
+C01528,C00753,Natural gas
+C00775,C01305,Phosphate rock
+C01529,C01306,Pesticides
+C01422,C01307,Potash ore
+C01530,C01308,Natural gas
+C01318,C00129,Diesel
+C01531,C01309,Phosphate rock
+C00574,C01310,Phosphate rock
+C01532,C01311,Diesel
+C01533,C01312,Potash ore
+C01534,C01313,Bauxite
+C01535,C01314,Urea
+C01536,C00917,Diesel
+C01537,C01315,Surfactants
+C00705,C01316,Surfactants
+C00964,C00413,Tinplate steel
+C01538,C01317,Diesel
+C01539,C00402,Solvents
+C01540,C00061,Pulpwood logs
+C01541,C00187,Phosphate rock
+C01542,C01318,Potash ore
+C01543,C01319,Solvents
+C01544,C01321,Potash ore
+C00761,C01322,Potash ore
+C01545,C01323,Potash ore
+C01546,C01324,Bauxite
+C01547,C01325,Tinplate steel
+C00991,C01326,Aluminium coil
+C01548,C01327,Diesel
+C01549,C01328,Tinplate steel
+C01272,C01329,Potash ore
+C00935,C01330,Caustic soda
+C01550,C01331,Pesticides
+C01551,C01332,Bauxite
+C00668,C01333,Natural gas
+C01552,C01334,Phosphate rock
+C00669,C01335,Potash ore
+C01553,C00507,Surfactants
+C01554,C01336,Solvents
+C00970,C00218,Tinplate steel
+C01555,C01337,Natural gas
+C01237,C01338,Pesticides
+C01295,C01340,Potash ore
+C01556,C01341,Tinplate steel
+C01557,C01342,Natural gas
+C01558,C00759,Diesel
+C01559,C01343,Aluminium coil
+C01560,C01344,Aluminium coil
+C01561,C00548,Phosphate rock
+C01562,C01345,Bauxite
+C01563,C01346,Phosphate rock
+C01564,C01347,Aluminium coil
+C01565,C01349,Bauxite
+C01541,C01350,Phosphate rock
+C01566,C00411,Diesel
+C01567,C01352,Diesel
+C00468,C01353,Potash ore
+C01568,C01354,Natural gas
+C01103,C01355,Potash
+C01569,C00738,Potash ore
+C01420,C00690,Diesel
+C01570,C01356,Potash ore
+C01571,C00261,Pesticides
+C01572,C01358,Potash ore
+C01522,C01360,Phosphate rock
+C00966,C01361,Natural gas
+C00521,C01363,Diesel
+C00486,C01364,Phosphate rock
+C00163,C01365,Solvents
+C00891,C00309,Diesel
+C01573,C00242,Diesel
+C01574,C00176,Potash
+C01575,C01366,Phosphate rock
+C01576,C01367,Bauxite
+C00850,C01368,Natural gas
+C01577,C00334,Phosphate rock
+C01578,C00537,Diesel
+C01579,C00149,Caustic soda
+C01484,C00776,Phosphate rock
+C01580,C01369,Natural gas
+C01581,C01370,Natural gas
+C01582,C00314,Tinplate steel
+C01583,C01373,Diesel
+C01584,C01374,Tinplate steel
+C00482,C00829,Bauxite
+C01585,C01376,Aluminium coil
+C01586,C00140,Diesel
+C01207,C01377,Solvents
+C01128,C01378,Natural gas
+C00834,C00310,Natural gas
+C01587,C00091,Pulpwood logs
+C01588,C01379,Potash ore
+C00139,C01380,Potash ore
+C01589,C01381,Potash ore
+C01590,C00249,Pesticides
+C01591,C01382,Caustic soda
+C01592,C01101,Urea
+C00898,C01102,Diesel
+C01593,C01103,Phosphate rock
+C00585,C01104,Diesel
+C00389,C00770,Potash ore
+C00353,C01105,Urea
+C01594,C01106,Natural gas
+C01595,C00346,Diesel
+C01596,C01107,Phosphate rock
+C01597,C00267,Pulpwood logs
+C01598,C01109,Pulpwood logs
+C00708,C01110,Potash ore
+C00689,C01111,Tinplate steel
+C01599,C01112,Bauxite
+C01600,C01113,Bauxite
+C01601,C01021,Tinplate steel
+C01602,C00400,Phosphate rock
+C01603,C00156,Potash ore
+C01604,C01115,Diesel
+C00638,C01116,Diesel
+C01605,C00379,Natural gas
+C00750,C00362,Natural gas
+C01606,C01117,Diesel
+C01607,C00031,PET resin
+C00253,C01118,Solvents
+C01608,C00276,Diesel
+C01609,C01119,Surfactants
+C01461,C00258,Ammonia
+C01610,C00270,Diesel
+C01611,C00754,Potash ore
+C01612,C01120,Natural gas
+C00908,C01121,Bauxite
+C01613,C01123,Aluminium coil
+C01322,C01124,Diesel
+C01614,C00144,Aluminium coil
+C00954,C00393,Potash ore
+C00462,C00768,Natural gas
+C01615,C01126,Natural gas
+C01616,C00162,Potash ore
+C00455,C01127,Natural gas
+C01617,C00323,Diesel
+C01618,C00108,Pulpwood logs
+C01619,C01128,Phosphate rock
+C00709,C01129,Potash ore
+C01620,C01130,Natural gas
+C01621,C00647,Natural gas
+C01622,C01131,Pulpwood logs
+C00953,C01132,Caustic soda
+C01576,C00715,Potash ore
+C00902,C00802,Bauxite
+C01623,C01133,Bauxite
+C00292,C01134,Diesel
+C01189,C01135,Potash ore
+C01624,C01136,Diesel
+C01625,C01137,Bauxite
+C01626,C01138,Natural gas
+C01627,C01139,Phosphate rock
+C00282,C01140,Surfactants
+C01321,C00039,Natural gas
+C01378,C01142,Solvents
+C01628,C01143,Solvents
+C01629,C01144,Tinplate steel
+C01630,C01145,Potash
+C00883,C01146,Potash ore
+C01631,C00682,Bauxite
+C00810,C01147,Diesel
+C00509,C00799,Natural gas
+C01423,C01148,Phosphate rock
+C01632,C01149,Tinplate steel
+C01633,C00559,Bauxite
+C01634,C00340,Potash ore
+C00132,C01150,Polypropylene
+C01635,C00157,Tinplate steel
+C01636,C00095,Aluminium coil
+C01637,C01152,Aluminium coil
+C01638,C00873,Phosphate rock
+C00420,C01153,Bauxite
+C01183,C01154,Natural gas
+C01484,C01155,Potash ore
+C01639,C01156,Diesel
+C01640,C01157,Natural gas
+C00828,C00867,Bauxite
+C01469,C01158,Phosphate rock
+C01388,C01159,Diesel
+C01641,C01160,Potash ore
+C01642,C01161,Tinplate steel
+C00387,C00190,Surfactants
+C01569,C01163,Phosphate rock
+C01643,C01164,Diesel
+C01644,C01166,Phosphate rock
+C00368,C01167,Pesticides
+C01645,C01168,Diesel
+C01646,C00205,Tinplate steel
+C01332,C00263,Natural gas
+C01647,C00366,Tinplate steel
+C01648,C01170,Aluminium coil
+C00446,C00584,Phosphate rock
+C01649,C01171,Potash ore
+C01650,C01172,Tinplate steel
+C01651,C01173,Diesel
+C01652,C00160,Diesel
+C01653,C01174,Phosphate rock
+C01654,C01175,Phosphate rock
+C01655,C01176,Aluminium coil
+C01656,C00419,Potash ore
+C01657,C01177,Tinplate steel
+C01430,C01178,Potash ore
+C01658,C00916,Bauxite
+C01659,C01180,Diesel
+C01660,C01181,Urea
+C01661,C01182,Potash ore
+C01662,C01183,Phosphate rock
+C01663,C00807,Diesel
+C01411,C01184,Bauxite
+C01664,C01185,Surfactants
+C01665,C01186,Tinplate steel
+C01666,C01187,Diesel
+C01667,C01188,Natural gas
+C01641,C00351,Potash ore
+C00197,C00113,Surfactants
+C01668,C00650,Natural gas
+C01334,C00158,Diesel
+C00441,C01190,Phosphate rock
+C00969,C00795,Diesel
+C01669,C01191,Aluminium coil
+C00954,C01193,Bauxite
+C01431,C01194,Potash ore
+C00180,C01195,Bauxite
+C01670,C01196,Aluminium coil
+C01671,C00397,Tinplate steel
+C01672,C01197,Potash
+C00710,C01065,Diesel
+C01673,C01198,Aluminium coil
+C01674,C01199,Diesel
+C01675,C01200,Ammonia
+C00239,C01201,Pulpwood logs
+C01676,C00111,Natural gas
+C01677,C01202,Phosphate rock
+C01678,C01203,Diesel
+C01679,C01205,Ammonia
+C00663,C01206,Pulpwood logs
+C01680,C01207,Diesel
+C01681,C01208,Potash ore
+C01682,C01209,Bauxite
+C01681,C01210,Potash ore
+C00934,C00540,Aluminium coil
+C01530,C01212,Natural gas
+C01683,C01213,Diesel
+C01684,C01214,Pulpwood logs
+C01685,C01215,Pesticides
+C00936,C01216,Potash ore
+C01686,C01217,Bauxite
+C01687,C01218,Phosphate rock
+C01688,C01219,Bauxite
+C00603,C01220,Bauxite
+C01689,C01221,Phosphate rock
+C01690,C00328,Diesel
+C01372,C01222,Bauxite
+C01691,C01223,Potash ore
+C01692,C01224,Bauxite
+C01693,C01225,Tinplate steel
+C00886,C01226,Phosphate rock
+C00294,C01227,Polypropylene
+C00792,C01228,Natural gas
+C01694,C01229,Pesticides
+C01695,C01230,Pulpwood logs
+C01643,C00050,Diesel
+C01696,C01231,Diesel
+C00387,C01232,Surfactants
+C00808,C01233,Potash ore
+C01482,C00054,Pulpwood logs
+C01550,C01234,Solvents
+C00958,C01235,Phosphate rock
+C00790,C00981,Potash ore
+C00875,C00975,Potash ore
+C00034,C00782,Surfactants
+C01697,C01237,Natural gas
+C01698,C01238,Potash ore
+C00443,C01239,Aluminium coil
+C01699,C01240,Phosphate rock
+C01700,C00057,Solvents
+C01582,C00405,Tinplate steel
+C00518,C01242,Phosphate rock
+C01701,C01243,Diesel
+C01702,C01244,Diesel
+C00324,C01245,Caustic soda
+C01703,C01074,Urea
+C01704,C00674,Diesel
+C00816,C01246,Tinplate steel
+C00399,C01247,Aluminium coil
+C01705,C01248,Bauxite
+C01706,C00522,Bauxite
+C01707,C01249,Natural gas
+C01708,C01250,Diesel
+C00519,C00485,Natural gas
+C01709,C00087,Tinplate steel
+C00623,C01251,Diesel
+C01710,C01252,Caustic soda
+C01711,C00789,Natural gas
+C01712,C01254,Phosphate rock
+C00656,C01256,Phosphate rock
+C00272,C00989,Tinplate steel
+C01713,C01257,Bauxite
+C01714,C01258,Phosphate rock
+C00369,C01259,Aluminium coil
+C01715,C01260,Natural gas
+C01716,C01261,Caustic soda
+C01717,C01262,Caustic soda
+C01718,C01263,Natural gas
+C01719,C01265,Tinplate steel
+C00638,C01266,Diesel
+C00939,C01268,Diesel
+C01720,C01269,Aluminium coil
+C01721,C00706,Tinplate steel
+C01296,C00173,Ammonia
+C01722,C01270,Phosphate rock
+C01723,C01271,Natural gas
+C00555,C00125,Aluminium coil
+C01724,C01273,Solvents
+C01725,C01274,Diesel
+C01726,C01275,Phosphate rock
+C01727,C01277,Bauxite
+C01728,C01278,Diesel
+C01729,C01279,Tinplate steel
+C00943,C01281,Potash ore
+C01730,C00512,Phosphate rock
+C01731,C01282,Diesel
+C01732,C01283,Natural gas
+C01733,C01284,Tinplate steel
+C00991,C01285,Tinplate steel
+C01734,C01286,Potash ore
+C01735,C01287,Bauxite
+C01736,C00870,Diesel
+C01572,C01288,Potash ore
+C01737,C01289,Caustic soda
+C01738,C01290,Surfactants
+C01739,C00047,Potash ore
+C01740,C01291,Bauxite
+C01741,C01292,Potash ore
+C01742,C00248,Solvents
+C01743,C00170,Pesticides
+C01323,C01296,Diesel
+C01744,C01297,Phosphate rock
+C01745,C01298,Potash ore
+C01746,C01299,Aluminium coil
+C01747,C00243,Diesel
+C01748,C00639,Bauxite
+C01749,C00617,Tinplate steel
+C01750,C01300,Pulpwood logs
+C01751,C01301,Bauxite
+C00576,C00427,Tinplate steel
+C00932,C01303,Diesel
+C00541,C00741,Bauxite
+C01217,C01304,Diesel
+C01752,C00753,Diesel
+C01753,C01305,Potash ore
+C01754,C01306,Diesel
+C01755,C01307,Potash ore
+C01756,C01308,Surfactants
+C01757,C00129,Diesel
+C01339,C01309,Potash ore
+C01758,C01310,Phosphate rock
+C01759,C01311,Aluminium coil
+C00805,C01312,Potash ore
+C01350,C01313,Diesel
+C00750,C01314,Natural gas
+C01760,C00917,Diesel
+C00177,C01315,Surfactants
+C01761,C01316,Pulpwood logs
+C01615,C00413,Diesel
+C01585,C01317,Tinplate steel
+C01762,C00402,Natural gas
+C01763,C00061,Pulpwood logs
+C01764,C00187,Diesel
+C01765,C01318,Potash ore
+C00236,C01319,Pulpwood logs
+C00451,C01321,Potash ore
+C00817,C01322,Potash ore
+C01649,C01323,Phosphate rock
+C01766,C01324,Phosphate rock
+C01767,C01325,Diesel
+C01768,C01326,Natural gas
+C01769,C01327,Diesel
+C00443,C01328,Aluminium coil
+C01770,C01329,Bauxite
+C01771,C01330,Diesel
+C01772,C01331,Urea
+C00420,C01332,Potash ore
+C01773,C01333,Aluminium coil
+C01774,C01334,Phosphate rock
+C01320,C01335,Phosphate rock
+C00855,C00507,Diesel
+C01775,C01336,Caustic soda
+C01776,C00218,Diesel
+C00588,C01337,Solvents
+C01777,C01338,Natural gas
+C01778,C01340,Bauxite
+C01779,C01341,Diesel
+C01780,C01342,Natural gas
+C01781,C00759,Natural gas
+C01657,C01343,Aluminium coil
+C01364,C01344,Diesel
+C01782,C00548,Bauxite
+C01783,C01345,Natural gas
+C01784,C01346,Potash ore
+C00439,C01347,Aluminium coil
+C01785,C01349,Bauxite
+C01267,C01350,Potash ore
+C01786,C00411,Tinplate steel
+C01501,C01352,Natural gas
+C01787,C01353,Bauxite
+C01788,C01354,Aluminium coil
+C01789,C01355,Ammonia
+C01790,C00738,Phosphate rock
+C00779,C00690,Phosphate rock
+C01791,C01356,Bauxite
+C01792,C00261,Surfactants
+C01519,C01358,Potash ore
+C01793,C01360,Phosphate rock
+C01794,C01361,Aluminium coil
+C00797,C01363,Diesel
+C01795,C01364,Phosphate rock
+C01763,C01365,Pulpwood logs
+C00913,C00309,Diesel
+C01796,C00242,Bauxite
+C01797,C00176,Solvents
+C01798,C01366,Phosphate rock
+C01799,C01367,Bauxite
+C01800,C01368,Bauxite
+C01801,C00334,Bauxite
+C00432,C00537,Phosphate rock
+C01510,C00149,Surfactants
+C01802,C00776,Potash ore
+C01803,C01369,Natural gas
+C01804,C01370,Natural gas
+C00986,C00314,Aluminium coil
+C01805,C01373,Potash ore
+C01806,C01374,PET resin
+C01807,C00829,Phosphate rock
+C01808,C01376,Aluminium coil
+C01809,C00140,Natural gas
+C01810,C01377,Pulpwood logs
+C01811,C01378,Diesel
+C01812,C00310,Diesel
+C01813,C00091,Pulpwood logs
+C00846,C01379,Bauxite
+C00615,C01380,Phosphate rock
+C01814,C01381,Natural gas
+C01762,C00249,Natural gas
+C01815,C01382,Pesticides
+C01816,C01101,Diesel
+C01773,C01102,Tinplate steel
+C01817,C01103,Potash ore
+C01818,C01104,Natural gas
+C01819,C00770,Potash ore
+C01820,C01105,Diesel
+C01821,C01106,Diesel
+C01822,C00346,Bauxite
+C00723,C01107,Phosphate rock
+C01823,C00267,Solvents
+C00663,C01109,Pulpwood logs
+C01824,C01110,Potash ore
+C01825,C01111,Natural gas
+C01826,C01112,Potash ore
+C01827,C01113,Potash ore
+C01828,C01021,Tinplate steel
+C01829,C00400,Bauxite
+C01830,C00156,Phosphate rock
+C01407,C01115,Natural gas
+C01831,C01116,Urea
+C01832,C00379,Phosphate rock
+C00682,C00362,Tinplate steel
+C01833,C01117,Diesel
+C01834,C00031,Tinplate steel
+C01835,C01118,Caustic soda
+C01836,C00276,Natural gas
+C01837,C01119,Natural gas
+C00487,C00258,Diesel
+C01838,C00270,Natural gas
+C01839,C00754,Bauxite
+C00860,C01120,Aluminium coil
+C01840,C01121,Diesel
+C01841,C01123,Tinplate steel
+C01705,C01124,Bauxite
+C01842,C00144,Tinplate steel
+C01843,C00393,Phosphate rock
+C01844,C00768,Natural gas
+C01845,C01126,Natural gas
+C01846,C00162,Diesel
+C01847,C01127,Potash ore
+C01766,C00323,Bauxite
+C01848,C00108,Pulpwood logs
+C01849,C01128,Bauxite
+C01850,C01129,Phosphate rock
+C01851,C01130,Diesel
+C01852,C00647,Bauxite
+C01853,C01131,Surfactants
+C01854,C01132,Natural gas
+C01108,C00715,Potash ore
+C01667,C00802,Natural gas
+C01855,C01133,Phosphate rock
+C01856,C01134,Phosphate rock
+C00469,C01135,Bauxite
+C01857,C01136,Aluminium coil
+C01858,C01137,Bauxite
+C00185,C01138,Tinplate steel
+C01108,C01139,Phosphate rock
+C00835,C01140,Caustic soda
+C01859,C00039,Potash
+C01860,C01142,Solvents
+C01861,C01143,Diesel
+C01862,C01144,Diesel
+C01863,C01145,Potash
+C01864,C01146,Bauxite
+C01865,C00682,Bauxite
+C01866,C01147,Bauxite
+C01704,C00799,Diesel
+C00988,C01148,Phosphate rock
+C00449,C01149,Aluminium coil
+C01867,C00559,Phosphate rock
+C01868,C00340,Potash ore
+C01869,C01150,Polyethylene
+C01870,C00157,Aluminium coil
+C00622,C00095,Tinplate steel
+C01871,C01152,Natural gas
+C01872,C00873,Potash ore
+C00202,C01153,Natural gas
+C01873,C01154,Potash ore
+C01755,C01155,Bauxite
+C01680,C01156,Diesel
+C01395,C01157,Diesel
+C01874,C00867,Phosphate rock
+C01875,C01158,Phosphate rock
+C01876,C01159,Potash ore
+C01877,C01160,Phosphate rock
+C01878,C01161,Tinplate steel
+C01879,C00190,Diesel
+C00464,C01163,Diesel
+C01880,C01164,Tinplate steel
+C01414,C01166,Potash ore
+C01881,C01167,Diesel
+C01400,C01168,Pesticides
+C01882,C00205,Natural gas
+C01883,C00263,Aluminium coil
+C01884,C00366,Natural gas
+C01885,C01170,Tinplate steel
+C01886,C00584,Diesel
+C01887,C01171,Phosphate rock
+C01888,C01172,Diesel
+C01889,C01173,Natural gas
+C00224,C00160,Solvents
+C01890,C01174,Potash ore
+C01891,C01175,Bauxite
+C01892,C01176,Tinplate steel
+C01893,C00419,Potash ore
+C01024,C01177,Tinplate steel
+C01894,C01178,Phosphate rock
+C00645,C00916,Bauxite
+C01895,C01180,Solvents
+C01608,C01181,Diesel
+C00174,C01182,Potash ore
+C01896,C01183,Potash ore
+C01897,C00807,Diesel
+C01898,C01184,Diesel
+C01899,C01185,Natural gas
+C00407,C01186,Natural gas
+C01900,C01187,Natural gas
+C01901,C01188,Bauxite
+C01902,C00351,Phosphate rock
+C00807,C00113,Solvents
+C00530,C00650,Pesticides
+C01903,C00158,Natural gas
+C00673,C01190,Bauxite
+C01302,C00795,Phosphate rock
+C01904,C01191,Natural gas
+C01905,C01193,Potash ore
+C01906,C01194,Phosphate rock
+C01907,C01195,Bauxite
+C01112,C01196,Natural gas
+C01908,C00397,Natural gas
+C01909,C01197,Urea
+C01910,C01065,Tinplate steel
+C01911,C01198,Polyethylene
+C00277,C01199,Diesel
+C01912,C01200,Potash
+C00289,C01201,Pulpwood logs
+C00714,C00111,Natural gas
+C01913,C01202,Bauxite
+C01914,C01203,Natural gas
+C01915,C01205,Surfactants
+C01916,C01206,Surfactants
+C01917,C01207,Natural gas
+C01169,C01208,Bauxite
+C01918,C01209,Potash ore
+C01919,C01210,Bauxite
+C01910,C00540,Tinplate steel
+C01920,C01212,Natural gas
+C00274,C01213,Potash ore
+C01921,C01214,Caustic soda
+C01922,C01215,Caustic soda
+C01923,C01216,Potash ore
+C01924,C01217,Potash ore
+C01211,C01218,Bauxite
+C01925,C01219,Diesel
+C01926,C01220,Potash ore
+C01927,C01221,Potash ore
+C01928,C00328,Phosphate rock
+C01826,C01222,Bauxite
+C00519,C01223,Diesel
+C01929,C01224,Potash ore
+C01930,C01225,Natural gas
+C01931,C01226,Potash ore
+C00244,C01227,Polyethylene
+C01932,C01228,Natural gas
+C01933,C01229,Ammonia
+C01934,C01230,Caustic soda
+C01935,C00050,Caustic soda
+C01936,C01231,Diesel
+C01937,C01232,Solvents
+C01938,C01233,Phosphate rock
+C00352,C00054,Surfactants
+C01939,C01234,Pulpwood logs
+C01940,C01235,Bauxite
+C01941,C00981,Potash ore
+C00906,C00975,Phosphate rock
+C01747,C00782,Natural gas
+C00150,C01237,Natural gas
+C01942,C01238,Bauxite
+C01943,C01239,Diesel
+C01730,C01240,Potash ore
+C01944,C00057,Solvents
+C01945,C00405,Tinplate steel
+C01862,C01242,Natural gas
+C01946,C01243,Diesel
+C01947,C01244,Tinplate steel
+C00314,C01245,Pesticides
+C01948,C01074,Natural gas
+C01949,C00674,Natural gas
+C01555,C01246,Diesel
+C01950,C01247,Diesel
+C01623,C01248,Bauxite
+C01951,C00522,Potash ore
+C01952,C01249,Potash ore
+C01557,C01250,Natural gas
+C01953,C00485,Diesel
+C01954,C00087,Diesel
+C01955,C01251,Tinplate steel
+C00820,C01252,Potash
+C00566,C00789,Natural gas
+C01956,C01254,Bauxite
+C01958,F3,Salad leaves
+C01959,F3,Fresh poultry
+C01960,F3,Cheese
+C01961,F3,Canned vegetables
+C01962,F3,Pork products
+C01963,F3,Soft drinks
+C01964,F3,Milk
+C00006,F3,Paper towels
+C01057,F3,Warehousing
+C01965,F3,Frozen foods
+C00999,F3,Cheese
+C01966,F3,Salad leaves
+C01001,F3,Pastries
+C00007,F3,Bread
+C01967,F3,Plastic film
+C01968,F3,Pastries
+C00025,F3,Fruit
+C01969,F3,Aluminium cans
+C01010,F3,Yoghurt
+C01970,F3,Freight forwarding
+C01971,F3,Freight forwarding
+C01972,F3,PET bottles
+C01005,F3,Soap
+C01973,F3,Warehousing
+C01974,F3,Cleaning sprays
+C00018,F3,Salad leaves
+C01975,F3,Cleaning sprays
+C01976,F3,Ready meals
+C01977,F3,Beef cuts
+C01978,F3,Salad leaves
+C01979,F3,Pork products
+C01980,F3,Bottled water
+C00326,C01958,Urea
+C01981,C01959,Plastic film
+C01982,C01960,Soy meal
+C01983,C01961,Cocoa
+C01984,C01962,Cold-chain transport
+C01985,C01963,Wheat
+C01986,C01964,PET bottles
+C01987,C00006,Wood pulp
+C01198,C01057,Telematics units
+C01988,C01965,Emulsifiers
+C01989,C00999,Plastic film
+C01990,C01966,Warehousing
+C01991,C01001,Sunflower oil
+C01992,C00007,Palm oil
+C01993,C01967,Aluminium coil
+C00120,C01968,Sunflower oil
+C01337,C00025,Soybeans
+C01994,C01969,PET resin
+C01995,C01010,Plastic film
+C01996,C01970,Refrigeration controllers
+C01997,C01971,Refrigeration controllers
+C01998,C01972,PET resin
+C01743,C01005,Caustic soda
+C01999,C01973,Diesel
+C02000,C01974,Surfactants
+C00386,C00018,Coffee beans
+C02001,C01975,Kraft paper
+C02002,C01976,Flavourings
+C00088,C01977,Freight forwarding
+C01069,C01978,Freight forwarding
+C02003,C01979,PET bottles
+C02004,C01980,Glass jars
+C02005,C01958,Sunflower seed
+C02006,C01959,Freight forwarding
+C02007,C01960,Aluminium cans
+C02008,C01961,Plastic film
+C02009,C01962,PET bottles
+C02010,C01963,Glass jars
+C02011,C01964,Corn
+C02012,C00006,Wood pulp
+C02013,C01057,Telematics units
+C01262,C01965,Soybeans
+C02014,C00999,Cocoa
+C01092,C01966,Cocoa
+C02015,C00007,Sunflower seed
+C02016,C01967,Aluminium coil
+C00100,C01968,Sunflower oil
+C01970,C00025,Warehousing
+C02017,C01969,Wood pulp
+C00123,C01010,PET bottles
+C02018,C01970,Telematics units
+C02019,C01971,Telematics units
+C01885,C01972,Aluminium coil
+C02020,C01973,Telematics units
+C02021,C01974,Solvents
+C01990,C00018,Cold-chain transport
+C02022,C01975,PET resin
+C00100,C01976,Sunflower oil
+C00001,C01977,Freight forwarding
+C02023,C01978,Ammonia
+C02024,C01979,Corrugated boxes
+C02025,C01980,Sunflower seed
+C02026,C01958,Wheat
+C00106,C01959,Soy meal
+C01076,C01960,Compound feed
+C02027,C01961,Corn
+C02028,C01962,PET bottles
+C02029,C01963,Soybeans
+C02030,C01964,Soybeans
+C01284,C00006,Caustic soda
+C02031,C01057,Refrigeration controllers
+C00060,C01965,Rapeseed oil
+C02032,C00999,PET bottles
+C02033,C01966,Ammonia
+C01043,C01001,Plastic film
+C02034,C00007,Glucose syrup
+C00033,C01967,Polyethylene
+C02035,C01968,Glucose syrup
+C01074,C00025,Sunflower seed
+C02036,C01969,Wood pulp
+C01032,C01010,Corrugated boxes
+C02037,C01970,Telematics units
+C01996,C01971,Telematics units
+C02038,C01972,Tinplate steel
+C00348,C01005,Polypropylene
+C02039,C01973,Telematics units
+C02040,C01974,Polypropylene
+C02041,C00018,Cold-chain transport
+C02042,C01975,Pesticides
+C02043,C01976,Palm oil
+C02044,C01977,Compound feed
+C00256,C01978,Cocoa
+C00062,C01979,Freight forwarding
+C02045,C01980,Coffee beans
+C02046,C01958,Corn
+C01022,C01959,Compound feed
+C02047,C01960,Corn
+C02048,C01961,Corrugated boxes
+C00101,C01962,Plastic film
+C02049,C01963,Glass bottles
+C02050,C01964,Soy meal
+C02051,C00006,PET resin
+C02052,C01057,Telematics units
+C02053,C01965,Flavourings
+C02054,C00999,Plastic film
+C00242,C01966,Urea
+C02034,C01001,Refined sugar
+C00070,C00007,Sunflower oil
+C00799,C01967,Aluminium coil
+C02055,C01968,Wheat
+C02056,C00025,Sunflower seed
+C01134,C01969,Aluminium coil
+C00341,C01010,Cocoa
+C02057,C01971,Natural gas
+C02058,C01972,Polyethylene
+C02059,C01005,Polyethylene
+C00355,C01973,Telematics units
+C02060,C01974,Solvents
+C01017,C00018,Corn
+C02012,C01975,Kraft paper
+C00049,C01976,Palm oil
+C02061,C01977,Warehousing
+C02062,C01978,Coffee beans
+C02063,C01979,Compound feed
+C02035,C01980,Glucose syrup
+C02064,C01958,Sunflower seed
+C02065,C01959,Corrugated boxes
+C01967,C01960,Plastic film
+C01073,C01961,Starch
+C01090,C01962,Soy meal
+C02066,C01963,Glass bottles
+C02067,C01964,Corrugated boxes
+C00129,C00006,Solvents
+C00223,C01057,Telematics units
+C02068,C01965,Rapeseed oil
+C00186,C00999,Sunflower seed
+C02069,C01966,Soybeans
+C02070,C00326,Bauxite
+C02071,C01981,Wood pulp
+C01102,C01982,Surfactants
+C02072,C01983,Natural gas
+C02073,C01984,Natural gas
+C01135,C01985,Diesel
+C02074,C01986,Polyethylene
+C02075,C01987,Pulpwood logs
+C01786,C01198,Tinplate steel
+C01361,C01988,Surfactants
+C00655,C01989,Tinplate steel
+C00271,C01990,Refrigeration controllers
+C01077,C01991,Coffee beans
+C01078,C01992,Coffee beans
+C02076,C01993,Natural gas
+C02077,C00120,Wheat
+C02078,C01337,Caustic soda
+C02079,C01994,Caustic soda
+C01083,C01995,Kraft paper
+C00398,C01996,Polypropylene
+C01910,C01997,Tinplate steel
+C02080,C01998,Caustic soda
+C02081,C01743,Diesel
+C02082,C01999,Phosphate rock
+C02083,C02000,Aluminium coil
+C00419,C00386,Diesel
+C00588,C02001,Pesticides
+C01132,C02002,Coffee beans
+C02084,C00088,Refrigeration controllers
+C02085,C01069,Natural gas
+C00827,C02003,Tinplate steel
+C02086,C02004,Solvents
+C00598,C02005,Caustic soda
+C02087,C02006,Diesel
+C02088,C02007,Aluminium coil
+C01869,C02008,PET resin
+C02089,C02009,Wood pulp
+C02090,C02010,Natural gas
+C01797,C02011,Caustic soda
+C02091,C02012,Pesticides
+C02092,C02013,Polyethylene
+C02093,C01262,Natural gas
+C02094,C02014,Diesel
+C01921,C01092,Pesticides
+C02095,C01050,Corn
+C02096,C02015,Natural gas
+C00453,C02016,Diesel
+C02097,C00100,Potash
+C02098,C01970,Diesel
+C00236,C02017,Pulpwood logs
+C02099,C00123,Aluminium coil
+C00370,C02018,Polyethylene
+C02100,C02019,PET resin
+C02101,C01885,Natural gas
+C02102,C00049,Cocoa
+C00537,C02020,Aluminium coil
+C02103,C02021,Aluminium coil
+C02104,C02022,Solvents
+C02105,C00001,Natural gas
+C02106,C02023,Potash ore
+C02001,C02024,Wood pulp
+C02107,C02025,Diesel
+C02108,C02026,Solvents
+C02109,C00106,Cocoa
+C02110,C01076,Sunflower seed
+C02111,C02027,Ammonia
+C02112,C02028,Wood pulp
+C02113,C02029,Solvents
+C00703,C02030,Urea
+C00901,C01284,Natural gas
+C02114,C02031,Polypropylene
+C02115,C00060,Corn
+C02116,C02032,Polyethylene
+C02117,C02033,Natural gas
+C02012,C01043,Kraft paper
+C02118,C02034,Potash
+C02119,C00033,Solvents
+C01153,C02035,Potash
+C01130,C01074,Ammonia
+C02120,C02036,Pulpwood logs
+C02121,C01032,Wood pulp
+C01749,C02037,Tinplate steel
+C02122,C02038,Natural gas
+C02123,C00348,Solvents
+C02124,C02039,Polypropylene
+C02087,C02040,Diesel
+C00419,C02041,Diesel
+C02125,C02042,Diesel
+C01675,C02043,Potash
+C02126,C02044,Pesticides
+C02127,C00256,Solvents
+C02052,C00062,Refrigeration controllers
+C02128,C02045,Pesticides
+C02129,C02046,Potash
+C02130,C01022,Caustic soda
+C01586,C02047,Natural gas
+C02022,C02048,Polyethylene
+C02131,C00101,Kraft paper
+C02132,C02049,Natural gas
+C02133,C02050,Corn
+C02134,C02051,Natural gas
+C01249,C02052,Aluminium coil
+C02135,C02053,Pesticides
+C02136,C02054,PET resin
+C01417,C00242,Diesel
+C02137,C00070,Wheat
+C01576,C00799,Phosphate rock
+C02138,C02055,Pesticides
+C02139,C02056,Diesel
+C00446,C01134,Potash ore
+C02140,C00341,Urea
+C02141,C02057,Bauxite
+C02142,C02058,Diesel
+C00375,C02059,Solvents
+C02143,C00355,PET resin
+C00985,C02060,Tinplate steel
+C00703,C01017,Ammonia
+C01666,C02061,Diesel
+C00407,C02062,Diesel
+C02144,C02063,Wheat
+C02145,C02064,Potash
+C02146,C02065,Tinplate steel
+C01474,C01967,Aluminium coil
+C02147,C01073,Sunflower seed
+C02148,C01090,Soybeans
+C01352,C02066,Surfactants
+C02149,C02067,Aluminium coil
+C02150,C00129,Aluminium coil
+C02151,C00223,Tinplate steel
+C02152,C02068,Urea
+C02153,C00186,Diesel
+C02154,C02069,Caustic soda
+C01545,C00326,Potash ore
+C00103,C01981,Polypropylene
+C02155,C01982,Surfactants
+C00116,C01983,Diesel
+C02156,C01984,Refrigeration controllers
+C02157,C01985,Urea
+C02158,C01986,Wood pulp
+C02159,C01987,Caustic soda
+C02160,C01198,Polypropylene
+C02161,C01988,Solvents
+C02162,C01989,PET resin
+C02020,C01990,Telematics units
+C02163,C01991,Sunflower seed
+C02164,C01992,Urea
+C02165,C01993,Natural gas
+C02166,C00120,Coffee beans
+C02167,C01337,Urea
+C02168,C01994,Natural gas
+C02169,C01995,Aluminium coil
+C01308,C01996,PET resin
+C02170,C01997,Polypropylene
+C02171,C01998,Diesel
+C02172,C01743,Natural gas
+C01755,C01999,Potash ore
+C01842,C02000,Tinplate steel
+C02173,C00386,Surfactants
+C02174,C02001,Pulpwood logs
+C02175,C02002,Cocoa
+C02085,C00088,Diesel
+C02176,C01069,Refrigeration controllers
+C02177,C02003,Aluminium coil
+C02178,C02004,Solvents
+C02179,C02005,Natural gas
+C00095,C02006,Telematics units
+C02180,C02007,Tinplate steel
+C00261,C02008,Polyethylene
+C02181,C02009,Wood pulp
+C02182,C02010,Surfactants
+C00367,C02011,Potash
+C02183,C02012,Pulpwood logs
+C02184,C02013,Polypropylene
+C02185,C01262,Caustic soda
+C02186,C02014,Surfactants
+C02187,C01092,Natural gas
+C02188,C01050,Urea
+C02189,C02015,Surfactants
+C02190,C02016,Natural gas
+C00383,C00100,Cocoa
+C01491,C01970,Diesel
+C02075,C02017,Pulpwood logs
+C02191,C00123,Kraft paper
+C02192,C02018,Aluminium coil
+C01235,C02019,Aluminium coil
+C02193,C01885,Natural gas
+C02194,C00049,Urea
+C01878,C02020,Tinplate steel
+C01594,C02021,Natural gas
+C00411,C02022,Solvents
+C02195,C00001,Diesel
+C02196,C02023,Bauxite
+C02197,C02024,Kraft paper
+C00887,C02025,Caustic soda
+C02198,C02026,Natural gas
+C02199,C00106,Sunflower seed
+C02200,C01076,Soybeans
+C01833,C02027,Diesel
+C02201,C02028,Kraft paper
+C02202,C02029,Natural gas
+C02203,C02030,Potash
+C02204,C01284,Diesel
+C02205,C02031,PET resin
+C02206,C00060,Ammonia
+C02207,C02032,Polyethylene
+C02208,C02033,Diesel
+C02209,C01043,Aluminium coil
+C02210,C02034,Urea
+C02211,C00033,Natural gas
+C01574,C02035,Potash
+C02212,C01074,Pesticides
+C01695,C02036,Pulpwood logs
+C02213,C01032,Aluminium coil
+C00474,C02037,Aluminium coil
+C02214,C02038,Potash ore
+C00132,C02039,Polyethylene
+C02215,C02040,Natural gas
+C02216,C02041,Natural gas
+C00430,C02042,Aluminium coil
+C02217,C02043,Ammonia
+C02218,C02044,Caustic soda
+C01049,C00256,Pesticides
+C02219,C00062,Telematics units
+C02220,C02045,Pesticides
+C01020,C02046,Ammonia
+C01742,C01022,Surfactants
+C02193,C02047,Natural gas
+C02221,C02048,Kraft paper
+C00093,C00101,Wood pulp
+C00706,C02049,Surfactants
+C02222,C02050,Sunflower seed
+C02223,C02051,Caustic soda
+C00959,C02052,PET resin
+C02224,C02053,Wheat
+C02225,C02054,Polypropylene
+C02226,C00242,Potash ore
+C02222,C00070,Soybeans
+C02227,C00799,Potash ore
+C02228,C02055,Diesel
+C02229,C02056,Surfactants
+C02230,C01134,Natural gas
+C02231,C00341,Caustic soda
+C02232,C02057,Phosphate rock
+C01716,C02058,Caustic soda
+C02233,C02059,Surfactants
+C02234,C00355,Tinplate steel
+C02235,C02060,Aluminium coil
+C02233,C01017,Solvents
+C00967,C02061,Diesel
+C02161,C02062,Solvents
+C02236,C02063,Caustic soda
+C02237,C02064,Surfactants
+C02238,C02065,Kraft paper
+C02239,C01967,PET resin
+C00188,C01073,Caustic soda
+C02240,C01090,Cocoa
+C02241,C02066,Caustic soda
+C02242,C02067,Tinplate steel
+C02243,C00129,Diesel
+C02244,C00223,Aluminium coil
+C02245,C02068,Ammonia
+C01859,C00186,Ammonia
+C00976,C02069,Ammonia
+C02246,C00326,Potash ore
+C02247,C01981,PET resin
+C02248,C01982,Surfactants
+C02249,C01983,Potash
+C00095,C01984,Telematics units
+C02250,C01985,Ammonia
+C02251,C01986,Tinplate steel
+C02252,C01987,Pulpwood logs
+C02253,C01198,Aluminium coil
+C02254,C01988,Surfactants
+C02255,C01989,Kraft paper
+C02256,C01990,Telematics units
+C02257,C01991,Cocoa
+C02258,C01992,Coffee beans
+C02259,C01993,Diesel
+C02260,C00120,Urea
+C00740,C01337,Natural gas
+C00629,C01994,Diesel
+C02261,C01995,Aluminium coil
+C02124,C01996,PET resin
+C02262,C01997,Aluminium coil
+C02263,C01998,Natural gas
+C02264,C01743,Aluminium coil
+C02265,C01999,Phosphate rock
+C00607,C02000,Aluminium coil
+C01051,C00386,Caustic soda
+C02266,C02001,Pesticides
+C01056,C02002,Cocoa
+C02267,C00088,Refrigeration controllers
+C02268,C01069,Diesel
+C02269,C02003,Aluminium coil
+C02270,C02004,Diesel
+C00753,C02005,Potash
+C02271,C02006,Refrigeration controllers
+C02272,C02007,Polypropylene
+C02273,C02008,Tinplate steel
+C00137,C02009,Tinplate steel
+C02274,C02010,Diesel
+C02275,C02011,Surfactants
+C02276,C02012,Pesticides
+C02277,C02013,Aluminium coil
+C02278,C01262,Diesel
+C02279,C02014,Urea
+C02280,C01092,Ammonia
+C01145,C01050,Coffee beans
+C02281,C02015,Ammonia
+C02282,C02016,Diesel
+C02283,C00100,Urea
+C02284,C01970,Telematics units
+C02285,C02017,Pesticides
+C02286,C00123,Tinplate steel
+C02287,C02018,Polypropylene
+C02288,C02019,Aluminium coil
+C02289,C01885,Potash ore
+C02290,C00049,Potash
+C02291,C02020,Polyethylene
+C00345,C02021,Natural gas
+C02292,C02022,Surfactants
+C01360,C00001,Natural gas
+C02293,C02023,Potash ore
+C01257,C02024,Tinplate steel
+C01460,C02025,Natural gas
+C00438,C02026,Natural gas
+C02294,C00106,Surfactants
+C02295,C01076,Pesticides
+C00215,C02027,Ammonia
+C00132,C02028,Polyethylene
+C02296,C02029,Ammonia
+C02297,C02030,Solvents
+C02298,C01284,Tinplate steel
+C02299,C02031,Aluminium coil
+C02300,C00060,Coffee beans
+C02301,C02032,PET resin
+C01730,C02033,Phosphate rock
+C02302,C01043,Kraft paper
+C02115,C02034,Sunflower seed
+C02303,C00033,Surfactants
+C02304,C02035,Cocoa
+C01265,C01074,Surfactants
+C02305,C02036,Pesticides
+C02306,C01032,Aluminium coil
+C00213,C02037,PET resin
+C00336,C02038,Diesel
+C02307,C00348,Caustic soda
+C00301,C02039,Aluminium coil
+C01620,C02040,Diesel
+C02284,C02041,Refrigeration controllers
+C02308,C02042,Diesel
+C01200,C02043,Corn
+C02309,C02044,Soybeans
+C02310,C00256,Urea
+C00223,C00062,Telematics units
+C02311,C02045,Urea
+C02312,C02046,Diesel
+C02313,C01022,Pesticides
+C01417,C02047,Natural gas
+C02314,C02048,Wood pulp
+C02315,C00101,PET resin
+C02316,C02049,Solvents
+C02248,C02050,Solvents
+C02317,C02051,Surfactants
+C02318,C02052,Aluminium coil
+C01152,C02053,Caustic soda
+C02319,C02054,Polyethylene
+C02320,C00242,Phosphate rock
+C02321,C00070,Soybeans
+C02322,C00799,Diesel
+C00604,C02055,Diesel
+C02323,C02056,Pesticides
+C01639,C01134,Diesel
+C02324,C00341,Potash
+C00669,C02057,Potash ore
+C02325,C02058,Caustic soda
+C00653,C02059,Natural gas
+C02326,C00355,Polyethylene
+C02327,C02060,Diesel
+C02328,C01017,Diesel
+C02031,C02061,Telematics units
+C02329,C02062,Pesticides
+C02330,C02063,Surfactants
+C02266,C02064,Solvents
+C02331,C02065,Aluminium coil
+C01214,C01967,Wood pulp
+C02332,C01073,Surfactants
+C00107,C01090,Wheat
+C02333,C02066,Caustic soda
+C02334,C02067,Polyethylene
+C02335,C00129,Tinplate steel
+C02083,C00223,Tinplate steel
+C02336,C02068,Urea
+C02337,C00186,Surfactants
+C00690,C02069,Potash
+C02338,C00326,Natural gas
+C02339,C01981,Polypropylene
+C02340,C01982,Surfactants
+C02341,C01983,Potash
+C02342,C01984,Telematics units
+C02343,C01985,Pesticides
+C02344,C01986,Kraft paper
+C02345,C01987,Surfactants
+C02346,C01198,Polypropylene
+C02347,C01988,Sunflower seed
+C00991,C01989,Tinplate steel
+C02039,C01990,Telematics units
+C02348,C01991,Ammonia
+C00393,C01992,Urea
+C01699,C01993,Phosphate rock
+C01093,C00120,Cocoa
+C02349,C01337,Potash
+C02350,C01994,Surfactants
+C02351,C01995,Kraft paper
+C00240,C01996,Tinplate steel
+C02352,C01997,Polyethylene
+C02353,C01998,Surfactants
+C02354,C01743,Natural gas
+C01561,C01999,Phosphate rock
+C02355,C02071,Pulpwood logs
+C02356,C01102,Natural gas
+C01267,C02072,Bauxite
+C02357,C02073,Bauxite
+C02358,C01135,Bauxite
+C02080,C02074,Pesticides
+C00446,C01786,Potash ore
+C02359,C01361,Diesel
+C02360,C00655,Natural gas
+C00956,C00271,Polyethylene
+C02152,C01077,Ammonia
+C02361,C01078,Diesel
+C01619,C02076,Bauxite
+C02362,C02077,Potash
+C02168,C02078,Natural gas
+C02363,C02079,Aluminium coil
+C00286,C01083,Pulpwood logs
+C02364,C00398,Solvents
+C02365,C01910,Diesel
+C00682,C02080,Aluminium coil
+C02366,C02081,Phosphate rock
+C02196,C02083,Phosphate rock
+C01677,C00419,Potash ore
+C01208,C00588,Diesel
+C02367,C01132,Pesticides
+C02368,C02084,Polypropylene
+C02369,C02085,Bauxite
+C02370,C00827,Potash ore
+C02371,C02086,Diesel
+C02372,C00598,Aluminium coil
+C02373,C02087,Phosphate rock
+C01375,C02088,Bauxite
+C02374,C01869,Natural gas
+C01311,C02089,Surfactants
+C01513,C02090,Phosphate rock
+C02375,C01797,Aluminium coil
+C00712,C02091,Tinplate steel
+C01914,C02092,Diesel
+C01817,C02093,Phosphate rock
+C02376,C02094,Phosphate rock
+C02377,C01921,Diesel
+C02378,C02095,Urea
+C01758,C02096,Bauxite
+C02379,C00453,Potash ore
+C02380,C02097,Potash ore
+C02381,C02098,Bauxite
+C00899,C02099,Potash ore
+C02382,C00370,Natural gas
+C01164,C02100,Pesticides
+C02383,C02101,Potash ore
+C02384,C02102,Solvents
+C01409,C00537,Diesel
+C02385,C02103,Diesel
+C00784,C02104,Natural gas
+C02386,C02105,Phosphate rock
+C02387,C02001,Pulpwood logs
+C02388,C02107,Bauxite
+C02389,C02108,Diesel
+C02390,C02109,Natural gas
+C02097,C02110,Ammonia
+C02391,C02111,Potash ore
+C00189,C02112,Pulpwood logs
+C02392,C02113,Diesel
+C02393,C00703,Bauxite
+C01432,C00901,Bauxite
+C02394,C02114,Caustic soda
+C00913,C02115,Natural gas
+C02395,C02116,Diesel
+C02396,C02117,Phosphate rock
+C02397,C02012,Solvents
+C00475,C02118,Phosphate rock
+C02398,C02119,Aluminium coil
+C02399,C01153,Potash ore
+C02400,C01130,Potash ore
+C02401,C02121,Pulpwood logs
+C02402,C01749,Natural gas
+C00817,C02122,Bauxite
+C02403,C02123,Diesel
+C02404,C02124,Solvents
+C01627,C02125,Bauxite
+C02405,C01675,Natural gas
+C02406,C02126,Aluminium coil
+C02407,C02127,Aluminium coil
+C02408,C02052,Polyethylene
+C00621,C02128,Aluminium coil
+C02409,C02129,Diesel
+C02410,C02130,Aluminium coil
+C00536,C01586,Potash ore
+C02411,C02022,Natural gas
+C02412,C02131,Pulpwood logs
+C01726,C02132,Potash ore
+C02413,C02133,Solvents
+C00418,C02134,Potash ore
+C02414,C01249,Bauxite
+C02415,C02135,Diesel
+C00171,C02136,Pesticides
+C02416,C01417,Potash ore
+C02417,C02137,Natural gas
+C02418,C02138,Aluminium coil
+C00415,C02139,Phosphate rock
+C02419,C02140,Diesel
+C02420,C02142,Bauxite
+C02421,C00375,Tinplate steel
+C02422,C02143,Surfactants
+C02423,C00985,Diesel
+C02424,C01666,Phosphate rock
+C02425,C00407,Potash ore
+C01210,C02144,Natural gas
+C01605,C02145,Natural gas
+C02426,C02146,Phosphate rock
+C02427,C01474,Phosphate rock
+C00263,C02147,Caustic soda
+C02428,C02148,Potash
+C02429,C01352,Aluminium coil
+C01643,C02149,Natural gas
+C02430,C02150,Bauxite
+C00629,C02151,Natural gas
+C00592,C02152,Bauxite
+C02431,C02153,Potash ore
+C01274,C02154,Tinplate steel
+C02432,C00103,Caustic soda
+C02433,C02155,Tinplate steel
+C02434,C00116,Phosphate rock
+C00717,C02156,Polyethylene
+C02435,C02157,Diesel
+C02436,C02158,Pesticides
+C01112,C02159,Diesel
+C02437,C02160,Natural gas
+C02438,C02161,Aluminium coil
+C00352,C02162,Surfactants
+C00688,C02020,Aluminium coil
+C02439,C02163,Urea
+C02440,C02164,Diesel
+C00673,C02165,Phosphate rock
+C01685,C02166,Surfactants
+C02441,C02167,Phosphate rock
+C02442,C02168,Potash ore
+C02443,C02169,Natural gas
+C02444,C01308,Surfactants
+C02445,C02170,Natural gas
+C02446,C02171,Potash ore
+C02447,C02172,Bauxite
+C02448,C01842,Bauxite
+C01524,C02173,Tinplate steel
+C02449,C02175,Ammonia
+C02450,C02176,Tinplate steel
+C02451,C02177,Phosphate rock
+C02452,C02178,Diesel
+C01272,C02179,Phosphate rock
+C02453,C00095,Aluminium coil
+C01732,C02180,Natural gas
+C00776,C00261,Natural gas
+C02454,C02181,Pulpwood logs
+C01861,C02182,Natural gas
+C02455,C00367,Natural gas
+C02456,C02184,Surfactants
+C00336,C02185,Natural gas
+C02457,C02186,Diesel
+C02379,C02187,Potash ore
+C02458,C02188,Bauxite
+C02459,C02189,Aluminium coil
+C02460,C02190,Potash ore
+C00803,C00383,Caustic soda
+C02461,C01491,Phosphate rock
+C02462,C02191,Pesticides
+C02463,C02192,Bauxite
+C02464,C01235,Phosphate rock
+C01928,C02193,Bauxite
+C00315,C02194,Diesel
+C02465,C01878,Potash ore
+C02461,C01594,Bauxite
+C02466,C00411,Diesel
+C02467,C02195,Potash ore
+C02468,C02197,Pulpwood logs
+C02469,C00887,Aluminium coil
+C02470,C02198,Phosphate rock
+C02471,C02199,Urea
+C02472,C02200,Diesel
+C01826,C01833,Potash ore
+C02473,C02201,Pulpwood logs
+C02474,C02202,Phosphate rock
+C02475,C02203,Potash ore
+C02476,C02204,Bauxite
+C02477,C02205,Natural gas
+C01496,C02206,Diesel
+C02478,C02207,Surfactants
+C02479,C02208,Potash ore
+C02480,C02209,Phosphate rock
+C02481,C02210,Natural gas
+C02482,C02211,Phosphate rock
+C00292,C01574,Natural gas
+C00963,C02212,Aluminium coil
+C02483,C02213,Natural gas
+C01899,C00474,Natural gas
+C02484,C00726,Phosphate rock
+C02485,C00132,Pesticides
+C02486,C02215,Potash ore
+C02487,C02216,Phosphate rock
+C02488,C00430,Bauxite
+C00839,C02217,Phosphate rock
+C02489,C02218,Natural gas
+C02490,C01049,Diesel
+C02491,C02219,PET resin
+C02492,C02220,Tinplate steel
+C02493,C01020,Diesel
+C02494,C01742,Aluminium coil
+C02495,C02221,Solvents
+C01771,C00706,Natural gas
+C02496,C02222,Solvents
+C00154,C02223,Diesel
+C02497,C00959,Diesel
+C00704,C02224,Natural gas
+C02498,C02225,Pesticides
+C02499,C02228,Potash ore
+C02500,C02229,Diesel
+C02501,C02230,Phosphate rock
+C02502,C02231,Tinplate steel
+C02503,C01716,Natural gas
+C02504,C02233,Diesel
+C02505,C02234,Bauxite
+C02506,C02235,Phosphate rock
+C02507,C00967,Bauxite
+C00689,C02236,Aluminium coil
+C02508,C02237,Natural gas
+C01294,C02238,Pulpwood logs
+C02509,C02239,Pesticides
+C00439,C00188,Aluminium coil
+C02510,C02240,Natural gas
+C02511,C02241,Tinplate steel
+C02512,C02242,Diesel
+C02513,C02243,Phosphate rock
+C01896,C02244,Bauxite
+C02514,C02245,Bauxite
+C00732,C01859,Diesel
+C02515,C00976,Natural gas
+C00134,C02247,Diesel
+C01228,C02248,Tinplate steel
+C02516,C02249,Natural gas
+C02517,C02250,Bauxite
+C00325,C02251,Diesel
+C02518,C02253,Potash ore
+C00780,C02254,Aluminium coil
+C02519,C02255,Pulpwood logs
+C00735,C02256,Polypropylene
+C02157,C02257,Urea
+C00220,C02258,Natural gas
+C02520,C02259,Bauxite
+C01734,C02260,Phosphate rock
+C00942,C00740,Bauxite
+C02521,C00629,Potash ore
+C02522,C02261,Bauxite
+C02523,C02262,Bauxite
+C02524,C02263,Potash ore
+C02525,C02264,Bauxite
+C02526,C00607,Natural gas
+C02527,C01051,Aluminium coil
+C02528,C02266,Diesel
+C02529,C01056,Caustic soda
+C02326,C02267,Polyethylene
+C02420,C02268,Potash ore
+C02530,C02269,Natural gas
+C02531,C02270,Potash ore
+C01879,C00753,Diesel
+C02532,C02271,Tinplate steel
+C01685,C02272,Pesticides
+C01856,C02273,Potash ore
+C02533,C00137,Natural gas
+C02534,C02274,Potash ore
+C02535,C02275,Aluminium coil
+C02536,C02276,Aluminium coil
+C02537,C02277,Bauxite
+C01623,C02278,Bauxite
+C02538,C02279,Phosphate rock
+C01683,C02280,Natural gas
+C01909,C01145,Potash
+C01395,C02281,Diesel
+C02539,C02282,Potash ore
+C02540,C02283,Potash ore
+C02541,C02284,PET resin
+C02542,C02285,Tinplate steel
+C00415,C02286,Bauxite
+C02543,C02287,Diesel
+C02544,C02288,Diesel
+C02545,C02290,Bauxite
+C02546,C02291,Natural gas
+C02547,C00345,Potash ore
+C00444,C02292,Aluminium coil
+C00651,C01360,Potash ore
+C02548,C01257,Potash ore
+C02549,C01460,Phosphate rock
+C02550,C00438,Bauxite
+C02551,C02294,Natural gas
+C02552,C02295,Aluminium coil
+C01286,C00215,Diesel
+C01322,C02296,Natural gas
+C00827,C02297,Tinplate steel
+C02553,C02298,Bauxite
+C01882,C02299,Natural gas
+C02554,C02300,Urea
+C01190,C02301,Natural gas
+C00175,C02302,Pulpwood logs
+C01313,C02303,Aluminium coil
+C02555,C02304,Natural gas
+C02390,C01265,Diesel
+C02556,C02305,Tinplate steel
+C02557,C02306,Phosphate rock
+C02558,C00213,Surfactants
+C02559,C00336,Phosphate rock
+C01223,C02307,Aluminium coil
+C02560,C00301,Potash ore
+C02561,C01620,Bauxite
+C02562,C02308,Phosphate rock
+C02563,C01200,Diesel
+C00719,C02309,Natural gas
+C02564,C02310,Natural gas
+C00741,C00223,Tinplate steel
+C02565,C02311,Diesel
+C00634,C02312,Phosphate rock
+C02566,C02313,Tinplate steel
+C02567,C02314,Caustic soda
+C02568,C02315,Caustic soda
+C01885,C02316,Tinplate steel
+C02569,C02317,Diesel
+C00150,C02318,Natural gas
+C02570,C01152,Diesel
+C01129,C02319,Diesel
+C02571,C02321,Diesel
+C02572,C02322,Potash ore
+C02573,C00604,Potash ore
+C02574,C02323,Natural gas
+C02575,C01639,Phosphate rock
+C02576,C02324,Phosphate rock
+C02577,C02325,Aluminium coil
+C02578,C00653,Potash ore
+C02579,C02326,Natural gas
+C01514,C02327,Phosphate rock
+C02580,C02328,Potash ore
+C02116,C02031,Polyethylene
+C02581,C02329,Natural gas
+C02582,C02330,Natural gas
+C02583,C02331,Diesel
+C00233,C01214,Pulpwood logs
+C02584,C02332,Diesel
+C01606,C00107,Natural gas
+C02577,C02333,Tinplate steel
+C02585,C02334,Natural gas
+C00611,C02335,Phosphate rock
+C02586,C02336,Potash ore
+C02269,C02337,Aluminium coil
+C02587,C00690,Natural gas
+C02588,C02338,Phosphate rock
+C02589,C02339,Pesticides
+C01615,C02340,Diesel
+C02590,C02341,Phosphate rock
+C02591,C02342,Aluminium coil
+C01729,C02343,Tinplate steel
+C01813,C02344,Pulpwood logs
+C02592,C02345,Diesel
+C02593,C02346,Solvents
+C02594,C02347,Potash
+C02595,C00991,Diesel
+C01655,C02039,Aluminium coil
+C00772,C02348,Natural gas
+C02596,C00393,Diesel
+C02597,C01093,Surfactants
+C02598,C02349,Diesel
+C02599,C02350,Diesel
+C02600,C02351,Surfactants
+C00791,C00240,Natural gas
+C02601,C02352,Natural gas
+C02602,C02353,Diesel
+C02603,C02354,Bauxite
+C02604,C02071,Pulpwood logs
+C00751,C01102,Natural gas
+C02605,C02072,Potash ore
+C02606,C02073,Potash ore
+C02607,C01135,Phosphate rock
+C02608,C02074,Surfactants
+C02609,C01786,Natural gas
+C00740,C01361,Diesel
+C02610,C00655,Phosphate rock
+C02611,C00271,Aluminium coil
+C00184,C01077,Urea
+C02612,C01078,Ammonia
+C02613,C02076,Bauxite
+C00867,C02077,Natural gas
+C02187,C02078,Diesel
+C02614,C02079,Tinplate steel
+C02615,C01083,Pulpwood logs
+C01152,C00398,Solvents
+C02616,C01910,Bauxite
+C02617,C02080,Aluminium coil
+C01913,C02081,Potash ore
+C02618,C02083,Potash ore
+C02619,C00419,Potash ore
+C02620,C00588,Aluminium coil
+C01148,C01132,Natural gas
+C02621,C02084,Tinplate steel
+C02622,C02085,Phosphate rock
+C02623,C00827,Phosphate rock
+C02624,C02086,Diesel
+C00600,C00598,Tinplate steel
+C02625,C02087,Phosphate rock
+C02626,C02088,Natural gas
+C00163,C01869,Pesticides
+C02627,C02089,Caustic soda
+C01588,C02090,Potash ore
+C00855,C01797,Natural gas
+C00780,C02091,Aluminium coil
+C02628,C02092,Natural gas
+C02629,C02093,Potash ore
+C01596,C02094,Potash ore
+C02630,C01921,Natural gas
+C02631,C02095,Natural gas
+C02632,C02096,Potash ore
+C02633,C00453,Bauxite
+C02634,C02097,Bauxite
+C02635,C02098,Bauxite
+C02636,C02099,Bauxite
+C02637,C00370,Diesel
+C02638,C02100,Diesel
+C02639,C02101,Bauxite
+C02640,C02102,Diesel
+C01814,C00537,Natural gas
+C02641,C02103,Natural gas
+C02642,C02104,Diesel
+C02643,C02105,Phosphate rock
+C01587,C02001,Pulpwood logs
+C01758,C02107,Phosphate rock
+C00400,C02108,Natural gas
+C02644,C02109,Urea
+C02645,C02110,Diesel
+C02646,C02111,Bauxite
+C00768,C02112,Pesticides
+C02647,C02113,Aluminium coil
+C02648,C00703,Diesel
+C02649,C00901,Phosphate rock
+C02650,C02114,Natural gas
+C02651,C02115,Diesel
+C00624,C02116,Natural gas
+C02652,C02117,Potash ore
+C02653,C02012,Pulpwood logs
+C02654,C02118,Potash ore
+C02655,C02119,Natural gas
+C02656,C01153,Bauxite
+C02657,C01130,Potash ore
+C01122,C02121,Pulpwood logs
+C02658,C01749,Diesel
+C02659,C02122,Phosphate rock
+C02660,C02123,Diesel
+C00539,C02124,Diesel
+C02661,C02125,Phosphate rock
+C02662,C01675,Natural gas
+C01409,C02126,Diesel
+C01885,C02127,Aluminium coil
+C01911,C02052,Polyethylene
+C02663,C02128,Diesel
+C02664,C02129,Natural gas
+C02665,C02130,Aluminium coil
+C01940,C01586,Potash ore
+C02666,C02022,Diesel
+C02667,C02131,Pulpwood logs
+C00586,C02132,Phosphate rock
+C02668,C02133,Potash
+C02669,C02134,Phosphate rock
+C02670,C01249,Diesel
+C02671,C02135,Natural gas
+C02672,C02136,Pesticides
+C02673,C01417,Potash ore
+C00549,C02137,Natural gas
+C02674,C02138,Natural gas
+C01456,C02139,Phosphate rock
+C02675,C02140,Phosphate rock
+C00614,C02142,Potash ore
+C00542,C00375,Aluminium coil
+C00253,C02143,Pesticides
+C01552,C00985,Potash ore
+C00945,C01666,Potash ore
+C02676,C00407,Potash ore
+C00105,C02144,Diesel
+C02677,C02145,Diesel
+C00455,C02146,Diesel
+C02657,C01474,Potash ore
+C00524,C02147,Potash
+C02471,C02148,Ammonia
+C02678,C01352,Natural gas
+C02434,C02149,Phosphate rock
+C02214,C02150,Bauxite
+C02679,C02151,Natural gas
+C02680,C02152,Natural gas
+C02681,C02153,Potash ore
+C02682,C02154,Natural gas
+C02683,C00103,Diesel
+C02684,C02155,Tinplate steel
+C02685,C00116,Potash ore
+C02686,C02156,Aluminium coil
+C01350,C02157,Natural gas
+C01810,C02158,Pulpwood logs
+C02687,C02159,Aluminium coil
+C01818,C02160,Natural gas
+C02688,C02161,Diesel
+C02689,C02162,Solvents
+C02690,C02020,Polypropylene
+C02691,C02163,Natural gas
+C01441,C02164,Potash ore
+C01514,C02165,Phosphate rock
+C02692,C02166,Potash
+C02693,C02167,Potash ore
+C02694,C02168,Bauxite
+C02695,C02169,Bauxite
+C02696,C01308,Solvents
+C02697,C02170,Solvents
+C00828,C02171,Potash ore
+C02196,C02172,Potash ore
+C02698,C01842,Potash ore
+C02699,C02173,Aluminium coil
+C02700,C02175,Caustic soda
+C02701,C02176,Aluminium coil
+C02702,C02177,Natural gas
+C02703,C02178,Natural gas
+C01599,C02179,Potash ore
+C01857,C00095,Aluminium coil
+C02704,C02180,Diesel
+C02705,C00261,Natural gas
+C02135,C02181,Surfactants
+C02706,C02182,Tinplate steel
+C02707,C00367,Phosphate rock
+C02708,C02184,Natural gas
+C02709,C02185,Tinplate steel
+C02710,C02186,Natural gas
+C01826,C02187,Bauxite
+C02711,C02188,Phosphate rock
+C02712,C02189,Aluminium coil
+C02713,C02190,Potash ore
+C02714,C00383,Urea
+C02715,C01491,Phosphate rock
+C02716,C02191,Pulpwood logs
+C02717,C02192,Potash ore
+C02718,C01235,Bauxite
+C02719,C02193,Potash ore
+C00487,C02194,Natural gas
+C02720,C01878,Phosphate rock
+C02721,C01594,Bauxite
+C01836,C00411,Diesel
+C02722,C02195,Phosphate rock
+C01597,C02197,Pulpwood logs
+C02723,C00887,Aluminium coil
+C00593,C02198,Bauxite
+C01120,C02199,Pesticides
+C02296,C02200,Ammonia
+C02724,C01833,Phosphate rock
+C02295,C02201,Pesticides
+C02725,C02202,Phosphate rock
+C02726,C02203,Diesel
+C02727,C02204,Phosphate rock
+C02728,C02205,Pesticides
+C02729,C02206,Diesel
+C02730,C02207,Solvents
+C02731,C02208,Potash ore
+C01441,C02209,Bauxite
+C00808,C02210,Phosphate rock
+C02732,C02211,Phosphate rock
+C02733,C01574,Diesel
+C02299,C02212,Aluminium coil
+C02734,C02213,Natural gas
+C02735,C00474,Potash ore
+C02736,C00726,Bauxite
+C02737,C00132,Caustic soda
+C02738,C02215,Potash ore
+C00673,C02216,Phosphate rock
+C02739,C00430,Potash ore
+C02740,C02217,Diesel
+C00816,C02218,Tinplate steel
+C02038,C01049,Aluminium coil
+C00240,C02219,Aluminium coil
+C00442,C02220,Natural gas
+C00846,C01020,Phosphate rock
+C02741,C01742,Natural gas
+C02742,C02221,Caustic soda
+C02174,C00093,Pulpwood logs
+C02743,C00706,Tinplate steel
+C02567,C02222,Surfactants
+C02744,C02223,Tinplate steel
+C02745,C00959,Natural gas
+C02746,C02224,Ammonia
+C01442,C02225,Diesel
+C00968,C02228,Phosphate rock
+C02747,C02229,Diesel
+C02718,C02230,Potash ore
+C00821,C02231,Tinplate steel
+C02748,C01716,Diesel
+C00821,C02233,Tinplate steel
+C02357,C02234,Phosphate rock
+C02749,C02235,Potash ore
+C02750,C00967,Potash ore
+C02751,C02236,Diesel
+C02752,C02237,Natural gas
+C02753,C02238,Surfactants
+C02754,C02239,Diesel
+C02755,C00188,Natural gas
+C02756,C02240,Diesel
+C01175,C02241,Diesel
+C02638,C02242,Diesel
+C02757,C02243,Potash ore
+C02758,C02244,Potash ore
+C01267,C02245,Bauxite
+C02512,C01859,Diesel
+C02759,C00976,Diesel
+C01385,C02247,Natural gas
+C02760,C02248,Tinplate steel
+C01824,C02249,Phosphate rock
+C02761,C02250,Diesel
+C02762,C02251,Bauxite
+C00604,C02253,Diesel
+C02763,C02254,Diesel
+C02764,C02255,Solvents
+C02765,C02256,PET resin
+C02766,C02257,Natural gas
+C02767,C02258,Urea
+C02720,C02259,Bauxite
+C02768,C02260,Potash ore
+C02769,C00740,Potash ore
+C01241,C00629,Bauxite
+C02770,C02261,Bauxite
+C02771,C02262,Natural gas
+C02772,C02263,Potash ore
+C02773,C02264,Bauxite
+C00518,C00607,Phosphate rock
+C02774,C01051,Tinplate steel
+C02299,C02266,Tinplate steel
+C02775,C01056,Pesticides
+C00328,C02267,Aluminium coil
+C02293,C02268,Potash ore
+C00819,C02269,Phosphate rock
+C02776,C02270,Potash ore
+C02626,C00753,Natural gas
+C02777,C02271,Aluminium coil
+C02778,C02272,Caustic soda
+C02779,C02273,Natural gas
+C02749,C00137,Bauxite
+C00721,C02274,Bauxite
+C02780,C02275,Diesel
+C02781,C02276,Natural gas
+C02782,C02277,Natural gas
+C02783,C02278,Bauxite
+C02784,C02279,Bauxite
+C02785,C02280,Phosphate rock
+C02786,C01145,Caustic soda
+C02787,C02281,Potash ore
+C02580,C02282,Bauxite
+C02076,C02283,Diesel
+C02788,C02284,PET resin
+C02789,C02285,Aluminium coil
+C00428,C02286,Natural gas
+C02790,C02287,Surfactants
+C02791,C02288,Bauxite
+C02792,C02290,Phosphate rock
+C02793,C02291,Natural gas
+C02794,C00345,Phosphate rock
+C02795,C02292,Natural gas
+C02796,C01360,Phosphate rock
+C02797,C01257,Diesel
+C02798,C01460,Phosphate rock
+C02799,C00438,Phosphate rock
+C01643,C02294,Natural gas
+C02800,C02295,Tinplate steel
+C02801,C00215,Phosphate rock
+C02802,C02296,Natural gas
+C02803,C02297,Diesel
+C02804,C02298,Bauxite
+C02805,C02299,Potash ore
+C02806,C02300,Urea
+C02807,C02301,Diesel
+C02808,C02302,Pulpwood logs
+C02809,C02303,Aluminium coil
+C02111,C02304,Urea
+C02810,C01265,Natural gas
+C02811,C02305,Aluminium coil
+C00899,C02306,Potash ore
+C02812,C00213,Surfactants
+C02813,C00336,Phosphate rock
+C02814,C02307,Natural gas
+C02563,C00301,Diesel
+C02815,C01620,Bauxite
+C00389,C02308,Bauxite
+C00834,C01200,Natural gas
+C01153,C02309,Urea
+C01698,C02310,Bauxite
+C02816,C00223,Polypropylene
+C02817,C02311,Diesel
+C01799,C02312,Bauxite
+C02818,C02313,Tinplate steel
+C02653,C02314,Pulpwood logs
+C02742,C02315,Solvents
+C02819,C02316,Diesel
+C01115,C02317,Aluminium coil
+C01812,C02318,Diesel
+C02782,C01152,Diesel
+C02820,C02319,Solvents
+C02821,C02321,Solvents
+C01204,C02322,Bauxite
+C02822,C00604,Bauxite
+C01555,C02323,Natural gas
+C01533,C01639,Bauxite
+C00247,C02324,Diesel
+C02823,C02325,Tinplate steel
+C02824,C00653,Potash ore
+C02825,C02326,Diesel
+C02826,C02327,Potash ore
+C02635,C02328,Bauxite
+C02827,C02031,Polypropylene
+C02828,C02329,Natural gas
+C02829,C02330,Diesel
+C02424,C02331,Bauxite
+C02186,C01214,Solvents
+C02830,C02332,Aluminium coil
+C02831,C00107,Diesel
+C02832,C02333,Tinplate steel
+C00516,C02334,Solvents
+C02833,C02335,Potash ore
+C02834,C02336,Phosphate rock
+C02835,C02337,Natural gas
+C02836,C00690,Bauxite
+C02837,C02338,Phosphate rock
+C02838,C02339,Caustic soda
+C02839,C02340,Diesel
+C02840,C02341,Natural gas
+C02315,C02342,Polypropylene
+C00194,C02343,Diesel
+C02841,C02344,Solvents
+C02842,C02345,Tinplate steel
+C02843,C02346,Diesel
+C02844,C02347,Diesel
+C01110,C00991,Natural gas
+C02845,C02039,Polypropylene
+C02846,C02348,Natural gas
+C01496,C00393,Diesel
+C02847,C01093,Surfactants
+C01877,C02349,Phosphate rock
+C01646,C02350,Tinplate steel
+C00191,C02351,Pesticides
+C02357,C00240,Bauxite
+C02848,C02352,Natural gas
+C00900,C02353,Aluminium coil
+C01924,C02354,Phosphate rock
+C02849,C02071,Pulpwood logs
+C02850,C01102,Diesel
+C02851,C02072,Potash ore
+C02852,C02073,Phosphate rock
+C01451,C01135,Phosphate rock
+C02853,C02074,Caustic soda
+C02854,C01786,Bauxite
+C02542,C01361,Aluminium coil
+C02855,C00655,Diesel
+C00650,C00271,Polypropylene
+C02856,C01077,Natural gas
+C02857,C01078,Diesel
+C02858,C02076,Phosphate rock
+C02859,C02077,Ammonia
+C02860,C02078,Natural gas
+C02861,C02079,Diesel
+C02862,C01083,Pulpwood logs
+C02863,C00398,Natural gas
+C02864,C01910,Diesel
+C02865,C02080,Natural gas
+C00504,C02081,Bauxite
+C02866,C02083,Phosphate rock
+C02675,C00419,Bauxite
+C02134,C00588,Natural gas
+C02867,C01132,Diesel
+C02868,C02084,PET resin
+C01866,C02085,Phosphate rock
+C02869,C00827,Diesel
+C02870,C02086,Tinplate steel
+C02680,C00598,Natural gas
+C02871,C02087,Bauxite
+C02414,C02088,Potash ore
+C02872,C01869,Diesel
+C02873,C02089,Pesticides
+C02874,C02090,Potash ore
+C02511,C01797,Tinplate steel
+C02875,C02091,Natural gas
+C02876,C02092,Natural gas
+C01359,C02093,Phosphate rock
+C02787,C02094,Potash ore
+C02877,C01921,Tinplate steel
+C02878,C02095,Potash
+C02879,C02096,Potash ore
+C02880,C00453,Bauxite
+C02881,C02097,Natural gas
+C02882,C02098,Bauxite
+C01676,C02099,Diesel
+C02883,C00370,Natural gas
+C02884,C02100,Natural gas
+C02885,C02101,Phosphate rock
+C02886,C02102,Pesticides
+C02887,C00537,Bauxite
+C02888,C02103,Bauxite
+C02569,C02104,Natural gas
+C00412,C02105,Bauxite
+C00282,C02001,Solvents
+C02889,C02107,Bauxite
+C02890,C02108,Natural gas
+C02891,C02109,Natural gas
+C02892,C02110,Ammonia
+C02893,C02111,Diesel
+C01695,C02112,Pulpwood logs
+C00461,C02113,Tinplate steel
+C02894,C00703,Natural gas
+C02895,C00901,Bauxite
+C02896,C02114,Solvents
+C00976,C02115,Ammonia
+C02897,C02116,Diesel
+C02898,C02117,Potash ore
+C02899,C02012,Pesticides
+C02900,C02118,Phosphate rock
+C00877,C02119,Tinplate steel
+C01595,C01153,Natural gas
+C02901,C01130,Bauxite
+C02902,C02121,Pulpwood logs
+C02903,C01749,Phosphate rock
+C02904,C02122,Phosphate rock
+C02429,C02123,Tinplate steel
+C02905,C02124,Natural gas
+C01843,C02125,Phosphate rock
+C00825,C01675,Natural gas
+C00428,C02126,Natural gas
+C02906,C02127,Aluminium coil
+C02907,C02052,Tinplate steel
+C02908,C02128,Aluminium coil
+C02909,C02129,Natural gas
+C00864,C02130,Tinplate steel
+C01531,C01586,Phosphate rock
+C01696,C02022,Diesel
+C02910,C02131,Surfactants
+C02911,C02132,Phosphate rock
+C02912,C02133,Potash
+C02913,C02134,Bauxite
+C02914,C01249,Phosphate rock
+C00471,C02135,Tinplate steel
+C02915,C02136,Natural gas
+C00432,C01417,Potash ore
+C02916,C02137,Surfactants
+C02917,C02138,Diesel
+C02918,C02139,Potash ore
+C01626,C02140,Diesel
+C02919,C02142,Bauxite
+C02920,C00375,Diesel
+C02921,C02143,Solvents
+C02482,C00985,Bauxite
+C02922,C01666,Phosphate rock
+C02923,C00407,Phosphate rock
+C00613,C02144,Diesel
+C02924,C02145,Bauxite
+C01457,C02146,Diesel
+C02925,C01474,Potash ore
+C02926,C02147,Pesticides
+C02927,C02148,Potash
+C00408,C01352,Tinplate steel
+C02928,C02149,Phosphate rock
+C02929,C02150,Phosphate rock
+C02930,C02151,Natural gas
+C02931,C02152,Potash ore
+C02932,C02153,Potash ore
+C02933,C02154,Tinplate steel
+C02582,C00103,Diesel
+C02934,C02155,Diesel
+C02935,C00116,Bauxite
+C01998,C02156,Polypropylene
+C01155,C02157,Diesel
+C02936,C02158,Surfactants
+C02937,C02159,Aluminium coil
+C02938,C02160,Natural gas
+C02939,C02161,Diesel
+C02940,C02162,Surfactants
+C02242,C02020,Aluminium coil
+C02941,C02163,Surfactants
+C02942,C02164,Potash ore
+C02943,C02165,Phosphate rock
+C02944,C02166,Solvents
+C01616,C02167,Potash ore
+C02945,C02168,Potash ore
+C00724,C02169,Natural gas
+C01583,C01308,Diesel
+C00629,C02170,Natural gas
+C02946,C02171,Potash ore
+C02882,C02172,Phosphate rock
+C00582,C01842,Phosphate rock
+C02947,C02173,Tinplate steel
+C02948,C02175,Urea
+C02949,C02176,Polypropylene
+C02950,C02177,Phosphate rock
+C02648,C02178,Diesel
+C02675,C02179,Bauxite
+C02832,C00095,Tinplate steel
+C02951,C02180,Bauxite
+C02952,C00261,Surfactants
+C00871,C02181,Surfactants
+C01651,C02182,Natural gas

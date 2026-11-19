@@ -1,0 +1,303 @@
+"""Phase 2 - the LangGraph pipeline.
+
+    [retrieve] -> monitoring (LLM) -> kg_query -> [no exposure? stop] -> risk -> visualizer
+        -> csco (LLM) -> human_review (interrupt) -> alternatives -> END
+                                         \\-> rejected -> END
+
+[retrieve] runs only with build_app(rag_examples=True and/or ground_entities=True); see rag.py.
+LLM steps return strict JSON (Pydantic). Tool steps are plain Python. The human review
+pauses the run with interrupt(); a MemorySaver checkpointer lets it resume.
+
+    from pipeline import build_app, run_article, resume_review
+    app = build_app()
+    result = run_article(app, article_text, "Northwind Grocers", thread_id="t1")
+    # result["paused"] -> result["review"] has the CSCO summary and actions
+    result = resume_review(app, "t1", {"decision": "approve"})
+"""
+from __future__ import annotations
+
+import functools
+import time
+
+from langgraph.checkpoint.memory import MemorySaver
+from langgraph.graph import END, START, StateGraph
+from langgraph.types import Command, interrupt
+
+from . import tools
+from .llm import BaseLLM, get_llm
+from .prompts import (CSCO_SYSTEM, CSCO_USER, MONITORING_RETRY_CONTEXT,
+                      MONITORING_SYSTEM, MONITORING_USER,
+                      MONITORING_USER_WITH_CONTEXT,
+                      SELF_CRITIQUE_SYSTEM, SELF_CRITIQUE_USER)
+from .schemas import CSCOOutput, MonitoringOutput, SelfCritiqueOutput, State
+
+
+def _memory_saver():
+    """MemorySaver that explicitly allows our state classes (newer LangGraph warns otherwise)."""
+    try:
+        from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+        return MemorySaver(serde=JsonPlusSerializer(
+            allowed_msgpack_modules=[("scpoc.schemas", "MonitoringOutput"), ("scpoc.schemas", "CSCOOutput"),
+                                     ("scpoc.schemas", "State")]))
+    except (ImportError, TypeError):      # older LangGraph: no such option
+        return MemorySaver()
+
+
+def _timed(step):
+    """Record seconds and LLM tokens used by a node into state.trace."""
+    def deco(fn):
+        @functools.wraps(fn)
+        def wrapper(state: State):
+            before, t0 = wrapper.llm.snapshot(), time.perf_counter()
+            update = fn(state)
+            after = wrapper.llm.snapshot()
+            update["trace"] = [{"step": step, "seconds": round(time.perf_counter() - t0, 3),
+                                "prompt_tokens": after["prompt_tokens"] - before["prompt_tokens"],
+                                "completion_tokens": after["completion_tokens"] - before["completion_tokens"]}]
+            return update
+        return wrapper
+    return deco
+
+
+MAX_RETRIES = 3
+
+
+def build_app(llm: BaseLLM | None = None, g=None, checkpointer=None, *,
+              rag_examples: bool = False, ground_entities: bool = False, k_examples: int = 3,
+              exemplar_store=None, max_retries: int = MAX_RETRIES):
+    """rag_examples: add the most similar labeled examples to the Monitoring prompt.
+    ground_entities: add the graph records of companies the article names.
+    With both off the graph is exactly the original one (no retrieve node).
+    max_retries: how many times the reviewer can ask the AI to retry (default 3)."""
+    g = g or tools.get_graph()
+    llm = llm or get_llm(g)
+    use_rag = rag_examples or ground_entities
+    store = entity_index = None
+    if use_rag:
+        from . import rag
+        store = (exemplar_store or rag.ExemplarStore.load()) if rag_examples else None
+        entity_index = rag.EntityIndex(g) if ground_entities else None
+    industries = sorted({d["industry"] for _, d in g.nodes(data=True)})
+    vocab = {k: {d[k].lower(): d[k] for _, d in g.nodes(data=True)} for k in ("country", "industry")}
+
+    def node(step):
+        def deco(fn):
+            w = _timed(step)(fn)
+            w.llm = llm
+            return w
+        return deco
+
+    # ---- 0. Retrieval (tools, optional): similar solved examples + companies the article names
+    @node("retrieve")
+    def retrieve(state: State):
+        out = {}
+        if store:
+            out["examples"] = store.search(state.article, k=k_examples)
+        if entity_index:
+            out["entities"] = entity_index.find(state.article)
+        return {"retrieved": out}
+
+    # ---- 1. Monitoring (LLM)
+    @node("monitoring")
+    def monitoring(state: State):
+        r = state.retrieved
+        blocks = []
+        if "examples" in r:
+            blocks.append(rag.format_examples(r["examples"]))
+        if "entities" in r:
+            blocks.append(rag.format_entities(r["entities"]))
+        if state.retry_feedback and state.previous_monitoring:
+            pm = state.previous_monitoring
+            blocks.append(MONITORING_RETRY_CONTEXT.format(
+                attempt=state.retry_count,
+                feedback=state.retry_feedback,
+                is_disruption=pm.is_disruption,
+                disruption_type=pm.disruption_type,
+                summary=pm.summary,
+                countries=pm.countries,
+                industries=pm.industries,
+                companies=pm.companies))
+        blocks = [b for b in blocks if b]
+        user = (MONITORING_USER_WITH_CONTEXT.format(context="\n\n".join(blocks), article=state.article)
+                if blocks else MONITORING_USER.format(article=state.article))
+        out = llm.complete_json(
+            "monitoring", MONITORING_SYSTEM.format(industries=", ".join(industries)),
+            user, MonitoringOutput, payload={"article": state.article, "retrieved": r})
+        return {"monitoring": out, "retry_feedback": "", "previous_monitoring": None}
+
+    # ---- 2. KG query (tools): resolve names, then BFS
+    @node("kg_query")
+    def kg_query(state: State):
+        m = state.monitoring
+        focal = tools.resolve_entity(state.focal_name, g=g)["match"]
+        if focal is None:
+            raise ValueError(f"Could not resolve focal firm {state.focal_name!r}")
+        countries, industries_, companies, unresolved = [], [], [], []
+        for c in m.countries:
+            (countries if c.lower() in vocab["country"] else unresolved).append(
+                vocab["country"].get(c.lower(), c))
+        for i in m.industries:
+            (industries_ if i.lower() in vocab["industry"] else unresolved).append(
+                vocab["industry"].get(i.lower(), i))
+        for name in m.companies:
+            hit = tools.resolve_entity(name, g=g)["match"]
+            if hit and hit["score"] >= 0.8:
+                companies.append(hit["company_id"])
+            else:
+                unresolved.append(name)
+        bfs = tools.supply_chain_bfs(focal["company_id"], countries=countries,
+                                     industries=industries_, companies=companies, g=g)
+        return {"focal_id": focal["company_id"], "unresolved": unresolved, "bfs": bfs,
+                "criteria": {"countries": countries, "industries": industries_, "companies": companies}}
+
+    def _is_disruption(m: MonitoringOutput) -> bool:
+        return m.is_disruption and m.disruption_type != "none"      # the model must agree with itself
+
+    def after_kg(state: State):
+        return "risk" if state.bfs["disrupted_count"] and _is_disruption(state.monitoring) else "no_exposure"
+
+    @node("no_exposure")
+    def no_exposure(state: State):
+        why = ("the article is not a supply chain disruption" if not _is_disruption(state.monitoring)
+               else "no supplier in the network matches the disruption")
+        return {"status": "no_exposure",
+                "message": f"No exposure for {state.focal_name}: {why}."}
+
+    # ---- 3. Risk (tools)
+    @node("risk")
+    def risk(state: State):
+        r = tools.tier1_risk_scores(state.bfs, g=g)
+        return {"risk": r, "actions": tools.recommend_actions(r)}
+
+    # ---- 4. Visualizer (tool)
+    @node("visualizer")
+    def visualizer(state: State):
+        return {"network_html": tools.plot_network(state.bfs, state.risk)}
+
+    # ---- 5. CSCO (LLM)
+    @node("csco")
+    def csco(state: State):
+        import json
+        m = state.monitoring
+        disruption = {"type": m.disruption_type, "summary": m.summary, **state.criteria}
+        exposure = {"disrupted_count": state.bfs["disrupted_count"],
+                    "per_tier": {t: len(state.bfs[f"tier_{t}"]) for t in range(1, 5)},
+                    "exposed_tier1": state.risk["exposed_tier1_count"]}
+        out = llm.complete_json(
+            "csco", CSCO_SYSTEM,
+            CSCO_USER.format(disruption=json.dumps(disruption), exposure=json.dumps(exposure),
+                             actions=json.dumps(state.actions)),
+            CSCOOutput, payload={"disruption": disruption, "bfs": state.bfs, "actions": state.actions})
+        return {"csco": out}
+
+    # ---- 5b. Self-critique (LLM) — suggests corrections for the reviewer
+    @node("self_critique")
+    def self_critique(state: State):
+        m = state.monitoring
+        try:
+            user = SELF_CRITIQUE_USER.format(
+                article=state.article, is_disruption=m.is_disruption,
+                disruption_type=m.disruption_type, summary=m.summary,
+                countries=m.countries, industries=m.industries, companies=m.companies)
+            out = llm.complete_json("self_critique", SELF_CRITIQUE_SYSTEM, user, SelfCritiqueOutput)
+            return {"ai_suggestions": out.suggestions or [], "ai_confidence": out.confidence or "medium"}
+        except Exception:
+            return {"ai_suggestions": [], "ai_confidence": ""}
+
+    # ---- 6. Human review (interrupt)
+    @node("human_review")
+    def human_review(state: State):
+        reply = interrupt({"csco": state.csco.model_dump(), "actions": state.actions,
+                           "retry_count": state.retry_count, "max_retries": max_retries,
+                           "ai_suggestions": state.ai_suggestions, "ai_confidence": state.ai_confidence})
+        decision = reply.get("decision")
+        if decision == "reject":
+            return {"approval": "rejected", "status": "rejected",
+                    "message": reply.get("reason", "Rejected by reviewer.")}
+        if decision == "retry":
+            if state.retry_count >= max_retries:
+                return {"approval": "rejected", "status": "rejected",
+                        "message": f"Maximum retries ({max_retries}) reached. Rejected."}
+            feedback = reply.get("reason", "Please re-analyse the article.")
+            return {"approval": "retry",
+                    "retry_count": state.retry_count + 1,
+                    "retry_feedback": feedback,
+                    "previous_monitoring": state.monitoring}
+        if decision == "edit":
+            return {"approval": "edited",
+                    "csco": CSCOOutput(**{**state.csco.model_dump(), **reply.get("csco", {})}),
+                    "actions": reply.get("actions", state.actions)}
+        if decision == "approve":
+            return {"approval": "approved"}
+        if decision == "edit_extraction":
+            edits = reply.get("monitoring", {})
+            m = state.monitoring
+            updated = MonitoringOutput(**{**m.model_dump(), **edits})
+            return {"approval": "edit_extraction", "monitoring": updated}
+        raise ValueError(f"Unknown decision {decision!r}; use approve, edit, reject, retry or edit_extraction")
+
+    def after_review(state: State):
+        if state.approval == "rejected":
+            return END
+        if state.approval == "retry":
+            return "monitoring"
+        if state.approval == "edit_extraction":
+            return "kg_query"
+        return "alternatives"
+
+    # ---- 7. Alternative sourcing (tool)
+    @node("alternatives")
+    def alternatives(state: State):
+        alts = [tools.find_alternatives(a["company_id"], state.bfs, g=g)
+                for a in state.actions if a["risk_level"] == "HIGH"]
+        n_high = len(alts)
+        return {"alternatives": alts, "status": "completed",
+                "message": f"Completed: {n_high} HIGH-risk supplier(s) with alternatives searched."}
+
+    wf = StateGraph(State)
+    for fn in (monitoring, kg_query, no_exposure, risk, visualizer, csco, self_critique, human_review, alternatives):
+        wf.add_node(fn.__name__, fn)
+    if use_rag:
+        wf.add_node("retrieve", retrieve)
+        wf.add_edge(START, "retrieve")
+        wf.add_edge("retrieve", "monitoring")
+    else:
+        wf.add_edge(START, "monitoring")
+    wf.add_edge("monitoring", "kg_query")
+    wf.add_conditional_edges("kg_query", after_kg, {"risk": "risk", "no_exposure": "no_exposure"})
+    wf.add_edge("no_exposure", END)
+    wf.add_edge("risk", "visualizer")
+    wf.add_edge("visualizer", "csco")
+    wf.add_edge("csco", "self_critique")
+    wf.add_edge("self_critique", "human_review")
+    wf.add_conditional_edges("human_review", after_review,
+                             {"alternatives": "alternatives", END: END,
+                              "monitoring": "monitoring", "kg_query": "kg_query"})
+    wf.add_edge("alternatives", END)
+    app = wf.compile(checkpointer=checkpointer or _memory_saver())
+    app.llm = llm
+    app.rag = {"rag_examples": rag_examples, "ground_entities": ground_entities}
+    return app
+
+
+# ------------------------------------------------------------------ helpers for callers
+def _result(app, config, out: dict) -> dict:
+    state = app.get_state(config).values
+    paused = "__interrupt__" in out
+    return {"paused": paused, "review": out["__interrupt__"][0].value if paused else None,
+            "state": state if isinstance(state, State) else State(**state)}
+
+
+def run_article(app, article: str, focal: str, thread_id: str = "run") -> dict:
+    """Run until the pipeline ends or pauses for human review."""
+    config = {"configurable": {"thread_id": thread_id}}
+    out = app.invoke(State(article=article, focal_name=focal), config)
+    return _result(app, config, out)
+
+
+def resume_review(app, thread_id: str, decision: dict) -> dict:
+    """decision: {"decision": "approve"} | {"decision": "reject", "reason": ...} |
+    {"decision": "edit", "csco": {...partial...}, "actions": [...]}"""
+    config = {"configurable": {"thread_id": thread_id}}
+    out = app.invoke(Command(resume=decision), config)
+    return _result(app, config, out)

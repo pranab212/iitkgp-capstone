@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Supply Chain Disruption Monitor</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+ --canvas:#0b1120;--surface:#111827;--s2:#1a2332;--s3:#1f2d3d;
+ --glass:rgba(255,255,255,.06);--gb:rgba(255,255,255,.08);--gh:rgba(255,255,255,.1);
+ --tx:#f1f5f9;--tx2:#94a3b8;--tx3:#64748b;
+ --ac:#3b82f6;--ac-g:rgba(59,130,246,.25);--ac-d:#2563eb;
+ --red:#ef4444;--rd:rgba(239,68,68,.12);--rg:rgba(239,68,68,.25);
+ --amb:#f59e0b;--ad:rgba(245,158,11,.12);--ag:rgba(245,158,11,.25);
+ --grn:#10b981;--gd:rgba(16,185,129,.12);--gg:rgba(16,185,129,.25);
+ --cy:#06b6d4;--cd:rgba(6,182,212,.12);--pu:#8b5cf6;--pd:rgba(139,92,246,.12);
+ --r:8px;--rl:12px;--rx:16px;
+ --ft:'Inter',system-ui,-apple-system,sans-serif;
+ --mo:'SF Mono','Fira Code',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ft);background:var(--canvas);color:var(--tx);line-height:1.6;min-height:100vh;
+ background-image:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(59,130,246,.07),transparent),
+ radial-gradient(ellipse 50% 40% at 80% 90%,rgba(139,92,246,.05),transparent)}
+
+/* Header */
+header{background:rgba(15,23,42,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);
+ border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:0;z-index:100}
+.hdr{max-width:1280px;margin:0 auto;padding:14px 28px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;font-size:17px;font-weight:700;letter-spacing:-.3px}
+.logo-i{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--ac),var(--pu));
+ display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:0 0 16px var(--ac-g)}
+.bdg{font-size:11px;padding:4px 14px;border-radius:20px;background:var(--glass);border:1px solid var(--gb);
+ color:var(--tx2);font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+.dot.on{background:var(--grn);box-shadow:0 0 6px var(--gg)}
+.dot.off{background:var(--amb);box-shadow:0 0 6px var(--ag)}
+
+main{max-width:1280px;margin:0 auto;padding:24px 28px 60px}
+
+/* Cards */
+.cd{background:var(--surface);border:1px solid var(--gb);border-radius:var(--rl);padding:20px 24px;margin-bottom:14px;transition:border-color .2s}
+.cd:hover{border-color:rgba(255,255,255,.12)}
+.cd-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.cd-h h3{font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.5px}
+.sb{padding:3px 10px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.4px}
+.sb.llm{background:var(--pd);color:#a78bfa;border:1px solid rgba(139,92,246,.2)}
+.sb.tool{background:var(--cd);color:#22d3ee;border:1px solid rgba(6,182,212,.2)}
+.sb.rag{background:var(--ad);color:#fbbf24;border:1px solid rgba(245,158,11,.2)}
+.mt{font-size:11px;color:var(--tx3);font-weight:500;display:flex;gap:14px;font-variant-numeric:tabular-nums}
+
+/* Forms */
+textarea{width:100%;font:14px/1.6 var(--ft);padding:12px 16px;background:var(--s2);
+ border:1px solid rgba(255,255,255,.08);border-radius:var(--r);color:var(--tx);resize:vertical;transition:border-color .2s,box-shadow .2s}
+textarea:focus{outline:none;border-color:var(--ac);box-shadow:0 0 0 3px var(--ac-g)}
+textarea::placeholder{color:var(--tx3)}
+select{font:13px var(--ft);padding:8px 12px;background:var(--s2);border:1px solid rgba(255,255,255,.08);
+ border-radius:var(--r);color:var(--tx);cursor:pointer}
+select:focus{outline:none;border-color:var(--ac)}
+select option{background:var(--surface);color:var(--tx)}
+
+/* Buttons */
+button{font:13px/1 var(--ft);font-weight:600;padding:9px 18px;border-radius:var(--r);
+ border:1px solid rgba(255,255,255,.1);background:var(--glass);color:var(--tx);cursor:pointer;
+ transition:all .15s;display:inline-flex;align-items:center;gap:6px}
+button:hover{background:var(--gh);transform:translateY(-1px)}
+button:active{transform:translateY(0)}
+button:disabled{opacity:.35;cursor:default;transform:none}
+.ba{background:var(--ac);color:#fff;border-color:var(--ac);box-shadow:0 0 14px var(--ac-g)}
+.ba:hover{background:var(--ac-d)}
+.bg{background:var(--grn);color:#fff;border-color:var(--grn);box-shadow:0 0 10px var(--gg)}.bg:hover{background:#059669}
+.br{background:rgba(239,68,68,.15);color:var(--red);border-color:rgba(239,68,68,.3)}.br:hover{background:rgba(239,68,68,.25)}
+.bw{background:rgba(245,158,11,.15);color:var(--amb);border-color:rgba(245,158,11,.3);box-shadow:0 0 10px var(--ag)}.bw:hover{background:rgba(245,158,11,.25)}
+
+/* Chips */
+.ch{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;
+ background:var(--glass);border:1px solid var(--gb);color:var(--tx2);gap:4px;margin:2px}
+.ch.w{background:var(--rd);border-color:rgba(239,68,68,.2);color:#fca5a5}
+.tH{background:var(--rd);color:var(--red);border:1px solid rgba(239,68,68,.25);font-weight:700}
+.tM{background:var(--ad);color:var(--amb);border:1px solid rgba(245,158,11,.25);font-weight:700}
+.tL{background:var(--gd);color:var(--grn);border:1px solid rgba(16,185,129,.25);font-weight:700}
+
+/* Tables */
+table{border-collapse:collapse;width:100%;font-size:12px;font-variant-numeric:tabular-nums}
+th{font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:var(--tx3);font-weight:600;
+ padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.06);text-align:left}
+td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--tx2)}
+tr:hover td{background:rgba(255,255,255,.02)}
+.HIGH{color:var(--red);font-weight:700}.MEDIUM{color:var(--amb);font-weight:700}.LOW{color:var(--grn);font-weight:700}
+
+iframe{width:100%;height:520px;border:1px solid var(--gb);border-radius:var(--rl);background:var(--surface)}
+.mu{color:var(--tx3);font-size:12px}
+pre{white-space:pre-wrap;font:11.5px/1.5 var(--mo);background:var(--s2);
+ padding:8px 12px;border-radius:var(--r);border:1px solid rgba(255,255,255,.04);color:var(--tx2);margin:4px 0}
+.sl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--tx3);margin-bottom:4px}
+
+/* Alerts */
+.al{border-radius:var(--r);padding:12px 16px;font-size:13px;margin-bottom:12px;display:flex;align-items:flex-start;gap:10px}
+.al.aw{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);color:#fbbf24}
+.al.ai{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);color:#93c5fd}
+.al.ae{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);color:#fca5a5}
+.al.ao{background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);color:#6ee7b7}
+
+/* Scenario bar */
+.scb{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+.scb .lb{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--tx3);font-weight:600;margin-right:4px}
+.scn{font-size:12px;padding:6px 16px;border-radius:20px;background:var(--s2);border:1px solid rgba(255,255,255,.06);color:var(--tx2)}
+.scn:hover{background:var(--ac);color:#fff;border-color:var(--ac)}
+.ir{display:flex;gap:14px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.ir label{font-size:12px;font-weight:600;color:var(--tx2);display:flex;align-items:center;gap:8px}
+.ir select{height:38px}
+.ir .ba{height:38px}
+
+/* KPI Grid */
+.kg{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px}
+.kp{background:var(--surface);border:1px solid var(--gb);border-radius:var(--rl);padding:14px 16px;text-align:center;
+ position:relative;overflow:hidden;transition:border-color .2s}
+.kp:hover{border-color:rgba(255,255,255,.14)}
+.kp::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .25s}.kp:hover::before{opacity:1}
+.kp.hero{grid-column:span 2}
+.kp .v{font-size:26px;font-weight:800;line-height:1.1;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.kp .l{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--tx3);font-weight:600;margin-top:3px}
+.kp.kh .v{color:var(--red)}.kp.kh::before{background:radial-gradient(ellipse at center,var(--rd),transparent)}
+.kp.km .v{color:var(--amb)}.kp.km::before{background:radial-gradient(ellipse at center,var(--ad),transparent)}
+.kp.kl .v{color:var(--grn)}.kp.kl::before{background:radial-gradient(ellipse at center,var(--gd),transparent)}
+.kp.kn .v{color:var(--ac)}
+
+/* Timeline */
+.tl{position:relative;padding-left:34px}
+.tl::before{content:'';position:absolute;left:12px;top:10px;bottom:10px;width:2px;
+ background:linear-gradient(to bottom,var(--ac),var(--pu),rgba(255,255,255,.06))}
+.ti{position:relative;margin-bottom:14px}
+.td{position:absolute;left:-34px;top:22px;width:22px;height:22px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;
+ z-index:2;border:2px solid var(--surface)}
+.td.ok{background:var(--grn);color:#fff;box-shadow:0 0 8px var(--gg)}
+.td.go{background:var(--ac);color:#fff;box-shadow:0 0 8px var(--ac-g);animation:pu 1.5s infinite}
+.td.wa{background:var(--amb);color:#fff;box-shadow:0 0 8px var(--ag)}
+@keyframes pu{0%,100%{opacity:1}50%{opacity:.5}}
+
+/* Spinner */
+.sp{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.1);border-top-color:var(--ac);
+ border-radius:50%;animation:sn .7s linear infinite;display:inline-block}
+@keyframes sn{to{transform:rotate(360deg)}}
+
+/* Diff */
+.df{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;padding:3px 10px;
+ border-radius:20px;letter-spacing:.3px;margin:2px}
+.df.da{background:rgba(16,185,129,.12);color:#6ee7b7;border:1px solid rgba(16,185,129,.2)}
+.df.dr{background:rgba(239,68,68,.12);color:#fca5a5;border:1px solid rgba(239,68,68,.2)}
+.df.ds{background:var(--glass);color:var(--tx3);border:1px solid var(--gb)}
+
+/* History */
+.hd{position:relative;margin:24px 0 16px;border:none;border-top:1px dashed rgba(245,158,11,.3)}
+.hl{position:absolute;top:-10px;left:20px;background:var(--canvas);padding:0 12px;
+ font-size:11px;font-weight:700;color:var(--amb);letter-spacing:.6px;text-transform:uppercase}
+.ht{font-size:12px;color:var(--ac);cursor:pointer;font-weight:600;background:none;border:none;
+ padding:4px 0;display:inline-flex;align-items:center;gap:5px}
+.ht:hover{color:#60a5fa;text-decoration:underline}
+.hb{overflow:hidden;transition:max-height .35s ease,opacity .25s;border-radius:var(--r);margin:8px 0 12px}
+.hb.shut{max-height:0;opacity:0;pointer-events:none}.hb.op{max-height:8000px;opacity:1}
+.hb .cd{opacity:.7;border-style:dashed}
+
+/* Review panel */
+.rp{background:var(--surface);border:1px solid rgba(59,130,246,.3);border-radius:var(--rx);
+ padding:28px;margin-bottom:16px;box-shadow:0 0 40px rgba(59,130,246,.06)}
+.rp h3{font-size:15px;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.ra{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.06)}
+.rf{margin-top:18px;padding:16px;background:var(--s2);border-radius:var(--rl);border:1px solid rgba(255,255,255,.06)}
+.rf label{font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:8px}
+.rf textarea{height:72px;font-size:13px;background:var(--surface);border-color:rgba(255,255,255,.06)}
+
+/* Outcome */
+.oc{border-left:3px solid;padding:16px 20px;display:flex;align-items:center;gap:10px}
+.oc.oo{border-left-color:var(--grn);background:rgba(16,185,129,.04)}
+.oc.ow{border-left-color:var(--amb);background:rgba(245,158,11,.04)}
+.oc.oe{border-left-color:var(--red);background:rgba(239,68,68,.04)}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px}
+.pill.pb{background:rgba(59,130,246,.12);color:#93c5fd;border:1px solid rgba(59,130,246,.2)}
+
+@media(max-width:768px){
+ .hdr{padding:12px 16px}main{padding:16px}
+ .kg{grid-template-columns:repeat(2,1fr)}.kp.hero{grid-column:span 2}
+ .ra{flex-direction:column}.ra button{width:100%;justify-content:center}
+ .tl{padding-left:26px}.tl::before{left:8px}.td{left:-26px;width:18px;height:18px;font-size:9px}}
+@supports not(backdrop-filter:blur(1px)){header{background:rgba(15,23,42,.95)}}
+</style></head><body>
+<header><div class="hdr">
+ <div class="logo"><span class="logo-i">&#x26a1;</span>Supply Chain Disruption Monitor</div>
+ <div style="display:flex;align-items:center;gap:12px">
+  <button onclick="showAnalytics()" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:var(--tx2);font:12px var(--ft);padding:6px 14px;border-radius:var(--r);cursor:pointer;backdrop-filter:blur(8px)">&#x1f4ca; Analytics</button>
+  <span class="bdg"><span class="dot on" id="sd"></span><span id="lt"></span></span>
+ </div>
+</div></header>
+<main>
+ <div id="mb" class="al aw" style="display:none">
+  <span>&#x26a0;</span>
+  <div>Running with <b>offline mock LLM</b>. Set <code style="background:var(--s2);padding:1px 6px;border-radius:4px">QWEN_API_KEY</code> in .env for Qwen3-8B.</div>
+ </div>
+ <div class="cd" style="border-color:rgba(59,130,246,.15)">
+  <div class="cd-h"><h3>&#x1f4f0; Input Article</h3></div>
+  <div class="scb"><span class="lb">Scenarios</span><span id="sc"></span></div>
+  <textarea id="art" rows="4" placeholder="Paste a news article about a potential supply chain disruption..."></textarea>
+  <div class="ir">
+   <label>Grocer <select id="fc"></select></label>
+   <button class="ba" id="rn" onclick="go()">&#x25b6;&#xfe0f; Run Analysis</button>
+   <span id="rm" class="mu"></span>
+  </div>
+ </div>
+ <div id="kp"></div>
+ <div id="st"></div>
+ <div id="rv"></div>
+ <div id="ot"></div>
+<div id="analytics_overlay" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);overflow:auto;padding:40px 20px" onclick="if(event.target===this)closeAnalytics()">
+ <div style="max-width:720px;margin:0 auto;background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.5)">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+   <h2 style="font-size:18px;color:var(--tx);font-weight:700">&#x1f4ca; Retry Analytics</h2>
+   <button onclick="closeAnalytics()" style="background:none;border:none;color:var(--tx2);font-size:20px;cursor:pointer">&times;</button>
+  </div>
+  <div id="analytics_body"><div class="sp" style="margin:40px auto"></div></div>
+ </div>
+</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const E=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const C=(a,c='')=>(a&&a.length?a.map(x=>`<span class="ch ${c}">${E(x)}</span>`).join(' '):'<span class="mu">none</span>');
+let J=null,T=null,SC=[],RS=false;
+
+async function init(){
+ const s=await(await fetch('/api/status')).json();
+ $('lt').textContent=s.llm;
+ if(s.mock){$('mb').style.display='flex';$('sd').className='dot off'}
+ const d=await(await fetch('/api/scenarios')).json();SC=d.scenarios;
+ $('fc').innerHTML=d.grocers.map(g=>`<option>${E(g)}</option>`).join('');
+ $('sc').innerHTML=SC.map((s,i)=>`<button class="scn" onclick="pk(${i})">${E(s.title)}</button>`).join('');
+}
+function pk(i){$('art').value=SC[i].article;$('fc').value=SC[i].focal}
+
+async function go(){
+ const a=$('art').value.trim();
+ if(!a){$('rm').textContent='Pick a scenario or paste an article.';return}
+ $('rm').textContent='';$('rn').disabled=true;
+ $('st').innerHTML='';$('rv').innerHTML='';$('ot').innerHTML='';$('kp').innerHTML='';RS=false;
+ const r=await fetch('/api/run',{method:'POST',body:JSON.stringify({article:a,focal:$('fc').value})});
+ const j=await r.json();
+ if(j.error){$('rm').textContent=j.error;$('rn').disabled=false;return}
+ J=j.job_id;poll();
+}
+function poll(){
+ clearInterval(T);
+ T=setInterval(async()=>{
+  const v=await(await fetch('/api/job/'+J)).json();render(v);
+  if(v.status!=='running'){clearInterval(T);if(v.status!=='awaiting_review')$('rn').disabled=false}
+ },500);
+}
+
+/* Step body */
+function bd(n,d){
+ if(n==='retrieve')return `${d.examples.length?`<div style="margin-bottom:6px"><span class="sl">Similar Examples</span> ${C(d.examples.map(e=>e.id+' ('+e.score+')'))}</div>`:''}
+  ${d.grounding?`<div><span class="sl">Companies Named</span> ${C(d.entities)}</div>`:''}`;
+ if(n==='monitoring')return `<div style="margin-bottom:10px;display:flex;gap:8px;flex-wrap:wrap">
+  <span class="ch" style="${d.is_disruption?'background:var(--rd);color:#fca5a5;border-color:rgba(239,68,68,.2)':'background:var(--gd);color:#6ee7b7;border-color:rgba(16,185,129,.2)'};font-weight:700">
+  ${d.is_disruption?'&#x1f6a8; Disruption':'&#x2705; Clear'}</span>
+  <span class="ch">${E(d.disruption_type)}</span></div>
+  <div style="margin-bottom:10px;font-size:14px">${E(d.summary)}</div>
+  <div style="margin-bottom:6px"><span class="sl">Countries</span> ${C(d.countries)}</div>
+  <div style="margin-bottom:6px"><span class="sl">Industries</span> ${C(d.industries)}</div>
+  <div style="margin-bottom:6px"><span class="sl">Companies</span> ${C(d.companies)}</div>
+  <details style="margin-top:8px"><summary class="mu" style="cursor:pointer;font-size:11px">Show reasoning</summary>
+  <div style="margin-top:6px;font-size:12px;color:var(--tx3);line-height:1.5">${E(d.reasoning)}</div></details>`;
+ if(n==='kg_query')return `<div style="margin-bottom:10px"><span class="sl">Matched</span> ${C([...d.criteria.countries,...d.criteria.industries,...d.criteria.companies])}</div>
+  ${d.unresolved.length?`<div style="margin-bottom:8px"><span class="sl">Not in Graph</span> ${C(d.unresolved,'w')}</div>`:''}
+  ${d.sample_chains.length?`<div style="margin-top:8px"><span class="sl">Sample Chains</span>${d.sample_chains.map(c=>`<pre>${E(c.join('  \u2190  '))}</pre>`).join('')}</div>`:''}`;
+ if(n==='risk')return `<div style="overflow-x:auto"><table><tr><th>Supplier</th><th>Industry</th><th>Score</th><th>Level</th>
+  <th>Breadth</th><th>Dep.</th><th>Crit.</th><th>Centr.</th><th>Depth</th></tr>
+  ${d.top_suppliers.map(s=>`<tr><td style="color:var(--tx);font-weight:600">${E(s.name)}</td><td>${E(s.industry)}</td>
+  <td style="font-weight:700;color:var(--tx)">${s.risk_score}</td>
+  <td><span class="ch t${s.risk_level[0]}">${s.risk_level}</span></td>
+  <td>${s.components.exposure_breadth}</td><td>${s.components.dependency_ratio}</td>
+  <td>${s.components.downstream_criticality}</td><td>${s.components.tier1_centrality}</td>
+  <td>${s.components.exposure_depth}</td></tr>`).join('')}</table></div>
+  <div class="mu" style="margin-top:8px">HIGH &ge; ${d.thresholds.HIGH} &middot; MEDIUM &ge; ${d.thresholds.MEDIUM}</div>`;
+ if(n==='visualizer')return `<iframe src="/api/network/${J}"></iframe>`;
+ if(n==='self_critique'){
+  const ss=d.suggestions||[],cf=d.confidence||'';
+  return ss.length?`<div style="margin-bottom:6px"><span class="ch ${cf==='high'?'tH':'tM'}">${cf} confidence</span></div>
+  <ul style="padding-left:18px;font-size:13px;color:var(--tx2)">${ss.map(s=>`<li style="margin-bottom:4px">${E(s)}</li>`).join('')}</ul>`
+  :`<div class="mu">No suggestions — extraction looks clean.</div>`}
+ if(n==='csco')return `<div style="font-size:14px;margin-bottom:10px;line-height:1.7">${E(d.executive_summary)}</div>
+  <div style="color:var(--tx2);margin-bottom:10px;font-size:13px">${E(d.network_impact)}</div>
+  <ul style="padding-left:18px;font-size:13px;color:var(--tx2)">${d.key_recommendations.map(x=>`<li style="margin-bottom:4px">${E(x)}</li>`).join('')}</ul>`;
+ if(n==='no_exposure')return `<div style="font-size:14px;color:var(--tx2)">${E(d.message)}</div>`;
+ if(n==='alternatives')return d.alternatives.length?d.alternatives.map(a=>`<div style="margin-bottom:14px">
+  <div style="font-size:14px;margin-bottom:8px"><b>${E(a.supplier.name)}</b>
+  <span class="mu">(${E(a.supplier.industry)})</span> &mdash; ${a.candidates_considered} candidates, <b style="color:var(--grn)">${a.clear_count}</b> clear</div>
+  <div style="overflow-x:auto"><table><tr><th>Candidate</th><th>Country</th><th>Clear</th><th>Disrupted</th><th>Upstream</th></tr>
+  ${a.alternatives.map(c=>`<tr><td style="color:var(--tx);font-weight:600">${E(c.name)}</td><td>${E(c.country)}</td>
+  <td>${c.verified_clear?'<span style="color:var(--grn)">&#x2705;</span>':'<span style="color:var(--red)">&#x274c;</span>'}</td>
+  <td>${c.disrupted_upstream}</td><td>${c.upstream_size}</td></tr>`).join('')}</table></div></div>`).join('')
+  :'<div class="mu">No HIGH-risk suppliers &mdash; no replacements needed.</div>';
+ return '';
+}
+
+function sType(n){return{monitoring:'llm',csco:'llm',self_critique:'llm',retrieve:'rag'}[n]||'tool'}
+function sIcon(n){return{retrieve:'&#x1f50d;',monitoring:'&#x1f916;',kg_query:'&#x1f578;',risk:'&#x1f4ca;',
+ visualizer:'&#x1f310;',csco:'&#x1f4dd;',self_critique:'&#x1f9e0;',no_exposure:'&#x2705;',alternatives:'&#x1f504;'}[n]||''}
+function sTitle(n){return{retrieve:'Retrieval (RAG)',monitoring:'Monitoring Agent',kg_query:'Knowledge Graph Query',
+ risk:'Risk Scoring',visualizer:'Network Diagram',csco:'CSCO Summary',self_critique:'AI Self-Critique',no_exposure:'No Exposure',alternatives:'Alternative Sourcing'}[n]||n}
+
+function mkStep(s){
+ const t=sType(s.node),mt=[];
+ if(s.seconds!=null)mt.push(s.seconds+'s');
+ if(s.tokens)mt.push(s.tokens+' tok');
+ return `<div class="ti"><span class="td ok">&#x2713;</span>
+  <div class="cd"><div class="cd-h"><h3>${sIcon(s.node)} ${sTitle(s.node)} <span class="sb ${t}">${t}</span></h3>
+  <div class="mt">${mt.map(m=>`<span>${m}</span>`).join('')}</div></div>${bd(s.node,s.data)}</div></div>`;
+}
+
+/* KPI bar */
+function mkKpi(steps){
+ const kg=steps.filter(s=>s.node==='kg_query').pop();
+ const rk=steps.filter(s=>s.node==='risk').pop();
+ if(!kg)return '';
+ const d=kg.data;
+ let h=`<div class="kg">
+  <div class="kp hero kn"><div class="v">${d.disrupted_count}</div><div class="l">Disrupted Suppliers</div></div>
+  <div class="kp"><div class="v" style="color:var(--tx)">${d.per_tier[1]}</div><div class="l">Tier 1</div></div>
+  <div class="kp"><div class="v" style="color:var(--tx)">${d.per_tier[2]}</div><div class="l">Tier 2</div></div>
+  <div class="kp"><div class="v" style="color:var(--tx)">${d.per_tier[3]}</div><div class="l">Tier 3</div></div>
+  <div class="kp"><div class="v" style="color:var(--tx)">${d.per_tier[4]}</div><div class="l">Tier 4</div></div>`;
+ if(rk){
+  const ts=rk.data.top_suppliers;
+  const hc=ts.filter(s=>s.risk_level==='HIGH').length;
+  const mc=ts.filter(s=>s.risk_level==='MEDIUM').length;
+  const lc=ts.filter(s=>s.risk_level==='LOW').length;
+  h+=`<div class="kp kh"><div class="v">${hc}</div><div class="l">High Risk</div></div>
+   <div class="kp km"><div class="v">${mc}</div><div class="l">Medium</div></div>
+   <div class="kp kl"><div class="v">${lc}</div><div class="l">Low</div></div>`;
+ }
+ return h+'</div>';
+}
+
+/* Split attempts */
+function splitA(steps){
+ const a=[];let c=[];
+ for(const s of steps){
+  if(s.node==='human_review'&&s.data.approval==='retry'){c.push(s);a.push(c);c=[]}
+  else c.push(s);
+ }
+ if(c.length)a.push(c);return a;
+}
+
+function dfb(o,n,l){
+ const os=JSON.stringify(o),ns=JSON.stringify(n);
+ if(os===ns)return `<span class="df ds">${l}: no change</span>`;
+ return `<span class="df dr">${l}: ${E(os)}</span><span class="df da">${l}: ${E(ns)}</span>`;
+}
+
+function mkHist(atts){
+ if(atts.length<=1)return '';
+ let h='';
+ for(let i=0;i<atts.length-1;i++){
+  const a=atts[i],rt=a.find(s=>s.node==='human_review'&&s.data.approval==='retry');
+  const m=a.find(s=>s.node==='monitoring'),k=a.find(s=>s.node==='kg_query');
+  const nm=atts[i+1].find(s=>s.node==='monitoring'),nk=atts[i+1].find(s=>s.node==='kg_query');
+  const id='h'+i;
+  h+=`<div class="hd"><span class="hl">Analysis #${i+1}</span></div>
+   ${rt?`<div class="al aw"><span>&#x1f4ac;</span><div><b>Your feedback:</b> <em>"${E(rt.data.retry_feedback)}"</em></div></div>`:''}
+   ${m&&nm?`<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">
+    ${dfb(m.data.countries,nm.data.countries,'Countries')}
+    ${dfb(m.data.industries,nm.data.industries,'Industries')}
+    ${dfb(m.data.companies,nm.data.companies,'Companies')}
+    ${k&&nk?dfb(k.data.disrupted_count,nk.data.disrupted_count,'Disrupted'):''}
+   </div>`:''}
+   <button class="ht" onclick="tg('${id}')"><span id="${id}_a">&#x25b6;</span> Show analysis #${i+1} details</button>
+   <div id="${id}" class="hb shut"><div class="tl" style="margin-top:12px">
+    ${a.filter(s=>s.node!=='human_review').map(s=>mkStep(s)).join('')}
+   </div></div>`;
+ }
+ return h;
+}
+
+function tg(id){
+ const e=$(id);if(!e)return;const a=$(id+'_a');
+ if(e.classList.contains('shut')){e.classList.remove('shut');e.classList.add('op');a.innerHTML='&#x25bc;'}
+ else{e.classList.remove('op');e.classList.add('shut');a.innerHTML='&#x25b6;'}
+}
+
+/* Main render */
+function render(v){
+ const atts=splitA(v.steps), cur=atts[atts.length-1], hasR=atts.length>1;
+ $('kp').innerHTML=mkKpi(v.steps);
+ let h='';
+ if(hasR)h+=mkHist(atts);
+ if(hasR)h+=`<div class="hd"><span class="hl" style="color:var(--grn)">&#x2713; Current &mdash; Analysis #${atts.length}</span></div>`;
+ h+='<div class="tl">';
+ h+=cur.filter(s=>s.node!=='human_review').map(s=>mkStep(s)).join('');
+ if(v.status==='running')h+=`<div class="ti"><span class="td go"><div class="sp" style="width:12px;height:12px;border-width:2px"></div></span>
+  <div class="cd" style="text-align:center;padding:28px"><div class="sp"></div><div class="mu" style="margin-top:8px">Analysing...</div></div></div>`;
+ h+='</div>';
+ $('st').innerHTML=h;
+ if(v.status==='awaiting_review'&&!RS){RS=true;showRv(v.review,atts)}
+ if(v.status!=='awaiting_review')$('rv').innerHTML='';
+ const oc={completed:'oo',no_exposure:'ow',rejected:'ow',error:'oe'}[v.status];
+ const oi={completed:'&#x2705;',no_exposure:'&#x1f7e1;',rejected:'&#x1f6d1;',error:'&#x274c;'}[v.status]||'';
+ $('ot').innerHTML=oc?`<div class="cd oc ${oc}"><span style="font-size:16px">${oi}</span> <b>${v.status.replace('_',' ')}</b> &mdash; ${E(v.error||v.message)}</div>`:'';
+}
+
+const ACT={HIGH:'Replace \u2014 source alternative supplier',MEDIUM:'Increase monitoring',LOW:'Maintain standard operations'};
+
+function showRv(rv,atts){
+ const rc=rv.retry_count||0,mx=rv.max_retries||3,ok=rc<mx;
+ const pm=atts&&atts.length>1?atts[atts.length-2].find(s=>s.node==='monitoring'):null;
+ const cm=atts?atts[atts.length-1].find(s=>s.node==='monitoring'):null;
+ let dh='';
+ if(pm&&cm)dh=`<div class="al ai"><span>&#x1f4ca;</span><div><b>Changes from previous attempt:</b><br>
+  ${dfb(pm.data.countries,cm.data.countries,'Countries')}
+  ${dfb(pm.data.industries,cm.data.industries,'Industries')}
+  ${dfb(pm.data.companies,cm.data.companies,'Companies')}</div></div>`;
+ const sug=rv.ai_suggestions||[],conf=rv.ai_confidence||'';
+ const sugHtml=sug.length?`<div class="al ${conf==='high'?'ae':'ai'}" style="flex-direction:column;gap:8px">
+  <div style="display:flex;align-items:center;gap:8px"><span>&#x1f9e0;</span>
+  <b>AI Self-Critique</b> <span class="pill ${conf==='high'?'pb':'pb'}" style="${conf==='high'?'background:var(--rd);color:#fca5a5;border-color:rgba(239,68,68,.2)':''}">${conf} confidence</span></div>
+  <ul style="margin:0;padding-left:18px;font-size:13px">${sug.map(s=>`<li style="margin-bottom:4px;cursor:pointer" onclick="document.getElementById('rfb').value=this.textContent;document.getElementById('rfb').focus()" title="Click to use as feedback">${E(s)}</li>`).join('')}</ul>
+  <div class="mu">Click a suggestion to auto-fill the feedback box below.</div></div>`:'';
+
+ const mon=cm?cm.data:null;
+ const exHtml=mon?`<details style="margin-bottom:14px"><summary style="cursor:pointer;font-size:12px;font-weight:700;color:var(--tx2)">&#x270f;&#xfe0f; Edit Extraction Directly (skip AI, re-run downstream only)</summary>
+  <div style="margin-top:10px;padding:14px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(255,255,255,.06)">
+  <div style="margin-bottom:8px"><span class="sl">Countries (comma-separated)</span>
+   <input id="ex_c" value="${E((mon.countries||[]).join(', '))}" style="width:100%;font:13px var(--ft);padding:8px 12px;background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);color:var(--tx)"></div>
+  <div style="margin-bottom:8px"><span class="sl">Industries (comma-separated)</span>
+   <input id="ex_i" value="${E((mon.industries||[]).join(', '))}" style="width:100%;font:13px var(--ft);padding:8px 12px;background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);color:var(--tx)"></div>
+  <div style="margin-bottom:8px"><span class="sl">Companies (comma-separated)</span>
+   <input id="ex_co" value="${E((mon.companies||[]).join(', '))}" style="width:100%;font:13px var(--ft);padding:8px 12px;background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);color:var(--tx)"></div>
+  <button class="ba" style="margin-top:8px" onclick='dc("edit_extraction")'>&#x2699;&#xfe0f; Apply &amp; Re-run KG &rarr; Risk &rarr; Summary</button>
+  </div></details>`:''
+
+ $('rv').innerHTML=`<div class="rp">
+  <h3>&#x1f9d1; Human Review ${rc?`<span class="pill pb">Analysis #${rc+1} of ${mx+1}</span>`:''}</h3>
+  ${rc?`<div class="al ai"><span>&#x1f504;</span><div>The AI has <b>re-analysed</b> the article using your feedback (${rc} round${rc>1?'s':''} of corrections). Review the updated extraction below.</div></div>`:''}
+  ${dh}
+  ${sugHtml}
+  ${exHtml}
+  <div style="margin-bottom:14px">
+   <label class="sl" style="margin-bottom:6px;display:block">Executive Summary (editable)</label>
+   <textarea id="rs" rows="4">${E(rv.csco.executive_summary)}</textarea>
+  </div>
+  <div style="overflow-x:auto"><table><tr><th>Supplier</th><th>Score</th><th>Action</th></tr>
+  ${rv.actions.map((a,i)=>`<tr><td style="color:var(--tx);font-weight:600">${E(a.name)}</td><td style="font-weight:700">${a.risk_score}</td>
+  <td><select id="ra${i}">${['HIGH','MEDIUM','LOW'].map(l=>`<option value="${l}" ${l===a.risk_level?'selected':''}>${l}: ${ACT[l]}</option>`).join('')}</select></td></tr>`).join('')}</table></div>
+  <div class="rf">
+   <label>&#x1f4ac; Feedback for AI Re-analysis</label>
+   <textarea id="rfb" placeholder="Tell the AI what to correct, e.g.: 'Japan is only a buyer, not disrupted. Remove it from countries.'"></textarea>
+  </div>
+  <div class="ra">
+   <button class="bg" onclick='dc("approve")'>&#x2705; Approve</button>
+   <button class="ba" onclick='dc("edit")'>&#x270f;&#xfe0f; Approve with Edits</button>
+   ${ok?`<button class="bw" onclick='dc("retry")'>&#x1f504; Send Feedback &amp; Re-analyse (${mx-rc} left)</button>`
+   :`<button disabled>&#x1f504; No re-analyses left</button>`}
+   <button class="br" onclick='dc("reject")'>&#x1f6d1; Discard Analysis</button>
+  </div></div>`;
+ window._rv=rv;
+}
+
+async function dc(d){
+ const rv=window._rv,m={job_id:J,decision:d};
+ if(d==='edit'){
+  m.csco={executive_summary:$('rs').value};
+  m.actions=rv.actions.map((a,i)=>{const l=$('ra'+i).value;return{...a,risk_level:l,action:ACT[l]}});
+ }
+ if(d==='reject')m.reason='Rejected by reviewer.';
+ if(d==='edit_extraction'){
+  const parse=id=>($(id)?$(id).value:'').split(',').map(s=>s.trim()).filter(Boolean);
+  m.monitoring={countries:parse('ex_c'),industries:parse('ex_i'),companies:parse('ex_co')};
+ }
+ if(d==='retry'){
+  const f=($('rfb')?$('rfb').value:'').trim();
+  if(!f){$('rfb').style.borderColor='var(--red)';$('rfb').focus();return}
+  m.reason=f;
+ }
+ $('rv').innerHTML=d==='retry'
+  ?`<div class="cd" style="text-align:center;padding:28px"><div class="sp"></div><div style="margin-top:10px;font-weight:600;color:var(--amb)">&#x1f504; AI is re-analysing with your feedback...</div></div>`
+  :`<div class="cd" style="text-align:center;padding:20px"><div class="sp"></div><div class="mu" style="margin-top:8px">Processing...</div></div>`;
+ const r=await fetch('/api/review',{method:'POST',body:JSON.stringify(m)});
+ if(!(await r.json()).ok){$('rv').innerHTML=`<div class="al ae"><span>&#x274c;</span><div>Could not submit. Try again.</div></div>`;return}
+ RS=false;poll();
+}
+async function showAnalytics(){
+ $('analytics_overlay').style.display='block';
+ $('analytics_body').innerHTML='<div class="sp" style="margin:40px auto"></div>';
+ try{
+  const a=await(await fetch('/api/analytics')).json();
+  const pct=v=>(v*100).toFixed(0)+'%';
+  $('analytics_body').innerHTML=`
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px">
+   <div style="background:var(--s2);border-radius:var(--r);padding:16px;text-align:center">
+    <div style="font-size:24px;font-weight:800;color:var(--tx)">${a.total_jobs}</div><div class="mu">Total Jobs</div></div>
+   <div style="background:var(--s2);border-radius:var(--r);padding:16px;text-align:center">
+    <div style="font-size:24px;font-weight:800;color:var(--amb)">${a.jobs_with_retries}</div><div class="mu">Jobs with Retries</div></div>
+   <div style="background:var(--s2);border-radius:var(--r);padding:16px;text-align:center">
+    <div style="font-size:24px;font-weight:800;color:var(--cy)">${pct(a.retry_rate)}</div><div class="mu">Retry Rate</div></div>
+   <div style="background:var(--s2);border-radius:var(--r);padding:16px;text-align:center">
+    <div style="font-size:24px;font-weight:800;color:var(--tx)">${a.avg_retries}</div><div class="mu">Avg Retries</div></div>
+   <div style="background:var(--s2);border-radius:var(--r);padding:16px;text-align:center">
+    <div style="font-size:24px;font-weight:800;color:var(--pp)">${a.self_critique_used}</div><div class="mu">Self-Critique Runs</div></div>
+   <div style="background:var(--s2);border-radius:var(--r);padding:16px;text-align:center">
+    <div style="font-size:24px;font-weight:800;color:var(--grn)">${a.edit_extraction_count}</div><div class="mu">Direct Edits</div></div>
+  </div>
+  <div style="margin-bottom:16px">
+   <h3 style="font-size:14px;color:var(--tx);margin-bottom:8px">Outcome Distribution</h3>
+   <div style="display:flex;gap:8px;flex-wrap:wrap">
+    ${Object.entries(a.outcomes).filter(([,v])=>v>0).map(([k,v])=>`<span class="ch" style="font-size:12px">${k}: <b>${v}</b></span>`).join('')}
+   </div>
+  </div>
+  ${a.recent_feedback.length?`<div>
+   <h3 style="font-size:14px;color:var(--tx);margin-bottom:8px">Recent Feedback</h3>
+   <div style="max-height:200px;overflow:auto">${a.recent_feedback.map(f=>`<div style="background:var(--s2);border-radius:var(--r);padding:10px 14px;margin-bottom:6px;font-size:13px">
+    <span class="mu">Job ${f.job_id} &middot; Retry #${f.retry_count}</span>
+    <div style="color:var(--tx);margin-top:2px">"${E(f.feedback)}"</div></div>`).join('')}</div></div>`
+   :'<div class="mu">No retry feedback recorded yet. Run some analyses and use the retry feature!</div>'}`;
+ }catch(e){$('analytics_body').innerHTML=`<div style="color:var(--red)">Failed to load analytics: ${e.message}</div>`}
+}
+function closeAnalytics(){$('analytics_overlay').style.display='none'}
+
+init();
+</script></body></html>
