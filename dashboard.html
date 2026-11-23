@@ -222,7 +222,7 @@ pre{white-space:pre-wrap;font:11.5px/1.5 var(--mo);background:var(--s2);
 const $=id=>document.getElementById(id);
 const E=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const C=(a,c='')=>(a&&a.length?a.map(x=>`<span class="ch ${c}">${E(x)}</span>`).join(' '):'<span class="mu">none</span>');
-let J=null,T=null,SC=[],RS=false;
+let J=null,T=null,SC=[],RS=false,KG=null,KGT=null,LASTV=null;
 
 async function init(){
  const s=await(await fetch('/api/status')).json();
@@ -231,6 +231,22 @@ async function init(){
  const d=await(await fetch('/api/scenarios')).json();SC=d.scenarios;
  $('fc').innerHTML=d.grocers.map(g=>`<option>${E(g)}</option>`).join('');
  $('sc').innerHTML=SC.map((s,i)=>`<button class="scn" onclick="pk(${i})">${E(s.title)}</button>`).join('');
+ await refreshKg(false);
+}
+
+/* Knowledge-graph impact: the server computes this itself in the background (see _ensure_kg_comparison
+   in app.py) when it starts with ground-entities on. Poll while it's running and soft-refresh any
+   already-rendered step cards once it lands, without disturbing an in-progress analysis job. */
+async function refreshKg(force=true){
+ if(force){try{await fetch('/api/kg-impact/refresh',{method:'POST'})}catch(e){}}
+ try{KG=await(await fetch('/api/kg-impact')).json()}catch(e){KG={available:false,status:'error',error:String(e)}}
+ if(KG.status==='running'){
+  clearInterval(KGT);
+  KGT=setInterval(async()=>{
+   try{KG=await(await fetch('/api/kg-impact')).json()}catch(e){return}
+   if(KG.status!=='running'){clearInterval(KGT);if(LASTV)render(LASTV)}
+  },8000);
+ }else if(LASTV){render(LASTV)}
 }
 function pk(i){$('art').value=SC[i].article;$('fc').value=SC[i].focal}
 
@@ -252,10 +268,71 @@ function poll(){
  },500);
 }
 
+/* Knowledge-graph grounding impact. The server computes this itself, live, against whichever LLM
+   it's actually running (see _ensure_kg_comparison in app.py) when started with ground-entities on;
+   /api/kg-impact serves the result and refreshKg() polls while a (re)compute is in flight.
+   kgPanel() is reused under Retrieval, Risk Scoring and the Network Diagram, each with the
+   metrics relevant to that step. */
+function kgRecomputeBtn(){
+ return `<button onclick="refreshKg()" style="font-size:10px;padding:3px 9px;margin-left:8px">&#x1f504; Recompute live</button>`;
+}
+function kgEmptyHtml(){
+ if(KG&&KG.status==='running')return `<div class="mu" style="margin-top:8px"><span class="sp" style="width:11px;height:11px;border-width:2px;vertical-align:middle;margin-right:6px"></span>Computing a live baseline-vs-grounding comparison with ${E(KG.current_llm||'the active LLM')} in the background (several minutes, runs once) &mdash; this panel updates automatically when it's done.</div>`;
+ if(KG&&KG.status==='error')return `<div class="mu" style="margin-top:8px;color:var(--red)">Live comparison failed: ${E(KG.error||'unknown error')}. ${kgRecomputeBtn()}</div>`;
+ return `<div class="mu" style="margin-top:8px">Start the server with <code style="background:var(--s2);padding:1px 6px;border-radius:4px">RAG=1 python app.py</code> to compute this live against the active LLM, or run <code style="background:var(--s2);padding:1px 6px;border-radius:4px">python cli.py eval --ground-entities</code> by hand. ${kgRecomputeBtn()}</div>`;
+}
+function kgPanel(title,rows,note){
+ if(!KG||!KG.available)return kgEmptyHtml();
+ const recomputing=KG.status==='running'?`<div class="mu" style="margin-top:6px"><span class="sp" style="width:10px;height:10px;border-width:2px;vertical-align:middle;margin-right:5px"></span>Recomputing live with ${E(KG.current_llm||'the active LLM')}&hellip; numbers below are from the last completed run (${E(KG.llm)}).</div>`:'';
+ return `<div style="margin-top:12px;padding:12px 14px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(255,255,255,.06)">
+  <div class="sl" style="margin-bottom:8px;display:flex;align-items:center;flex-wrap:wrap">&#x1f578;&#xfe0f; ${title} &mdash; ${KG.articles}-article eval set (${E(KG.llm)})${kgRecomputeBtn()}</div>
+  <div style="overflow-x:auto"><table><tr><th></th><th>Without RAG</th><th>With KG Grounding</th></tr>
+  ${rows.map(([l,a,b])=>`<tr><td>${l}</td><td>${a}</td><td style="color:var(--grn);font-weight:700">${b}</td></tr>`).join('')}
+  </table></div>
+  ${note?`<div class="mu" style="margin-top:6px">${note}</div>`:''}
+  ${recomputing}
+ </div>`;
+}
+function kgImpactHtml(){
+ if(!KG||!KG.available)return kgPanel('Knowledge Graph Impact',[]);
+ const wo=KG.without_rag,w=KG.with_kg_grounding;
+ const rows=[['Extraction F1',wo.extraction_f1,w.extraction_f1],
+  ['Exact extraction',wo.exact_extraction,w.exact_extraction],
+  ['Exposure detected',wo.exposure_detected,w.exposure_detected],
+  ['False positives handled',wo.false_positives_handled,w.false_positives_handled]];
+ if('entity_grounding_precision' in w)rows.push(['Company name match P / R','n/a &mdash; no KG check',
+  `${w.entity_grounding_precision} / ${w.entity_grounding_recall}`]);
+ return kgPanel('Knowledge Graph Impact',rows,'Without grounding the model has no way to verify a company name against the supply network; with it, every named company is checked against the graph before extraction is trusted.');
+}
+function kgRiskHtml(){
+ if(!KG||!KG.available)return kgPanel('RAG Impact on Risk Scoring',[]);
+ const wo=KG.without_rag,w=KG.with_kg_grounding;
+ const rows=[['Top Tier-1 supplier match',wo.top_supplier_match,w.top_supplier_match],
+  ['Top HIGH-risk supplier match',wo.top_high_supplier_match,w.top_high_supplier_match],
+  ['Disrupted-supplier count match',wo.disrupted_count_match,w.disrupted_count_match]];
+ return kgPanel('RAG Impact on Risk Scoring',rows,'Risk scores themselves are computed deterministically from the extracted criteria (no LLM in this step); grounding helps indirectly, by giving the Monitoring step verified company/industry/country names so the risk engine starts from more accurate inputs.');
+}
+function kgNetworkHtml(){
+ if(!KG||!KG.available)return kgPanel('RAG Impact on Network Diagram',[]);
+ const wo=KG.without_rag,w=KG.with_kg_grounding;
+ const rows=[['Disrupted-supplier count match',wo.disrupted_count_match,w.disrupted_count_match],
+  ['Exposure detected',wo.exposure_detected,w.exposure_detected]];
+ return kgPanel('RAG Impact on Network Diagram',rows,'The diagram only draws what the knowledge-graph traversal (BFS) found; its accuracy is capped by how correctly Monitoring extracted countries/industries/companies, which grounding helps with.');
+}
+
 /* Step body */
 function bd(n,d){
- if(n==='retrieve')return `${d.examples.length?`<div style="margin-bottom:6px"><span class="sl">Similar Examples</span> ${C(d.examples.map(e=>e.id+' ('+e.score+')'))}</div>`:''}
-  ${d.grounding?`<div><span class="sl">Companies Named</span> ${C(d.entities)}</div>`:''}`;
+ if(n==='retrieve'){
+  const fn=d.fake_news;
+  const fnBadge=fn?`<span class="ch" style="${fn.verdict==='fake'?'background:var(--rd);color:#fca5a5;border-color:rgba(239,68,68,.2)':'background:var(--gd);color:#6ee7b7;border-color:rgba(16,185,129,.2)'};font-weight:700">
+    ${fn.verdict==='fake'?'&#x26a0;&#xfe0f; Likely Fake / False Positive':'&#x2705; Likely Genuine Disruption'}</span>
+   <span class="mu">${fn.false_positive_votes}/${fn.total_votes} nearest historical examples were false positives &middot; closest match ${E(fn.top_match)} (score ${fn.top_score})</span>`
+   :'<span class="mu">RAG examples are off &mdash; no fake-news check available for this run.</span>';
+  return `<div style="margin-bottom:10px"><span class="sl">Fake News Check</span><div style="margin-top:4px">${fnBadge}</div></div>
+   ${d.examples.length?`<details style="margin-bottom:6px"><summary class="mu" style="cursor:pointer;font-size:11px">Show matched examples</summary>
+    <div style="margin-top:6px">${C(d.examples.map(e=>e.id+' ['+e.kind+'] ('+e.score+')'))}</div></details>`:''}
+   ${d.grounding?`<div><span class="sl">Companies Named</span> ${C(d.entities)}</div>${kgImpactHtml()}`:''}`;
+ }
  if(n==='monitoring')return `<div style="margin-bottom:10px;display:flex;gap:8px;flex-wrap:wrap">
   <span class="ch" style="${d.is_disruption?'background:var(--rd);color:#fca5a5;border-color:rgba(239,68,68,.2)':'background:var(--gd);color:#6ee7b7;border-color:rgba(16,185,129,.2)'};font-weight:700">
   ${d.is_disruption?'&#x1f6a8; Disruption':'&#x2705; Clear'}</span>
@@ -277,8 +354,9 @@ function bd(n,d){
   <td>${s.components.exposure_breadth}</td><td>${s.components.dependency_ratio}</td>
   <td>${s.components.downstream_criticality}</td><td>${s.components.tier1_centrality}</td>
   <td>${s.components.exposure_depth}</td></tr>`).join('')}</table></div>
-  <div class="mu" style="margin-top:8px">HIGH &ge; ${d.thresholds.HIGH} &middot; MEDIUM &ge; ${d.thresholds.MEDIUM}</div>`;
- if(n==='visualizer')return `<iframe src="/api/network/${J}"></iframe>`;
+  <div class="mu" style="margin-top:8px">HIGH &ge; ${d.thresholds.HIGH} &middot; MEDIUM &ge; ${d.thresholds.MEDIUM}</div>
+  ${kgRiskHtml()}`;
+ if(n==='visualizer')return `<iframe src="/api/network/${J}"></iframe>${kgNetworkHtml()}`;
  if(n==='self_critique'){
   const ss=d.suggestions||[],cf=d.confidence||'';
   return ss.length?`<div style="margin-bottom:6px"><span class="ch ${cf==='high'?'tH':'tM'}">${cf} confidence</span></div>
@@ -386,6 +464,7 @@ function tg(id){
 
 /* Main render */
 function render(v){
+ LASTV=v;
  const atts=splitA(v.steps), cur=atts[atts.length-1], hasR=atts.length>1;
  $('kp').innerHTML=mkKpi(v.steps);
  let h='';

@@ -16,6 +16,7 @@ from urllib.parse import urlparse
 
 from langgraph.types import Command
 
+from scpoc.graph import OUT_DIR
 from scpoc.pipeline import build_app
 from scpoc.schemas import State
 from scpoc import tools
@@ -55,7 +56,14 @@ def _summarise(node: str, u: dict) -> dict:
     """Turn a node's state update into a small JSON-friendly dict for the page."""
     if node == "retrieve":
         r = u["retrieved"]
-        return {"examples": [{"id": e["id"], "kind": e["kind"], "score": e["score"]} for e in r.get("examples", [])],
+        examples = [{"id": e["id"], "kind": e["kind"], "score": e["score"]} for e in r.get("examples", [])]
+        fake_news = None
+        if examples:
+            fp_votes = sum(1 for e in examples if e["kind"] == "false_positive")
+            fake_news = {"verdict": "fake" if fp_votes * 2 > len(examples) else "genuine",
+                        "false_positive_votes": fp_votes, "total_votes": len(examples),
+                        "top_match": examples[0]["id"], "top_score": examples[0]["score"]}
+        return {"examples": examples, "fake_news": fake_news,
                 "entities": [f"{e['name']} ({e['industry']}, {e['country']})" for e in r.get("entities", [])],
                 "grounding": "entities" in r}
     if node == "monitoring":
@@ -183,6 +191,94 @@ def _analytics() -> dict:
     }
 
 
+# ------------------------------------------------------------------ KG grounding impact (from saved `cli.py eval` runs)
+# When the server starts with ground-entities on (RAG=1 or GROUND_ENTITIES=1), it runs this pair of
+# eval configs itself, in the background, against whichever LLM is actually configured (Qwen3-8B,
+# Azure, or the offline mock) — so the comparison reflects the real model, not stale sample data.
+KG_LOCK = threading.Lock()
+KG_STATUS: dict = {"status": "idle", "error": None}      # idle | running | done | error
+
+
+def _load_eval(config: str) -> dict | None:
+    suffix = "" if config == "baseline" else "_" + config
+    p = OUT_DIR / f"eval_results{suffix}.json"
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
+
+
+def _kg_cache_matches(llm_name: str) -> bool:
+    base, ge = _load_eval("baseline"), _load_eval("ground-entities")
+    return bool(base and ge and base.get("llm") == llm_name and ge.get("llm") == llm_name)
+
+
+def _compute_kg_comparison() -> None:
+    """Run the 20-article eval twice (baseline, then --ground-entities) against the same LLM
+    the live pipeline uses, and save the results where _kg_impact() reads them from."""
+    with KG_LOCK:
+        if KG_STATUS["status"] == "running":
+            return
+        KG_STATUS.update(status="running", error=None)
+    try:
+        from scpoc import evaluate
+        mock = PIPELINE.llm.name == "offline mock"
+        evaluate.main(mock=mock, ground_entities=False)
+        evaluate.main(mock=mock, ground_entities=True)
+        KG_STATUS.update(status="done", error=None)
+    except Exception as e:
+        traceback.print_exc()
+        KG_STATUS.update(status="error", error=f"{type(e).__name__}: {e}")
+
+
+def _ensure_kg_comparison() -> None:
+    """Called once at startup when ground-entities is on. Skips the (possibly expensive, real-API)
+    recompute if the cached eval files already match the LLM in use; otherwise runs it in a
+    background thread so server startup isn't blocked."""
+    if _kg_cache_matches(PIPELINE.llm.name):
+        KG_STATUS.update(status="done", error=None)
+        return
+    threading.Thread(target=_compute_kg_comparison, daemon=True).start()
+
+
+def _kg_impact() -> dict:
+    """Compare the saved baseline eval run against the saved ground-entities run, so the
+    dashboard can show, with real numbers, what grounding entities against the knowledge
+    graph buys you. Regenerated automatically at startup when ground-entities is on
+    (see _ensure_kg_comparison), or by hand with `python cli.py eval [--mock]` and
+    `python cli.py eval [--mock] --ground-entities`, or on demand via POST /api/kg-impact/refresh."""
+    current_llm = PIPELINE.llm.name if PIPELINE else None
+    base, ge = _load_eval("baseline"), _load_eval("ground-entities")
+    if not base or not ge:
+        return {"available": False, "status": KG_STATUS["status"], "error": KG_STATUS.get("error"),
+               "current_llm": current_llm}
+    bs, gs = base["summary"], ge["summary"]
+    out = {
+        "available": True, "status": KG_STATUS["status"], "error": KG_STATUS.get("error"),
+        "current_llm": current_llm, "articles": bs["articles"], "llm": ge["llm"],
+        "without_rag": {
+            "extraction_f1": bs["extraction"]["overall"]["f1"],
+            "exact_extraction": bs["extraction_exact_match"],
+            "exposure_detected": bs["network_query"]["exposure_detected"],
+            "false_positives_handled": bs["false_positives"]["correctly_ended_no_exposure"],
+            "disrupted_count_match": bs["network_query"]["disrupted_count_match"],
+            "top_supplier_match": bs["risk"]["top_supplier_match"],
+            "top_high_supplier_match": bs["risk"]["top_high_supplier_match"],
+        },
+        "with_kg_grounding": {
+            "extraction_f1": gs["extraction"]["overall"]["f1"],
+            "exact_extraction": gs["extraction_exact_match"],
+            "exposure_detected": gs["network_query"]["exposure_detected"],
+            "false_positives_handled": gs["false_positives"]["correctly_ended_no_exposure"],
+            "disrupted_count_match": gs["network_query"]["disrupted_count_match"],
+            "top_supplier_match": gs["risk"]["top_supplier_match"],
+            "top_high_supplier_match": gs["risk"]["top_high_supplier_match"],
+        },
+    }
+    eg = gs.get("retrieval", {}).get("entity_grounding")
+    if eg:
+        out["with_kg_grounding"]["entity_grounding_precision"] = eg["precision"]
+        out["with_kg_grounding"]["entity_grounding_recall"] = eg["recall"]
+    return out
+
+
 # ------------------------------------------------------------------ HTTP
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, fmt, *args):             # keep the console quiet
@@ -217,6 +313,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._json({"error": "no network yet"}, 404)
         if path == "/api/analytics":
             return self._json(_analytics())
+        if path == "/api/kg-impact":
+            return self._json(_kg_impact())
         self._json({"error": "not found"}, 404)
 
     def do_POST(self):
@@ -243,6 +341,9 @@ class Handler(BaseHTTPRequestHandler):
                 return self._json({"error": "decision must be approve, edit, reject, retry or edit_extraction"}, 400)
             resume_job(job, {k: v for k, v in body.items() if k in ("decision", "csco", "actions", "reason", "monitoring")})
             return self._json({"ok": True})
+        if path == "/api/kg-impact/refresh":
+            threading.Thread(target=_compute_kg_comparison, daemon=True).start()
+            return self._json({"ok": True})
         self._json({"error": "not found"}, 404)
 
 
@@ -259,6 +360,8 @@ def main():
                          ground_entities=on("GROUND_ENTITIES") or on("RAG"))
     rag_on = [k for k, v in PIPELINE.rag.items() if v]
     kind = PIPELINE.llm.name + (f", RAG: {'+'.join(rag_on)}" if rag_on else "")
+    if PIPELINE.rag.get("ground_entities"):
+        _ensure_kg_comparison()      # live baseline-vs-grounding comparison, computed in the background
     server = ThreadingHTTPServer((HOST, PORT), Handler)
     print(f"Supply chain disruption monitor on http://{HOST}:{PORT}  ({kind})  - Ctrl+C to stop")
     try:
