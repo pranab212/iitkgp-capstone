@@ -189,6 +189,23 @@ def tier1_risk_scores(bfs: dict, top_n: int = 10, g: nx.DiGraph | None = None) -
         }
         score = sum(WEIGHTS[k] * v for k, v in comp.items())
         d = g.nodes[t1]
+        # human-readable reasoning for why this Tier-1 is scored this way
+        reasons = []
+        if comp["exposure_breadth"] >= 0.4:
+            reasons.append(f"{len(hit)} disrupted supplier(s) upstream, weighted by proximity")
+        if comp["dependency_ratio"] >= 0.5:
+            if t1 in disrupted:
+                reasons.append("directly disrupted (is itself in the affected region/industry)")
+            else:
+                reasons.append(f"{round(dependency*100):.0f}% of its direct inputs are disrupted or lead to disruption")
+        if comp["downstream_criticality"] >= 0.5:
+            reasons.append("high criticality — a critical node in the network (PageRank/degree)")
+        if comp["tier1_centrality"] >= 0.5:
+            reasons.append("high centrality among Tier-1 suppliers — many connections")
+        if comp["exposure_depth"] >= 0.5:
+            reasons.append(f"disruption reaches deep (tier {max(hops[n]+1 for n in hit)})")
+        if not reasons:
+            reasons.append("moderate exposure across all factors")
         scored.append({
             "company_id": t1, "name": d["name"], "country": d["country"], "industry": d["industry"],
             "product_supplied": g.edges[t1, focal]["product"],
@@ -196,6 +213,7 @@ def tier1_risk_scores(bfs: dict, top_n: int = 10, g: nx.DiGraph | None = None) -
             "risk_level": "HIGH" if score >= HIGH else "MEDIUM" if score >= MEDIUM else "LOW",
             "disrupted_upstream": len(hit), "upstream_total": len(upstream),
             "components": {k: round(v, 3) for k, v in comp.items()},
+            "reasoning": "; ".join(reasons),
         })
     scored.sort(key=lambda r: r["risk_score"], reverse=True)
     return {"focal": bfs["focal"], "weights": WEIGHTS,
@@ -298,12 +316,18 @@ def plot_network(bfs: dict, risk: dict | None = None, out: str | None = None,
     bg_colour = "#0c0e14"
     surface = "#131620"
 
+    # Build lookup for risk reasoning
+    reasoning_map = {r["company_id"]: r.get("reasoning", "") for r in (risk or {}).get("top_suppliers", [])}
+
     svg = []
     for (s, c), prod in edges.items():
         (x1, y1), (x2, y2) = pos[s], pos[c]
+        edge_tip = (f'{html.escape(nodes[s]["name"])} supplies {html.escape(prod or "goods")} '
+                    f'to {html.escape(nodes[c]["name"])}')
+        if s in disrupted:
+            edge_tip += ' ⚠ (supplier is disrupted — this link is at risk)'
         svg.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{edge_colour}" stroke-width="1">'
-                   f'<title>{html.escape(nodes[s]["name"])} → {html.escape(nodes[c]["name"])}: '
-                   f'{html.escape(prod)}</title></line>')
+                   f'<title>{edge_tip}</title></line>')
     for n, (x, y) in pos.items():
         s = nodes[n]
         fill = (focal_colour if s["tier"] == 0
@@ -313,7 +337,11 @@ def plot_network(bfs: dict, risk: dict | None = None, out: str | None = None,
         glow = f' filter="url(#glow)"' if n in disrupted or s["tier"] == 0 else ""
         tip = f'{s["name"]} | Tier-{s["tier"]} | {s["country"]} | {s["industry"]}'
         if n in level:
-            tip += f' | risk {level[n]}'
+            tip += f' | Risk: {level[n]}'
+        if n in disrupted:
+            tip += f' | DISRUPTED — matches disruption criteria (country/industry/company)'
+        if n in reasoning_map and reasoning_map[n]:
+            tip += f' | Why: {reasoning_map[n]}'
         svg.append(f'<g><circle cx="{x}" cy="{y}" r="7" fill="{fill}" opacity="0.9"{glow}/>'
                    f'<text x="{x + 11}" y="{y + 4}" font-size="11" fill="{text_colour}">'
                    f'{html.escape(s["name"][:26])}</text>'

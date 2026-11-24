@@ -107,3 +107,17 @@ Rules: use only the numbers and names provided; do not invent suppliers, scores 
 actions; do not change any recommended action. Reply with JSON matching the schema."""
 
 CSCO_USER = "Disruption:\n{disruption}\n\nNetwork exposure:\n{exposure}\n\nTop Tier-1 risks and actions:\n{actions}"
+
+CSCO_USER_WITH_CONTEXT = """{rag_context}
+
+Now write the executive summary for the following disruption.
+
+""" + CSCO_USER
+
+CSCO_RAG_CONTEXT = """Context from similar past disruptions and verified entities:
+
+{context}
+
+Use this context to inform your summary. If past disruptions show a known pattern
+(e.g., similar events typically caused X weeks of delay), mention it briefly.
+Only reference specifics you can verify from the data above."""

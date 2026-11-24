@@ -81,7 +81,9 @@ def _summarise(node: str, u: dict) -> dict:
         return {"exposed_tier1_count": r["exposed_tier1_count"], "top_suppliers": r["top_suppliers"],
                 "weights": r["weights"], "thresholds": r["thresholds"]}
     if node == "csco":
-        return u["csco"].model_dump()
+        d = u["csco"].model_dump()
+        d["rag_enhanced"] = bool(PIPELINE and PIPELINE.rag and any(PIPELINE.rag.values()))
+        return d
     if node == "no_exposure":
         return {"message": u["message"]}
     if node == "alternatives":

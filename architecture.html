@@ -19,11 +19,11 @@ backdrop-filter:blur(20px);border-bottom:1px solid var(--brd);padding:20px 0;pos
 header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 header h1{font-size:22px;font-weight:800;letter-spacing:-.5px;display:flex;align-items:center;gap:10px}
 header h1 span{font-size:18px}
-.sub{color:var(--tx2);font-size:13px;max-width:540px}
+.sub{color:var(--tx2);font-size:13px;max-width:620px}
 main{padding:32px 0 60px}
 
 /* Overview cards */
-.overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:40px}
+.overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:40px}
 .ov-card{background:var(--s1);border:1px solid var(--brd);border-radius:var(--r);padding:18px;text-align:center;transition:transform .2s,border-color .2s}
 .ov-card:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.12)}
 .ov-card .num{font-size:28px;font-weight:800;line-height:1.2}
@@ -53,6 +53,7 @@ margin-bottom:8px;overflow:hidden;cursor:pointer;transition:border-color .2s,box
 .b-tool{background:var(--cybg);color:var(--cy);border:1px solid rgba(34,211,238,.15)}
 .b-human{background:var(--ambbg);color:var(--amb);border:1px solid rgba(251,191,36,.15)}
 .b-rag{background:var(--bluebg);color:var(--blue);border:1px solid rgba(96,165,250,.15)}
+.b-llm-rag{background:linear-gradient(135deg,var(--ppbg),var(--bluebg));color:var(--pp);border:1px solid rgba(167,139,250,.2)}
 .chevron{color:var(--tx3);font-size:18px;transition:transform .2s}
 .step-card.open .chevron{transform:rotate(180deg)}
 .step-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
@@ -86,6 +87,8 @@ margin-bottom:8px;overflow:hidden;cursor:pointer;transition:border-color .2s,box
 .t-human .step-connector{background:var(--amb)}
 .t-rag .step-dot{background:var(--bluebg);border-color:var(--blue);color:var(--blue)}
 .t-rag .step-connector{background:var(--blue)}
+.t-llm-rag .step-dot{background:linear-gradient(135deg,var(--ppbg),var(--bluebg));border-color:var(--pp);color:var(--pp)}
+.t-llm-rag .step-connector{background:linear-gradient(to bottom,var(--pp),var(--blue))}
 
 /* Feedback arrows */
 .fb-section{margin-top:32px;padding:24px;background:var(--s1);border:1px solid var(--brd);border-radius:var(--r)}
@@ -97,6 +100,15 @@ margin-bottom:8px;overflow:hidden;cursor:pointer;transition:border-color .2s,box
 .fb-card p{font-size:12px;color:var(--tx2);line-height:1.6}
 .fb-card .arrow{font-size:11px;color:var(--amb);font-weight:600;margin-top:8px;display:block}
 
+/* RAG flow diagram */
+.rag-flow{background:var(--s1);border:1px solid var(--brd);border-radius:var(--r);padding:24px;margin-bottom:32px}
+.rag-flow h3{font-size:15px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.rag-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.rag-card{background:var(--s2);border:1px solid var(--brd);border-radius:var(--r);padding:16px}
+.rag-card h4{font-size:13px;font-weight:700;margin-bottom:6px;color:var(--blue)}
+.rag-card p{font-size:12px;color:var(--tx2);line-height:1.6}
+.rag-card .target{font-size:11px;color:var(--pp);font-weight:600;margin-top:8px}
+
 /* Tech stack */
 .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
 .tech{background:var(--s1);border:1px solid var(--brd);border-radius:var(--r);padding:14px;text-align:center}
@@ -107,6 +119,7 @@ margin-bottom:8px;overflow:hidden;cursor:pointer;transition:border-color .2s,box
 @media(max-width:600px){
   .io-grid{grid-template-columns:1fr}
   .fb-grid{grid-template-columns:1fr}
+  .rag-cards{grid-template-columns:1fr}
   header h1{font-size:18px}
   .overview{grid-template-columns:repeat(2,1fr)}
 }
@@ -118,7 +131,7 @@ margin-bottom:8px;overflow:hidden;cursor:pointer;transition:border-color .2s,box
 <div class="wrap">
   <div>
     <h1><span>⚡</span> Supply Chain Disruption Monitor</h1>
-    <p class="sub">Agentic AI pipeline that reads news articles, identifies disrupted suppliers across a multi-tier network, scores risk, and recommends actions — with human-AI feedback loop.</p>
+    <p class="sub">Agentic AI pipeline with RAG-enhanced extraction and summarisation, risk scoring with human-readable reasoning, and human-AI feedback loop for iterative refinement.</p>
   </div>
 </div>
 </header>
@@ -129,9 +142,41 @@ margin-bottom:8px;overflow:hidden;cursor:pointer;transition:border-color .2s,box
 <div class="overview">
   <div class="ov-card"><div class="num" style="color:var(--pp)">3</div><div class="lbl">LLM Steps</div></div>
   <div class="ov-card"><div class="num" style="color:var(--cy)">5</div><div class="lbl">Deterministic Tools</div></div>
+  <div class="ov-card"><div class="num" style="color:var(--blue)">2</div><div class="lbl">RAG-Enhanced Steps</div></div>
   <div class="ov-card"><div class="num" style="color:var(--amb)">5</div><div class="lbl">Review Actions</div></div>
   <div class="ov-card"><div class="num" style="color:var(--grn)">4</div><div class="lbl">Tier Depth</div></div>
   <div class="ov-card"><div class="num" style="color:var(--tx)">31</div><div class="lbl">Tests Passing</div></div>
+</div>
+
+<!-- RAG Flow -->
+<div class="section">
+  <div class="section-hdr"><h2>📚 RAG Integration</h2><div class="line"></div></div>
+  <p style="font-size:13px;color:var(--tx2);margin-bottom:16px">Retrieval-Augmented Generation enhances two LLM steps. The RAG layer is deterministic (BM25 + substring matching) — no vector database or embeddings API.</p>
+  <div class="rag-flow">
+    <h3><span style="font-size:18px">🔍</span> How RAG Feeds Into the Pipeline</h3>
+    <div class="rag-cards">
+      <div class="rag-card">
+        <h4>BM25 Exemplar Search</h4>
+        <p>37 labeled articles indexed with BM25. For each new article, the top 3 by keyword similarity are selected as dynamic few-shot examples.</p>
+        <div class="target">→ Monitoring Agent prompt + CSCO Summary prompt</div>
+      </div>
+      <div class="rag-card">
+        <h4>Entity Grounding</h4>
+        <p>Company names in the article are matched against 2,900 nodes in the knowledge graph (exact + fuzzy). Matched companies get their verified industry and country.</p>
+        <div class="target">→ Monitoring Agent prompt + CSCO Summary prompt</div>
+      </div>
+      <div class="rag-card">
+        <h4>Monitoring Agent</h4>
+        <p>Receives examples showing "how similar articles were correctly analysed" + grounded entity records. Prevents over-generalization and buyer/producer confusion.</p>
+        <div class="target">Result: more precise extraction</div>
+      </div>
+      <div class="rag-card">
+        <h4>CSCO Summary</h4>
+        <p>Receives the same RAG context so the executive summary references verified entities and patterns from similar past disruptions.</p>
+        <div class="target">Result: more informed executive summary</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Pipeline Steps -->
@@ -161,11 +206,11 @@ margin-bottom:8px;overflow:hidden;cursor:pointer;transition:border-color .2s,box
       <div class="fb-card" onclick="this.classList.toggle('open')">
         <h4>🔄 Send Feedback & Re-analyse</h4>
         <p>Write what's wrong (e.g., "Japan is only a buyer"). The AI re-reads the article with this feedback injected into the prompt. Up to 3 rounds.</p>
-        <span class="arrow">→ monitoring (full re-run with feedback)</span>
+        <span class="arrow">→ monitoring (full re-run with feedback + RAG)</span>
       </div>
       <div class="fb-card" onclick="this.classList.toggle('open')">
         <h4>⚙️ Edit Extraction Directly</h4>
-        <p>Fix countries/industries/companies by hand. Skips the LLM entirely — only re-runs KG query, risk, visualization, and summary.</p>
+        <p>Fix countries/industries/companies by hand. Skips the LLM entirely — only re-runs KG query, risk scoring (with reasoning), visualization, and summary.</p>
         <span class="arrow">→ kg_query (skips LLM, much faster)</span>
       </div>
       <div class="fb-card" onclick="this.classList.toggle('open')">
@@ -177,15 +222,71 @@ margin-bottom:8px;overflow:hidden;cursor:pointer;transition:border-color .2s,box
   </div>
 </div>
 
+<!-- Risk Reasoning -->
+<div class="section">
+  <div class="section-hdr"><h2>📊 Risk Scoring with Reasoning</h2><div class="line"></div></div>
+  <div style="background:var(--s1);border:1px solid var(--brd);border-radius:var(--r);padding:24px">
+    <p style="font-size:13px;color:var(--tx2);margin-bottom:16px">Every Tier-1 supplier gets a risk score (0–1) with a human-readable explanation of <em>why</em> it's scored that way. The formula:</p>
+    <pre style="background:var(--s2);padding:16px;border-radius:8px;font-size:13px;color:var(--grn);border:1px solid var(--brd);margin-bottom:16px">score = 0.35 × breadth + 0.25 × dependency + 0.20 × criticality + 0.10 × centrality + 0.10 × depth</pre>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+      <div style="background:var(--s2);border:1px solid var(--brd);border-radius:8px;padding:14px">
+        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:4px">Breadth (35%)</div>
+        <div style="font-size:12px;color:var(--tx2)">How many disrupted suppliers sit upstream, weighted by proximity</div>
+      </div>
+      <div style="background:var(--s2);border:1px solid var(--brd);border-radius:8px;padding:14px">
+        <div style="font-size:13px;font-weight:700;color:var(--amb);margin-bottom:4px">Dependency (25%)</div>
+        <div style="font-size:12px;color:var(--tx2)">Share of this Tier-1's direct inputs that are disrupted or lead to disruption</div>
+      </div>
+      <div style="background:var(--s2);border:1px solid var(--brd);border-radius:8px;padding:14px">
+        <div style="font-size:13px;font-weight:700;color:var(--pp);margin-bottom:4px">Criticality (20%)</div>
+        <div style="font-size:12px;color:var(--tx2)">PageRank and degree centrality of the most critical disrupted node upstream</div>
+      </div>
+      <div style="background:var(--s2);border:1px solid var(--brd);border-radius:8px;padding:14px">
+        <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:4px">Centrality (10%)</div>
+        <div style="font-size:12px;color:var(--tx2)">How well-connected this Tier-1 is relative to other Tier-1 suppliers</div>
+      </div>
+      <div style="background:var(--s2);border:1px solid var(--brd);border-radius:8px;padding:14px">
+        <div style="font-size:13px;font-weight:700;color:var(--cy);margin-bottom:4px">Depth (10%)</div>
+        <div style="font-size:12px;color:var(--tx2)">How deep in the supply chain the disruption reaches (Tier-2, 3, 4)</div>
+      </div>
+    </div>
+    <div style="margin-top:16px;padding:14px;background:var(--s2);border:1px solid var(--brd);border-radius:8px">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--tx3);margin-bottom:6px">Example Reasoning Output</div>
+      <div style="font-size:13px;color:var(--tx2);line-height:1.7">
+        <span style="color:var(--tx);font-weight:600">Sakri Packaging 020</span>: <span style="color:var(--red);font-weight:700">HIGH</span> (0.613) —
+        directly disrupted (is itself in the affected region/industry); high criticality — a critical node in the network; high centrality among Tier-1 suppliers
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Network Diagram -->
+<div class="section">
+  <div class="section-hdr"><h2>🌐 Network Diagram with Connection Reasoning</h2><div class="line"></div></div>
+  <div style="background:var(--s1);border:1px solid var(--brd);border-radius:var(--r);padding:24px">
+    <p style="font-size:13px;color:var(--tx2);margin-bottom:16px">The network diagram shows the supply chain graph with nodes colored by risk level. Every node and edge has reasoning tooltips:</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="background:var(--s2);border:1px solid var(--brd);border-radius:8px;padding:14px">
+        <div style="font-size:13px;font-weight:700;color:var(--cy);margin-bottom:6px">Hover a Node</div>
+        <div style="font-size:12px;color:var(--tx2)">Shows: name, tier, country, industry, risk level, and <em>reasoning</em> (why it's scored this way). Disrupted nodes show which criteria they match.</div>
+      </div>
+      <div style="background:var(--s2);border:1px solid var(--brd);border-radius:8px;padding:14px">
+        <div style="font-size:13px;font-weight:700;color:var(--grn);margin-bottom:6px">Hover an Edge</div>
+        <div style="font-size:12px;color:var(--tx2)">Shows: "X supplies [product] to Y". If the supplier is disrupted, adds "⚠ this link is at risk" so you can trace the disruption path.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Tech Stack -->
 <div class="section">
   <div class="section-hdr"><h2>🛠 Tech Stack</h2><div class="line"></div></div>
   <div class="tech-grid">
     <div class="tech"><div class="name">LangGraph</div><div class="role">Pipeline orchestration, interrupt, graph cycles</div></div>
-    <div class="tech"><div class="name">Qwen3-8B</div><div class="role">LLM for extraction & summary</div></div>
+    <div class="tech"><div class="name">Qwen3-8B</div><div class="role">LLM for extraction, summary & self-critique</div></div>
     <div class="tech"><div class="name">Pydantic</div><div class="role">Strict JSON schema validation</div></div>
     <div class="tech"><div class="name">NetworkX</div><div class="role">Supply chain knowledge graph</div></div>
-    <div class="tech"><div class="name">BM25</div><div class="role">RAG exemplar retrieval</div></div>
+    <div class="tech"><div class="name">BM25</div><div class="role">RAG exemplar retrieval (pure Python)</div></div>
     <div class="tech"><div class="name">Python http.server</div><div class="role">Zero-dependency web server</div></div>
   </div>
 </div>
@@ -195,34 +296,34 @@ margin-bottom:8px;overflow:hidden;cursor:pointer;transition:border-color .2s,box
 <script>
 const STEPS = [
   {num:'0', title:'RAG Retrieval', type:'rag', icon:'🔍', opt:true,
-   desc:'BM25 keyword search picks the 3 most similar solved examples from a corpus of 37 labeled articles. Entity grounding looks up company names mentioned in the article against the knowledge graph.',
+   desc:'BM25 keyword search picks the 3 most similar solved examples from a corpus of 37 labeled articles. Entity grounding looks up company names mentioned in the article against the knowledge graph. This context is shared with both LLM steps (Monitoring + CSCO).',
    inputs:['News article text','Exemplar corpus (37 labeled articles)','Knowledge graph (2,900 companies)'],
    outputs:['Top 3 similar examples with BM25 scores','Grounded company entities with industry & country','Warnings (e.g., "company X is the grocer, not a supplier")'],
-   routes:[]},
-  {num:'1', title:'Monitoring Agent', type:'llm', icon:'🤖',
-   desc:'The LLM reads the article and extracts structured disruption information as strict JSON. On a retry, the reviewer\'s feedback is injected into the prompt so the AI corrects specific issues.',
-   inputs:['News article text','RAG context (if enabled)','Retry feedback & previous extraction (if re-analysing)'],
-   outputs:['is_disruption (boolean)','disruption_type (geopolitical, natural_disaster, etc.)','summary (one-line)','countries[ ], industries[ ], companies[ ]'],
+   routes:[{label:'Context → Monitoring Agent', cls:'r-blue'},{label:'Context → CSCO Summary', cls:'r-blue'}]},
+  {num:'1', title:'Monitoring Agent', type:'llm-rag', icon:'🤖',
+   desc:'The LLM reads the article and extracts structured disruption information as strict JSON using Chain of Thought reasoning. When RAG is on, the prompt includes similar solved examples and grounded entity records. On a retry, the reviewer\'s feedback is also injected.',
+   inputs:['News article text','RAG: similar solved examples (BM25)','RAG: grounded company entities','Retry feedback & previous extraction (if re-analysing)'],
+   outputs:['reasoning (Chain of Thought)','is_disruption (boolean)','disruption_type (geopolitical, natural_disaster, etc.)','summary (one-line)','countries[ ], industries[ ], companies[ ]'],
    routes:[{label:'Not a disruption → No Exposure → END', cls:'r-red'}]},
   {num:'2', title:'Knowledge Graph Query', type:'tool', icon:'🕸',
    desc:'Resolves extracted country/industry/company names to graph entities. Then BFS traversal finds every disrupted supplier from Tier-1 through Tier-4, with full supply chain paths back to the grocer.',
    inputs:['Extracted countries, industries, companies','NetworkX directed graph (2,900 nodes, 3 grocers)'],
-   outputs:['disrupted_count','Tier breakdown (per_tier 1–4)','Supply chain paths','Unresolved names (not in graph)','Focal company info'],
+   outputs:['disrupted_count','Tier breakdown (per_tier 1–4)','Supply chain paths with product at each link','Unresolved names (not in graph)','Focal company info'],
    routes:[{label:'0 disrupted suppliers → No Exposure → END', cls:'r-red'}]},
-  {num:'3', title:'Risk Scoring', type:'tool', icon:'📊',
-   desc:'Scores each exposed Tier-1 supplier: score = 0.35×breadth + 0.25×dependency + 0.20×criticality + 0.10×centrality + 0.10×depth. Assigns HIGH (≥0.60), MEDIUM (0.45–0.59), or LOW (<0.45) and an action.',
-   inputs:['BFS disrupted suppliers & chain data','Graph structure for centrality','Configurable weights & thresholds'],
-   outputs:['Top 10 Tier-1 suppliers with risk scores','risk_level per supplier (HIGH/MEDIUM/LOW)','Recommended action per supplier','Component breakdown (5 factors)'],
+  {num:'3', title:'Risk Scoring with Reasoning', type:'tool', icon:'📊',
+   desc:'Scores each exposed Tier-1 supplier using 5 weighted factors. NEW: generates human-readable reasoning for each score explaining exactly why a supplier is flagged (e.g., "directly disrupted; 80% of inputs affected; high centrality"). Assigns HIGH (≥0.60), MEDIUM (0.45–0.59), or LOW (<0.45).',
+   inputs:['BFS disrupted suppliers & chain data','Graph structure for centrality (PageRank, degree)','Configurable weights & thresholds'],
+   outputs:['Top 10 Tier-1 suppliers with risk scores','risk_level per supplier (HIGH/MEDIUM/LOW)','Human-readable reasoning per supplier','Recommended action per supplier','Component breakdown (5 factors)'],
    routes:[]},
-  {num:'4', title:'Network Visualisation', type:'tool', icon:'🌐',
-   desc:'Generates a self-contained dark-themed SVG diagram. Grocer on the left, Tier-1 through Tier-4 in columns. Disrupted nodes glow red, Tier-1 nodes colored by risk level. Hover for details.',
-   inputs:['BFS chain data','Risk scores & levels'],
-   outputs:['Interactive HTML/SVG network diagram','Color-coded by risk level with glow effects'],
+  {num:'4', title:'Network Visualisation with Connection Reasoning', type:'tool', icon:'🌐',
+   desc:'Generates a self-contained dark-themed SVG diagram with reasoning tooltips. Nodes: hover shows name, tier, country, industry, risk level, disruption status, and scoring reasoning. Edges: hover shows product flow direction and disruption warning if the supplier is affected.',
+   inputs:['BFS chain data with product links','Risk scores, levels & reasoning'],
+   outputs:['Interactive HTML/SVG network diagram','Color-coded by risk level with glow effects','Hover tooltips with connection & scoring reasoning'],
    routes:[]},
-  {num:'5', title:'CSCO Summary', type:'llm', icon:'📝',
-   desc:'The LLM writes an executive summary for the Chief Supply Chain Officer. Includes network impact assessment and key recommendations. The actions themselves are fixed by risk thresholds, not the LLM.',
-   inputs:['Disruption info from monitoring','BFS results (tier counts, chains)','Risk-scored supplier actions'],
-   outputs:['executive_summary (paragraph)','network_impact (paragraph)','key_recommendations[ ] (action items)'],
+  {num:'5', title:'CSCO Summary', type:'llm-rag', icon:'📝',
+   desc:'The LLM writes an executive summary for the Chief Supply Chain Officer. NEW: when RAG is on, the same context (similar examples + grounded entities) is provided so the summary can reference verified entities and known patterns from past disruptions. Actions are fixed by risk thresholds, not the LLM.',
+   inputs:['Disruption info from monitoring','BFS results (tier counts, chains)','Risk-scored supplier actions','RAG: similar examples + grounded entities (if RAG is on)'],
+   outputs:['executive_summary (paragraph, RAG-enhanced)','network_impact (paragraph)','key_recommendations[ ] (action items)'],
    routes:[]},
   {num:'6', title:'AI Self-Critique', type:'llm', icon:'🧠',
    desc:'Before the human sees the analysis, the AI reviews its own monitoring extraction using a separate "reviewer" prompt. Flags common mistakes: buyer countries listed as disrupted, industry over-generalization, missing entities.',
@@ -230,13 +331,13 @@ const STEPS = [
    outputs:['suggestions[ ] — clickable in the dashboard to auto-fill feedback','confidence level (high / medium / low)'],
    routes:[]},
   {num:'7', title:'Human Review', type:'human', icon:'🧑',
-   desc:'The pipeline pauses using LangGraph interrupt(). The reviewer sees the full extraction, risk table, network graph, executive summary, and AI self-critique suggestions. Five possible decisions.',
-   inputs:['CSCO summary & recommendations','Risk-scored actions table','AI self-critique suggestions','Full history if re-analysing (diff badges)'],
+   desc:'The pipeline pauses using LangGraph interrupt(). The reviewer sees the full extraction, risk table with reasoning, network graph with connection tooltips, executive summary (with RAG badge if enhanced), and AI self-critique suggestions.',
+   inputs:['CSCO summary & recommendations (RAG-enhanced badge)','Risk-scored actions with reasoning column','AI self-critique suggestions','Network diagram with connection reasoning','Full history if re-analysing (diff badges)'],
    outputs:['Decision: approve / edit / feedback / edit_extraction / discard','Optional: edited summary, changed actions, feedback text, modified entities'],
    routes:[
     {label:'Approve → Alternatives', cls:'r-grn'},
     {label:'Edit → Alternatives', cls:'r-blue'},
-    {label:'Feedback → Monitoring', cls:'r-amb'},
+    {label:'Feedback → Monitoring (with RAG)', cls:'r-amb'},
     {label:'Edit extraction → KG Query', cls:'r-amb'},
     {label:'Discard → END', cls:'r-red'}
    ]},
@@ -247,9 +348,9 @@ const STEPS = [
    routes:[]}
 ];
 
-const TYPE_CLS = {llm:'t-llm', tool:'t-tool', human:'t-human', rag:'t-rag'};
-const BADGE_CLS = {llm:'b-llm', tool:'b-tool', human:'b-human', rag:'b-rag'};
-const BADGE_TXT = {llm:'LLM', tool:'TOOL', human:'HUMAN', rag:'RAG'};
+const TYPE_CLS = {llm:'t-llm', tool:'t-tool', human:'t-human', rag:'t-rag', 'llm-rag':'t-llm-rag'};
+const BADGE_CLS = {llm:'b-llm', tool:'b-tool', human:'b-human', rag:'b-rag', 'llm-rag':'b-llm-rag'};
+const BADGE_TXT = {llm:'LLM', tool:'TOOL', human:'HUMAN', rag:'RAG', 'llm-rag':'LLM + RAG'};
 
 const el = document.getElementById('pipeline');
 let html = '';
