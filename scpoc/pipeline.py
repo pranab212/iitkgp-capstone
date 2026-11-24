@@ -25,7 +25,9 @@ from langgraph.types import Command, interrupt
 
 from . import tools
 from .llm import BaseLLM, get_llm
-from .prompts import (CSCO_SYSTEM, CSCO_USER, MONITORING_RETRY_CONTEXT,
+from .prompts import (CSCO_RAG_CONTEXT, CSCO_SYSTEM, CSCO_USER,
+                      CSCO_USER_WITH_CONTEXT,
+                      MONITORING_RETRY_CONTEXT,
                       MONITORING_SYSTEM, MONITORING_USER,
                       MONITORING_USER_WITH_CONTEXT,
                       SELF_CRITIQUE_SYSTEM, SELF_CRITIQUE_USER)
@@ -174,7 +176,7 @@ def build_app(llm: BaseLLM | None = None, g=None, checkpointer=None, *,
     def visualizer(state: State):
         return {"network_html": tools.plot_network(state.bfs, state.risk)}
 
-    # ---- 5. CSCO (LLM)
+    # ---- 5. CSCO (LLM) — with optional RAG context
     @node("csco")
     def csco(state: State):
         import json
@@ -183,10 +185,28 @@ def build_app(llm: BaseLLM | None = None, g=None, checkpointer=None, *,
         exposure = {"disrupted_count": state.bfs["disrupted_count"],
                     "per_tier": {t: len(state.bfs[f"tier_{t}"]) for t in range(1, 5)},
                     "exposed_tier1": state.risk["exposed_tier1_count"]}
+        # Build RAG context for CSCO if retrieval ran
+        r = state.retrieved
+        rag_blocks = []
+        if use_rag and r:
+            if "examples" in r and r["examples"]:
+                from . import rag
+                rag_blocks.append(rag.format_examples(r["examples"]))
+            if "entities" in r and r["entities"]:
+                from . import rag
+                rag_blocks.append(rag.format_entities(r["entities"]))
+        base_user = CSCO_USER.format(disruption=json.dumps(disruption), exposure=json.dumps(exposure),
+                                     actions=json.dumps(state.actions))
+        if rag_blocks:
+            context = "\n\n".join(rag_blocks)
+            user_prompt = CSCO_USER_WITH_CONTEXT.format(
+                rag_context=CSCO_RAG_CONTEXT.format(context=context),
+                disruption=json.dumps(disruption), exposure=json.dumps(exposure),
+                actions=json.dumps(state.actions))
+        else:
+            user_prompt = base_user
         out = llm.complete_json(
-            "csco", CSCO_SYSTEM,
-            CSCO_USER.format(disruption=json.dumps(disruption), exposure=json.dumps(exposure),
-                             actions=json.dumps(state.actions)),
+            "csco", CSCO_SYSTEM, user_prompt,
             CSCOOutput, payload={"disruption": disruption, "bfs": state.bfs, "actions": state.actions})
         return {"csco": out}
 
