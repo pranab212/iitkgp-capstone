@@ -356,9 +356,38 @@ function bd(n,d){
   <td>${s.components.exposure_depth}</td>
   <td style="font-size:11px;color:var(--tx2);max-width:260px">${E(s.reasoning||'')}</td></tr>`).join('')}</table></div>
   <div class="mu" style="margin-top:8px">HIGH &ge; ${d.thresholds.HIGH} &middot; MEDIUM &ge; ${d.thresholds.MEDIUM}</div>
-  <div class="mu" style="margin-top:4px">&#x1f4a1; Hover nodes in the network diagram for detailed connection reasoning.</div>
+  <div class="mu" style="margin-top:4px">&#x1f4a1; See the network diagram below for a visual reasoning panel with product flow paths.</div>
   ${kgRiskHtml()}`;
- if(n==='visualizer')return `<iframe src="/api/network/${J}"></iframe>${kgNetworkHtml()}`;
+ if(n==='visualizer'){
+  /* Build a visible reasoning panel below the diagram using risk data from the previous step */
+  const riskStep=LASTV&&LASTV.steps?LASTV.steps.filter(s=>s.node==='risk').pop():null;
+  const kgStep=LASTV&&LASTV.steps?LASTV.steps.filter(s=>s.node==='kg_query').pop():null;
+  let reasonPanel='';
+  if(riskStep&&riskStep.data.top_suppliers&&riskStep.data.top_suppliers.length){
+   const sups=riskStep.data.top_suppliers;
+   reasonPanel=`<div style="margin-top:14px;padding:16px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(255,255,255,.06)">
+    <div class="sl" style="margin-bottom:10px">&#x1f4a1; Why are these suppliers flagged?</div>
+    ${sups.map(s=>`<div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;padding:8px 12px;background:var(--surface);border-radius:6px;border:1px solid rgba(255,255,255,.04)">
+     <span class="ch t${s.risk_level[0]}" style="flex-shrink:0;margin-top:2px">${s.risk_level}</span>
+     <div><span style="color:var(--tx);font-weight:600;font-size:13px">${E(s.name)}</span>
+      <span class="mu"> (${E(s.industry)}, ${E(s.country)})</span>
+      <span class="mu"> — supplies ${E(s.product_supplied||'goods')}</span>
+      <div style="font-size:12px;color:var(--tx2);margin-top:3px">${E(s.reasoning||'moderate exposure across all factors')}</div>
+     </div>
+     <span style="flex-shrink:0;font-weight:700;color:var(--tx);font-size:13px;margin-left:auto">${s.risk_score}</span>
+    </div>`).join('')}
+   </div>`;
+  }
+  let chainPanel='';
+  if(kgStep&&kgStep.data.sample_chains&&kgStep.data.sample_chains.length){
+   chainPanel=`<div style="margin-top:10px;padding:16px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(255,255,255,.06)">
+    <div class="sl" style="margin-bottom:8px">&#x1f517; Supply Chain Paths (product flow)</div>
+    ${kgStep.data.sample_chains.map(c=>`<pre style="margin:4px 0;font-size:11px">${E(c.join('  ←  '))}</pre>`).join('')}
+    <div class="mu" style="margin-top:6px">Each arrow shows what product flows between connected suppliers. Disrupted suppliers break these links.</div>
+   </div>`;
+  }
+  return `<iframe src="/api/network/${J}"></iframe>${reasonPanel}${chainPanel}${kgNetworkHtml()}`;
+ }
  if(n==='self_critique'){
   const ss=d.suggestions||[],cf=d.confidence||'';
   return ss.length?`<div style="margin-bottom:6px"><span class="ch ${cf==='high'?'tH':'tM'}">${cf} confidence</span></div>
