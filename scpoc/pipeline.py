@@ -1,7 +1,8 @@
 """Phase 2 - the LangGraph pipeline.
 
-    [retrieve] -> monitoring (LLM) -> kg_query -> [no exposure? stop] -> risk -> visualizer
-        -> csco (LLM) -> human_review (interrupt) -> alternatives -> END
+    [retrieve] -> [credibility] -> monitoring (LLM) -> kg_query -> [no exposure? stop] -> risk -> visualizer
+        -> csco (LLM) -> self_critique -> preview_alternatives -> human_review (interrupt)
+        -> alternatives -> END
                                          \\-> rejected -> END
 
 [retrieve] runs only with build_app(rag_examples=True and/or ground_entities=True); see rag.py.
@@ -23,15 +24,17 @@ from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, START, StateGraph
 from langgraph.types import Command, interrupt
 
+from . import credibility as cred
+from . import observability as obs
 from . import tools
 from .llm import BaseLLM, get_llm
-from .prompts import (CSCO_RAG_CONTEXT, CSCO_SYSTEM, CSCO_USER,
+from .prompts import (CLAIMS_SYSTEM, CLAIMS_USER, CSCO_RAG_CONTEXT, CSCO_SYSTEM, CSCO_USER,
                       CSCO_USER_WITH_CONTEXT,
                       MONITORING_RETRY_CONTEXT,
                       MONITORING_SYSTEM, MONITORING_USER,
                       MONITORING_USER_WITH_CONTEXT,
                       SELF_CRITIQUE_SYSTEM, SELF_CRITIQUE_USER)
-from .schemas import CSCOOutput, MonitoringOutput, SelfCritiqueOutput, State
+from .schemas import ClaimsOutput, CSCOOutput, MonitoringOutput, SelfCritiqueOutput, State
 
 
 def _memory_saver():
@@ -40,7 +43,8 @@ def _memory_saver():
         from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
         return MemorySaver(serde=JsonPlusSerializer(
             allowed_msgpack_modules=[("scpoc.schemas", "MonitoringOutput"), ("scpoc.schemas", "CSCOOutput"),
-                                     ("scpoc.schemas", "State")]))
+                                     ("scpoc.schemas", "State"),
+                                     ("scpoc.schemas", "CredibilityOutput"), ("scpoc.schemas", "ClaimCheck")]))
     except (ImportError, TypeError):      # older LangGraph: no such option
         return MemorySaver()
 
@@ -51,7 +55,11 @@ def _timed(step):
         @functools.wraps(fn)
         def wrapper(state: State):
             before, t0 = wrapper.llm.snapshot(), time.perf_counter()
-            update = fn(state)
+            with obs.node_span(step, state) as span:
+                update = fn(state)
+                obs.note(span, output={k: v for k, v in update.items()
+                                       if k in ("status", "message", "approval", "retry_count")} or
+                         {"updated": sorted(update)})
             after = wrapper.llm.snapshot()
             update["trace"] = [{"step": step, "seconds": round(time.perf_counter() - t0, 3),
                                 "prompt_tokens": after["prompt_tokens"] - before["prompt_tokens"],
@@ -63,14 +71,23 @@ def _timed(step):
 
 MAX_RETRIES = 3
 
+# how replacement candidates are chosen (also shown in the dashboard and README)
+ALT_RULES = ("same industry as the supplier; outside the disrupted countries/industries/companies; "
+             "own upstream (Tier-2..4) has no disrupted company; ranked by exposure score then smaller "
+             "upstream network then name; exposed candidates only if no clear one exists; top 5")
+
 
 def build_app(llm: BaseLLM | None = None, g=None, checkpointer=None, *,
               rag_examples: bool = False, ground_entities: bool = False, k_examples: int = 3,
-              exemplar_store=None, max_retries: int = MAX_RETRIES):
+              exemplar_store=None, max_retries: int = MAX_RETRIES,
+              credibility: bool = False, block_fake: bool = False, preview_n: int = 5):
     """rag_examples: add the most similar labeled examples to the Monitoring prompt.
     ground_entities: add the graph records of companies the article names.
     With both off the graph is exactly the original one (no retrieve node).
-    max_retries: how many times the reviewer can ask the AI to retry (default 3)."""
+    max_retries: how many times the reviewer can ask the AI to retry (default 3).
+    credibility: add a fake-news check (claim extraction + evidence) before Monitoring.
+    block_fake: with credibility on, stop the run when the verdict is "likely_fake" (default: warn only).
+    preview_n: how many top suppliers get replacement candidates shown to the reviewer before approval."""
     g = g or tools.get_graph()
     llm = llm or get_llm(g)
     use_rag = rag_examples or ground_entities
@@ -99,6 +116,27 @@ def build_app(llm: BaseLLM | None = None, g=None, checkpointer=None, *,
             out["entities"] = entity_index.find(state.article)
         return {"retrieved": out}
 
+    # ---- 0b. Credibility (LLM extracts claims, tools check them): genuine / suspicious / likely fake
+    @node("credibility")
+    def credibility_check(state: State):
+        claims = llm.complete_json("credibility", obs.prompt_text("claims_system", CLAIMS_SYSTEM),
+                                   CLAIMS_USER.format(article=state.article),
+                                   ClaimsOutput, payload={"article": state.article})
+        out = cred.check_claims(claims, g, examples=state.retrieved.get("examples"))
+        obs.score(state.trace_id, "credibility_verdict", out.verdict, "CATEGORICAL")
+        obs.score(state.trace_id, "credibility_score", out.score)
+        return {"credibility": out}
+
+    def after_credibility(state: State):
+        return "flagged_fake" if block_fake and state.credibility.verdict == "likely_fake" else "monitoring"
+
+    @node("flagged_fake")
+    def flagged_fake(state: State):
+        obs.score(state.trace_id, "final_status", "flagged_fake", "CATEGORICAL")
+        return {"status": "flagged_fake",
+                "message": "Stopped: the article failed the credibility check (" +
+                           "; ".join(state.credibility.reasons[:3]) + ")."}
+
     # ---- 1. Monitoring (LLM)
     @node("monitoring")
     def monitoring(state: State):
@@ -123,7 +161,7 @@ def build_app(llm: BaseLLM | None = None, g=None, checkpointer=None, *,
         user = (MONITORING_USER_WITH_CONTEXT.format(context="\n\n".join(blocks), article=state.article)
                 if blocks else MONITORING_USER.format(article=state.article))
         out = llm.complete_json(
-            "monitoring", MONITORING_SYSTEM.format(industries=", ".join(industries)),
+            "monitoring", obs.format_prompt("monitoring_system", MONITORING_SYSTEM, industries=", ".join(industries)),
             user, MonitoringOutput, payload={"article": state.article, "retrieved": r})
         return {"monitoring": out, "retry_feedback": "", "previous_monitoring": None}
 
@@ -162,6 +200,7 @@ def build_app(llm: BaseLLM | None = None, g=None, checkpointer=None, *,
     def no_exposure(state: State):
         why = ("the article is not a supply chain disruption" if not _is_disruption(state.monitoring)
                else "no supplier in the network matches the disruption")
+        obs.score(state.trace_id, "final_status", "no_exposure", "CATEGORICAL")
         return {"status": "no_exposure",
                 "message": f"No exposure for {state.focal_name}: {why}."}
 
@@ -169,6 +208,9 @@ def build_app(llm: BaseLLM | None = None, g=None, checkpointer=None, *,
     @node("risk")
     def risk(state: State):
         r = tools.tier1_risk_scores(state.bfs, g=g)
+        if r["top_suppliers"]:
+            obs.score(state.trace_id, "risk_top_score", r["top_suppliers"][0]["risk_score"])
+        obs.score(state.trace_id, "disrupted_suppliers", state.bfs["disrupted_count"])
         return {"risk": r, "actions": tools.recommend_actions(r)}
 
     # ---- 4. Visualizer (tool)
@@ -206,7 +248,7 @@ def build_app(llm: BaseLLM | None = None, g=None, checkpointer=None, *,
         else:
             user_prompt = base_user
         out = llm.complete_json(
-            "csco", CSCO_SYSTEM, user_prompt,
+            "csco", obs.prompt_text("csco_system", CSCO_SYSTEM), user_prompt,
             CSCOOutput, payload={"disruption": disruption, "bfs": state.bfs, "actions": state.actions})
         return {"csco": out}
 
@@ -219,19 +261,40 @@ def build_app(llm: BaseLLM | None = None, g=None, checkpointer=None, *,
                 article=state.article, is_disruption=m.is_disruption,
                 disruption_type=m.disruption_type, summary=m.summary,
                 countries=m.countries, industries=m.industries, companies=m.companies)
-            out = llm.complete_json("self_critique", SELF_CRITIQUE_SYSTEM, user, SelfCritiqueOutput)
+            out = llm.complete_json("self_critique", obs.prompt_text("self_critique_system", SELF_CRITIQUE_SYSTEM),
+                                   user, SelfCritiqueOutput)
             return {"ai_suggestions": out.suggestions or [], "ai_confidence": out.confidence or "medium"}
         except Exception:
             return {"ai_suggestions": [], "ai_confidence": ""}
+
+    # ---- 5c. Alternative suppliers shown while the reviewer decides (tool)
+    @node("preview_alternatives")
+    def preview_alternatives(state: State):
+        out = [tools.find_alternatives(a["company_id"], state.bfs, g=g) | {"risk_level": a["risk_level"]}
+               for a in state.actions[:preview_n]]
+        obs.span_meta(rule=ALT_RULES, suppliers=[
+            {"supplier": a["supplier"]["name"], "risk_level": a["risk_level"],
+             "candidates_considered": a["candidates_considered"], "clear_count": a["clear_count"],
+             "fallback_to_exposed": a["clear_count"] == 0 and bool(a["alternatives"])} for a in out])
+        return {"alternatives_preview": out}
 
     # ---- 6. Human review (interrupt)
     @node("human_review")
     def human_review(state: State):
         reply = interrupt({"csco": state.csco.model_dump(), "actions": state.actions,
+                           "alternatives": state.alternatives_preview,
+                           "credibility": state.credibility.model_dump() if state.credibility else None,
                            "retry_count": state.retry_count, "max_retries": max_retries,
                            "ai_suggestions": state.ai_suggestions, "ai_confidence": state.ai_confidence})
         decision = reply.get("decision")
+        obs.score(state.trace_id, "human_decision", str(decision), "CATEGORICAL")
+        obs.score(state.trace_id, "retry_count", state.retry_count)
+        if decision == "edit":
+            changed = any(a.get("risk_level") != b.get("risk_level")
+                          for a, b in zip(reply.get("actions", state.actions), state.actions))
+            obs.score(state.trace_id, "edited_actions", changed, "BOOLEAN")
         if decision == "reject":
+            obs.score(state.trace_id, "final_status", "rejected", "CATEGORICAL")
             return {"approval": "rejected", "status": "rejected",
                     "message": reply.get("reason", "Rejected by reviewer.")}
         if decision == "retry":
@@ -268,28 +331,44 @@ def build_app(llm: BaseLLM | None = None, g=None, checkpointer=None, *,
     # ---- 7. Alternative sourcing (tool)
     @node("alternatives")
     def alternatives(state: State):
-        alts = [tools.find_alternatives(a["company_id"], state.bfs, g=g)
+        ready = {p["supplier"]["company_id"]: p for p in state.alternatives_preview}
+        alts = [{k: v for k, v in (ready.get(a["company_id"]) or
+                                   tools.find_alternatives(a["company_id"], state.bfs, g=g)).items()
+                 if k != "risk_level"}
                 for a in state.actions if a["risk_level"] == "HIGH"]
         n_high = len(alts)
+        obs.span_meta(rule=ALT_RULES, high_risk_suppliers=n_high,
+                      clear_counts={a["supplier"]["name"]: a["clear_count"] for a in alts})
+        obs.score(state.trace_id, "final_status", "completed", "CATEGORICAL")
         return {"alternatives": alts, "status": "completed",
                 "message": f"Completed: {n_high} HIGH-risk supplier(s) with alternatives searched."}
 
     wf = StateGraph(State)
-    for fn in (monitoring, kg_query, no_exposure, risk, visualizer, csco, self_critique, human_review, alternatives):
+    for fn in (monitoring, kg_query, no_exposure, risk, visualizer, csco, self_critique,
+               preview_alternatives, human_review, alternatives):
         wf.add_node(fn.__name__, fn)
+    first = "monitoring"                                   # where the run goes after the optional steps
+    if credibility:
+        wf.add_node("credibility", credibility_check)
+        wf.add_node("flagged_fake", flagged_fake)
+        wf.add_conditional_edges("credibility", after_credibility,
+                                 {"monitoring": "monitoring", "flagged_fake": "flagged_fake"})
+        wf.add_edge("flagged_fake", END)
+        first = "credibility"
     if use_rag:
         wf.add_node("retrieve", retrieve)
         wf.add_edge(START, "retrieve")
-        wf.add_edge("retrieve", "monitoring")
+        wf.add_edge("retrieve", first)
     else:
-        wf.add_edge(START, "monitoring")
+        wf.add_edge(START, first)
     wf.add_edge("monitoring", "kg_query")
     wf.add_conditional_edges("kg_query", after_kg, {"risk": "risk", "no_exposure": "no_exposure"})
     wf.add_edge("no_exposure", END)
     wf.add_edge("risk", "visualizer")
     wf.add_edge("visualizer", "csco")
     wf.add_edge("csco", "self_critique")
-    wf.add_edge("self_critique", "human_review")
+    wf.add_edge("self_critique", "preview_alternatives")
+    wf.add_edge("preview_alternatives", "human_review")
     wf.add_conditional_edges("human_review", after_review,
                              {"alternatives": "alternatives", END: END,
                               "monitoring": "monitoring", "kg_query": "kg_query"})
@@ -297,6 +376,7 @@ def build_app(llm: BaseLLM | None = None, g=None, checkpointer=None, *,
     app = wf.compile(checkpointer=checkpointer or _memory_saver())
     app.llm = llm
     app.rag = {"rag_examples": rag_examples, "ground_entities": ground_entities}
+    app.credibility = credibility
     return app
 
 
@@ -311,7 +391,9 @@ def _result(app, config, out: dict) -> dict:
 def run_article(app, article: str, focal: str, thread_id: str = "run") -> dict:
     """Run until the pipeline ends or pauses for human review."""
     config = {"configurable": {"thread_id": thread_id}}
-    out = app.invoke(State(article=article, focal_name=focal), config)
+    trace_id, session_id = obs.new_trace(thread_id)
+    out = app.invoke(State(article=article, focal_name=focal, trace_id=trace_id, session_id=session_id), config)
+    obs.flush()
     return _result(app, config, out)
 
 
@@ -320,4 +402,5 @@ def resume_review(app, thread_id: str, decision: dict) -> dict:
     {"decision": "edit", "csco": {...partial...}, "actions": [...]}"""
     config = {"configurable": {"thread_id": thread_id}}
     out = app.invoke(Command(resume=decision), config)
+    obs.flush()
     return _result(app, config, out)

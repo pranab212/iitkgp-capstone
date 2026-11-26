@@ -12,6 +12,7 @@ else the mock. Settings come from the environment or a .env file in the project 
 """
 from __future__ import annotations
 
+import functools
 import json
 import os
 import re
@@ -25,8 +26,9 @@ from typing import TypeVar
 
 from pydantic import BaseModel, ValidationError
 
+from . import observability as obs
 from .graph import ROOT
-from .schemas import CSCOOutput, MonitoringOutput, SelfCritiqueOutput
+from .schemas import Claim, ClaimsOutput, CSCOOutput, MonitoringOutput, SelfCritiqueOutput
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -52,8 +54,35 @@ def _load_dotenv(path=ROOT / ".env") -> None:
                 os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
 
 
+def _traced(fn):
+    """Wrap a complete_json so each call is a Langfuse generation (no-op when tracing is off)."""
+    @functools.wraps(fn)
+    def wrapper(self, step, system, user, schema, payload=None):
+        if not obs.enabled():
+            return fn(self, step, system, user, schema, payload)
+        before = self.snapshot()
+        with obs.generation(step, getattr(self, "model", self.name), system, user,
+                            prompt=obs.prompt_for_step(step)) as gen:
+            out = fn(self, step, system, user, schema, payload)
+            if gen is not None:
+                after = self.snapshot()
+                pt, ct = after["prompt_tokens"] - before["prompt_tokens"], after["completion_tokens"] - before["completion_tokens"]
+                obs.note(gen, output=obs._hide(out.model_dump()),
+                         usage_details={"input": pt, "output": ct, "total": pt + ct},
+                         metadata={"backend": self.name, "api_calls": after["calls"] - before["calls"]})
+            return out
+    wrapper._traced = True
+    return wrapper
+
+
 class BaseLLM:
     name = "LLM"
+
+    def __init_subclass__(cls, **kw):
+        super().__init_subclass__(**kw)
+        fn = cls.__dict__.get("complete_json")
+        if fn is not None and not getattr(fn, "_traced", False):
+            cls.complete_json = _traced(fn)         # every backend (and test double) is traced the same way
 
     def __init__(self):
         self.usage = {"prompt_tokens": 0, "completion_tokens": 0, "calls": 0}
@@ -136,6 +165,7 @@ class QwenLLM(BaseLLM):
                 break
             except urllib.error.HTTPError as e:
                 if e.code in (429, 503) and attempt < len(self.RETRY_DELAYS):
+                    obs.event("qwen_retry", status=e.code, attempt=attempt + 1, wait_s=self.RETRY_DELAYS[attempt])
                     time.sleep(self.RETRY_DELAYS[attempt])
                     continue
                 detail = e.read().decode("utf-8", "replace")[:300]
@@ -168,6 +198,7 @@ class QwenLLM(BaseLLM):
                 return schema.model_validate(self._extract_json(reply))
             except (ValueError, ValidationError) as e:    # json errors are ValueErrors
                 err = e
+                obs.event("json_repair_retry", error=str(e)[:200])
                 messages += [{"role": "assistant", "content": reply},
                              {"role": "user", "content": f"That reply was invalid ({str(err)[:300]}). "
                                                          "Reply again with ONLY the corrected JSON object."}]
@@ -192,7 +223,39 @@ class MockLLM(BaseLLM):
             return self._csco(payload)
         if schema is SelfCritiqueOutput:
             return self._self_critique(user)
+        if schema is ClaimsOutput:
+            return self._claims(payload["article"])
         raise ValueError(f"MockLLM cannot handle {schema}")
+
+    RED_FLAG_WORDS = {
+        "sensational wording": ["shocking", "you won't believe", "exposed", "secret", "bombshell", "!!"],
+        "vague or unnamed sourcing": ["sources say", "insiders", "reportedly", "rumour", "rumor",
+                                      "unconfirmed", "anonymous", "it is said", "people are saying"],
+        "calls to panic or share": ["share this", "panic", "stock up now", "wake up"],
+    }
+
+    def _claims(self, article: str) -> ClaimsOutput:
+        """Crude: one claim per sentence; names found by vocabulary matching."""
+        text = article.lower()
+        claims = []
+        for s in [x.strip() for x in re.split(r"(?<=[.!?])\s+", article.strip()) if x.strip()]:
+            low = s.lower()
+            companies = [c for c in sorted(self.companies) if c.lower() in low]
+            # company-style names ("Zorblax Dynamics 777") that are not in the network
+            companies += [m for m in re.findall(r"\b[A-Z][a-z]+(?: [A-Z][a-z]+)* \d{3}\b", s) if m not in companies]
+            # a mock cannot tell event places from buyer places: for claims naming a company, only take a
+            # country written right after the company ("Acme Foods 001 in Brazil")
+            if companies:
+                countries = [ct for ct in sorted(self.countries) for c in companies
+                             if re.search(rf"{re.escape(c.lower())}(?:\s+[\w\-]+){{0,3}}?\s+(?:in|near)\s+"
+                                          rf"{re.escape(ct.lower())}\b", low)]
+            else:
+                countries = [c for c in sorted(self.countries) if re.search(rf"\b{re.escape(c.lower())}\b", low)]
+            kind = "event" if any(re.search(rf"\b{re.escape(w)}", low) for ws in DISRUPTION_WORDS.values()
+                                  for w in ws) else "other"
+            claims.append(Claim(text=s, kind=kind, companies=companies, countries=countries))
+        flags = [name for name, words in self.RED_FLAG_WORDS.items() if any(w in text for w in words)]
+        return ClaimsOutput(claims=claims, red_flags=flags)
 
     def _self_critique(self, user_prompt: str) -> SelfCritiqueOutput:
         suggestions: list[str] = []

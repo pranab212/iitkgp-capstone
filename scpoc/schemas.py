@@ -35,14 +35,60 @@ class SelfCritiqueOutput(BaseModel):
     confidence: Literal["high", "medium", "low"] = "medium"
 
 
+ClaimKind = Literal["event", "cause", "impact", "quantity", "timing", "other"]
+
+
+class Claim(BaseModel):
+    """One atomic factual claim made by the article."""
+    text: str
+    kind: ClaimKind = "other"
+    companies: list[str] = Field(default_factory=list)
+    countries: list[str] = Field(default_factory=list, description="Where the event happens, not buyers.")
+    industries: list[str] = Field(default_factory=list)
+
+
+class ClaimsOutput(BaseModel):
+    """Strict JSON returned by the claim-extraction step (the LLM)."""
+    claims: list[Claim] = Field(default_factory=list)
+    contradictions: list[str] = Field(default_factory=list,
+                                      description="Pairs of claims that cannot both be true.")
+    red_flags: list[str] = Field(default_factory=list,
+                                 description="Style or sourcing warning signs (no named source, sensational "
+                                             "wording, vague attribution, missing place or date).")
+
+
+class ClaimCheck(BaseModel):
+    """Evidence for or against one claim (computed without the LLM)."""
+    claim: str
+    status: Literal["supported", "unverifiable", "contradicted"]
+    reasons: list[str] = Field(default_factory=list)
+
+
+class CredibilityOutput(BaseModel):
+    """Overall credibility verdict, with the evidence behind it."""
+    verdict: Literal["genuine", "suspicious", "likely_fake"]
+    score: int = 0                       # suspicion points; higher = less credible
+    checks: list[ClaimCheck] = Field(default_factory=list)
+    contradictions: list[str] = Field(default_factory=list)
+    red_flags: list[str] = Field(default_factory=list)
+    reasons: list[str] = Field(default_factory=list)
+
+
 class State(BaseModel):
     """Everything the pipeline knows. Each node reads this and returns a partial update."""
     # inputs
     article: str
     focal_name: str
 
+    # Langfuse tracing (None when tracing is off); kept in the state so a run is one trace across the review pause
+    trace_id: str | None = None
+    session_id: str | None = None
+
     # retrieval (only when RAG flags are on): {"examples": [...], "entities": [...]}
     retrieved: dict[str, Any] = Field(default_factory=dict)
+
+    # credibility check (only when build_app(credibility=True))
+    credibility: CredibilityOutput | None = None
 
     # monitoring
     monitoring: MonitoringOutput | None = None
@@ -69,12 +115,14 @@ class State(BaseModel):
 
     # alternative sourcing
     alternatives: list[dict[str, Any]] = Field(default_factory=list)
+    # candidates shown to the reviewer BEFORE approval (top suppliers by risk, any level)
+    alternatives_preview: list[dict[str, Any]] = Field(default_factory=list)
 
     # AI self-critique suggestions for the reviewer
     ai_suggestions: list[str] = Field(default_factory=list)
     ai_confidence: str = ""
 
     # outcome and bookkeeping
-    status: Literal["running", "no_exposure", "rejected", "completed"] = "running"
+    status: Literal["running", "no_exposure", "rejected", "completed", "flagged_fake"] = "running"
     message: str = ""
     trace: Annotated[list[dict[str, Any]], operator.add] = Field(default_factory=list)  # per-step timing/tokens

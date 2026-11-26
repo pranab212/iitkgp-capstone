@@ -16,6 +16,7 @@ import json
 import time
 from collections import defaultdict
 
+from . import observability as obs
 from . import tools
 from .evalset import load
 from .graph import OUT_DIR
@@ -139,6 +140,7 @@ def run_one_with_retry(app, a: dict, g, thread: str, max_retries: int = 1) -> di
                                "match": bool(same(top, exp["top_supplier"]))}
         row["top_high"] = {"expected": (exp["top_high_supplier"] or {}).get("name"), "got": high and high["name"],
                            "match": bool(same(high, exp["top_high_supplier"]))}
+    obs.eval_scores(st.trace_id, row)                    # per-article metrics on that article's Langfuse trace
     return row
 
 
@@ -195,6 +197,7 @@ def run_one(app, a: dict, g, thread: str) -> dict:
                                "match": bool(same(top, exp["top_supplier"]))}
         row["top_high"] = {"expected": (exp["top_high_supplier"] or {}).get("name"), "got": high and high["name"],
                            "match": bool(same(high, exp["top_high_supplier"]))}
+    obs.eval_scores(st.trace_id, row)                    # per-article metrics on that article's Langfuse trace
     return row
 
 
@@ -300,7 +303,8 @@ def config_tag(rag_examples: bool, ground_entities: bool) -> str:
 
 def main(ids: list[str] | None = None, price_in: float = 0.0, price_out: float = 0.0, mock: bool = False,
          rag_examples: bool = False, ground_entities: bool = False, k_examples: int = 3,
-         with_retry: bool = False, max_retries: int = 1) -> str:
+         with_retry: bool = False, max_retries: int = 1, langfuse_run: str | None = None) -> str:
+    obs.RUN_NAME = langfuse_run          # one Langfuse session (and tag) for the whole run, so runs can be compared
     g = tools.get_graph()
     arts = [a for a in load() if not ids or a["id"] in ids]
     llm = (MockLLM({d["country"] for _, d in g.nodes(data=True)}, {d["industry"] for _, d in g.nodes(data=True)},
@@ -334,6 +338,7 @@ def main(ids: list[str] | None = None, price_in: float = 0.0, price_out: float =
     (OUT_DIR / f"eval_results{suffix}.json").write_text(
         json.dumps({"llm": llm.name, "config": config, "summary": s, "articles": rows}, indent=2))
     (OUT_DIR / f"eval_report{suffix}.txt").write_text(text + "\n", encoding="utf-8")
+    obs.flush()
     main.saved = (OUT_DIR / f"eval_report{suffix}.txt", OUT_DIR / f"eval_results{suffix}.json")
     return text
 

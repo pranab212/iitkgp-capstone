@@ -326,7 +326,7 @@ def plot_network(bfs: dict, risk: dict | None = None, out: str | None = None,
                     f'to {html.escape(nodes[c]["name"])}')
         if s in disrupted:
             edge_tip += ' ⚠ (supplier is disrupted — this link is at risk)'
-        svg.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{edge_colour}" stroke-width="1">'
+        svg.append(f'<line class="e" x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{edge_colour}" stroke-width="1">'
                    f'<title>{edge_tip}</title></line>')
     for n, (x, y) in pos.items():
         s = nodes[n]
@@ -343,10 +343,10 @@ def plot_network(bfs: dict, risk: dict | None = None, out: str | None = None,
         if n in reasoning_map and reasoning_map[n]:
             tip += f' | Why: {reasoning_map[n]}'
         svg.append(f'<g><circle cx="{x}" cy="{y}" r="7" fill="{fill}" opacity="0.9"{glow}/>'
-                   f'<text x="{x + 11}" y="{y + 4}" font-size="11" fill="{text_colour}">'
+                   f'<text class="t" x="{x + 11}" y="{y + 4}" font-size="11" fill="{text_colour}">'
                    f'{html.escape(s["name"][:26])}</text>'
                    f'<title>{html.escape(tip)}</title></g>')
-    heads = "".join(f'<text x="{60 + t * colw}" y="20" font-size="13" font-weight="bold" fill="{heading_colour}">'
+    heads = "".join(f'<text class="hh" x="{60 + t * colw}" y="20" font-size="13" font-weight="bold" fill="{heading_colour}">'
                     f'{"Grocer" if t == 0 else f"Tier-{t}"}</text>' for t in sorted(cols))
     defs = ('<defs><filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/>'
             '<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>')
@@ -357,11 +357,16 @@ def plot_network(bfs: dict, risk: dict | None = None, out: str | None = None,
     page = f"""<!DOCTYPE html><html><head><meta charset="utf-8"><title>{title_text}</title>
 <style>
 *{{margin:0;padding:0;box-sizing:border-box}}
-body{{font-family:'Inter',system-ui,sans-serif;background:{bg_colour};color:{text_colour};padding:16px}}
-h3{{font-size:14px;font-weight:700;color:{heading_colour};margin-bottom:6px}}
-p{{font-size:12px;color:#64748b;margin-bottom:12px;line-height:1.5}}
-svg{{border:1px solid rgba(255,255,255,0.06);border-radius:10px;background:{surface}}}
-.legend{{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:11px;color:#94a3b8}}
+:root{{--bg:{bg_colour};--surf:{surface};--txt:{text_colour};--head:{heading_colour};--edge:{edge_colour};
+ --mut:#64748b;--leg:#94a3b8;--line:rgba(255,255,255,0.06)}}
+[data-theme=light]{{--bg:#f4f6fb;--surf:#ffffff;--txt:#334155;--head:#0f172a;--edge:rgba(71,85,105,0.3);
+ --mut:#64748b;--leg:#475569;--line:rgba(15,23,42,0.1)}}
+body{{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--txt);padding:16px}}
+h3{{font-size:14px;font-weight:700;color:var(--head);margin-bottom:6px}}
+p{{font-size:12px;color:var(--mut);margin-bottom:12px;line-height:1.5}}
+svg{{border:1px solid var(--line);border-radius:10px;background:var(--surf)}}
+.t{{fill:var(--txt)}}.hh{{fill:var(--head)}}.e{{stroke:var(--edge)}}
+.legend{{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:11px;color:var(--leg)}}
 .legend span{{display:inline-flex;align-items:center;gap:5px}}
 .legend i{{display:inline-block;width:10px;height:10px;border-radius:50%}}
 </style></head>
@@ -377,6 +382,11 @@ svg{{border:1px solid rgba(255,255,255,0.06);border-radius:10px;background:{surf
  <span><i style="background:#10b981"></i> LOW risk</span>
  <span><i style="background:#64748b"></i> Not exposed</span>
 </div>
+<script>
+function ap(t){{document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark')}}
+try{{ap(parent.document.documentElement.getAttribute('data-theme'))}}catch(e){{}}
+addEventListener('message',function(e){{if(e.data&&e.data.theme)ap(e.data.theme)}});
+</script>
 </body></html>"""
     with open(out, "w", encoding="utf-8") as f:
         f.write(page)

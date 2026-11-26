@@ -68,11 +68,20 @@ def cmd_run(a):
     if not article:
         raise SystemExit("give --article or --text")
 
-    app = build_app(k_examples=a.k, **_rag_flags(a))
+    app = build_app(k_examples=a.k, credibility=a.credibility or a.block_fake, block_fake=a.block_fake,
+                    **_rag_flags(a))
     print("LLM:", app.llm.name, "| RAG:", {k: v for k, v in app.rag.items() if v} or "off")
     r = run_article(app, article, a.focal, thread_id="cli")
     s = r["state"]
     m = s.monitoring
+    if s.credibility:
+        c = s.credibility
+        print(f"[credibility] {c.verdict.upper()} (suspicion score {c.score})")
+        for why in c.reasons[:5]:
+            print("   -", why)
+        if s.status == "flagged_fake":
+            print(f"\nstatus: {s.status}  {s.message}")
+            return
     if s.retrieved.get("examples"):
         print("[retrieve] examples:", [f"{e['id']} ({e['score']})" for e in s.retrieved["examples"]])
     if "entities" in s.retrieved:
@@ -93,6 +102,11 @@ def cmd_run(a):
         print("\n[csco]", json.dumps(r["review"]["csco"], indent=2))
         for x in r["review"]["actions"][:10]:
             print(f"  {x['name'][:30]:30} {x['risk_score']:>6} {x['risk_level']:7} {x['action']}")
+        for alt in r["review"].get("alternatives", []):
+            print(f"\n  possible replacements for {alt['supplier']['name']} ({alt['risk_level']}, "
+                  f"{alt['clear_count']} fully clear):")
+            for c in alt["alternatives"][:3]:
+                print(f"    {c['name'][:30]:30} {c['country']:15} clear={c['verified_clear']} upstream={c['upstream_size']}")
         if a.auto:
             choice = a.auto
         else:
@@ -119,6 +133,10 @@ def cmd_run(a):
                   f"upstream={c['upstream_size']}")
     tok = {k: sum(t[k] for t in s.trace) for k in ("prompt_tokens", "completion_tokens")}
     print(f"\ntime per step: { {t['step']: t['seconds'] for t in s.trace} }  tokens: {tok}")
+    from scpoc import observability as obs
+    if obs.enabled():
+        print("langfuse trace:", obs.trace_url(s.trace_id))
+        obs.flush()
 
 
 def cmd_eval_build(_):
@@ -136,9 +154,22 @@ def cmd_eval(a):
     ids = a.ids.split(",") if a.ids else None
     print(evaluate.main(ids=ids, price_in=a.price_in, price_out=a.price_out, mock=a.mock,
                         k_examples=a.k, with_retry=a.with_retry,
-                        max_retries=a.max_retries, **_rag_flags(a)))
+                        max_retries=a.max_retries, langfuse_run=a.langfuse_run, **_rag_flags(a)))
     report, results = evaluate.main.saved
     print(f"\nsaved to {report} and {results}")
+
+
+def cmd_langfuse_push_prompts(_):
+    from scpoc import observability as obs
+    from scpoc.prompts import PROMPTS
+    print("\n".join(obs.push_prompts(PROMPTS)))
+    obs.flush()
+
+
+def cmd_langfuse_sync_dataset(a):
+    from scpoc import observability as obs
+    from scpoc.evalset import load
+    print(obs.sync_dataset(load(), a.name))
 
 
 def cmd_eval_compare(a):
@@ -171,6 +202,8 @@ def main():
     r.add_argument("--text", help="article text")
     r.add_argument("--focal", default="Northwind Grocers")
     r.add_argument("--auto", choices=["approve", "reject"], help="skip the prompt")
+    r.add_argument("--credibility", action="store_true", help="add the fake-news check before Monitoring")
+    r.add_argument("--block-fake", action="store_true", help="stop the run when the article looks fake (implies --credibility)")
     _add_rag_args(r)
     r.set_defaults(fn=cmd_run)
 
@@ -183,8 +216,17 @@ def main():
     e.add_argument("--with-retry", action="store_true",
                    help="simulate human feedback retry on wrong extractions and measure improvement")
     e.add_argument("--max-retries", type=int, default=1, help="max retry attempts per article (default 1)")
+    e.add_argument("--langfuse-run", metavar="NAME",
+                   help="send traces to Langfuse as one session named NAME, with per-article eval scores")
     _add_rag_args(e)
     e.set_defaults(fn=cmd_eval)
+
+    sub.add_parser("langfuse-push-prompts",
+                   help="create the prompts in Langfuse prompt management (skips ones that exist)"
+                   ).set_defaults(fn=cmd_langfuse_push_prompts)
+    ds = sub.add_parser("langfuse-sync-dataset", help="upload the evaluation articles as a Langfuse dataset")
+    ds.add_argument("--name", default="supply-chain-eval")
+    ds.set_defaults(fn=cmd_langfuse_sync_dataset)
 
     c = sub.add_parser("eval-compare", help="compare saved eval_results*.json files side by side")
     c.add_argument("files", nargs="+", help="results files; the first one is the reference")

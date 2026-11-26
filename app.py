@@ -19,6 +19,7 @@ from langgraph.types import Command
 from scpoc.graph import OUT_DIR
 from scpoc.pipeline import build_app
 from scpoc.schemas import State
+from scpoc import observability as obs
 from scpoc import tools
 
 PORT = int(os.environ.get("PORT", "8080"))
@@ -41,6 +42,14 @@ SCENARIOS = [
      "article": "Dockworkers in Vietnam began an indefinite strike today, shutting container terminals. "
                 "Logistics operators say cold-chain transport and freight forwarding out of the country "
                 "are suspended, with long delays expected."},
+    {"id": "fake_unknown", "title": "Fake news: unknown company, sensational", "focal": "Northwind Grocers",
+     "article": "SHOCKING: sources say Zorblax Dynamics 777 has been secretly shut down and insiders claim "
+                "all supermarkets will run empty by Friday. Share this before it is deleted! "
+                "Reportedly the plant is unconfirmed but panic buying is already starting."},
+    {"id": "fake_mismatch", "title": "Fake news: real company, wrong country", "focal": "Northwind Grocers",
+     "article": "A fire destroyed the Sakri Packaging 020 plant in Brazil on Monday. The company "
+                "said production is halted and the plant is operating normally. Unconfirmed reports "
+                "say the whole of Brazil's packaging sector has stopped."},
     {"id": "falsepos", "title": "False positive: storm in Iceland", "focal": "Northwind Grocers",
      "article": "A heavy storm closed roads in Iceland on Saturday and cancelled a music festival. "
                 "Organisers said tickets will be refunded."},
@@ -66,6 +75,12 @@ def _summarise(node: str, u: dict) -> dict:
         return {"examples": examples, "fake_news": fake_news,
                 "entities": [f"{e['name']} ({e['industry']}, {e['country']})" for e in r.get("entities", [])],
                 "grounding": "entities" in r}
+    if node == "credibility":
+        return u["credibility"].model_dump()
+    if node == "flagged_fake":
+        return {"message": u["message"]}
+    if node == "preview_alternatives":
+        return {"count": len(u["alternatives_preview"])}
     if node == "monitoring":
         return u["monitoring"].model_dump()
     if node == "kg_query":
@@ -114,7 +129,7 @@ def _consume(job: dict, stream) -> None:
             if node == "visualizer":
                 with open(u["network_html"], encoding="utf-8") as f:
                     job["network"] = f.read()
-            if u.get("status") in ("no_exposure", "rejected", "completed"):
+            if u.get("status") in ("no_exposure", "rejected", "completed", "flagged_fake"):
                 job["status"] = u["status"]
                 job["message"] = u.get("message", "")
     if job["status"] == "running":                 # stream ended without a final status
@@ -127,16 +142,20 @@ def _work(job: dict, make_stream) -> None:
     except Exception as e:                         # show the error on the page instead of dying silently
         traceback.print_exc()
         job["status"], job["error"] = "error", f"{type(e).__name__}: {e}"
+    finally:
+        obs.flush()
 
 
 def start_job(article: str, focal: str) -> str:
     job_id = uuid.uuid4().hex[:10]
+    trace_id, session_id = obs.new_trace(job_id)
     job = {"id": job_id, "status": "running", "steps": [], "review": None, "network": None,
-           "message": "", "error": None, "started": time.time()}
+           "message": "", "error": None, "started": time.time(), "trace_url": obs.trace_url(trace_id)}
     JOBS[job_id] = job
     cfg = {"configurable": {"thread_id": job_id}}
     threading.Thread(target=_work, daemon=True, args=(
-        job, lambda: PIPELINE.stream(State(article=article, focal_name=focal), cfg, stream_mode="updates"))).start()
+        job, lambda: PIPELINE.stream(State(article=article, focal_name=focal, trace_id=trace_id, session_id=session_id),
+                                     cfg, stream_mode="updates"))).start()
     return job_id
 
 
@@ -149,7 +168,7 @@ def resume_job(job: dict, decision: dict) -> None:
 
 def job_view(job: dict) -> dict:
     return {k: job[k] for k in ("id", "status", "steps", "review", "message", "error")} | {
-        "has_network": job["network"] is not None, "elapsed": round(time.time() - job["started"], 1)}
+        "has_network": job["network"] is not None, "trace_url": job.get("trace_url"), "elapsed": round(time.time() - job["started"], 1)}
 
 
 # ------------------------------------------------------------------ analytics
@@ -158,7 +177,8 @@ def _analytics() -> dict:
     total = len(JOBS)
     retried = 0
     retry_counts: list[int] = []
-    outcomes = {"approved": 0, "edited": 0, "rejected": 0, "no_exposure": 0, "error": 0, "completed": 0}
+    outcomes = {"approved": 0, "edited": 0, "rejected": 0, "no_exposure": 0, "error": 0, "completed": 0,
+                "flagged_fake": 0}
     feedback_log: list[dict] = []
     edit_extraction_count = 0
     self_critique_used = 0
@@ -302,7 +322,8 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/":
             return self._send(200, PAGE.encode("utf-8"), "text/html; charset=utf-8")
         if path == "/api/status":
-            return self._json({"llm": PIPELINE.llm.name, "mock": PIPELINE.llm.name == "offline mock"})
+            return self._json({"llm": PIPELINE.llm.name, "mock": PIPELINE.llm.name == "offline mock",
+                               "langfuse": obs.enabled()})
         if path == "/api/scenarios":
             return self._json({"scenarios": SCENARIOS, "grocers": GROCERS})
         if path.startswith("/api/job/"):
@@ -358,10 +379,14 @@ def main():
     from scpoc.llm import _load_dotenv
     _load_dotenv()                                 # so RAG=1 etc. can also live in .env
     on = lambda k: os.environ.get(k, "").strip().lower() in ("1", "true", "yes")
+    off = lambda k: os.environ.get(k, "").strip().lower() in ("0", "false", "no")
     PIPELINE = build_app(g=tools.get_graph(), rag_examples=on("RAG_EXAMPLES") or on("RAG"),
-                         ground_entities=on("GROUND_ENTITIES") or on("RAG"))
+                         ground_entities=on("GROUND_ENTITIES") or on("RAG"),
+                         credibility=not off("CREDIBILITY"),         # on by default; CREDIBILITY=0 turns it off
+                         block_fake=on("CREDIBILITY_BLOCK"))         # default: warn only, the reviewer decides
     rag_on = [k for k, v in PIPELINE.rag.items() if v]
-    kind = PIPELINE.llm.name + (f", RAG: {'+'.join(rag_on)}" if rag_on else "")
+    kind = PIPELINE.llm.name + (f", RAG: {'+'.join(rag_on)}" if rag_on else "") + \
+        (", Langfuse tracing" if obs.enabled() else "")
     if PIPELINE.rag.get("ground_entities"):
         _ensure_kg_comparison()      # live baseline-vs-grounding comparison, computed in the background
     server = ThreadingHTTPServer((HOST, PORT), Handler)
@@ -370,6 +395,8 @@ def main():
         server.serve_forever()
     except KeyboardInterrupt:
         print("\nstopped")
+    finally:
+        obs.flush()
 
 
 if __name__ == "__main__":

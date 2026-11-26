@@ -2,10 +2,16 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Supply Chain Disruption Monitor</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>(function(){var t=null;try{t=localStorage.getItem('theme')}catch(e){}
+if(!t)t=(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark';
+document.documentElement.setAttribute('data-theme',t)})()</script>
 <style>
 :root{
+ color-scheme:dark;--w:255,255,255;
+ --t-red:#fca5a5;--t-grn:#6ee7b7;--t-blu:#93c5fd;--t-amb:#fbbf24;--t-amb2:#fcd34d;--t-pu:#a78bfa;--t-cy:#22d3ee;--t-blu2:#60a5fa;
+ --hdr-bg:rgba(15,23,42,.72);--hdr-bg2:rgba(15,23,42,.95);
  --canvas:#0b1120;--surface:#111827;--s2:#1a2332;--s3:#1f2d3d;
- --glass:rgba(255,255,255,.06);--gb:rgba(255,255,255,.08);--gh:rgba(255,255,255,.1);
+ --glass:rgba(var(--w),.06);--gb:rgba(var(--w),.08);--gh:rgba(var(--w),.1);
  --tx:#f1f5f9;--tx2:#94a3b8;--tx3:#64748b;
  --ac:#3b82f6;--ac-g:rgba(59,130,246,.25);--ac-d:#2563eb;
  --red:#ef4444;--rd:rgba(239,68,68,.12);--rg:rgba(239,68,68,.25);
@@ -15,14 +21,27 @@
  --r:8px;--rl:12px;--rx:16px;
  --ft:'Inter',system-ui,-apple-system,sans-serif;
  --mo:'SF Mono','Fira Code',ui-monospace,monospace}
+html[data-theme=light]{
+ color-scheme:light;--w:15,23,42;
+ --canvas:#f4f6fb;--surface:#ffffff;--s2:#f1f5f9;--s3:#e2e8f0;
+ --tx:#0f172a;--tx2:#475569;--tx3:#64748b;
+ --ac:#2563eb;--ac-d:#1d4ed8;--ac-g:rgba(37,99,235,.2);
+ --red:#dc2626;--amb:#d97706;--grn:#059669;--pu:#7c3aed;
+ --t-red:#b91c1c;--t-grn:#047857;--t-blu:#1d4ed8;--t-amb:#b45309;--t-amb2:#92400e;--t-pu:#6d28d9;--t-cy:#0e7490;--t-blu2:#2563eb;
+ --hdr-bg:rgba(255,255,255,.82);--hdr-bg2:rgba(255,255,255,.97)}
+html[data-theme=light] body{background-image:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(59,130,246,.08),transparent)}
+html[data-theme=light] .cd,html[data-theme=light] .kp,html[data-theme=light] .rp{box-shadow:0 1px 3px rgba(15,23,42,.06)}
+html[data-theme=light] #analytics_overlay{background:rgba(15,23,42,.35)!important}
+html[data-theme=light] #analytics_overlay>div{box-shadow:0 20px 60px rgba(15,23,42,.18)!important}
+.tgl{padding:6px 12px;font-size:13px}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:var(--ft);background:var(--canvas);color:var(--tx);line-height:1.6;min-height:100vh;
  background-image:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(59,130,246,.07),transparent),
  radial-gradient(ellipse 50% 40% at 80% 90%,rgba(139,92,246,.05),transparent)}
 
 /* Header */
-header{background:rgba(15,23,42,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);
- border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:0;z-index:100}
+header{background:var(--hdr-bg);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);
+ border-bottom:1px solid rgba(var(--w),.06);position:sticky;top:0;z-index:100}
 .hdr{max-width:1280px;margin:0 auto;padding:14px 28px;display:flex;justify-content:space-between;align-items:center}
 .logo{display:flex;align-items:center;gap:12px;font-size:17px;font-weight:700;letter-spacing:-.3px}
 .logo-i{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--ac),var(--pu));
@@ -37,28 +56,28 @@ main{max-width:1280px;margin:0 auto;padding:24px 28px 60px}
 
 /* Cards */
 .cd{background:var(--surface);border:1px solid var(--gb);border-radius:var(--rl);padding:20px 24px;margin-bottom:14px;transition:border-color .2s}
-.cd:hover{border-color:rgba(255,255,255,.12)}
+.cd:hover{border-color:rgba(var(--w),.12)}
 .cd-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
 .cd-h h3{font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.5px}
 .sb{padding:3px 10px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.4px}
-.sb.llm{background:var(--pd);color:#a78bfa;border:1px solid rgba(139,92,246,.2)}
-.sb.tool{background:var(--cd);color:#22d3ee;border:1px solid rgba(6,182,212,.2)}
-.sb.rag{background:var(--ad);color:#fbbf24;border:1px solid rgba(245,158,11,.2)}
+.sb.llm{background:var(--pd);color:var(--t-pu);border:1px solid rgba(139,92,246,.2)}
+.sb.tool{background:var(--cd);color:var(--t-cy);border:1px solid rgba(6,182,212,.2)}
+.sb.rag{background:var(--ad);color:var(--t-amb);border:1px solid rgba(245,158,11,.2)}
 .mt{font-size:11px;color:var(--tx3);font-weight:500;display:flex;gap:14px;font-variant-numeric:tabular-nums}
 
 /* Forms */
 textarea{width:100%;font:14px/1.6 var(--ft);padding:12px 16px;background:var(--s2);
- border:1px solid rgba(255,255,255,.08);border-radius:var(--r);color:var(--tx);resize:vertical;transition:border-color .2s,box-shadow .2s}
+ border:1px solid rgba(var(--w),.08);border-radius:var(--r);color:var(--tx);resize:vertical;transition:border-color .2s,box-shadow .2s}
 textarea:focus{outline:none;border-color:var(--ac);box-shadow:0 0 0 3px var(--ac-g)}
 textarea::placeholder{color:var(--tx3)}
-select{font:13px var(--ft);padding:8px 12px;background:var(--s2);border:1px solid rgba(255,255,255,.08);
+select{font:13px var(--ft);padding:8px 12px;background:var(--s2);border:1px solid rgba(var(--w),.08);
  border-radius:var(--r);color:var(--tx);cursor:pointer}
 select:focus{outline:none;border-color:var(--ac)}
 select option{background:var(--surface);color:var(--tx)}
 
 /* Buttons */
 button{font:13px/1 var(--ft);font-weight:600;padding:9px 18px;border-radius:var(--r);
- border:1px solid rgba(255,255,255,.1);background:var(--glass);color:var(--tx);cursor:pointer;
+ border:1px solid rgba(var(--w),.1);background:var(--glass);color:var(--tx);cursor:pointer;
  transition:all .15s;display:inline-flex;align-items:center;gap:6px}
 button:hover{background:var(--gh);transform:translateY(-1px)}
 button:active{transform:translateY(0)}
@@ -72,7 +91,7 @@ button:disabled{opacity:.35;cursor:default;transform:none}
 /* Chips */
 .ch{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;
  background:var(--glass);border:1px solid var(--gb);color:var(--tx2);gap:4px;margin:2px}
-.ch.w{background:var(--rd);border-color:rgba(239,68,68,.2);color:#fca5a5}
+.ch.w{background:var(--rd);border-color:rgba(239,68,68,.2);color:var(--t-red)}
 .tH{background:var(--rd);color:var(--red);border:1px solid rgba(239,68,68,.25);font-weight:700}
 .tM{background:var(--ad);color:var(--amb);border:1px solid rgba(245,158,11,.25);font-weight:700}
 .tL{background:var(--gd);color:var(--grn);border:1px solid rgba(16,185,129,.25);font-weight:700}
@@ -80,28 +99,28 @@ button:disabled{opacity:.35;cursor:default;transform:none}
 /* Tables */
 table{border-collapse:collapse;width:100%;font-size:12px;font-variant-numeric:tabular-nums}
 th{font-size:10px;letter-spacing:.5px;text-transform:uppercase;color:var(--tx3);font-weight:600;
- padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.06);text-align:left}
-td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--tx2)}
-tr:hover td{background:rgba(255,255,255,.02)}
+ padding:10px 12px;border-bottom:1px solid rgba(var(--w),.06);text-align:left}
+td{padding:10px 12px;border-bottom:1px solid rgba(var(--w),.04);color:var(--tx2)}
+tr:hover td{background:rgba(var(--w),.02)}
 .HIGH{color:var(--red);font-weight:700}.MEDIUM{color:var(--amb);font-weight:700}.LOW{color:var(--grn);font-weight:700}
 
 iframe{width:100%;height:520px;border:1px solid var(--gb);border-radius:var(--rl);background:var(--surface)}
 .mu{color:var(--tx3);font-size:12px}
 pre{white-space:pre-wrap;font:11.5px/1.5 var(--mo);background:var(--s2);
- padding:8px 12px;border-radius:var(--r);border:1px solid rgba(255,255,255,.04);color:var(--tx2);margin:4px 0}
+ padding:8px 12px;border-radius:var(--r);border:1px solid rgba(var(--w),.04);color:var(--tx2);margin:4px 0}
 .sl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--tx3);margin-bottom:4px}
 
 /* Alerts */
 .al{border-radius:var(--r);padding:12px 16px;font-size:13px;margin-bottom:12px;display:flex;align-items:flex-start;gap:10px}
-.al.aw{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);color:#fbbf24}
-.al.ai{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);color:#93c5fd}
-.al.ae{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);color:#fca5a5}
-.al.ao{background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);color:#6ee7b7}
+.al.aw{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);color:var(--t-amb)}
+.al.ai{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);color:var(--t-blu)}
+.al.ae{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);color:var(--t-red)}
+.al.ao{background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);color:var(--t-grn)}
 
 /* Scenario bar */
 .scb{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
 .scb .lb{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--tx3);font-weight:600;margin-right:4px}
-.scn{font-size:12px;padding:6px 16px;border-radius:20px;background:var(--s2);border:1px solid rgba(255,255,255,.06);color:var(--tx2)}
+.scn{font-size:12px;padding:6px 16px;border-radius:20px;background:var(--s2);border:1px solid rgba(var(--w),.06);color:var(--tx2)}
 .scn:hover{background:var(--ac);color:#fff;border-color:var(--ac)}
 .ir{display:flex;gap:14px;align-items:center;margin-top:14px;flex-wrap:wrap}
 .ir label{font-size:12px;font-weight:600;color:var(--tx2);display:flex;align-items:center;gap:8px}
@@ -112,7 +131,7 @@ pre{white-space:pre-wrap;font:11.5px/1.5 var(--mo);background:var(--s2);
 .kg{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px}
 .kp{background:var(--surface);border:1px solid var(--gb);border-radius:var(--rl);padding:14px 16px;text-align:center;
  position:relative;overflow:hidden;transition:border-color .2s}
-.kp:hover{border-color:rgba(255,255,255,.14)}
+.kp:hover{border-color:rgba(var(--w),.14)}
 .kp::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .25s}.kp:hover::before{opacity:1}
 .kp.hero{grid-column:span 2}
 .kp .v{font-size:26px;font-weight:800;line-height:1.1;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
@@ -125,7 +144,7 @@ pre{white-space:pre-wrap;font:11.5px/1.5 var(--mo);background:var(--s2);
 /* Timeline */
 .tl{position:relative;padding-left:34px}
 .tl::before{content:'';position:absolute;left:12px;top:10px;bottom:10px;width:2px;
- background:linear-gradient(to bottom,var(--ac),var(--pu),rgba(255,255,255,.06))}
+ background:linear-gradient(to bottom,var(--ac),var(--pu),rgba(var(--w),.06))}
 .ti{position:relative;margin-bottom:14px}
 .td{position:absolute;left:-34px;top:22px;width:22px;height:22px;border-radius:50%;
  display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;
@@ -136,15 +155,15 @@ pre{white-space:pre-wrap;font:11.5px/1.5 var(--mo);background:var(--s2);
 @keyframes pu{0%,100%{opacity:1}50%{opacity:.5}}
 
 /* Spinner */
-.sp{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.1);border-top-color:var(--ac);
+.sp{width:18px;height:18px;border:2.5px solid rgba(var(--w),.1);border-top-color:var(--ac);
  border-radius:50%;animation:sn .7s linear infinite;display:inline-block}
 @keyframes sn{to{transform:rotate(360deg)}}
 
 /* Diff */
 .df{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;padding:3px 10px;
  border-radius:20px;letter-spacing:.3px;margin:2px}
-.df.da{background:rgba(16,185,129,.12);color:#6ee7b7;border:1px solid rgba(16,185,129,.2)}
-.df.dr{background:rgba(239,68,68,.12);color:#fca5a5;border:1px solid rgba(239,68,68,.2)}
+.df.da{background:rgba(16,185,129,.12);color:var(--t-grn);border:1px solid rgba(16,185,129,.2)}
+.df.dr{background:rgba(239,68,68,.12);color:var(--t-red);border:1px solid rgba(239,68,68,.2)}
 .df.ds{background:var(--glass);color:var(--tx3);border:1px solid var(--gb)}
 
 /* History */
@@ -153,7 +172,7 @@ pre{white-space:pre-wrap;font:11.5px/1.5 var(--mo);background:var(--s2);
  font-size:11px;font-weight:700;color:var(--amb);letter-spacing:.6px;text-transform:uppercase}
 .ht{font-size:12px;color:var(--ac);cursor:pointer;font-weight:600;background:none;border:none;
  padding:4px 0;display:inline-flex;align-items:center;gap:5px}
-.ht:hover{color:#60a5fa;text-decoration:underline}
+.ht:hover{color:var(--t-blu2);text-decoration:underline}
 .hb{overflow:hidden;transition:max-height .35s ease,opacity .25s;border-radius:var(--r);margin:8px 0 12px}
 .hb.shut{max-height:0;opacity:0;pointer-events:none}.hb.op{max-height:8000px;opacity:1}
 .hb .cd{opacity:.7;border-style:dashed}
@@ -162,10 +181,10 @@ pre{white-space:pre-wrap;font:11.5px/1.5 var(--mo);background:var(--s2);
 .rp{background:var(--surface);border:1px solid rgba(59,130,246,.3);border-radius:var(--rx);
  padding:28px;margin-bottom:16px;box-shadow:0 0 40px rgba(59,130,246,.06)}
 .rp h3{font-size:15px;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:10px}
-.ra{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.06)}
-.rf{margin-top:18px;padding:16px;background:var(--s2);border-radius:var(--rl);border:1px solid rgba(255,255,255,.06)}
+.ra{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid rgba(var(--w),.06)}
+.rf{margin-top:18px;padding:16px;background:var(--s2);border-radius:var(--rl);border:1px solid rgba(var(--w),.06)}
 .rf label{font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:8px}
-.rf textarea{height:72px;font-size:13px;background:var(--surface);border-color:rgba(255,255,255,.06)}
+.rf textarea{height:72px;font-size:13px;background:var(--surface);border-color:rgba(var(--w),.06)}
 
 /* Outcome */
 .oc{border-left:3px solid;padding:16px 20px;display:flex;align-items:center;gap:10px}
@@ -173,19 +192,20 @@ pre{white-space:pre-wrap;font:11.5px/1.5 var(--mo);background:var(--s2);
 .oc.ow{border-left-color:var(--amb);background:rgba(245,158,11,.04)}
 .oc.oe{border-left-color:var(--red);background:rgba(239,68,68,.04)}
 .pill{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px}
-.pill.pb{background:rgba(59,130,246,.12);color:#93c5fd;border:1px solid rgba(59,130,246,.2)}
+.pill.pb{background:rgba(59,130,246,.12);color:var(--t-blu);border:1px solid rgba(59,130,246,.2)}
 
 @media(max-width:768px){
  .hdr{padding:12px 16px}main{padding:16px}
  .kg{grid-template-columns:repeat(2,1fr)}.kp.hero{grid-column:span 2}
  .ra{flex-direction:column}.ra button{width:100%;justify-content:center}
  .tl{padding-left:26px}.tl::before{left:8px}.td{left:-26px;width:18px;height:18px;font-size:9px}}
-@supports not(backdrop-filter:blur(1px)){header{background:rgba(15,23,42,.95)}}
+@supports not(backdrop-filter:blur(1px)){header{background:var(--hdr-bg2)}}
 </style></head><body>
 <header><div class="hdr">
  <div class="logo"><span class="logo-i">&#x26a1;</span>Supply Chain Disruption Monitor</div>
  <div style="display:flex;align-items:center;gap:12px">
-  <button onclick="showAnalytics()" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:var(--tx2);font:12px var(--ft);padding:6px 14px;border-radius:var(--r);cursor:pointer;backdrop-filter:blur(8px)">&#x1f4ca; Analytics</button>
+ <button id="tg" class="tgl" onclick="toggleTheme()" title="Switch between light and dark mode" aria-label="Switch between light and dark mode"></button>
+  <button onclick="showAnalytics()" style="background:rgba(var(--w),.08);border:1px solid rgba(var(--w),.12);color:var(--tx2);font:12px var(--ft);padding:6px 14px;border-radius:var(--r);cursor:pointer;backdrop-filter:blur(8px)">&#x1f4ca; Analytics</button>
   <span class="bdg"><span class="dot on" id="sd"></span><span id="lt"></span></span>
  </div>
 </div></header>
@@ -209,7 +229,7 @@ pre{white-space:pre-wrap;font:11.5px/1.5 var(--mo);background:var(--s2);
  <div id="rv"></div>
  <div id="ot"></div>
 <div id="analytics_overlay" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);overflow:auto;padding:40px 20px" onclick="if(event.target===this)closeAnalytics()">
- <div style="max-width:720px;margin:0 auto;background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.5)">
+ <div style="max-width:720px;margin:0 auto;background:var(--surface);border:1px solid rgba(var(--w),.08);border-radius:16px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.5)">
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
    <h2 style="font-size:18px;color:var(--tx);font-weight:700">&#x1f4ca; Retry Analytics</h2>
    <button onclick="closeAnalytics()" style="background:none;border:none;color:var(--tx2);font-size:20px;cursor:pointer">&times;</button>
@@ -220,6 +240,14 @@ pre{white-space:pre-wrap;font:11.5px/1.5 var(--mo);background:var(--s2);
 </main>
 <script>
 const $=id=>document.getElementById(id);
+/* Light / dark mode: saved choice, else the system setting (see the script in <head>) */
+function curTheme(){return document.documentElement.getAttribute('data-theme')==='light'?'light':'dark'}
+function paintTheme(){const t=curTheme(),b=$('tg');
+ if(b)b.innerHTML=t==='light'?'&#x1f319; Dark':'&#x2600;&#xfe0f; Light';
+ document.querySelectorAll('iframe').forEach(f=>{try{f.contentWindow.postMessage({theme:t},'*')}catch(e){}})}
+function toggleTheme(){const t=curTheme()==='light'?'dark':'light';
+ document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('theme',t)}catch(e){}paintTheme()}
+window.addEventListener('DOMContentLoaded',paintTheme);paintTheme();
 const E=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const C=(a,c='')=>(a&&a.length?a.map(x=>`<span class="ch ${c}">${E(x)}</span>`).join(' '):'<span class="mu">none</span>');
 let J=null,T=null,SC=[],RS=false,KG=null,KGT=null,LASTV=null;
@@ -284,7 +312,7 @@ function kgEmptyHtml(){
 function kgPanel(title,rows,note){
  if(!KG||!KG.available)return kgEmptyHtml();
  const recomputing=KG.status==='running'?`<div class="mu" style="margin-top:6px"><span class="sp" style="width:10px;height:10px;border-width:2px;vertical-align:middle;margin-right:5px"></span>Recomputing live with ${E(KG.current_llm||'the active LLM')}&hellip; numbers below are from the last completed run (${E(KG.llm)}).</div>`:'';
- return `<div style="margin-top:12px;padding:12px 14px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(255,255,255,.06)">
+ return `<div style="margin-top:12px;padding:12px 14px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(var(--w),.06)">
   <div class="sl" style="margin-bottom:8px;display:flex;align-items:center;flex-wrap:wrap">&#x1f578;&#xfe0f; ${title} &mdash; ${KG.articles}-article eval set (${E(KG.llm)})${kgRecomputeBtn()}</div>
   <div style="overflow-x:auto"><table><tr><th></th><th>Without RAG</th><th>With KG Grounding</th></tr>
   ${rows.map(([l,a,b])=>`<tr><td>${l}</td><td>${a}</td><td style="color:var(--grn);font-weight:700">${b}</td></tr>`).join('')}
@@ -320,11 +348,47 @@ function kgNetworkHtml(){
  return kgPanel('RAG Impact on Network Diagram',rows,'The diagram only draws what the knowledge-graph traversal (BFS) found; its accuracy is capped by how correctly Monitoring extracted countries/industries/companies, which grounding helps with.');
 }
 
+/* Credibility verdict badge (shared by the step card and the review panel) */
+const CRV={genuine:['&#x2705; Genuine','background:var(--gd);color:var(--t-grn);border-color:rgba(16,185,129,.2)'],
+ suspicious:['&#x26a0;&#xfe0f; Suspicious','background:rgba(245,158,11,.12);color:var(--t-amb2);border-color:rgba(245,158,11,.25)'],
+ likely_fake:['&#x1f6a9; Likely Fake','background:var(--rd);color:var(--t-red);border-color:rgba(239,68,68,.2)']};
+function credBadge(c){const v=CRV[c.verdict]||CRV.suspicious;
+ return `<span class="ch" style="${v[1]};font-weight:700">${v[0]}</span> <span class="mu">suspicion score ${c.score}</span>`}
+const CST={supported:['&#x2705;','var(--grn)'],unverifiable:['&#x2753;','var(--amb)'],contradicted:['&#x274c;','var(--red)']};
+function credHtml(c){
+ return `<div style="margin-bottom:10px">${credBadge(c)}</div>
+  ${c.reasons.length?`<ul style="padding-left:18px;font-size:13px;color:var(--tx2);margin-bottom:10px">${c.reasons.map(r=>`<li style="margin-bottom:3px">${E(r)}</li>`).join('')}</ul>`:''}
+  <details><summary class="mu" style="cursor:pointer;font-size:11px">Show ${c.checks.length} extracted claim${c.checks.length===1?'':'s'} and the evidence for each</summary>
+  <div style="overflow-x:auto;margin-top:6px"><table><tr><th>Claim</th><th>Status</th><th>Evidence</th></tr>
+  ${c.checks.map(k=>{const t=CST[k.status]||CST.unverifiable;return `<tr><td style="color:var(--tx)">${E(k.claim)}</td>
+   <td style="color:${t[1]};white-space:nowrap">${t[0]} ${k.status}</td><td style="font-size:12px;color:var(--tx2)">${E((k.reasons||[]).join('; '))}</td></tr>`}).join('')}</table></div></details>
+  <div class="mu" style="margin-top:8px">No live fact-checking: the verdict rests on the supplier network, internal consistency and warning signs. A person makes the final call.</div>`}
+
+const ALT_HOW=`<details style="margin-bottom:10px"><summary class="mu" style="cursor:pointer;font-size:11px">How candidates are chosen</summary>
+ <ol class="mu" style="margin:6px 0 0 18px;line-height:1.6">
+  <li><b>Same industry</b> as the supplier being replaced.</li>
+  <li><b>Outside the disruption:</b> its country, industry and name do not match what the article says is hit.</li>
+  <li><b>Clean upstream:</b> its own suppliers (Tier-2 to Tier-4 once it becomes your Tier-1) include no disrupted company. Those pass as <i>clear</i>.</li>
+  <li><b>Exposure</b> (for candidates that are not clear): each disrupted upstream supplier adds 1/(hops+1), so nearer ones count more.</li>
+  <li><b>Ranking:</b> lowest exposure first, then smaller upstream network (less can go wrong), then name.</li>
+  <li><b>Fallback:</b> exposed candidates are shown only when no clear candidate exists, and are marked not clear. The top 5 are listed.</li>
+  <li>Only industry is matched: check product, capacity, price and lead time before switching.</li></ol></details>`;
+
+/* Replacement candidates for one supplier (used in the review panel and the final card) */
+function altTable(a){
+ return `<div style="overflow-x:auto"><table><tr><th>Candidate</th><th>Country</th><th>Clear</th><th>Disrupted upstream</th><th title="0 = no disrupted supplier upstream; each one adds 1/(hops+1)">Exposure</th><th>Upstream size</th></tr>
+  ${a.alternatives.length?a.alternatives.map(c=>`<tr><td style="color:var(--tx);font-weight:600">${E(c.name)}${c.already_supplier?' <span class="mu">(already a supplier)</span>':''}</td><td>${E(c.country)}</td>
+  <td>${c.verified_clear?'<span style="color:var(--grn)">&#x2705;</span>':'<span style="color:var(--red)">&#x274c;</span>'}</td>
+  <td>${c.disrupted_upstream}</td><td>${c.exposure_score}</td><td>${c.upstream_size}</td></tr>`).join(''):'<tr><td colspan="6" class="mu">No candidate outside the disrupted area in the same industry.</td></tr>'}</table></div>`}
+
 /* Step body */
 function bd(n,d){
+ if(n==='credibility')return credHtml(d);
+ if(n==='flagged_fake')return `<div style="font-size:14px;color:var(--tx2)">${E(d.message)}</div>`;
+ if(n==='preview_alternatives')return '';
  if(n==='retrieve'){
   const fn=d.fake_news;
-  const fnBadge=fn?`<span class="ch" style="${fn.verdict==='fake'?'background:var(--rd);color:#fca5a5;border-color:rgba(239,68,68,.2)':'background:var(--gd);color:#6ee7b7;border-color:rgba(16,185,129,.2)'};font-weight:700">
+  const fnBadge=fn?`<span class="ch" style="${fn.verdict==='fake'?'background:var(--rd);color:var(--t-red);border-color:rgba(239,68,68,.2)':'background:var(--gd);color:var(--t-grn);border-color:rgba(16,185,129,.2)'};font-weight:700">
     ${fn.verdict==='fake'?'&#x26a0;&#xfe0f; Likely Fake / False Positive':'&#x2705; Likely Genuine Disruption'}</span>
    <span class="mu">${fn.false_positive_votes}/${fn.total_votes} nearest historical examples were false positives &middot; closest match ${E(fn.top_match)} (score ${fn.top_score})</span>`
    :'<span class="mu">RAG examples are off &mdash; no fake-news check available for this run.</span>';
@@ -334,7 +398,7 @@ function bd(n,d){
    ${d.grounding?`<div><span class="sl">Companies Named</span> ${C(d.entities)}</div>${kgImpactHtml()}`:''}`;
  }
  if(n==='monitoring')return `<div style="margin-bottom:10px;display:flex;gap:8px;flex-wrap:wrap">
-  <span class="ch" style="${d.is_disruption?'background:var(--rd);color:#fca5a5;border-color:rgba(239,68,68,.2)':'background:var(--gd);color:#6ee7b7;border-color:rgba(16,185,129,.2)'};font-weight:700">
+  <span class="ch" style="${d.is_disruption?'background:var(--rd);color:var(--t-red);border-color:rgba(239,68,68,.2)':'background:var(--gd);color:var(--t-grn);border-color:rgba(16,185,129,.2)'};font-weight:700">
   ${d.is_disruption?'&#x1f6a8; Disruption':'&#x2705; Clear'}</span>
   <span class="ch">${E(d.disruption_type)}</span></div>
   <div style="margin-bottom:10px;font-size:14px">${E(d.summary)}</div>
@@ -365,9 +429,9 @@ function bd(n,d){
   let reasonPanel='';
   if(riskStep&&riskStep.data.top_suppliers&&riskStep.data.top_suppliers.length){
    const sups=riskStep.data.top_suppliers;
-   reasonPanel=`<div style="margin-top:14px;padding:16px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(255,255,255,.06)">
+   reasonPanel=`<div style="margin-top:14px;padding:16px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(var(--w),.06)">
     <div class="sl" style="margin-bottom:10px">&#x1f4a1; Why are these suppliers flagged?</div>
-    ${sups.map(s=>`<div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;padding:8px 12px;background:var(--surface);border-radius:6px;border:1px solid rgba(255,255,255,.04)">
+    ${sups.map(s=>`<div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;padding:8px 12px;background:var(--surface);border-radius:6px;border:1px solid rgba(var(--w),.04)">
      <span class="ch t${s.risk_level[0]}" style="flex-shrink:0;margin-top:2px">${s.risk_level}</span>
      <div><span style="color:var(--tx);font-weight:600;font-size:13px">${E(s.name)}</span>
       <span class="mu"> (${E(s.industry)}, ${E(s.country)})</span>
@@ -380,7 +444,7 @@ function bd(n,d){
   }
   let chainPanel='';
   if(kgStep&&kgStep.data.sample_chains&&kgStep.data.sample_chains.length){
-   chainPanel=`<div style="margin-top:10px;padding:16px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(255,255,255,.06)">
+   chainPanel=`<div style="margin-top:10px;padding:16px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(var(--w),.06)">
     <div class="sl" style="margin-bottom:8px">&#x1f517; Supply Chain Paths (product flow)</div>
     ${kgStep.data.sample_chains.map(c=>`<pre style="margin:4px 0;font-size:11px">${E(c.join('  ←  '))}</pre>`).join('')}
     <div class="mu" style="margin-top:6px">Each arrow shows what product flows between connected suppliers. Disrupted suppliers break these links.</div>
@@ -393,27 +457,24 @@ function bd(n,d){
   return ss.length?`<div style="margin-bottom:6px"><span class="ch ${cf==='high'?'tH':'tM'}">${cf} confidence</span></div>
   <ul style="padding-left:18px;font-size:13px;color:var(--tx2)">${ss.map(s=>`<li style="margin-bottom:4px">${E(s)}</li>`).join('')}</ul>`
   :`<div class="mu">No suggestions — extraction looks clean.</div>`}
- if(n==='csco')return `${d.rag_enhanced?'<div style="margin-bottom:8px"><span class="ch" style="background:rgba(96,165,250,.12);color:#93c5fd;border:1px solid rgba(96,165,250,.2);font-weight:700">&#x1f4da; RAG-Enhanced Summary</span> <span class="mu">Context from similar past disruptions and verified entities was provided to the LLM</span></div>':''}
+ if(n==='csco')return `${d.rag_enhanced?'<div style="margin-bottom:8px"><span class="ch" style="background:rgba(96,165,250,.12);color:var(--t-blu);border:1px solid rgba(96,165,250,.2);font-weight:700">&#x1f4da; RAG-Enhanced Summary</span> <span class="mu">Context from similar past disruptions and verified entities was provided to the LLM</span></div>':''}
   <div style="font-size:14px;margin-bottom:10px;line-height:1.7">${E(d.executive_summary)}</div>
   <div style="color:var(--tx2);margin-bottom:10px;font-size:13px">${E(d.network_impact)}</div>
   <ul style="padding-left:18px;font-size:13px;color:var(--tx2)">${d.key_recommendations.map(x=>`<li style="margin-bottom:4px">${E(x)}</li>`).join('')}</ul>`;
  if(n==='no_exposure')return `<div style="font-size:14px;color:var(--tx2)">${E(d.message)}</div>`;
- if(n==='alternatives')return d.alternatives.length?d.alternatives.map(a=>`<div style="margin-bottom:14px">
+ if(n==='alternatives')return d.alternatives.length?ALT_HOW+d.alternatives.map(a=>`<div style="margin-bottom:14px">
   <div style="font-size:14px;margin-bottom:8px"><b>${E(a.supplier.name)}</b>
   <span class="mu">(${E(a.supplier.industry)})</span> &mdash; ${a.candidates_considered} candidates, <b style="color:var(--grn)">${a.clear_count}</b> clear</div>
-  <div style="overflow-x:auto"><table><tr><th>Candidate</th><th>Country</th><th>Clear</th><th>Disrupted</th><th>Upstream</th></tr>
-  ${a.alternatives.map(c=>`<tr><td style="color:var(--tx);font-weight:600">${E(c.name)}</td><td>${E(c.country)}</td>
-  <td>${c.verified_clear?'<span style="color:var(--grn)">&#x2705;</span>':'<span style="color:var(--red)">&#x274c;</span>'}</td>
-  <td>${c.disrupted_upstream}</td><td>${c.upstream_size}</td></tr>`).join('')}</table></div></div>`).join('')
+  ${altTable(a)}</div>`).join('')
   :'<div class="mu">No HIGH-risk suppliers &mdash; no replacements needed.</div>';
  return '';
 }
 
-function sType(n){return{monitoring:'llm',csco:'llm',self_critique:'llm',retrieve:'rag'}[n]||'tool'}
+function sType(n){return{monitoring:'llm',csco:'llm',self_critique:'llm',credibility:'llm',retrieve:'rag'}[n]||'tool'}
 function sIcon(n){return{retrieve:'&#x1f50d;',monitoring:'&#x1f916;',kg_query:'&#x1f578;',risk:'&#x1f4ca;',
- visualizer:'&#x1f310;',csco:'&#x1f4dd;',self_critique:'&#x1f9e0;',no_exposure:'&#x2705;',alternatives:'&#x1f504;'}[n]||''}
+ visualizer:'&#x1f310;',csco:'&#x1f4dd;',self_critique:'&#x1f9e0;',no_exposure:'&#x2705;',alternatives:'&#x1f504;',credibility:'&#x1f575;&#xfe0f;',flagged_fake:'&#x1f6a9;'}[n]||''}
 function sTitle(n){return{retrieve:'Retrieval (RAG)',monitoring:'Monitoring Agent',kg_query:'Knowledge Graph Query',
- risk:'Risk Scoring',visualizer:'Network Diagram',csco:'CSCO Summary',self_critique:'AI Self-Critique',no_exposure:'No Exposure',alternatives:'Alternative Sourcing'}[n]||n}
+ risk:'Risk Scoring',visualizer:'Network Diagram',csco:'CSCO Summary',self_critique:'AI Self-Critique',no_exposure:'No Exposure',alternatives:'Alternative Sourcing',credibility:'Credibility Check (Fake News)',flagged_fake:'Stopped: Likely Fake'}[n]||n}
 
 function mkStep(s){
  const t=sType(s.node),mt=[];
@@ -482,7 +543,7 @@ function mkHist(atts){
    </div>`:''}
    <button class="ht" onclick="tg('${id}')"><span id="${id}_a">&#x25b6;</span> Show analysis #${i+1} details</button>
    <div id="${id}" class="hb shut"><div class="tl" style="margin-top:12px">
-    ${a.filter(s=>s.node!=='human_review').map(s=>mkStep(s)).join('')}
+    ${a.filter(s=>s.node!=='human_review'&&s.node!=='preview_alternatives').map(s=>mkStep(s)).join('')}
    </div></div>`;
  }
  return h;
@@ -503,16 +564,17 @@ function render(v){
  if(hasR)h+=mkHist(atts);
  if(hasR)h+=`<div class="hd"><span class="hl" style="color:var(--grn)">&#x2713; Current &mdash; Analysis #${atts.length}</span></div>`;
  h+='<div class="tl">';
- h+=cur.filter(s=>s.node!=='human_review').map(s=>mkStep(s)).join('');
+ h+=cur.filter(s=>s.node!=='human_review'&&s.node!=='preview_alternatives').map(s=>mkStep(s)).join('');
  if(v.status==='running')h+=`<div class="ti"><span class="td go"><div class="sp" style="width:12px;height:12px;border-width:2px"></div></span>
   <div class="cd" style="text-align:center;padding:28px"><div class="sp"></div><div class="mu" style="margin-top:8px">Analysing...</div></div></div>`;
  h+='</div>';
  $('st').innerHTML=h;
  if(v.status==='awaiting_review'&&!RS){RS=true;showRv(v.review,atts)}
  if(v.status!=='awaiting_review')$('rv').innerHTML='';
- const oc={completed:'oo',no_exposure:'ow',rejected:'ow',error:'oe'}[v.status];
- const oi={completed:'&#x2705;',no_exposure:'&#x1f7e1;',rejected:'&#x1f6d1;',error:'&#x274c;'}[v.status]||'';
- $('ot').innerHTML=oc?`<div class="cd oc ${oc}"><span style="font-size:16px">${oi}</span> <b>${v.status.replace('_',' ')}</b> &mdash; ${E(v.error||v.message)}</div>`:'';
+ const oc={completed:'oo',no_exposure:'ow',rejected:'ow',flagged_fake:'ow',error:'oe'}[v.status];
+ const oi={completed:'&#x2705;',no_exposure:'&#x1f7e1;',rejected:'&#x1f6d1;',flagged_fake:'&#x1f6a9;',error:'&#x274c;'}[v.status]||'';
+ const tl=v.trace_url?`<div class="mu" style="margin:8px 0"><a href="${E(v.trace_url)}" target="_blank" rel="noopener" style="color:var(--tx2)">&#x1f50e; View this run in Langfuse</a></div>`:'';
+ $('ot').innerHTML=(oc?`<div class="cd oc ${oc}"><span style="font-size:16px">${oi}</span> <b>${v.status.replace('_',' ')}</b> &mdash; ${E(v.error||v.message)}</div>`:'')+tl;
 }
 
 const ACT={HIGH:'Replace \u2014 source alternative supplier',MEDIUM:'Increase monitoring',LOW:'Maintain standard operations'};
@@ -529,25 +591,38 @@ function showRv(rv,atts){
  const sug=rv.ai_suggestions||[],conf=rv.ai_confidence||'';
  const sugHtml=sug.length?`<div class="al ${conf==='high'?'ae':'ai'}" style="flex-direction:column;gap:8px">
   <div style="display:flex;align-items:center;gap:8px"><span>&#x1f9e0;</span>
-  <b>AI Self-Critique</b> <span class="pill ${conf==='high'?'pb':'pb'}" style="${conf==='high'?'background:var(--rd);color:#fca5a5;border-color:rgba(239,68,68,.2)':''}">${conf} confidence</span></div>
+  <b>AI Self-Critique</b> <span class="pill ${conf==='high'?'pb':'pb'}" style="${conf==='high'?'background:var(--rd);color:var(--t-red);border-color:rgba(239,68,68,.2)':''}">${conf} confidence</span></div>
   <ul style="margin:0;padding-left:18px;font-size:13px">${sug.map(s=>`<li style="margin-bottom:4px;cursor:pointer" onclick="document.getElementById('rfb').value=this.textContent;document.getElementById('rfb').focus()" title="Click to use as feedback">${E(s)}</li>`).join('')}</ul>
   <div class="mu">Click a suggestion to auto-fill the feedback box below.</div></div>`:'';
 
  const mon=cm?cm.data:null;
  const exHtml=mon?`<details style="margin-bottom:14px"><summary style="cursor:pointer;font-size:12px;font-weight:700;color:var(--tx2)">&#x270f;&#xfe0f; Edit Extraction Directly (skip AI, re-run downstream only)</summary>
-  <div style="margin-top:10px;padding:14px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(255,255,255,.06)">
+  <div style="margin-top:10px;padding:14px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(var(--w),.06)">
   <div style="margin-bottom:8px"><span class="sl">Countries (comma-separated)</span>
-   <input id="ex_c" value="${E((mon.countries||[]).join(', '))}" style="width:100%;font:13px var(--ft);padding:8px 12px;background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);color:var(--tx)"></div>
+   <input id="ex_c" value="${E((mon.countries||[]).join(', '))}" style="width:100%;font:13px var(--ft);padding:8px 12px;background:var(--surface);border:1px solid rgba(var(--w),.08);border-radius:var(--r);color:var(--tx)"></div>
   <div style="margin-bottom:8px"><span class="sl">Industries (comma-separated)</span>
-   <input id="ex_i" value="${E((mon.industries||[]).join(', '))}" style="width:100%;font:13px var(--ft);padding:8px 12px;background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);color:var(--tx)"></div>
+   <input id="ex_i" value="${E((mon.industries||[]).join(', '))}" style="width:100%;font:13px var(--ft);padding:8px 12px;background:var(--surface);border:1px solid rgba(var(--w),.08);border-radius:var(--r);color:var(--tx)"></div>
   <div style="margin-bottom:8px"><span class="sl">Companies (comma-separated)</span>
-   <input id="ex_co" value="${E((mon.companies||[]).join(', '))}" style="width:100%;font:13px var(--ft);padding:8px 12px;background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);color:var(--tx)"></div>
+   <input id="ex_co" value="${E((mon.companies||[]).join(', '))}" style="width:100%;font:13px var(--ft);padding:8px 12px;background:var(--surface);border:1px solid rgba(var(--w),.08);border-radius:var(--r);color:var(--tx)"></div>
   <button class="ba" style="margin-top:8px" onclick='dc("edit_extraction")'>&#x2699;&#xfe0f; Apply &amp; Re-run KG &rarr; Risk &rarr; Summary</button>
   </div></details>`:''
+
+ const cr=rv.credibility;
+ const crHtml=cr?`<div class="al ${cr.verdict==='genuine'?'ai':'ae'}" style="flex-direction:column;align-items:flex-start;gap:6px">
+  <div><b>&#x1f575;&#xfe0f; Fake-news check</b> &nbsp;${credBadge(cr)}</div>
+  ${cr.verdict==='genuine'?'':`<ul style="margin:0;padding-left:18px;font-size:13px">${cr.reasons.slice(0,4).map(r=>`<li>${E(r)}</li>`).join('')}</ul>`}</div>`:'';
+ const alts=rv.alternatives||[];
+ const altHtml=alts.length?`<div style="margin:14px 0"><div class="sl" style="margin-bottom:6px">&#x1f504; Alternative Suppliers (shown before you approve)</div>
+  ${ALT_HOW}
+  ${alts.map(a=>{const hi=a.risk_level==='HIGH';return `<details ${hi?'open':''} style="margin-bottom:8px;padding:10px 14px;background:var(--s2);border-radius:var(--r);border:1px solid rgba(var(--w),.06)">
+   <summary style="cursor:pointer;font-size:13px"><span class="ch t${a.risk_level[0]}">${a.risk_level}</span> <b style="color:var(--tx)">${E(a.supplier.name)}</b>
+    <span class="mu">(${E(a.supplier.industry)}) &mdash; ${a.candidates_considered} candidates, <b style="color:var(--grn)">${a.clear_count}</b> clear${hi?'':' &middot; only used if you change this supplier to HIGH'}</span></summary>
+   <div style="margin-top:8px">${altTable(a)}</div></details>`}).join('')}</div>`:'';
 
  $('rv').innerHTML=`<div class="rp">
   <h3>&#x1f9d1; Human Review ${rc?`<span class="pill pb">Analysis #${rc+1} of ${mx+1}</span>`:''}</h3>
   ${rc?`<div class="al ai"><span>&#x1f504;</span><div>The AI has <b>re-analysed</b> the article using your feedback (${rc} round${rc>1?'s':''} of corrections). Review the updated extraction below.</div></div>`:''}
+  ${crHtml}
   ${dh}
   ${sugHtml}
   ${exHtml}
@@ -558,6 +633,7 @@ function showRv(rv,atts){
   <div style="overflow-x:auto"><table><tr><th>Supplier</th><th>Score</th><th>Action</th></tr>
   ${rv.actions.map((a,i)=>`<tr><td style="color:var(--tx);font-weight:600">${E(a.name)}</td><td style="font-weight:700">${a.risk_score}</td>
   <td><select id="ra${i}">${['HIGH','MEDIUM','LOW'].map(l=>`<option value="${l}" ${l===a.risk_level?'selected':''}>${l}: ${ACT[l]}</option>`).join('')}</select></td></tr>`).join('')}</table></div>
+  ${altHtml}
   <div class="rf">
    <label>&#x1f4ac; Feedback for AI Re-analysis</label>
    <textarea id="rfb" placeholder="Tell the AI what to correct, e.g.: 'Japan is only a buyer, not disrupted. Remove it from countries.'"></textarea>

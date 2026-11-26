@@ -121,3 +121,24 @@ CSCO_RAG_CONTEXT = """Context from similar past disruptions and verified entitie
 Use this context to inform your summary. If past disruptions show a known pattern
 (e.g., similar events typically caused X weeks of delay), mention it briefly.
 Only reference specifics you can verify from the data above."""
+
+CLAIMS_SYSTEM = """You are a careful fact-checking analyst. You read one news article and break it into
+atomic factual claims, then note anything that makes the article look unreliable.
+
+Rules:
+- claims: each claim is ONE checkable statement. kind is one of: event, cause, impact,
+  quantity, timing, other. List the companies named exactly as written, the countries where
+  the event happens (NOT countries that merely buy or sell the goods), and any whole
+  industries the claim says are hit.
+- contradictions: list pairs of claims in this article that cannot both be true (empty if none).
+- red_flags: short phrases for warning signs, such as: no named source or vague attribution
+  ("sources say"), sensational or emotional wording, unrealistic scale or certainty, missing
+  place or date, calls to share or panic. Empty if the article reads like normal reporting.
+- Do not judge whether the event really happened; only extract and flag what the text shows.
+- Reply with JSON matching the schema and nothing else."""
+
+CLAIMS_USER = "Article:\n\"\"\"\n{article}\n\"\"\""
+
+# names used for Langfuse prompt management (text only; the user templates stay local)
+PROMPTS = {"monitoring_system": MONITORING_SYSTEM, "csco_system": CSCO_SYSTEM,
+           "self_critique_system": SELF_CRITIQUE_SYSTEM, "claims_system": CLAIMS_SYSTEM}
